@@ -106,12 +106,10 @@ d3.xml("./xml/techtreey.xml", function(data) {
   function updateUnitButton(selectedCiv) {
     effects = getAllEffects(selectedCiv['techs'])
     civUnits = effects.filter(d => d.attributes['type'].value=="Data" ).map(d => d.children[0].textContent)
-    console.log(civUnits)
 
     militaryUnitNames = Array.from(militaryUnits).map(d=>d.attributes["name"].value)
     civMilUnits = new Set(civUnits.filter(d => militaryUnitNames.includes(d)));
     civMilUnits = Array.from(civMilUnits)
-    console.log(civMilUnits)
 
     // add remove old options from the button
     d3.select("#selectUnitButton")
@@ -190,7 +188,6 @@ protoaction_tags = ['damage', 'maxrange', 'rof', 'damagecap', 'damagearea', 'dam
 protoactions = unit.getElementsByTagName("protoaction")
 Array.from(protoactions).filter(d => d.children[0].textContent.includes("Attack")).forEach(function(protoAction){
   record ={}
-  console.log(protoAction.children[0].textContent)
   myname = protoAction.getElementsByTagName('name')[0].textContent + " (" + protoAction.getElementsByTagName('damagetype')[0].textContent + ") "
 
   Array.from(protoAction.children).filter(d => protoaction_tags.includes(d.tagName)).forEach(function(item){
@@ -211,7 +208,6 @@ Array.from(protoactions).filter(d => d.children[0].textContent.includes("Attack"
 })
 
 function calcModifier(record, effect, relativity){
-  console.log(relativity)
   if (relativity == 'BasePercent'){
     record['BasePercent'] = record['BasePercent'] + parseFloat(effect.attributes['amount'].value) - 1.0
   }
@@ -223,14 +219,14 @@ function calcModifier(record, effect, relativity){
 
 function applyEffect(effect, stat_table_data){
   stat_table_data = stat_table_data.map(function(record){
-    console.log(effect.attributes['subtype'].value==record['subtype'])
    if(effect.attributes['subtype'].value==record['subtype']){
         record = calcModifier(record, effect, effect.attributes['relativity'].value)
    }
    if(effect.attributes['subtype'].value=='DamageForAllHandLogicActions' && record['damagetype'] == "Hand" &&  record['tag'] == "damage"){
         record = calcModifier(record, effect, effect.attributes['relativity'].value)
    }
-   if(effect.attributes['subtype'].value=='DamageBonus' && effect.attributes['allactions'].value=='1' &&  record['tag'] == "damage"){
+   if(effect.attributes['subtype'].value =='DamageBonus' && effect.attributes['allactions'].value=='1' &&  record['tag'] == "damagebonus"
+      && effect.attributes['unittype'].value == record['type'] ){
         record = calcModifier(record, effect, effect.attributes['relativity'].value)
    }
    if(effect.attributes['subtype'].value=='Damage' && effect.attributes['allactions'].value=='1' &&  record['tag'] == "damage"){
@@ -371,7 +367,6 @@ function updateUnitTechs(unit){
 
     selectedUnit = selectedOption
     unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
-    console.log(unit)
     // run the updateChart function with this selected option
     updateUnitStats(unit, [])
     updateUnitTechs(unit)
