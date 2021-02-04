@@ -74,7 +74,8 @@ var civTechs = [];
 var unit = [];
 
   //Read the data
-d3.xml("./xml/protoy.xml", function(data) {
+// d3.xml("./xml/protoy.xml", function(data) {
+d3.xml("https://raw.githubusercontent.com/andrewgsavage/andrewgsavage.github.io/master/aoe3_damage_calc/xml/protoy.xml", function(data) {
   data = data.children[0]
   protoy = data;
 
