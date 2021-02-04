@@ -1,0 +1,31 @@
+<homecityfireworks>
+  <reactionsoundset frequency="20">HC_CrowdOohs</reactionsoundset>
+  <firework>
+    <modelfile>effects\fireworks\fireworks_red.xml</modelfile>
+    <explodesoundtime>1.5</explodesoundtime>
+    <soundcycletime>3.0</soundcycletime>
+    <launchsoundset>HC_FireworksLaunch</launchsoundset>
+    <explodesoundset>HC_FireworksBurst</explodesoundset>
+  </firework>
+  <firework>
+    <modelfile>effects\fireworks\fireworks_blue.xml</modelfile>
+    <explodesoundtime>1.5</explodesoundtime>
+    <soundcycletime>3.0</soundcycletime>
+    <launchsoundset>HC_FireworksLaunch</launchsoundset>
+    <explodesoundset>HC_FireworksBurst</explodesoundset>
+  </firework>
+  <firework>
+    <modelfile>effects\fireworks\fireworks_purple.xml</modelfile>
+    <explodesoundtime>1.5</explodesoundtime>
+    <soundcycletime>3.0</soundcycletime>
+    <launchsoundset>HC_FireworksLaunch</launchsoundset>
+    <explodesoundset>HC_FireworksBurst</explodesoundset>
+  </firework>
+  <firework>
+    <modelfile>effects\fireworks\fireworks_orange.xml</modelfile>
+    <explodesoundtime>1.5</explodesoundtime>
+    <soundcycletime>3.0</soundcycletime>
+    <launchsoundset>HC_FireworksLaunch</launchsoundset>
+    <explodesoundset>HC_FireworksBurst</explodesoundset>
+  </firework>
+</homecityfireworks>
