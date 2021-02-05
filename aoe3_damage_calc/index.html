@@ -326,13 +326,30 @@ function updateUnitTechs(unit){
     return effects.length>0
   })
 
-  techs = techs.filter(d => civTechs.includes(d.attributes['name'].value))
+  function hasElementWithTextContent(parent, element, textConent){
+    tags = Array.from(parent.getElementsByTagName(element)).filter(d => d.textContent == textConent)
+    return tags.length>0
+  }
+  test = techs
+  research_techs = techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
+      hasElementWithTextContent(d, "flag", "UpgradeTech") )
+  hc_techs = techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
+      hasElementWithTextContent(d, "flag", "HomeCity") )
+  team_techs = techs.filter(d => !hc_techs.includes(d) && 
+      hasElementWithTextContent(d, "flag", "HomeCity")  && 
+      hasElementWithTextContent(d, "flag", "TeamTech") )
+    techs = hc_techs
   test = techs
   
   var gallery = d3.select('.cards').html("")
 
+  tech_groups = [research_techs, hc_techs, team_techs]
+  tech_groups.forEach(function(techs){
+  var techs_container = gallery.append("div")
+    .attr('class', 'card_group')
 
-  var container = gallery.selectAll('.container')
+
+  var container = techs_container.selectAll('.container')
 
   container.enter().append('div')
     .data(techs, function(d) {return d.id; })
@@ -358,6 +375,7 @@ function updateUnitTechs(unit){
       link = "/aoe3_damage_calc/UI/Data/wpfg/" + icon_list[0].textContent
       link = link
       return link; });
+    })
 }
 
   // When the button is changed, run the updateChart function
