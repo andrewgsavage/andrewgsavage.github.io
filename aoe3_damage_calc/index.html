@@ -56,6 +56,14 @@ var civs = [
 {name: 'Portuguese', age0Civ: 'Age0Portuguese', homecity: 'homecityportuguese', techs: ['Age0Portuguese', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
 {name: 'Ottoman', age0Civ: 'Age0Ottoman', homecity: 'homecityottomans', techs: ['Age0Ottoman', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
 {name: 'Spanish', techtree: 'Age0Spanish', homecity: 'homecityspanish', techs: ['Age0Spanish', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
+{name: 'Iroquois', techtree: 'Age0XPIroquois', homecity: 'homecityxpiroquois', techs: ['Age0XPIroquois', 'HCXPNewWaysIroquois', ]},
+{name: 'Aztec', techtree: 'Age0XPAztec', homecity: 'homecityxpaztec', techs: ['Age0XPAztec', ]},
+{name: 'Sioux', techtree: 'Age0XPSioux', homecity: 'homecityxpsioux', techs: ['Age0XPSioux', 'HCXPNewWaysSioux', ]},
+{name: 'Japanese', techtree: 'YPAge0Japanese', homecity: 'homecityjapanese', techs: ["YPAge0JapaneseConsulate", "YPAge0JapaneseBuildings", "YPAge0JapaneseUnits", "YPAge0JapaneseMonks", "YPAge0JapaneseTechs", "YPAge0JapaneseWonders", "YPAge0JapaneseSpecialTechs", ]},
+{name: 'Chinese', techtree: 'YPAge0Chinese', homecity: 'homecitychinese', techs: ["YPAge0ChineseConsulate", "YPAge0ChineseBuildings", "YPAge0ChineseUnits", "YPAge0ChineseMonks", "YPAge0ChineseTechs", "YPAge0ChineseWonders", "YPAge0ChineseSpecialTechs", "YPAge0ChineseClone6"]},
+{name: 'Indians', techtree: 'YPAge0Indians', homecity: 'homecityindians', techs: ["ypAge0IndiansConsulate", "ypAge0IndiansBuildings", "ypAge0IndiansUnits", "ypAge0IndiansMonks", "ypAge0IndiansTechs", "ypAge0IndiansWonders", "ypAge0IndiansSpecialTechs", ]},
+{name: 'Inca', techtree: 'DEAge0Inca', homecity: 'homecitydeinca', techs: ['DEAge0Inca', ]},
+{name: 'Swedish', techtree: 'DEAge0Swedish', homecity: 'homecityswedish', techs: ['DEAge0Swedish', ]},
 ]
 
 // add the options to the button
@@ -154,7 +162,9 @@ var text_stats =[
 
 function getAllEffects(tech_list){
   effects = tech_list.map(function(age0Civ){
+    console.log(age0Civ)
     age0Civ = Array.from(techtree.children).filter(d => d.attributes["name"].value == age0Civ)[0]
+    console.log(age0Civ)
     return Array.from(age0Civ.getElementsByTagName("effect"))
   })
   return [].concat(...effects)
@@ -334,7 +344,7 @@ function updateUnitTechs(unit){
   research_techs = techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
       hasElementWithTextContent(d, "flag", "UpgradeTech") )
   hc_techs = techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
-      hasElementWithTextContent(d, "flag", "HomeCity") )
+      ( hasElementWithTextContent(d, "flag", "HomeCity") || hasElementWithTextContent(d, "flag", "YPConsulateTech") ))
   team_techs = techs.filter(d => !hc_techs.includes(d) && 
       hasElementWithTextContent(d, "flag", "HomeCity")  && 
       hasElementWithTextContent(d, "flag", "TeamTech") )
