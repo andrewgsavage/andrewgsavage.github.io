@@ -182,6 +182,8 @@ function calcUnitStats(unit, techs){
     d['baseValue'] = parseFloat(unit.getElementsByTagName(d['gameName'])[0].textContent)
     d['BasePercent'] = 0.0
     d['Absolute'] = 0.0    
+    d['tag'] = ""
+    d['type'] = ""
     return d
   })
 
@@ -214,10 +216,27 @@ Array.from(protoactions).filter(d => d.children[0].textContent.includes("Attack"
       record['type'] = item.attributes['type'].value
     }
   stat_table_data.push(record)
+  if (record['niceName'] == "BuildingAttack (Siege) damage"){
+    stat_table_data.push({
+      Absolute: 0,
+      BasePercent: 0,
+      baseValue: 1,
+      damagetype: "Siege",
+      niceName: "BuildingAttack (Siege) damagebonus Building",
+      tag: "damagebonus",
+      type: "Building"
+      })
+
+  }
   })
 })
 
 function calcModifier(record, effect, relativity){
+  if (effect.attributes['unittype'] != undefined){
+    if(effect.attributes['unittype'].value != record['type'] ){
+     return record
+    }
+  }
   if (relativity == 'BasePercent'){
     record['BasePercent'] = record['BasePercent'] + parseFloat(effect.attributes['amount'].value) - 1.0
   }
@@ -232,16 +251,24 @@ function applyEffect(effect, stat_table_data){
    if(effect.attributes['subtype'].value==record['subtype']){
         record = calcModifier(record, effect, effect.attributes['relativity'].value)
    }
+   if(effect.attributes['action'] != undefined){
+     // record['tag'] = damagebonus, record['type'] = Building, 
+    if(effect.attributes['subtype'].value.toLowerCase() == record['tag'] && record['niceName'].includes(effect.attributes['action'].value ) ){
+      console.log("building", record)    
+      record = calcModifier(record, effect, effect.attributes['relativity'].value)
+    }
+  }
    if(effect.attributes['subtype'].value=='DamageForAllHandLogicActions' && record['damagetype'] == "Hand" &&  record['tag'] == "damage"){
         record = calcModifier(record, effect, effect.attributes['relativity'].value)
    }
-   if(effect.attributes['subtype'].value =='DamageBonus' && effect.attributes['allactions'].value=='1' &&  record['tag'] == "damagebonus"
-      && effect.attributes['unittype'].value == record['type'] ){
-        record = calcModifier(record, effect, effect.attributes['relativity'].value)
-   }
-   if(effect.attributes['subtype'].value=='Damage' && effect.attributes['allactions'].value=='1' &&  record['tag'] == "damage"){
-        record = calcModifier(record, effect, effect.attributes['relativity'].value)
-   }
+   if(effect.attributes['allactions'] != undefined){
+    if(effect.attributes['subtype'].value =='DamageBonus' && effect.attributes['allactions'].value=='1' &&  record['tag'] == "damagebonus" ){
+          record = calcModifier(record, effect, effect.attributes['relativity'].value)
+    }
+    if(effect.attributes['subtype'].value=='Damage' && effect.attributes['allactions'].value=='1' &&  record['tag'] == "damage"){
+          record = calcModifier(record, effect, effect.attributes['relativity'].value)
+    }
+  }
    return record
   })
   return stat_table_data
