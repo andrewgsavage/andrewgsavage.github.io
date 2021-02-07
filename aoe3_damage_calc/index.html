@@ -340,7 +340,7 @@ function updateUnitTechs(unit){
     tags = Array.from(parent.getElementsByTagName(element)).filter(d => d.textContent == textConent)
     return tags.length>0
   }
-  test = techs
+  test = Array.from(techs)
   research_techs = techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
       hasElementWithTextContent(d, "flag", "UpgradeTech") )
   hc_techs = techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
@@ -348,12 +348,12 @@ function updateUnitTechs(unit){
   team_techs = techs.filter(d => !hc_techs.includes(d) && 
       hasElementWithTextContent(d, "flag", "HomeCity")  && 
       hasElementWithTextContent(d, "flag", "TeamTech") )
-    techs = hc_techs
-  test = techs
+  native_techs = techs.filter(d => hasElementWithTextContent(d, "flag", "YPNativeImprovement") )
+    techs = native_techs
   
   var gallery = d3.select('.cards').html("")
 
-  tech_groups = [research_techs, hc_techs, team_techs]
+  tech_groups = [research_techs, hc_techs, team_techs, native_techs]
   tech_groups.forEach(function(techs){
   var techs_container = gallery.append("div")
     .attr('class', 'card_group')
