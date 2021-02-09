@@ -54,7 +54,7 @@ var civs = [
 {name: 'Dutch', age0Civ: 'Age0Dutch', homecity: 'homecitydutch', techs: ['Age0Dutch', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
 {name: 'German', age0Civ: 'Age0German', homecity: 'homecitygerman', techs: ['Age0German', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
 {name: 'Portuguese', age0Civ: 'Age0Portuguese', homecity: 'homecityportuguese', techs: ['Age0Portuguese', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
-{name: 'Ottoman', age0Civ: 'Age0Ottoman', homecity: 'homecityottomans', techs: ['Age0Ottoman', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
+{name: 'Ottoman', age0Civ: 'Age0Ottoman', homecity: 'homecityottomans', techs: ['Age0Ottoman', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEVeteranNizam']},
 {name: 'Spanish', techtree: 'Age0Spanish', homecity: 'homecityspanish', techs: ['Age0Spanish', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
 {name: 'Iroquois', techtree: 'Age0XPIroquois', homecity: 'homecityxpiroquois', techs: ['Age0XPIroquois', 'HCXPNewWaysIroquois', ]},
 {name: 'Aztec', techtree: 'Age0XPAztec', homecity: 'homecityxpaztec', techs: ['Age0XPAztec', ]},
@@ -162,9 +162,7 @@ var text_stats =[
 
 function getAllEffects(tech_list){
   effects = tech_list.map(function(age0Civ){
-    console.log(age0Civ)
     age0Civ = Array.from(techtree.children).filter(d => d.attributes["name"].value == age0Civ)[0]
-    console.log(age0Civ)
     return Array.from(age0Civ.getElementsByTagName("effect"))
   })
   return [].concat(...effects)
@@ -368,7 +366,7 @@ function updateUnitTechs(unit){
     return tags.length>0
   }
   research_techs = relevant_techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
-      hasElementWithTextContent(d, "flag", "UpgradeTech") )
+      (hasElementWithTextContent(d, "flag", "UpgradeTech") || ["PaperCartridge"].includes(d.attributes['name'].value) ) )
   hc_techs = relevant_techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
       ( hasElementWithTextContent(d, "flag", "HomeCity") || hasElementWithTextContent(d, "flag", "YPConsulateTech") ))
   team_techs = relevant_techs.filter(d => !hc_techs.includes(d) && 
