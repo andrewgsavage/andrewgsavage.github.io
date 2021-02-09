@@ -23,29 +23,14 @@ div.active {
 
 <table class="stats"></table>
 
-<div class="cards"></table>
+<div class="cards"></div>
 <!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
-
+<table class="tags"></table>
 <!-- Color Scale -->
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
 
 <script>
-
-// set the dimensions and margins of the graph
-var margin = {top: 10, right: 100, bottom: 30, left: 30},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
-
-// append the svg object to the body of the page
-var svg = d3.select("#my_dataviz")
-  .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
 
 var civs = [
 {name: 'French', age0Civ: 'Age0French', homecity: 'homecityfrench', techs: ['Age0French', 'AAStandardStartingTechs', 'HCAdvancedArsenal'] },
@@ -361,8 +346,8 @@ function updateUnitTechs(unit){
     return effects.length>0
   })
 
-  function hasElementWithTextContent(parent, element, textConent){
-    tags = Array.from(parent.getElementsByTagName(element)).filter(d => d.textContent == textConent)
+  function hasElementWithTextContent(parent, element, textContent){
+    tags = Array.from(parent.getElementsByTagName(element)).filter(d => d.textContent == textContent)
     return tags.length>0
   }
   research_techs = relevant_techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
@@ -412,7 +397,56 @@ function updateUnitTechs(unit){
       return link; });
     })
 }
+function updateTags(unit){
+  tags = Array.from(unit.getElementsByTagName("unittype")).map(d => d.textContent)
+  tags = tags.filter(function(tag){
+    if (tag.includes("LogicalType")){
+      return false
+    }
+    if (["UnitClass", "Military", "Unit", "ConvertsHerds", "HasBountyValue", "CountsTowardMilitaryScore"
+  ].includes(tag)){
+      return false
+    }
+    return true
+  })
+  tags = tags.map(function(d){ return {"tag" : d} })
+  var columns = [
+      { head: 'tag', cl: 'title', html: d => d['tag'] },
+]
+  console.log(tags)
+  var table = d3.select('.tags').html("")
 
+  // create table header
+  table.append('thead').append('tr')
+      .selectAll('th')
+      .data(["tag"]).enter()
+      .append('th')
+      // .attr('class', d => d['cl'])
+      .text(d => d);
+
+  // create table body
+  table.append('tbody')
+      .selectAll('tr')
+      .data(tags).enter()
+      .append('tr')
+      .selectAll('td')
+      .data(function(row, i) {
+          return columns.map(function(c) {
+              // compute cell values for this specific row
+              var cell = {};
+              d3.keys(c).forEach(function(k) {
+                  cell[k] = typeof c[k] == 'function' ? c[k](row,i) : c[k];
+              });
+              return cell;
+          });
+      }).enter()
+      .append('td')
+      .text(d => d['head'])
+      .html(d => d['html'])
+      .attr('class', d => d['cl'])
+
+
+}
   // When the button is changed, run the updateChart function
   d3.select("#selectUnitButton").on("change", function(d) {
     // recover the option that has been chosen
@@ -423,5 +457,6 @@ function updateUnitTechs(unit){
     // run the updateChart function with this selected option
     updateUnitStats(unit, [])
     updateUnitTechs(unit)
+    updateTags(unit)
   })
 </script>
