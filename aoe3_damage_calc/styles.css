@@ -1,0 +1,50 @@
+/* 
+  Default font cascade
+*/
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* 
+  D3.js styles
+*/
+.card {
+  display: inline;
+  filter: brightness(50%);
+}
+.card img {
+  height: 80px;
+  width: 80px;
+}
+.active {
+  filter: brightness(100%);
+}
+
+/* 
+  Table styles
+*/
+.stats {
+  min-width: 650px;
+  width: 100%;
+}
+th {
+  color: rgb(49, 49, 49);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  max-width: 200px;
+  font-size: 1.5em;
+}
+tr {
+  background-color: rgb(207, 207, 207);
+}
+tr:nth-child(even) {
+  background-color: rgb(134, 134, 134);
+}
+td {
+  padding: 5px 3px;
+  font-size: 1.1em;
+  color: rgb(26, 26, 26);
+}
+.title {
+  font-weight: 500;
+  padding: 5px 10px 5px 5px;
+  color: rgb(0, 0, 0);
+}
