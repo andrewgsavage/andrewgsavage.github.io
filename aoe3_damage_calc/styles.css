@@ -24,27 +24,27 @@ html {
 */
 .stats {
   min-width: 650px;
-  width: 100%;
 }
 th {
   color: rgb(49, 49, 49);
-  border-bottom: 1px solid rgb(0, 0, 0);
-  max-width: 200px;
-  font-size: 1.5em;
+  border-bottom: 3px solid rgb(0, 0, 0);
+  /* font-weight: 600; */
+  min-width: 50px;
 }
 tr {
   background-color: rgb(207, 207, 207);
 }
 tr:nth-child(even) {
-  background-color: rgb(134, 134, 134);
+  background-color: rgb(185, 185, 185);
 }
 td {
   padding: 5px 3px;
-  font-size: 1.1em;
+  /* font-weight: 450; */
   color: rgb(26, 26, 26);
 }
 .title {
-  font-weight: 500;
+  /* max-width: 200px; */
+  /* font-weight: 450; */
   padding: 5px 10px 5px 5px;
   color: rgb(0, 0, 0);
 }
