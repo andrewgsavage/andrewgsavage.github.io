@@ -1,12 +1,12 @@
 let civs = [
-{name: 'French', age0Civ: 'Age0French', homecity: 'homecityfrench', techs: ['Age0French', 'AAStandardStartingTechs', 'HCAdvancedArsenal'] },
-{name: 'Russian', age0Civ: 'Age0Russian', homecity: 'homecityrussians', techs: ['Age0Russian', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
-{name: 'British', age0Civ: 'Age0British', homecity: 'homecitybritish', techs: ['Age0British', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
-{name: 'Dutch', age0Civ: 'Age0Dutch', homecity: 'homecitydutch', techs: ['Age0Dutch', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
-{name: 'German', age0Civ: 'Age0German', homecity: 'homecitygerman', techs: ['Age0German', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
-{name: 'Portuguese', age0Civ: 'Age0Portuguese', homecity: 'homecityportuguese', techs: ['Age0Portuguese', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
-{name: 'Ottoman', age0Civ: 'Age0Ottoman', homecity: 'homecityottomans', techs: ['Age0Ottoman', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEVeteranNizam']},
-{name: 'Spanish', techtree: 'Age0Spanish', homecity: 'homecityspanish', techs: ['Age0Spanish', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
+{name: 'French', age0Civ: 'Age0French', homecity: 'homecityfrench', techs: ['Age0French', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable'] },
+{name: 'Russian', age0Civ: 'Age0Russian', homecity: 'homecityrussians', techs: ['Age0Russian', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
+{name: 'British', age0Civ: 'Age0British', homecity: 'homecitybritish', techs: ['Age0British', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
+{name: 'Dutch', age0Civ: 'Age0Dutch', homecity: 'homecitydutch', techs: ['Age0Dutch', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
+{name: 'German', age0Civ: 'Age0German', homecity: 'homecitygerman', techs: ['Age0German', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
+{name: 'Portuguese', age0Civ: 'Age0Portuguese', homecity: 'homecityportuguese', techs: ['Age0Portuguese', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
+{name: 'Ottoman', age0Civ: 'Age0Ottoman', homecity: 'homecityottomans', techs: ['Age0Ottoman', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEVeteranNizam', 'DEGrenadierEnable']},
+{name: 'Spanish', techtree: 'Age0Spanish', homecity: 'homecityspanish', techs: ['Age0Spanish', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
 {name: 'Iroquois', techtree: 'Age0XPIroquois', homecity: 'homecityxpiroquois', techs: ['Age0XPIroquois', 'HCXPNewWaysIroquois', ]},
 {name: 'Aztec', techtree: 'Age0XPAztec', homecity: 'homecityxpaztec', techs: ['Age0XPAztec', ]},
 {name: 'Sioux', techtree: 'Age0XPSioux', homecity: 'homecityxpsioux', techs: ['Age0XPSioux', 'HCXPNewWaysSioux', ]},
@@ -14,7 +14,7 @@ let civs = [
 {name: 'Chinese', techtree: 'YPAge0Chinese', homecity: 'homecitychinese', techs: ["YPAge0ChineseConsulate", "YPAge0ChineseBuildings", "YPAge0ChineseUnits", "YPAge0ChineseMonks", "YPAge0ChineseTechs", "YPAge0ChineseWonders", "YPAge0ChineseSpecialTechs", "YPAge0ChineseClone6"]},
 {name: 'Indians', techtree: 'YPAge0Indians', homecity: 'homecityindians', techs: ["ypAge0IndiansConsulate", "ypAge0IndiansBuildings", "ypAge0IndiansUnits", "ypAge0IndiansMonks", "ypAge0IndiansTechs", "ypAge0IndiansWonders", "ypAge0IndiansSpecialTechs", ]},
 {name: 'Inca', techtree: 'DEAge0Inca', homecity: 'homecitydeinca', techs: ['DEAge0Inca', ]},
-{name: 'Swedish', techtree: 'DEAge0Swedish', homecity: 'homecityswedish', techs: ['DEAge0Swedish', ]},
+{name: 'Swedish', techtree: 'DEAge0Swedish', homecity: 'homecityswedish', techs: ['DEAge0Swedish', 'DEGrenadierEnable']},
 ]
 
 // add the options to the button
