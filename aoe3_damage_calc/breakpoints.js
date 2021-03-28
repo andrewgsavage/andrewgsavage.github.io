@@ -200,6 +200,7 @@ function calcUnmodifiedUnitStats(unit){
   protoactions = unit.getElementsByTagName("protoaction")
   Array.from(protoactions).filter(d => d.children[0].textContent.includes("Attack")).forEach(function(protoAction){
     record = {}
+    attackname = protoAction.getElementsByTagName('name')[0].textContent
     myname = protoAction.getElementsByTagName('name')[0].textContent + " (" + protoAction.getElementsByTagName('damagetype')[0].textContent + ") "
 
     Array.from(protoAction.children).filter(d => protoaction_tags.includes(d.tagName)).forEach(function(item){
@@ -209,7 +210,8 @@ function calcUnmodifiedUnitStats(unit){
         BasePercent: 0.0,
         Absolute: 0.0,
         damagetype: protoAction.getElementsByTagName('damagetype')[0].textContent,
-        tag: item.tagName
+        tag: item.tagName,
+        attackName: protoAction.getElementsByTagName('name')[0].textContent,
       }
       if("type" in item.attributes){
         record['niceName'] = record['niceName'] + " " + item.attributes['type'].value
@@ -252,14 +254,21 @@ function calcUnitStats(unit, techs){
   })
   return stat_table_data
 }
-
+unit_stats = {}
 function updateUnitStats(unit, techs, side) {
   stat_table_data = calcUnitStats(unit, techs)
+  unit_stats[side] = stat_table_data
   // column definitions
   let columns = [
       { head: 'Statistic', cl: 'title', html: d => d['niceName'] },
       { head: 'Base', cl: 'right', html: d => d['baseValue'] },
-      { head: '+%', cl: 'center', html: d => d3.format(".0%")(d['BasePercent']) },
+      { head: '+%', cl: 'center', html: function(d){
+        if(d['BasePercent']== 0){
+           return ''
+          }
+        return d3.format(".0%")(d['BasePercent'])
+       }
+       },
       { head: '+abs', cl: 'center', html: d => d['Absolute'] },
       { head: 'Modified', cl: 'right', html: d => d3.format(".2f")(d['modifiedValue']) },
   ];
@@ -302,7 +311,6 @@ function updateUnitStats(unit, techs, side) {
   }
 }
 
-let test =[];
 function gatherUnitTechs(unit, civTechs){
   tags = Array.from(unit.getElementsByTagName("unittype")).map(d => d.textContent)
   tags.push(unit.attributes['name'].value)
@@ -319,12 +327,13 @@ function gatherUnitTechs(unit, civTechs){
     })
     return effects.length>0
   })
-
+  return relevant_techs
+}
+function groupUnitTechs(relevant_techs, civTechs){
   function hasElementWithTextContent(parent, element, textContent){
     tags = Array.from(parent.getElementsByTagName(element)).filter(d => d.textContent == textContent)
     return tags.length>0
-  }
-
+  }  
   research_techs = relevant_techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
       (hasElementWithTextContent(d, "flag", "UpgradeTech") || ["PaperCartridge"].includes(d.attributes['name'].value) ) )
   hc_techs = relevant_techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
@@ -337,7 +346,8 @@ function gatherUnitTechs(unit, civTechs){
 }
 
 function updateUnitTechs(unit, civTechs, side){
-  tech_groups = gatherUnitTechs(unit, civTechs)
+  relevant_techs = gatherUnitTechs(unit, civTechs)
+  tech_groups = groupUnitTechs(relevant_techs, civTechs)
   let gallery = d3.select('.cards.'+side).html("")
 
   tech_groups.forEach(function(techs){
@@ -352,10 +362,11 @@ function updateUnitTechs(unit, civTechs, side){
       .attr('class', 'card '+side)
       .on("click", function(d) {
           this.classList.toggle("active")
+          relevant_techs = gatherUnitTechs(unit, civTechs)
           active_techs = Array.from(d3.selectAll('.card.active.'+side)._groups[0]).map(d =>  d.children[0].attributes['title'].value)
-          console.log(active_techs)
+          console.log(unit, active_techs, relevant_techs)
           active_techs = relevant_techs.filter(d => active_techs.includes(d.attributes['name'].value))
-          console.log(active_techs)
+          console.log(unit, active_techs)
           updateUnitStats(unit, active_techs, side)
       })
       .append('img')
@@ -370,7 +381,7 @@ function updateUnitTechs(unit, civTechs, side){
   })
 }
 
-function updateTags(unit){
+function updateTags(unit, side){
   tags = Array.from(unit.getElementsByTagName("unittype")).map(d => d.textContent)
   tags = tags.filter(function(tag){
     if (tag.includes("LogicalType")){
@@ -386,7 +397,7 @@ function updateTags(unit){
   let columns = [
       { head: 'tag', cl: 'title', html: d => d['tag'] },
 ]
-  let table = d3.select('.tags').html("")
+  let table = d3.select('.tags.'+side).html("")
 
   // create table header
   table.append('thead').append('tr')
@@ -423,7 +434,7 @@ d3.select("#selectUnitButtonLeft").on("change", function(d) {
   unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
   updateUnitStats(unit, [], "left")
   updateUnitTechs(unit, civTechsLeft, "left")
-  updateTags(unit)
+  updateTags(unit, "left")
 })
 
 d3.select("#selectUnitButtonRight").on("change", function(d) {
@@ -431,5 +442,5 @@ d3.select("#selectUnitButtonRight").on("change", function(d) {
   unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
   updateUnitStats(unit, [], "right")
   updateUnitTechs(unit, civTechsRight, "right")
-  updateTags(unit)
+  updateTags(unit, "right")
 })
