@@ -48,3 +48,14 @@ td {
   padding: 5px 10px 5px 5px;
   color: rgb(0, 0, 0);
 }
+
+
+
+
+
+.row {
+  display: flex;
+}
+.column {
+  flex: 50%;
+}
