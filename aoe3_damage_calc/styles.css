@@ -48,6 +48,15 @@ td {
   padding: 5px 10px 5px 5px;
   color: rgb(0, 0, 0);
 }
+.right-align {
+  text-align: right
+}
+.left-align {
+  text-align: left
+}
+.center {
+  text-align: center
+}
 
 
 

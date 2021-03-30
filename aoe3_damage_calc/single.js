@@ -18,7 +18,7 @@ let civs = [
 ]
 
 // add the options to the button
-d3.selectAll(".selectCivButton")
+d3.select("#selectCivButton")
   .selectAll('myOptions')
   .data(civs)
   .enter()
@@ -37,12 +37,16 @@ let unit = [];
 d3.xml("https://raw.githubusercontent.com/andrewgsavage/andrewgsavage.github.io/master/aoe3_damage_calc/xml/protoy.xml", function(data) {
   data = data.children[0]
   protoy = data;
-  units = Array.from(data.children)      
+
+  
+  units = Array.from(data.children)
+      
   militaryUnits = units.filter(function(d){
     unittypes = Array.from(d.getElementsByTagName("unittype"))
     unittypes = unittypes.map(d => d.textContent)
     return unittypes.includes("Military")
   })
+
 })
 
 civs.map(function(civ){    
@@ -54,12 +58,11 @@ civs.map(function(civ){
   })
   return civ
 })
-
 d3.xml("./xml/techtreey.xml", function(data) {
   data = data.children[0]
   techtree = data;
 
-  function updateUnitButton(selectedCiv, unitButtonID) {
+  function updateUnitButton(selectedCiv) {
     effects = getAllEffects(selectedCiv['techs'])
     civUnits = effects.filter(d => d.attributes['type'].value=="Data" ).map(d => d.children[0].textContent)
 
@@ -68,13 +71,13 @@ d3.xml("./xml/techtreey.xml", function(data) {
     civMilUnits = Array.from(civMilUnits)
 
     // add remove old options from the button
-    d3.select(unitButtonID)
+    d3.select("#selectUnitButton")
       .selectAll('option')
       .data([])
       .exit().remove();
 
     // add the options to the button
-    d3.select(unitButtonID)
+    d3.select("#selectUnitButton")
       .selectAll('option')
       .data(civMilUnits)
       .enter()
@@ -84,25 +87,14 @@ d3.xml("./xml/techtreey.xml", function(data) {
   }
 
   // When the button is changed, run the updateChart function
-  d3.select("#selectCivButtonLeft").on("change", function(d) {
+  d3.select("#selectCivButton").on("change", function(d) {
     // recover the option that has been chosen
     let selectedOption = d3.select(this).property("value")
 
     selectedOption = civs.filter(d => d['name'] == selectedOption)[0]
     // run the updateChart function with this selected option
-    updateUnitButton(selectedOption, "#selectUnitButtonLeft")
-    civTechsLeft = updateCivTechs(selectedOption)
-  })
-
-  // When the button is changed, run the updateChart function
-  d3.select("#selectCivButtonRight").on("change", function(d) {
-    // recover the option that has been chosen
-    let selectedOption = d3.select(this).property("value")
-
-    selectedOption = civs.filter(d => d['name'] == selectedOption)[0]
-    // run the updateChart function with this selected option
-    updateUnitButton(selectedOption, "#selectUnitButtonRight")
-    civTechsRight = updateCivTechs(selectedOption)
+    updateUnitButton(selectedOption)
+    updateCivTechs(selectedOption)
   })
 
 })
@@ -131,8 +123,62 @@ function updateCivTechs(selectedCiv){
   effects = getAllEffects(selectedCiv['techs'])
   civTechs = effects.filter(d => d.attributes['type'].value=="TechStatus" ).map(d => d.textContent)
   civTechs = civTechs.concat(selectedCiv['cards'])
-  return civTechs
 }
+
+function calcUnitStats(unit, techs){
+  stat_table_data = [];
+  stat_table_data = text_stats.map(function(d){
+    d['baseValue'] = parseFloat(unit.getElementsByTagName(d['gameName'])[0].textContent)
+    d['BasePercent'] = 0.0
+    d['Absolute'] = 0.0    
+    d['tag'] = ""
+    d['type'] = ""
+    return d
+  })
+
+  tags = Array.from(unit.getElementsByTagName("unittype")).map(d => d.textContent)
+  tags.push(unit.attributes['name'].value)
+
+cost = Array.from(unit.getElementsByTagName("Cost")).map(d => d.textContent + " " + d.attributes['resourcetype'].value )
+stat_table_data.push({
+  gameName:'Cost', niceName: 'Cost', baseValue: cost.join(", ")
+})
+
+
+protoaction_tags = ['damage', 'maxrange', 'rof', 'damagecap', 'damagearea', 'damagebonus']
+protoactions = unit.getElementsByTagName("protoaction")
+Array.from(protoactions).filter(d => d.children[0].textContent.includes("Attack")).forEach(function(protoAction){
+  record ={}
+  myname = protoAction.getElementsByTagName('name')[0].textContent + " (" + protoAction.getElementsByTagName('damagetype')[0].textContent + ") "
+
+  Array.from(protoAction.children).filter(d => protoaction_tags.includes(d.tagName)).forEach(function(item){
+    record = {
+      niceName: myname + item.tagName,
+      baseValue: parseFloat(item.textContent),
+      BasePercent: 0.0,
+      Absolute: 0.0,
+      damagetype: protoAction.getElementsByTagName('damagetype')[0].textContent,
+      tag: item.tagName
+    }
+    if("type" in item.attributes){
+      record['niceName'] = record['niceName'] + " " + item.attributes['type'].value
+      record['type'] = item.attributes['type'].value
+    }
+  stat_table_data.push(record)
+  if (record['niceName'] == "BuildingAttack (Siege) damage"){
+    stat_table_data.push({
+      Absolute: 0,
+      BasePercent: 0,
+      baseValue: 1,
+      damagetype: "Siege",
+      niceName: "BuildingAttack (Siege) damagebonus Building",
+      tag: "damagebonus",
+      type: "Building"
+      })
+
+  }
+  })
+})
 
 function calcModifier(record, effect, relativity){
   if (effect.attributes['unittype'] != undefined){
@@ -176,105 +222,42 @@ function applyEffect(effect, stat_table_data){
   })
   return stat_table_data
 }
+techs.forEach(function(tech){
+// for each effect, 
+// for each target,
+// for each tag
+// check if applicable
+// 
 
-function calcUnmodifiedUnitStats(unit){
-  stat_table_data = [];
-  stat_table_data = text_stats.map(function(d){
-    d['baseValue'] = parseFloat(unit.getElementsByTagName(d['gameName'])[0].textContent)
-    d['BasePercent'] = 0.0
-    d['Absolute'] = 0.0
-    d['tag'] = ""
-    d['type'] = ""
-    return d
-  })
-
-  tags = Array.from(unit.getElementsByTagName("unittype")).map(d => d.textContent)
-  tags.push(unit.attributes['name'].value)
-
-  cost = Array.from(unit.getElementsByTagName("Cost")).map(d => d.textContent + " " + d.attributes['resourcetype'].value )
-  stat_table_data.push({
-    gameName:'Cost', niceName: 'Cost', baseValue: cost.join(", ")
-  })
-
-  protoaction_tags = ['damage', 'maxrange', 'rof', 'damagecap', 'damagearea', 'damagebonus']
-  protoactions = unit.getElementsByTagName("protoaction")
-  Array.from(protoactions).filter(d => d.children[0].textContent.includes("Attack")).forEach(function(protoAction){
-    record = {}
-    attackname = protoAction.getElementsByTagName('name')[0].textContent
-    myname = protoAction.getElementsByTagName('name')[0].textContent + " (" + protoAction.getElementsByTagName('damagetype')[0].textContent + ") "
-
-    Array.from(protoAction.children).filter(d => protoaction_tags.includes(d.tagName)).forEach(function(item){
-      record = {
-        niceName: myname + item.tagName,
-        baseValue: parseFloat(item.textContent),
-        BasePercent: 0.0,
-        Absolute: 0.0,
-        damagetype: protoAction.getElementsByTagName('damagetype')[0].textContent,
-        tag: item.tagName,
-        attackName: protoAction.getElementsByTagName('name')[0].textContent,
-      }
-      if("type" in item.attributes){
-        record['niceName'] = record['niceName'] + " " + item.attributes['type'].value
-        record['type'] = item.attributes['type'].value
-      }
-    stat_table_data.push(record)
-    if (record['niceName'] == "BuildingAttack (Siege) damage"){
-      stat_table_data.push({
-        Absolute: 0,
-        BasePercent: 0,
-        baseValue: 1,
-        damagetype: "Siege",
-        niceName: "BuildingAttack (Siege) damagebonus Building",
-        tag: "damagebonus",
-        type: "Building"
-        })
-    }})
-  })
-  return stat_table_data
+effects = Array.from(tech.getElementsByTagName("effects")[0].children).forEach(function(effect){
+  targets = Array.from(effect.getElementsByTagName("target")).forEach(function(target){
+    if(tags.includes(target.textContent)){
+      stat_table_data = applyEffect(effect, stat_table_data)
+    }
+  });
+})
+})
+stat_table_data = stat_table_data.map(function(d){
+  d['modifiedValue'] = d['baseValue'] * (1.0 + d['BasePercent']) + d['Absolute']
+  return d
+})
+return stat_table_data
 }
 
-function calcUnitStats(unit, techs){
-  stat_table_data = calcUnmodifiedUnitStats(unit)
-  techs.forEach(function(tech){
-  // for each effect, 
-  // for each target,
-  // for each tag
-  // check if applicable
-  effects = Array.from(tech.getElementsByTagName("effects")[0].children).forEach(function(effect){
-    targets = Array.from(effect.getElementsByTagName("target")).forEach(function(target){
-      if(tags.includes(target.textContent)){
-        stat_table_data = applyEffect(effect, stat_table_data)
-      }
-    });
-  })
-  })
-  stat_table_data = stat_table_data.map(function(d){
-    d['modifiedValue'] = d['baseValue'] * (1.0 + d['BasePercent']) + d['Absolute']
-    return d
-  })
-  return stat_table_data
-}
-unit_stats = {}
-function updateUnitStats(unit, techs, side) {
+function updateUnitStats(unit, techs) {
+
   stat_table_data = calcUnitStats(unit, techs)
-  unit_stats[side] = stat_table_data
   // column definitions
   let columns = [
       { head: 'Statistic', cl: 'title', html: d => d['niceName'] },
       { head: 'Base', cl: 'right', html: d => d['baseValue'] },
-      { head: '+%', cl: 'center', html: function(d){
-        if(d['BasePercent']== 0){
-           return ''
-          }
-        return d3.format(".0%")(d['BasePercent'])
-       }
-       },
+      { head: '+%', cl: 'center', html: d => d3.format(".0%")(d['BasePercent']) },
       { head: '+abs', cl: 'center', html: d => d['Absolute'] },
       { head: 'Modified', cl: 'right', html: d => d3.format(".2f")(d['modifiedValue']) },
   ];
 
   // create table
-  let table = d3.select('.stats.'+side).html("")
+  let table = d3.select('.stats').html("")
 
   // create table header
   table.append('thead').append('tr')
@@ -311,7 +294,8 @@ function updateUnitStats(unit, techs, side) {
   }
 }
 
-function gatherUnitTechs(unit, civTechs){
+let test =[];
+function updateUnitTechs(unit){
   tags = Array.from(unit.getElementsByTagName("unittype")).map(d => d.textContent)
   tags.push(unit.attributes['name'].value)
 
@@ -327,13 +311,11 @@ function gatherUnitTechs(unit, civTechs){
     })
     return effects.length>0
   })
-  return relevant_techs
-}
-function groupUnitTechs(relevant_techs, civTechs){
+
   function hasElementWithTextContent(parent, element, textContent){
     tags = Array.from(parent.getElementsByTagName(element)).filter(d => d.textContent == textContent)
     return tags.length>0
-  }  
+  }
   research_techs = relevant_techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
       (hasElementWithTextContent(d, "flag", "UpgradeTech") || ["PaperCartridge"].includes(d.attributes['name'].value) ) )
   hc_techs = relevant_techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
@@ -342,46 +324,46 @@ function groupUnitTechs(relevant_techs, civTechs){
       hasElementWithTextContent(d, "flag", "HomeCity")  && 
       hasElementWithTextContent(d, "flag", "TeamTech") )
   native_techs = relevant_techs.filter(d => hasElementWithTextContent(d, "flag", "YPNativeImprovement") )
-  return [research_techs, hc_techs, team_techs, native_techs]
-}
+  
+  let gallery = d3.select('.cards').html("")
 
-function updateUnitTechs(unit, civTechs, side){
-  relevant_techs = gatherUnitTechs(unit, civTechs)
-  tech_groups = groupUnitTechs(relevant_techs, civTechs)
-  let gallery = d3.select('.cards.'+side).html("")
-
+  tech_groups = [research_techs, hc_techs, team_techs, native_techs]
   tech_groups.forEach(function(techs){
-    let techs_container = gallery.append("div")
-      .attr('class', 'card_group')
+  let techs_container = gallery.append("div")
+    .attr('class', 'card_group')
 
-    let container = techs_container.selectAll('.container')
 
-    container.enter().append('div')
-      .data(techs, function(d) {return d.id; })
-      .enter().append('div')
-      .attr('class', 'card '+side)
-      .on("click", function(d) {
-          this.classList.toggle("active")
-          relevant_techs = gatherUnitTechs(unit, civTechs)
-          active_techs = Array.from(d3.selectAll('.card.active.'+side)._groups[0]).map(d =>  d.children[0].attributes['title'].value)
-          console.log(unit, active_techs, relevant_techs)
-          active_techs = relevant_techs.filter(d => active_techs.includes(d.attributes['name'].value))
-          console.log(unit, active_techs)
-          updateUnitStats(unit, active_techs, side)
-      })
-      .append('img')
-      .attr("title", function(d){return d.attributes['name'].value})
-      .attr('src', function(d) { 
-        icon_list = d.getElementsByTagName("icon")
-        if (icon_list.length == 0){
-          return ""
-        }
-        link = "/aoe3_damage_calc/UI/Data/wpfg/" + icon_list[0].textContent.toLowerCase()
-    return link; });
+  let container = techs_container.selectAll('.container')
+
+  container.enter().append('div')
+    .data(techs, function(d) {return d.id; })
+    .enter().append('div')
+    .attr('class', 'card')
+    
+    .on("click", function(d) {
+        this.classList.toggle("active")
+        active_techs = Array.from(d3.selectAll(".card.active")._groups[0]).map(d =>  d.children[0].attributes['title'].value)
+        console.log(active_techs)
+        active_techs = relevant_techs.filter(d => active_techs.includes(d.attributes['name'].value))
+        console.log(active_techs)
+        updateUnitStats(unit, active_techs)
+
   })
-}
+    
+    .append('img')
+    .attr("title", function(d){return d.attributes['name'].value})
+    .attr('src', function(d) { 
+      icon_list = d.getElementsByTagName("icon")
+      if (icon_list.length == 0){
+        return ""
+      }
 
-function updateTags(unit, side){
+      link = "/aoe3_damage_calc/UI/Data/wpfg/" + icon_list[0].textContent.toLowerCase()
+      link = link
+      return link; });
+    })
+}
+function updateTags(unit){
   tags = Array.from(unit.getElementsByTagName("unittype")).map(d => d.textContent)
   tags = tags.filter(function(tag){
     if (tag.includes("LogicalType")){
@@ -397,13 +379,15 @@ function updateTags(unit, side){
   let columns = [
       { head: 'tag', cl: 'title', html: d => d['tag'] },
 ]
-  let table = d3.select('.tags.'+side).html("")
+  console.log(tags)
+  let table = d3.select('.tags').html("")
 
   // create table header
   table.append('thead').append('tr')
       .selectAll('th')
       .data(["tag"]).enter()
       .append('th')
+      // .attr('class', d => d['cl'])
       .text(d => d);
 
   // create table body
@@ -426,21 +410,18 @@ function updateTags(unit, side){
       .text(d => d['head'])
       .html(d => d['html'])
       .attr('class', d => d['cl'])
+
+
 }
+  // When the button is changed, run the updateChart function
+  d3.select("#selectUnitButton").on("change", function(d) {
+    // recover the option that has been chosen
+    let selectedOption = d3.select(this).property("value")
 
-
-d3.select("#selectUnitButtonLeft").on("change", function(d) {
-  let selectedUnit = d3.select(this).property("value")
-  unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
-  updateUnitStats(unit, [], "left")
-  updateUnitTechs(unit, civTechsLeft, "left")
-  updateTags(unit, "left")
-})
-
-d3.select("#selectUnitButtonRight").on("change", function(d) {
-  let selectedUnit = d3.select(this).property("value")
-  unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
-  updateUnitStats(unit, [], "right")
-  updateUnitTechs(unit, civTechsRight, "right")
-  updateTags(unit, "right")
-})
+    selectedUnit = selectedOption
+    unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
+    // run the updateChart function with this selected option
+    updateUnitStats(unit, [])
+    updateUnitTechs(unit)
+    updateTags(unit)
+  })
