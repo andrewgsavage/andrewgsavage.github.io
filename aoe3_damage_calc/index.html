@@ -77,8 +77,21 @@ let civs = [
     militaryUnits = units.filter(function(d){
       unittypes = Array.from(d.getElementsByTagName("unittype"))
       unittypes = unittypes.map(d => d.textContent)
-      return unittypes.includes("Military")
+      return unittypes.includes("Military") && !unittypes.includes("Ship")
     })
+    mercUnits = militaryUnits.filter(function(d){
+      unittypes = Array.from(d.getElementsByTagName("unittype"))
+      unittypes = unittypes.map(d => d.textContent)
+      return unittypes.includes("Mercenary")
+    })
+    mercUnitNames = Array.from(mercUnits).map(d=>d.attributes["name"].value).sort()
+    natUnits = militaryUnits.filter(function(d){
+      unittypes = Array.from(d.getElementsByTagName("unittype"))
+      unittypes = unittypes.map(d => d.textContent)
+      return unittypes.includes("AbstractNativeWarrior")
+    })
+    natUnitNames = Array.from(natUnits).map(d=>d.attributes["name"].value).sort()
+    
   })
   
   civs.map(function(civ){    
@@ -101,8 +114,8 @@ let civs = [
   
       militaryUnitNames = Array.from(militaryUnits).map(d=>d.attributes["name"].value)
       civMilUnits = new Set(civUnits.filter(d => militaryUnitNames.includes(d)));
-      civMilUnits = Array.from(civMilUnits)
-  
+      civMilUnits = Array.from(civMilUnits).sort() 
+      civMilUnits = civMilUnits.concat(mercUnitNames).concat(natUnitNames)
       // add remove old options from the button
       d3.select(unitButtonID)
         .selectAll('option')
