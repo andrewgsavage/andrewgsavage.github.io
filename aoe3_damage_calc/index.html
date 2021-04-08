@@ -169,16 +169,20 @@ let civs = [
   ];
   
   function getAllEffects(tech_list){
-    effects = tech_list.map(function(age0Civ){
-      age0Civ = Array.from(techtree.children).filter(d => d.attributes["name"].value == age0Civ)[0]
-      return Array.from(age0Civ.getElementsByTagName("effect"))
+    effects = tech_list.map(function(age0CivName){
+      age0Civ = Array.from(techtree.children).filter(d => d.attributes["name"].value == age0CivName)[0]
+      effects =Array.from(age0Civ.getElementsByTagName("effect"))
+      return effects
     })
     return [].concat(...effects)
   }
   
   function updateCivTechs(selectedCiv){
     effects = getAllEffects(selectedCiv['techs'])
-    civTechs = effects.filter(d => d.attributes['type'].value=="TechStatus" ).map(d => d.textContent)
+    civTechs = effects.filter(d => d.attributes['type'].value=="TechStatus").map(d => d.textContent)
+    if(selectedCiv['name'] =="Russian"){
+      civTechs = civTechs.concat(["Age0Russian"])
+    }
     civTechs = civTechs.concat(selectedCiv['cards'])
     return civTechs
   }
@@ -385,7 +389,8 @@ let civs = [
     relevant_techs = Array.from(techtree.children).filter(function(tech){
       effects_parent = tech.getElementsByTagName("effects")
       if (effects_parent.length == 0){
-        return false}
+        return false
+      }
       effects = Array.from(tech.getElementsByTagName("effects")[0].children).filter(function(effect){
         targets = Array.from(effect.getElementsByTagName("target")).filter(function(target){
           return tags.includes(target.textContent);
@@ -401,8 +406,9 @@ let civs = [
       tags = Array.from(parent.getElementsByTagName(element)).filter(d => d.textContent == textContent)
       return tags.length>0
     }  
+    console.log(relevant_techs.filter(d => d.attributes['name'].value == "Age0Russian" ) )
     research_techs = relevant_techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
-        (hasElementWithTextContent(d, "flag", "UpgradeTech") || ["PaperCartridge"].includes(d.attributes['name'].value) ) )
+        (hasElementWithTextContent(d, "flag", "UpgradeTech") || ["PaperCartridge", "Age0Russian"].includes(d.attributes['name'].value) ) )
     hc_techs = relevant_techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
         ( hasElementWithTextContent(d, "flag", "HomeCity") || hasElementWithTextContent(d, "flag", "YPConsulateTech") ))
     team_techs = relevant_techs.filter(d => !hc_techs.includes(d) && 
@@ -414,6 +420,7 @@ let civs = [
   
   function updateUnitTechs(unit, civTechs, side){
     relevant_techs = gatherUnitTechs(unit, civTechs)
+    console.log(relevant_techs,civTechs)
     tech_groups = groupUnitTechs(relevant_techs, civTechs)
     let gallery = d3.select('.cards.'+side).html("")
   
@@ -541,6 +548,9 @@ let civs = [
       'hitpoints': defender_hp,
       'shots_required': defender_hp / effective_damage,
     }  
+
+    record['full_shots_required'] = Math.ceil(record['shots_required'] )
+    record['seconds_required'] = record['full_shots_required'] * attack_rof
     return record
     })
   return breakpoints_data
@@ -557,6 +567,8 @@ let civs = [
       { head: 'Effective damage', cl: 'right-align', html: d => d3.format(".2f")(d['effective_damage']) },
       { head: 'Hitpoints', cl: 'right-align', html: d => d3.format(".2f")(d['hitpoints']) },
       { head: 'Shots required', cl: 'right-align', html: d => d3.format(".2f")(d['shots_required']) },
+      { head: 'Full shots required', cl: 'right-align', html: d => d3.format(".2f")(d['full_shots_required']) },
+      { head: 'Seconds required', cl: 'right-align', html: d => d3.format(".2f")(d['seconds_required']) },
     ]
     let table = d3.select('.breakpoints.'+attacker_side).html("")
   header = unit_tags[attacker_side].map( d => d['tag']).slice(-1)[0] + " (" + attacker_side + 
