@@ -715,7 +715,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>HCUnlockFort</prereqtech>
-      <age>0</age>
+      <age>1</age>
     </card>
     <card>
       <name>HCFencingSchool</name>
@@ -975,7 +975,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>-1</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>HCXPLandGrab</name>
@@ -1205,7 +1205,7 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPDanceHall</name>
+      <name>DEHCTheaters</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
@@ -1476,31 +1476,29 @@
       <default>
       </default>
       <cards>
-        <card dbid="2573">HCShipWoodCrates1</card>
         <card dbid="2207">HCShipSettlers3</card>
-        <card dbid="3387">HCXPEconomicTheory</card>
-        <card dbid="1992">HCColonialMilitia</card>
         <card dbid="2208">HCShipSettlers4</card>
-        <card dbid="2215">HCShipCoinCrates3</card>
-        <card dbid="1853">HCHandInfantryDamageSpanishTeam</card>
-        <card dbid="2174">HCHandInfantryHitpointsSpanish</card>
-        <card dbid="2029">HCHandCavalryDamageSpanish</card>
-        <card dbid="2025">HCHandCavalryHitpointsSpanish</card>
-        <card dbid="773">HCRoyalDecreeSpanish</card>
-        <card dbid="3441">HCXPUnction</card>
-        <card dbid="2674">HCShipRodeleros5</card>
-        <card dbid="1957">HCAdvancedArsenal</card>
-        <card dbid="3464">HCXPSpanishGold</card>
-        <card dbid="2041">HCRefrigeration</card>
-        <card dbid="2093">HCRoyalMint</card>
-        <card dbid="2028">HCHandInfantryCombatSpanish</card>
-        <card dbid="2045">HCHandCavalryCombatSpanish</card>
-        <card dbid="2622">HCCaballeros</card>
-        <card dbid="2234">HCShipLancers3</card>
+        <card dbid="2618">HCShipLancers5</card>
         <card dbid="2318">HCShipHussars4</card>
-        <card dbid="2236">HCShipFalconets3</card>
-        <card dbid="3345">HCXPIndustrialRevolution</card>
+        <card dbid="2239">HCShipCannons1</card>
+        <card dbid="2190">HCShipCoveredWagons</card>
+        <card dbid="3387">HCXPEconomicTheory</card>
         <card dbid="625">HCUnlockFactory</card>
+        <card dbid="3345">HCXPIndustrialRevolution</card>
+        <card dbid="2623">HCColonialEstancias</card>
+        <card dbid="814">HCUnlockFort</card>
+        <card dbid="2619">HCShipSpanishSquare</card>
+        <card dbid="2227">HCShipPikemen1</card>
+        <card dbid="2674">HCShipRodeleros5</card>
+        <card dbid="2038">HCRidingSchool</card>
+        <card dbid="2037">HCFencingSchool</card>
+        <card dbid="2234">HCShipLancers3</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2220">HCShipCows</card>
+        <card dbid="2206">HCShipSettlers2</card>
+        <card dbid="2236">HCShipFalconets3</card>
+        <card dbid="2045">HCHandCavalryCombatSpanish</card>
       </cards>
     </deck>
     <deck>
@@ -2019,7 +2017,7 @@
       <tech x="1.7" y="4.0">HCArmada</tech>
       <tech x="1.7" y="5.0">HCSpanishTreasureFleet</tech>
       <tech x="1.7" y="7.0">HCXPSpanishGold</tech>
-      <tech x="3.6" y="1.0">HCXPDanceHall</tech>
+      <tech x="3.6" y="1.0">DEHCTheaters</tech>
       <tech x="2.8" y="3.0">HCShipFrigates</tech>
       <tech x="2.4" y="4.0">HCNavalCombat</tech>
       <tech x="3.1" y="4.0">HCShipMonitors</tech>
@@ -2049,7 +2047,7 @@
       <tech x="1.7" y="4.0">HCArmada</tech>
       <tech x="1.7" y="5.0">HCSpanishTreasureFleet</tech>
       <tech x="1.7" y="7.0">HCXPSpanishGold</tech>
-      <tech x="3.6" y="1.0">HCXPDanceHall</tech>
+      <tech x="3.6" y="1.0">DEHCTheaters</tech>
       <tech x="2.8" y="3.0">HCShipFrigates</tech>
       <tech x="2.4" y="4.0">HCNavalCombat</tech>
       <tech x="3.1" y="4.0">HCShipMonitors</tech>

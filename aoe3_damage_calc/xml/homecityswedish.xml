@@ -256,7 +256,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCShipSurgeons</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>DEHCExplorerSwedish</name>
@@ -267,11 +267,10 @@
     </card>
     <card>
       <name>DEHCBlackberries</name>
-      <maxcount>1</maxcount>
+      <maxcount>2</maxcount>
       <level>10</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
-      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>HCShipBalloons</name>
@@ -474,15 +473,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipCrossbowmen1</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>1</age>
-      <displayunitcount>8</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCXPShipHorseArtillery2</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -627,7 +617,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>1</age>
+      <age>2</age>
       <displayunitcount>4</displayunitcount>
     </card>
     <card>
@@ -745,7 +735,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>HCUnlockFort</prereqtech>
-      <age>0</age>
+      <age>1</age>
     </card>
     <card>
       <name>HCFencingSchool</name>
@@ -992,7 +982,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>-1</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>HCXPLandGrab</name>
@@ -1200,7 +1190,7 @@
       <displayunitcount>2</displayunitcount>
     </card>
     <card>
-      <name>HCXPDanceHall</name>
+      <name>DEHCTheaters</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
@@ -1252,6 +1242,7 @@
       <prereqtech>-1</prereqtech>
       <age>1</age>
       <displayunitcount>2</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>DEHCShipMineWagon2</name>
@@ -1260,6 +1251,16 @@
       <prereqtech>-1</prereqtech>
       <age>2</age>
       <displayunitcount>3</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCShipMineWagon3</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>4</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>DEHCSveaLifeguard</name>
@@ -1513,6 +1514,16 @@
       <revoltcard>
       </revoltcard>
     </card>
+    <card>
+      <name>DEHCREVShipBalticFleet</name>
+      <maxcount>-1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>3</age>
+      <displayunitcount>2</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
   </cards>
   <decks>
     <deck>
@@ -1658,6 +1669,7 @@
         <card>DEHCREVBlackberries</card>
         <card>DEHCREVShipCopperMines</card>
         <card>DEHCREVShipHakkapelits</card>
+        <card>DEHCREVShipBalticFleet</card>
       </cards>
     </revoltdeck>
   </decks>
@@ -1806,7 +1818,6 @@
       <tech x="3.2" y="3.0">HCShipHussars5</tech>
       <tech x="4.2" y="1.0">DEHCShipDragoonsRepeat</tech>
       <tech x="4.2" y="2.0">DEHCShipHakkapelits1</tech>
-      <tech x="3.9" y="3.0">HCShipCrossbowmen1</tech>
       <tech x="3.9" y="4.0">HCXPShipHorseArtillery2</tech>
       <tech x="3.4" y="5.0">DEHCShipCaroleans2</tech>
       <tech x="3.9" y="7.0">DEHCShipCaroleans3</tech>
@@ -1854,7 +1865,6 @@
       <tech x="3.2" y="3.0">HCShipHussars5</tech>
       <tech x="4.2" y="1.0">DEHCShipDragoonsRepeat</tech>
       <tech x="4.2" y="2.0">DEHCShipHakkapelits1</tech>
-      <tech x="3.9" y="3.0">HCShipCrossbowmen1</tech>
       <tech x="3.9" y="4.0">HCXPShipHorseArtillery2</tech>
       <tech x="3.4" y="5.0">DEHCShipCaroleans2</tech>
       <tech x="3.9" y="7.0">DEHCShipCaroleans3</tech>
@@ -2016,6 +2026,7 @@
       <tech x="6.1" y="3.0">DEHCShipMineWagonRepeat</tech>
       <tech x="6.1" y="3.0">DEHCShipMineWagon1</tech>
       <tech x="6.1" y="3.0">DEHCShipMineWagon2</tech>
+      <tech x="6.1" y="3.0">DEHCShipMineWagon3</tech>
       <tech x="6.1" y="3.0">DEHCNorthernForests</tech>
     </obtainabletechs>
     <activetechs>
@@ -2042,6 +2053,7 @@
       <tech x="6.1" y="3.0">DEHCShipMineWagonRepeat</tech>
       <tech x="6.1" y="3.0">DEHCShipMineWagon1</tech>
       <tech x="6.1" y="3.0">DEHCShipMineWagon2</tech>
+      <tech x="6.1" y="3.0">DEHCShipMineWagon3</tech>
       <tech x="6.1" y="3.0">DEHCNorthernForests</tech>
     </activetechs>
     <validunits>
@@ -2084,7 +2096,7 @@
       <tech x="4.6" y="5.0">HCMercsHighland</tech>
       <tech x="5.3" y="5.0">HCMercenaryLoyalty</tech>
       <tech x="5.3" y="6.0">HCMercsHessians2</tech>
-      <tech x="4.2" y="1.0">HCXPDanceHall</tech>
+      <tech x="4.2" y="1.0">DEHCTheaters</tech>
       <tech x="6.0" y="1.0">HCPrivateers</tech>
       <tech x="6.0" y="3.0">HCPrivateers2</tech>
       <tech x="6.0" y="5.0">HCPrivateersTeam</tech>
@@ -2115,7 +2127,7 @@
       <tech x="4.6" y="5.0">HCMercsHighland</tech>
       <tech x="5.3" y="5.0">HCMercenaryLoyalty</tech>
       <tech x="5.3" y="6.0">HCMercsHessians2</tech>
-      <tech x="4.2" y="1.0">HCXPDanceHall</tech>
+      <tech x="4.2" y="1.0">DEHCTheaters</tech>
       <tech x="6.0" y="1.0">HCPrivateers</tech>
       <tech x="6.0" y="3.0">HCPrivateers2</tech>
       <tech x="6.0" y="5.0">HCPrivateersTeam</tech>

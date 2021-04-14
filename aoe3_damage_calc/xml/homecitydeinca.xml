@@ -213,7 +213,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>0</age>
-      <displayunitcount>2</displayunitcount>
+      <displayunitcount>1</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -530,7 +530,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>2</age>
+      <age>1</age>
     </card>
     <card>
       <name>HCXPBloodBrothers</name>
@@ -596,7 +596,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>0</age>
+      <age>1</age>
     </card>
     <card>
       <name>DEHCIncaFortifications</name>
@@ -696,13 +696,6 @@
       <age>0</age>
     </card>
     <card>
-      <name>HCSustainableAgriculture</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>1</age>
-    </card>
-    <card>
       <name>HCFurrier</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -728,7 +721,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>HCXPAgrarianWays</name>
@@ -1561,7 +1554,6 @@
       <tech x="1.8" y="3.0">HCSchooners</tech>
       <tech x="2.9" y="5.0">HCExoticHardwoods</tech>
       <tech x="5.7" y="1.0">HCFoodSilos</tech>
-      <tech x="5.7" y="3.0">HCSustainableAgriculture</tech>
       <tech x="7.5" y="1.0">HCFurrier</tech>
       <tech x="7.5" y="5.0">HCMedicine</tech>
       <tech x="7.5" y="6.0">HCXPMedicineTeam</tech>
@@ -1583,7 +1575,6 @@
       <tech>HCSchooners</tech>
       <tech>HCExoticHardwoods</tech>
       <tech>HCFoodSilos</tech>
-      <tech>HCSustainableAgriculture</tech>
       <tech>HCFurrier</tech>
       <tech>HCMedicine</tech>
       <tech>HCXPMedicineTeam</tech>

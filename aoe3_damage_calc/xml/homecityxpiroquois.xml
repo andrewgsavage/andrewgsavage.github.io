@@ -656,7 +656,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>0</age>
+      <age>1</age>
     </card>
     <card>
       <name>HCHeavyFortifications</name>
@@ -719,7 +719,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCNativeWarriors</prereqtech>
-      <age>2</age>
+      <age>1</age>
     </card>
     <card>
       <name>HCXPBloodBrothers</name>
@@ -1223,6 +1223,13 @@
       <prereqtech>-1</prereqtech>
       <age>2</age>
     </card>
+    <card>
+      <name>HCXPWarHutTrainingIroquois</name>
+      <maxcount>1</maxcount>
+      <level>40</level>
+      <prereqtech>-1</prereqtech>
+      <age>1</age>
+    </card>
   </cards>
   <decks>
     <deck>
@@ -1329,8 +1336,8 @@
         <card dbid="2885">HCXPShipTravois3</card>
         <card dbid="2285">HCFoodSilosTeam</card>
         <card dbid="2091">HCExoticHardwoods</card>
-        <card dbid="2859">HCXPBattlefieldConstructionIroquois</card>
         <card dbid="2862">HCXPExtensiveFortifications2</card>
+        <card dbid="3407">HCXPFrenchAllies1</card>
       </cards>
     </deck>
   </decks>
@@ -1583,6 +1590,7 @@
       <tech x="6.3" y="2.0">HCAdvancedMarket</tech>
       <tech x="7.1" y="1.0">HCCheapDocksTeam</tech>
       <tech x="7.1" y="3.0">HCAdvancedDock</tech>
+      <tech x="7.1" y="3.0">HCXPWarHutTrainingIroquois</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.7" y="1.0">HCNativeLore</tech>
@@ -1612,6 +1620,7 @@
       <tech x="6.3" y="2.0">HCAdvancedMarket</tech>
       <tech x="7.1" y="1.0">HCCheapDocksTeam</tech>
       <tech x="7.1" y="3.0">HCAdvancedDock</tech>
+      <tech x="7.1" y="3.0">HCXPWarHutTrainingIroquois</tech>
     </activetechs>
     <validunits>
     </validunits>

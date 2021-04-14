@@ -201,15 +201,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipCows</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>HCShipSheep1</prereqtech>
-      <age>1</age>
-      <displayunitcount>7</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCShipCoveredWagons</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -256,7 +247,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCShipSurgeons</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>HCExplorerPortuguese</name>
@@ -622,13 +613,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>DEHCExtensiveFortificationsEuropean</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>HCUnlockFort</prereqtech>
-      <age>0</age>
-    </card>
-    <card>
       <name>HCNativeLore</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -985,7 +969,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>-1</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>HCXPLandGrab</name>
@@ -1199,7 +1183,7 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPDanceHall</name>
+      <name>DEHCTheaters</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
@@ -1548,7 +1532,6 @@
       <cards>
         <card dbid="3387">HCXPEconomicTheory</card>
         <card dbid="2573">HCShipWoodCrates1</card>
-        <card dbid="2220">HCShipCows</card>
         <card dbid="2212">HCShipWoodCrates3</card>
         <card dbid="2215">HCShipCoinCrates3</card>
         <card dbid="2209">HCShipFoodCrates3</card>
@@ -1764,7 +1747,6 @@
       <tech x="0.2" y="3.0">HCTeamWoodCrates</tech>
       <tech x="3.6" y="1.0">HCShipSheep1</tech>
       <tech x="3.3" y="2.0">HCShipSheep2</tech>
-      <tech x="4.0" y="2.0">HCShipCows</tech>
       <tech x="4.9" y="2.0">HCShipSurgeons</tech>
       <tech x="4.9" y="3.0">HCXPMasterSurgeons</tech>
       <tech x="4.9" y="5.0">HCXPAdvancedBalloon</tech>
@@ -1794,7 +1776,6 @@
       <tech x="0.2" y="3.0">HCTeamWoodCrates</tech>
       <tech x="3.6" y="1.0">HCShipSheep1</tech>
       <tech x="3.3" y="2.0">HCShipSheep2</tech>
-      <tech x="4.0" y="2.0">HCShipCows</tech>
       <tech x="4.9" y="2.0">HCShipSurgeons</tech>
       <tech x="4.9" y="3.0">HCXPMasterSurgeons</tech>
       <tech x="4.9" y="5.0">HCXPAdvancedBalloon</tech>
@@ -1932,7 +1913,6 @@
     <displaynamestringid>24969</displaynamestringid>
     <rolloverstringid>25538</rolloverstringid>
     <obtainabletechs>
-      <tech x="0.0" y="1.0">DEHCExtensiveFortificationsEuropean</tech>
       <tech x="0.0" y="1.0">HCNativeLore</tech>
       <tech x="0.0" y="2.0">HCNativeTreaties</tech>
       <tech x="0.0" y="3.0">HCNativeWarriors</tech>
@@ -1965,7 +1945,6 @@
       <tech x="7.4" y="3.0">HCRobberBarons</tech>
     </obtainabletechs>
     <activetechs>
-      <tech x="0.0" y="1.0">DEHCExtensiveFortificationsEuropean</tech>
       <tech x="0.0" y="1.0">HCNativeLore</tech>
       <tech x="0.0" y="2.0">HCNativeTreaties</tech>
       <tech x="0.0" y="3.0">HCNativeWarriors</tech>
@@ -2094,7 +2073,7 @@
       <tech x="1.7" y="4.0">HCShipMonitors</tech>
       <tech x="1.7" y="7.0">HCXPShipMonitorsTeam</tech>
       <tech x="3.1" y="1.0">HCAdmirality</tech>
-      <tech x="4.4" y="1.0">HCXPDanceHall</tech>
+      <tech x="4.4" y="1.0">DEHCTheaters</tech>
       <tech x="3.5" y="4.0">HCXPMercsElmeti</tech>
       <tech x="4.4" y="3.0">HCMercsCorsairs</tech>
       <tech x="4.4" y="4.0">HCMercsMamelukes</tech>
@@ -2121,7 +2100,7 @@
       <tech x="1.7" y="4.0">HCShipMonitors</tech>
       <tech x="1.7" y="7.0">HCXPShipMonitorsTeam</tech>
       <tech x="3.1" y="1.0">HCAdmirality</tech>
-      <tech x="4.4" y="1.0">HCXPDanceHall</tech>
+      <tech x="4.4" y="1.0">DEHCTheaters</tech>
       <tech x="3.5" y="4.0">HCXPMercsElmeti</tech>
       <tech x="4.4" y="3.0">HCMercsCorsairs</tech>
       <tech x="4.4" y="4.0">HCMercsMamelukes</tech>

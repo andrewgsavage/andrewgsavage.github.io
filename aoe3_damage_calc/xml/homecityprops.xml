@@ -671,6 +671,68 @@
     <visual>homecity\home_city_props\prop_swedish_northern_lights.xml</visual>
   </prop>
   <prop>
+    <name>American_LightSetDay</name>
+    <type>LightSet</type>
+    <displayname>Daytime Lighting</displayname>
+    <displaynamestringid>42534</displaynamestringid>
+    <description>The city with the sun shining brightly.</description>
+    <descriptionstringid>42535</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Capitol</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_lightset1</icon>
+    <variationid>0</variationid>
+    <lightset>american_homecity</lightset>
+  </prop>
+  <prop>
+    <name>American_LightSetNight</name>
+    <type>LightSet</type>
+    <displayname>Night Lighting</displayname>
+    <displaynamestringid>49058</displaynamestringid>
+    <description>The city at night with spectacular fireworks.</description>
+    <descriptionstringid>49059</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Capitol</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_fireworks</icon>
+    <variationid>1</variationid>
+    <lightset>america_hc_night</lightset>
+    <visual>homecity\home_city_props\prop_american_fireworks.xml</visual>
+  </prop>
+  <prop>
+    <name>American_LightSetNightNoFireworks</name>
+    <type>LightSet</type>
+    <displayname>Night Lighting without fireworks</displayname>
+    <displaynamestringid>49225</displaynamestringid>
+    <description>The city at night.</description>
+    <descriptionstringid>49226</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Capitol</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_lightset3</icon>
+    <variationid>1</variationid>
+    <lightset>america_hc_night</lightset>
+    <visual>homecity\home_city_props\prop_american_night_lights.xml</visual>
+  </prop>
+  <prop>
+    <name>American_LightSetEvening</name>
+    <type>LightSet</type>
+    <displayname>Dusk Lighting</displayname>
+    <displaynamestringid>42536</displaynamestringid>
+    <description>The city at dusk.</description>
+    <descriptionstringid>42537</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Capitol</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_lightset2</icon>
+    <variationid>2</variationid>
+    <lightset>america_hc_dusk</lightset>
+  </prop>
+  <prop>
     <name>British_AcadProp01</name>
     <type>Object</type>
     <displayname>Patriotic Bunting</displayname>
@@ -8501,6 +8563,12 @@
     <prop>Swedish_LightSetNorthernLights</prop>
   </exclusiveprops>
   <exclusiveprops>
+    <prop>American_LightSetDay</prop>
+    <prop>American_LightSetEvening</prop>
+    <prop>American_LightSetNight</prop>
+    <prop>American_LightSetNightNoFireworks</prop>
+  </exclusiveprops>
+  <exclusiveprops>
     <prop>British_NWTCTexture0</prop>
     <prop>British_NWTCTexture1</prop>
     <prop>British_NWTCTexture2</prop>
@@ -9547,5 +9615,619 @@
     <prop>Swedish_HTexture1</prop>
     <prop>Swedish_HTexture2</prop>
     <prop>Swedish_HTexture3</prop>
+  </exclusiveprops>
+  <prop>
+    <name>American_HFlag01_Academy</name>
+    <type>Object</type>
+    <displayname>Star-Spangled Banner Flags</displayname>
+    <displaynamestringid>49223</displaynamestringid>
+    <description>Display the Star-Spangled Banner flag on this building.</description>
+    <descriptionstringid>49224</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_flags_american_academy.xml</visual>
+    <position>
+      <bone>bone_amFlg</bone>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_stars_flag</icon>
+  </prop>
+  <prop>
+    <name>American_HFlag02_Academy</name>
+    <type>Object</type>
+    <displayname>Betsy Ross Flags</displayname>
+    <displaynamestringid>49155</displaynamestringid>
+    <description>Display the Betsy Ross flag on this building.</description>
+    <descriptionstringid>49156</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_flags_betsyross_academy.xml</visual>
+    <position>
+      <bone>bone_amFlg</bone>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_bross_flag</icon>
+  </prop>
+  <prop>
+    <name>American_HFlag03_Academy</name>
+    <type>Object</type>
+    <displayname>Grand Union Flags</displayname>
+    <displaynamestringid>49157</displaynamestringid>
+    <description>Display the Grand Union flag on this building.</description>
+    <descriptionstringid>49158</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_flags_grandunion_academy.xml</visual>
+    <position>
+      <bone>bone_amFlg</bone>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_union_flag</icon>
+  </prop>
+  <prop>
+    <name>American_HFlag01_Capitol</name>
+    <type>Object</type>
+    <displayname>Star-Spangled Banner Flags</displayname>
+    <displaynamestringid>49223</displaynamestringid>
+    <description>Display the Star-Spangled Banner flag on this building.</description>
+    <descriptionstringid>49224</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_flags_american_capitol.xml</visual>
+    <position>
+      <bone>bone_amFlg</bone>
+      <building>Capitol</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_stars_flag</icon>
+  </prop>
+  <prop>
+    <name>American_HFlag02_Capitol</name>
+    <type>Object</type>
+    <displayname>Betsy Ross Flags</displayname>
+    <displaynamestringid>49155</displaynamestringid>
+    <description>Display the Betsy Ross flag on this building.</description>
+    <descriptionstringid>49156</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_flags_betsyross_capitol.xml</visual>
+    <position>
+      <bone>bone_amFlg</bone>
+      <building>Capitol</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_bross_flag</icon>
+  </prop>
+  <prop>
+    <name>American_HFlag03_Capitol</name>
+    <type>Object</type>
+    <displayname>Grand Union Flags</displayname>
+    <displaynamestringid>49157</displaynamestringid>
+    <description>Display the Grand Union flag on this building.</description>
+    <descriptionstringid>49158</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_flags_grandunion_capitol.xml</visual>
+    <position>
+      <bone>bone_amFlg</bone>
+      <building>Capitol</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_union_flag</icon>
+  </prop>
+  <prop>
+    <name>American_HFlag01_WhiteHouse</name>
+    <type>Object</type>
+    <displayname>Star-Spangled Banner Flags</displayname>
+    <displaynamestringid>49223</displaynamestringid>
+    <description>Display the Star-Spangled Banner flag on this building.</description>
+    <descriptionstringid>49224</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_flags_american_whitehouse.xml</visual>
+    <position>
+      <bone>bone_amFlg</bone>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_stars_flag</icon>
+  </prop>
+  <prop>
+    <name>American_HFlag02_WhiteHouse</name>
+    <type>Object</type>
+    <displayname>Betsy Ross Flags</displayname>
+    <displaynamestringid>49155</displaynamestringid>
+    <description>Display the Betsy Ross flag on this building.</description>
+    <descriptionstringid>49156</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_flags_betsyross_whitehouse.xml</visual>
+    <position>
+      <bone>bone_amFlg</bone>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_bross_flag</icon>
+  </prop>
+  <prop>
+    <name>American_HFlag03_WhiteHouse</name>
+    <type>Object</type>
+    <displayname>Grand Union Flags</displayname>
+    <displaynamestringid>49157</displaynamestringid>
+    <description>Display the Grand Union flag on this building.</description>
+    <descriptionstringid>49158</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_flags_grandunion_whitehouse.xml</visual>
+    <position>
+      <bone>bone_amFlg</bone>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_union_flag</icon>
+  </prop>
+  <prop>
+    <name>American_FloatingCrates</name>
+    <type>Object</type>
+    <displayname>Floating Crates</displayname>
+    <displaynamestringid>49161</displaynamestringid>
+    <description>Floating crates in the Harbor.</description>
+    <descriptionstringid>49162</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\american_floatingcrates.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_tea_party</icon>
+  </prop>
+  <prop>
+    <name>American_BuntingFlags01</name>
+    <type>Object</type>
+    <displayname>Bunting Flags</displayname>
+    <displaynamestringid>49159</displaynamestringid>
+    <description>Display Bunting flag on this building.</description>
+    <descriptionstringid>49160</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_whitehouse_bunting.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+  </prop>
+  <prop>
+    <name>American_BuntingFlags02</name>
+    <type>Object</type>
+    <displayname>Bunting Flags</displayname>
+    <displaynamestringid>49159</displaynamestringid>
+    <description>Display Bunting flag on this building.</description>
+    <descriptionstringid>49160</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_capitol_bunting.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Capitol</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+  </prop>
+  <prop>
+    <name>American_BuntingFlags03</name>
+    <type>Object</type>
+    <displayname>Bunting Flags</displayname>
+    <displaynamestringid>49159</displaynamestringid>
+    <description>Display Bunting flag on this building.</description>
+    <descriptionstringid>49160</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_manufacturingplant_bunting.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+  </prop>
+  <prop>
+    <name>American_BuntingFlags04</name>
+    <type>Object</type>
+    <displayname>Bunting Flags</displayname>
+    <displaynamestringid>49159</displaynamestringid>
+    <description>Display Bunting flag on this building.</description>
+    <descriptionstringid>49160</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_academy_bunting.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+  </prop>
+  <prop>
+    <name>American_BuntingFlags05</name>
+    <type>Object</type>
+    <displayname>Bunting Flags</displayname>
+    <displaynamestringid>49159</displaynamestringid>
+    <description>Display Bunting flag on this building.</description>
+    <descriptionstringid>49160</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_harbor_bunting.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+  </prop>
+  <prop>
+    <name>American_Obelisk</name>
+    <type>Object</type>
+    <displayname>Obelisk</displayname>
+    <displaynamestringid>49163</displaynamestringid>
+    <description>Display Obelisk statue at the Harbor.</description>
+    <descriptionstringid>49164</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_statue_obelisk.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_obelisk</icon>
+  </prop>
+  <prop>
+    <name>American_CapitolCannons</name>
+    <type>Object</type>
+    <displayname>Cannons</displayname>
+    <displaynamestringid>200012</displaynamestringid>
+    <description>Display Cannons at the Capitol.</description>
+    <descriptionstringid>49165</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_capitol_cannons.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Capitol</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_capitol_cannon</icon>
+  </prop>
+  <prop>
+    <name>American_Cranes</name>
+    <type>Object</type>
+    <displayname>Cranes</displayname>
+    <displaynamestringid>49167</displaynamestringid>
+    <description>Display Cranes at the Harbor.</description>
+    <descriptionstringid>49168</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_harbour_cranes.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\dock_crane</icon>
+  </prop>
+  <prop>
+    <name>American_ExplorerStatue</name>
+    <type>Object</type>
+    <displayname>Explorer Statue</displayname>
+    <displaynamestringid>49169</displaynamestringid>
+    <description>Display Explorer statue at the Harbor.</description>
+    <descriptionstringid>49170</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_statue.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_explorer</icon>
+  </prop>
+  <prop>
+    <name>American_NateStatue</name>
+    <type>Object</type>
+    <displayname>Nate Statue</displayname>
+    <displaynamestringid>49227</displaynamestringid>
+    <description>Display Nathan Black statue at the Harbor.</description>
+    <descriptionstringid>49228</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_statue_nate.xml</visual>
+    <position>
+      <bone>bone_nate_statue</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_nate</icon>
+  </prop>
+  <prop>
+    <name>American_DockBoats01</name>
+    <type>Object</type>
+    <displayname>Swedish Ships</displayname>
+    <displaynamestringid>49171</displaynamestringid>
+    <description>Swedish ships docked at the Harbor.</description>
+    <descriptionstringid>49172</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_harbour_boats.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_ship</icon>
+  </prop>
+  <prop>
+    <name>American_CherryTrees</name>
+    <type>Object</type>
+    <displayname>Cherry Trees</displayname>
+    <displaynamestringid>49173</displaynamestringid>
+    <description>Display Cherry trees in front of the Capitol Building.</description>
+    <descriptionstringid>49174</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\american_cherrytree_prop01.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Capitol</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_cherrytree</icon>
+  </prop>
+  <prop>
+    <name>Ameircan_MarketStalls</name>
+    <type>Object</type>
+    <displayname>Market Stalls</displayname>
+    <displaynamestringid>49175</displaynamestringid>
+    <description>Display Market stalls infront of the White House.</description>
+    <descriptionstringid>49176</descriptionstringid>
+    <levelprereq>30</levelprereq>
+    <visual>homecity\home_city_props\prop_american_market_stalls.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\crate_awning</icon>
+  </prop>
+  <prop>
+    <name>American_ManufacturingCannons</name>
+    <type>Object</type>
+    <displayname>Cannons</displayname>
+    <displaynamestringid>200012</displaynamestringid>
+    <description>Display Cannons at the Manufacturing Plant.</description>
+    <descriptionstringid>49166</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_american_manufacture_cannon.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\sw_cannon</icon>
+  </prop>
+  <prop>
+    <name>American_Eagle</name>
+    <type>Unit</type>
+    <displayname>Bald Eagle</displayname>
+    <displaynamestringid>49177</displaynamestringid>
+    <description>A soaring bald eagle that watches the city.</description>
+    <descriptionstringid>49178</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_eagle</bone>
+      <building>Capitol</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_eagle</icon>
+  </prop>
+  <prop>
+    <name>AmericanHotdogMan</name>
+    <type>Unit</type>
+    <displayname>Hotdog man!</displayname>
+    <displaynamestringid>49179</displaynamestringid>
+    <description>Hotdog Vendor, get your hotdogs here!</description>
+    <descriptionstringid>49180</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_hotdog_cart</icon>
+  </prop>
+  <prop>
+    <name>AmericanAcademyGuards</name>
+    <type>Unit</type>
+    <displayname>Academy Guards</displayname>
+    <displaynamestringid>49183</displaynamestringid>
+    <description>Guards standing guard in front of the Academy.</description>
+    <descriptionstringid>49184</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_guard_soldier</bone>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_soldier</icon>
+  </prop>
+  <prop>
+    <name>AmericanPreacher</name>
+    <type>PerformerUnit</type>
+    <displayname>The Reverend</displayname>
+    <displaynamestringid>42498</displaynamestringid>
+    <description>A street preacher sharing the good news.</description>
+    <descriptionstringid>42499</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\preacher</icon>
+  </prop>
+  <prop>
+    <name>AmericanMime</name>
+    <type>PerformerUnit</type>
+    <displayname>Mime</displayname>
+    <displaynamestringid>42474</displaynamestringid>
+    <description>A street performer who interacts with an unseen world.</description>
+    <descriptionstringid>42475</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\mime</icon>
+  </prop>
+  <prop>
+    <name>AmericanPainter</name>
+    <type>PerformerUnit</type>
+    <displayname>The Artist</displayname>
+    <displaynamestringid>42506</displaynamestringid>
+    <description>An artist who sets up his easel and paints.</description>
+    <descriptionstringid>42507</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\painter</icon>
+  </prop>
+  <prop>
+    <name>AmericanStagecoach</name>
+    <type>Unit</type>
+    <displayname>The Royal Coach</displayname>
+    <displaynamestringid>42504</displaynamestringid>
+    <description>This coach waits upon the whims of royalty.</description>
+    <descriptionstringid>42505</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\stagecoach</icon>
+  </prop>
+  <prop>
+    <name>American_CapitolTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Captiol - Original</displayname>
+    <displaynamestringid>49185</displaynamestringid>
+    <description>The original version of the Capitol with copper roofing.</description>
+    <descriptionstringid>49186</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Capitol</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_capitol2</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>American_CapitolTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Captiol - Green Copper Roofing</displayname>
+    <displaynamestringid>49187</displaynamestringid>
+    <description>The Capitol with green cooper roofing.</description>
+    <descriptionstringid>49188</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Capitol</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_capitol1</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>American_ManufacturingTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>American Manufacturing Plant - Original</displayname>
+    <displaynamestringid>49189</displaynamestringid>
+    <description>The original color scheme of the American Manufacturing Plant.</description>
+    <descriptionstringid>49190</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_manufacture1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>American_ManufacturingTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>American Manufacturing Plant - Red</displayname>
+    <displaynamestringid>49191</displaynamestringid>
+    <description>A red and gold version of the American Manufacturing Plant.</description>
+    <descriptionstringid>49192</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_manufacture2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>American_ManufacturingTexture2</name>
+    <type>ReplaceVisual</type>
+    <displayname>American Manufacturing Plant - Blue</displayname>
+    <displaynamestringid>49193</displaynamestringid>
+    <description>A blue and white version of the American Manufacturing Plant.</description>
+    <descriptionstringid>49194</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_manufacture3</icon>
+    <variationid>2</variationid>
+  </prop>
+  <prop>
+    <name>American_ManufacturingTexture3</name>
+    <type>ReplaceVisual</type>
+    <displayname>American Manufacturing Plant - Orange</displayname>
+    <displaynamestringid>49195</displaynamestringid>
+    <description>An orange version of the American Manufacturing Plant.</description>
+    <descriptionstringid>49196</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_manufacture4</icon>
+    <variationid>3</variationid>
+  </prop>
+  <prop>
+    <name>American_AcademyTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Academy - Original</displayname>
+    <displaynamestringid>49197</displaynamestringid>
+    <description>The original version of the Academy.</description>
+    <descriptionstringid>49198</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_military1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>American_AcademyTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Academy - Copper</displayname>
+    <displaynamestringid>49199</displaynamestringid>
+    <description>A white colour way of the Academy with bright copper roofing.</description>
+    <descriptionstringid>49200</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_military2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>American_AcademyTexture2</name>
+    <type>ReplaceVisual</type>
+    <displayname>Academy - Green</displayname>
+    <displaynamestringid>49201</displaynamestringid>
+    <description>A white colour way of the Academy with green roofing.</description>
+    <descriptionstringid>49202</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\usa_military3</icon>
+    <variationid>2</variationid>
+  </prop>
+  <exclusiveprops>
+    <prop>American_HFlag01_Academy</prop>
+    <prop>American_HFlag02_Academy</prop>
+    <prop>American_HFlag03_Academy</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>American_HFlag01_Capitol</prop>
+    <prop>American_HFlag02_Capitol</prop>
+    <prop>American_HFlag03_Capitol</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>American_HFlag01_WhiteHouse</prop>
+    <prop>American_HFlag02_WhiteHouse</prop>
+    <prop>American_HFlag03_WhiteHouse</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>American_ExplorerStatue</prop>
+    <prop>American_NateStatue</prop>
+    <prop>American_Obelisk</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>American_CapitolTexture0</prop>
+    <prop>American_CapitolTexture1</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>American_ManufacturingTexture0</prop>
+    <prop>American_ManufacturingTexture1</prop>
+    <prop>American_ManufacturingTexture2</prop>
+    <prop>American_ManufacturingTexture3</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>American_AcademyTexture0</prop>
+    <prop>American_AcademyTexture1</prop>
+    <prop>American_AcademyTexture2</prop>
   </exclusiveprops>
 </homecityprops>

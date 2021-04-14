@@ -326,7 +326,7 @@
       <maxcount>1</maxcount>
       <level>40</level>
       <prereqtech>YPHCStandardArmyHitpoints</prereqtech>
-      <age>2</age>
+      <age>1</age>
     </card>
     <card>
       <name>YPHCShipQiangPikeman1</name>
@@ -427,7 +427,7 @@
       <level>10</level>
       <prereqtech>YPHCShipKeshik2</prereqtech>
       <age>2</age>
-      <displayunitcount>9</displayunitcount>
+      <displayunitcount>10</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -778,7 +778,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>ypHCShipCastleWagons1</prereqtech>
-      <age>0</age>
+      <age>1</age>
     </card>
     <card>
       <name>ypHCShipCastleWagons2</name>
@@ -1114,7 +1114,7 @@
       <level>25</level>
       <prereqtech>YPHCMercsRattanShield1</prereqtech>
       <age>3</age>
-      <displayunitcount>24</displayunitcount>
+      <displayunitcount>26</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1123,7 +1123,7 @@
       <level>40</level>
       <prereqtech>YPHCMercsRattanShield2</prereqtech>
       <age>3</age>
-      <displayunitcount>15</displayunitcount>
+      <displayunitcount>10</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1993,66 +1993,43 @@
     </waypoint>
   </waypoints>
   <obtainableprops>
-    <prop>Torchy</prop>
-    <prop>Juggler</prop>
-    <prop>PeasantVendor</prop>
-    <prop>MiddleClassMusician</prop>
-    <prop>MiddleClassPreacher</prop>
-    <prop>PeasantPainter</prop>
-    <prop>Drunk</prop>
-    <prop>NiceLady</prop>
-    <prop>Thug</prop>
-    <prop>PeasantFisherman</prop>
-    <prop>UnitChats</prop>
-    <prop active="0">Spanish_LightSet1</prop>
-    <prop>Spanish_LightSet2</prop>
-    <prop>Spanish_AcadProp01</prop>
-    <prop>Spanish_AcadProp02</prop>
-    <prop>Spanish_AcadProp03</prop>
-    <prop>Spanish_AcadProp04</prop>
-    <prop>Church_RiderStatueProp</prop>
-    <prop>Spanish_CathProp01</prop>
-    <prop>Spanish_NWCTProp01</prop>
-    <prop>Spanish_NWCTProp02</prop>
-    <prop>Spanish_NWCTProp03</prop>
-    <prop>Spn_FactProp01</prop>
-    <prop>Spn_FactProp02</prop>
-    <prop>Spn_DockProp01</prop>
-    <prop>Spn_DockProp02</prop>
-    <prop>Spn_DockProp03</prop>
-    <prop>Spn_DockProp04</prop>
-    <prop>Spn_DockProp05</prop>
-    <prop active="1">Spanish_NWTCTexture0</prop>
-    <prop>Spanish_NWTCTexture1</prop>
-    <prop>Spanish_NWTCTexture2</prop>
-    <prop>Spanish_NWTCTexture3</prop>
-    <prop>Spanish_NWTCTexture4</prop>
-    <prop>Spanish_NWTCTexture5</prop>
-    <prop>Spanish_NWTCTexture6</prop>
-    <prop>Spanish_NWTCTexture7</prop>
-    <prop active="1">Spanish_AcademyTexture0</prop>
-    <prop>Spanish_AcademyTexture1</prop>
-    <prop>Spanish_AcademyTexture2</prop>
-    <prop>Spanish_AcademyTexture3</prop>
-    <prop active="1">Spanish_ManuPlantTexture0</prop>
-    <prop>Spanish_ManuPlantTexture1</prop>
-    <prop>Spanish_ManuPlantTexture2</prop>
-    <prop>Spanish_ManuPlantTexture3</prop>
-    <prop>Spanish_ManuPlantTexture4</prop>
-    <prop>Spanish_ManuPlantTexture5</prop>
-    <prop>Spanish_ManuPlantTexture6</prop>
-    <prop>Spanish_ManuPlantTexture7</prop>
-    <prop active="1">Spanish_CathedralTexture0</prop>
-    <prop>Spanish_CathedralTexture1</prop>
-    <prop>Spanish_CathedralTexture2</prop>
-    <prop>Spanish_CathedralTexture3</prop>
-    <prop active="1">Spanish_DockTexture0</prop>
-    <prop>Spanish_DockTexture1</prop>
-    <prop>Spanish_DockTexture2</prop>
-    <prop>Spanish_DockTexture3</prop>
-    <prop>Spanish_DockTexture4</prop>
-    <prop>Spanish_DockTexture5</prop>
-    <prop>Spanish_DockTexture6</prop>
-    <prop>Spanish_DockTexture7</prop>
+    <prop>ChineseTorchy</prop>
+    <prop>ChineseJuggler</prop>
+    <prop>ChinesePeasantVendor</prop>
+    <prop>ChineseDrunk</prop>
+    <prop>ChinesePeasantFisherman</prop>
+    <prop>ChineseThug</prop>
+    <prop>ChineseOx</prop>
+    <prop active="1">ChineseLightSetMorning</prop>
+    <prop>ChineseLightSetDay</prop>
+    <prop>ChineseLightSetNight</prop>
+    <prop>ChineseLightSetNightStormy</prop>
+    <prop active="1">ChineseETTexture0</prop>
+    <prop>ChineseETTexture1</prop>
+    <prop>ChineseETTexture2</prop>
+    <prop>ChineseETTexture3</prop>
+    <prop>ChineseETTexture4</prop>
+    <prop active="1">ChineseFortTexture0</prop>
+    <prop>ChineseFortTexture1</prop>
+    <prop>ChineseFortTexture2</prop>
+    <prop>ChineseFortTexture3</prop>
+    <prop>ChineseFortTexture4</prop>
+    <prop active="1">ChineseICTexture0</prop>
+    <prop>ChineseICTexture1</prop>
+    <prop>ChineseICTexture2</prop>
+    <prop>ChineseICTexture3</prop>
+    <prop>ChineseICTexture4</prop>
+    <prop active="1">ChineseMGTexture0</prop>
+    <prop>ChineseMGTexture1</prop>
+    <prop>ChineseMGTexture2</prop>
+    <prop>ChineseMGTexture3</prop>
+    <prop>ChineseMGTexture4</prop>
+    <prop active="1">ChineseCHTexture0</prop>
+    <prop>ChineseCHTexture1</prop>
+    <prop>ChineseCHTexture2</prop>
+    <prop>ChineseCHTexture3</prop>
+    <prop>ChineseCHTexture4</prop>
+    <prop>ChineseLanterns</prop>
+    <prop>ChineseBanners</prop>
   </obtainableprops>
 </homecity>

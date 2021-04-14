@@ -241,7 +241,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCShipSurgeons</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>HCExplorerFrench</name>
@@ -641,7 +641,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>HCNativeTreaties</name>
@@ -662,7 +662,7 @@
       <maxcount>1</maxcount>
       <level>25</level>
       <prereqtech>HCNativeWarriors</prereqtech>
-      <age>2</age>
+      <age>1</age>
     </card>
     <card>
       <name>HCXPBloodBrothers</name>
@@ -757,7 +757,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>HCUnlockFort</prereqtech>
-      <age>0</age>
+      <age>1</age>
     </card>
     <card>
       <name>HCFencingSchool</name>
@@ -895,13 +895,6 @@
       <age>2</age>
     </card>
     <card>
-      <name>HCFoodSilos</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>0</age>
-    </card>
-    <card>
       <name>HCSustainableAgriculture</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -983,7 +976,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>-1</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>HCXPLandGrab</name>
@@ -1163,7 +1156,7 @@
       <displayunitcount>4</displayunitcount>
     </card>
     <card>
-      <name>HCXPDanceHall</name>
+      <name>DEHCTheaters</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
@@ -1516,7 +1509,6 @@
         <card dbid="2239">HCShipCannons1</card>
         <card dbid="814">HCUnlockFort</card>
         <card dbid="2595">HCWildernessWarfare</card>
-        <card dbid="2052">HCNativeCombat</card>
         <card dbid="2445">HCEarlySkirmishersTeam</card>
         <card dbid="2245">HCRangedInfantryHitpointsFrench</card>
         <card dbid="2212">HCShipWoodCrates3</card>
@@ -1525,6 +1517,7 @@
         <card dbid="2037">HCFencingSchool</card>
         <card dbid="2093">HCRoyalMint</card>
         <card dbid="2099">HCRenderingPlant</card>
+        <card dbid="3383">HCXPGribeauvalSystem</card>
       </cards>
     </deck>
     <revoltdeck>
@@ -1899,7 +1892,6 @@
       <tech x="1.8" y="5.0">HCExoticHardwoods</tech>
       <tech x="2.7" y="3.0">HCSilversmith</tech>
       <tech x="2.7" y="5.0">HCRoyalMint</tech>
-      <tech x="3.6" y="1.0">HCFoodSilos</tech>
       <tech x="3.6" y="3.0">HCSustainableAgriculture</tech>
       <tech x="3.6" y="5.0">HCRefrigeration</tech>
       <tech x="3.6" y="6.0">HCXPColbertism</tech>
@@ -1922,7 +1914,6 @@
       <tech x="1.8" y="5.0">HCExoticHardwoods</tech>
       <tech x="2.7" y="3.0">HCSilversmith</tech>
       <tech x="2.7" y="5.0">HCRoyalMint</tech>
-      <tech x="3.6" y="1.0">HCFoodSilos</tech>
       <tech x="3.6" y="3.0">HCSustainableAgriculture</tech>
       <tech x="3.6" y="5.0">HCRefrigeration</tech>
       <tech x="3.6" y="6.0">HCXPColbertism</tech>
@@ -1962,7 +1953,7 @@
       <tech x="2.1" y="4.0">HCShipMonitors</tech>
       <tech x="2.1" y="5.0">HCCoastalDefensesTeam</tech>
       <tech x="2.8" y="1.0">HCAdmirality</tech>
-      <tech x="3.5" y="1.0">HCXPDanceHall</tech>
+      <tech x="3.5" y="1.0">DEHCTheaters</tech>
       <tech x="3.4" y="3.0">HCXPMercsElmeti</tech>
       <tech x="3.4" y="4.0">HCXPHuronAllies1</tech>
       <tech x="3.4" y="5.0">HCXPHuronAllies2</tech>
@@ -1988,7 +1979,7 @@
       <tech x="2.1" y="4.0">HCShipMonitors</tech>
       <tech x="2.1" y="5.0">HCCoastalDefensesTeam</tech>
       <tech x="2.8" y="1.0">HCAdmirality</tech>
-      <tech x="3.5" y="1.0">HCXPDanceHall</tech>
+      <tech x="3.5" y="1.0">DEHCTheaters</tech>
       <tech x="3.4" y="3.0">HCXPMercsElmeti</tech>
       <tech x="3.4" y="4.0">HCXPHuronAllies1</tech>
       <tech x="3.4" y="5.0">HCXPHuronAllies2</tech>

@@ -717,7 +717,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCImprovedBuildings</prereqtech>
-      <age>0</age>
+      <age>1</age>
     </card>
     <card>
       <name>HCXPShipWarHutTravois1</name>

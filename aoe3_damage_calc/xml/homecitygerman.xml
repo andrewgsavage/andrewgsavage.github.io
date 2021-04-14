@@ -265,7 +265,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCXPShipSurgeons2German</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>HCExplorerGerman</name>
@@ -636,13 +636,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>DEHCExtensiveFortificationsEuropean</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>HCUnlockFort</prereqtech>
-      <age>0</age>
-    </card>
-    <card>
       <name>HCCheapStablesTeam</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -983,7 +976,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>-1</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>HCXPLandGrab</name>
@@ -1187,7 +1180,7 @@
       <age>2</age>
     </card>
     <card>
-      <name>HCXPDanceHallGerman</name>
+      <name>DEHCTheaters</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
@@ -1489,7 +1482,7 @@
         <card dbid="3387">HCXPEconomicTheory</card>
         <card dbid="2642">HCShipWingedHussars</card>
         <card dbid="2643">HCUhlanCombatGerman</card>
-        <card dbid="3366">HCXPDanceHallGerman</card>
+        <card dbid="3366">DEHCTheaters</card>
         <card dbid="2282">HCShipWarWagons1</card>
         <card dbid="2692">HCShipSettlerWagonsTeam</card>
         <card dbid="2496">HCRidingSchoolGerman</card>
@@ -1809,7 +1802,6 @@
     <displaynamestringid>24969</displaynamestringid>
     <rolloverstringid>25538</rolloverstringid>
     <obtainabletechs>
-      <tech x="0.0" y="1.0">DEHCExtensiveFortificationsEuropean</tech>
       <tech x="0.0" y="1.0">HCNativeLoreGerman</tech>
       <tech x="0.0" y="2.0">HCNativeTreatiesGerman</tech>
       <tech x="0.0" y="3.0">HCNativeWarriorsGerman</tech>
@@ -1841,7 +1833,6 @@
       <tech x="6.9" y="3.0">HCRobberBaronsGerman</tech>
     </obtainabletechs>
     <activetechs>
-      <tech x="0.0" y="1.0">DEHCExtensiveFortificationsEuropean</tech>
       <tech x="0.0" y="1.0">HCNativeLoreGerman</tech>
       <tech x="0.0" y="2.0">HCNativeTreatiesGerman</tech>
       <tech x="0.0" y="3.0">HCNativeWarriorsGerman</tech>
@@ -1981,7 +1972,7 @@
       <tech x="6.1" y="5.0">HCMercenaryLoyaltyGerman</tech>
       <tech x="5.4" y="4.0">HCMercenaryCombatGerman</tech>
       <tech x="6.1" y="7.0">HCXPCreeAlliesTeam</tech>
-      <tech x="6.1" y="1.0">HCXPDanceHallGerman</tech>
+      <tech x="6.1" y="1.0">DEHCTheaters</tech>
       <tech x="7.0" y="1.0">HCPrivateers</tech>
     </obtainabletechs>
     <activetechs>
@@ -2007,7 +1998,7 @@
       <tech x="6.1" y="5.0">HCMercenaryLoyaltyGerman</tech>
       <tech x="5.4" y="4.0">HCMercenaryCombatGerman</tech>
       <tech x="6.1" y="7.0">HCXPCreeAlliesTeam</tech>
-      <tech x="6.1" y="1.0">HCXPDanceHallGerman</tech>
+      <tech x="6.1" y="1.0">DEHCTheaters</tech>
       <tech x="7.0" y="1.0">HCPrivateers</tech>
     </activetechs>
     <validunits>
