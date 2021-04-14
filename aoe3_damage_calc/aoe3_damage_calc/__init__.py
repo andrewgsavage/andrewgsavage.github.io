@@ -6,6 +6,8 @@ import xml.etree.ElementTree as ET
 # to get homecity xml, go here http://aoe3.heavengames.com/downloads/showfile.php?fileid=3686 and extract data.bar
 # homecity_xml=r"C:\Users\A\Downloads\AOE3H\Data\homecityfrench.xml"
 from pathlib import Path
+import pandas as pd
+
 xml_dir = Path(__file__).parent.parent / "xml" 
 
 proto_xml = xml_dir / "protoy.xml"
@@ -25,13 +27,12 @@ proto_root = etree.getroot()
 
 etree = ET.parse(techtree_xml) #create an ElementTree object 
 tech_root = etree.getroot()
-tech_ships = tech_root.findall(".//Cost[@resourcetype='Ships']...") 
-http://127.0.0.1:8887/UI/Data/wpfg/resources/images/icons/cavalry_cuirass/cavalry_cuirass.png
-http://127.0.0.1:8887/UI/Data/wpfg/resources/images/icons/cavalry_cuirass/cavalry_cuirass.png
-http://127.0.0.1:8887/UI/Data/wpfgresources/images/icons/techs/cavalry_cuirass/cavalry_cuirass.png 
-http://127.0.0.1:8887/UI/Data/wpfg/resources/images/icons/techs/cavalry_cuirass/cavalry_cuirass.png
+tech_ships = tech_root.findall(".//cost[@resourcetype='Ships']...") 
 
-
+data = [{
+    ship[]
+} for ship in tech_ships
+]
 ##################
 ## find french units 
 
@@ -54,3 +55,6 @@ dragoon.findall("Cost")
 tech_mil = tech_root.findall(".//Effect[Target='AbstractLightCavalry']....") 
 # tech that affects a unit
 tech_mil = tech_root.findall(".//Effect[Target='Dragoon']....") 
+
+
+tech_ships[0]
