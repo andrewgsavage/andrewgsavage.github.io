@@ -203,7 +203,7 @@ let civs = [
     return record
   };
   
-  function applyEffect(effect, stat_table_data){
+  function applyEffect(effect, stat_table_data, tech){
     stat_table_data = stat_table_data.map(function(record){
     if(effect.attributes['subtype'].value==record['subtype']){
           record = calcModifier(record, effect, effect.attributes['relativity'].value)
@@ -211,7 +211,6 @@ let civs = [
     if(effect.attributes['action'] != undefined){
       // record['tag'] = damagebonus, record['type'] = Building, 
       if(effect.attributes['subtype'].value.toLowerCase() == record['tag'] && record['niceName'].includes(effect.attributes['action'].value ) ){
-        console.log("building", record)    
         record = calcModifier(record, effect, effect.attributes['relativity'].value)
       }
     }
@@ -296,10 +295,7 @@ let civs = [
     })
     return stat_table_data
   }
-  
-  function calcUnitStats(unit, techs){
-    stat_table_data = calcUnmodifiedUnitStats(unit)
-    techs.forEach(function(tech){
+  function applyTech(tech, stat_table_data){
     // for each effect, 
     // for each target,
     // for each tag
@@ -307,10 +303,26 @@ let civs = [
     effects = Array.from(tech.getElementsByTagName("effects")[0].children).forEach(function(effect){
       targets = Array.from(effect.getElementsByTagName("target")).forEach(function(target){
         if(tags.includes(target.textContent)){
-          stat_table_data = applyEffect(effect, stat_table_data)
+          stat_table_data = applyEffect(effect, stat_table_data, tech)
         }
       });
-    })
+    })    
+    console.log(tech)
+    if(tech.getAttribute("name").includes("RG")){
+      rg_techs = Array.from(tech.getElementsByTagName("effect")).filter(effect => effect.getAttribute("type") == "TechStatus")
+      rg_techs.forEach(function(tech){
+        tech = Array.from(techtree.children).filter(d => d.attributes["name"].value == tech.textContent)[0]
+        stat_table_data = applyTech(tech, stat_table_data)
+      })
+    };
+    return stat_table_data
+  }
+  
+  function calcUnitStats(unit, techs){
+    stat_table_data = calcUnmodifiedUnitStats(unit)
+    techs.forEach(function(tech){
+      console.log(tech)
+      stat_table_data = applyTech(tech, stat_table_data)
     })
     stat_table_data = stat_table_data.map(function(d){
       d['modifiedValue'] = d['baseValue'] * (1.0 + d['BasePercent']) + d['Absolute']
@@ -407,7 +419,6 @@ let civs = [
       tags = Array.from(parent.getElementsByTagName(element)).filter(d => d.textContent == textContent)
       return tags.length>0
     }  
-    console.log(relevant_techs.filter(d => d.attributes['name'].value == "Age0Russian" ) )
     research_techs = relevant_techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
         (hasElementWithTextContent(d, "flag", "UpgradeTech") || ["PaperCartridge", "Age0Russian"].includes(d.attributes['name'].value) ) )
     hc_techs = relevant_techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
@@ -421,7 +432,6 @@ let civs = [
   
   function updateUnitTechs(unit, civTechs, side){
     relevant_techs = gatherUnitTechs(unit, civTechs)
-    console.log(relevant_techs,civTechs)
     tech_groups = groupUnitTechs(relevant_techs, civTechs)
     let gallery = d3.select('.cards.'+side).html("")
   
@@ -439,9 +449,7 @@ let civs = [
             this.classList.toggle("active")
             relevant_techs = gatherUnitTechs(unit, civTechs)
             active_techs = Array.from(d3.selectAll('.card.active.'+side)._groups[0]).map(d =>  d.children[0].attributes['title'].value)
-            console.log(unit, active_techs, relevant_techs)
             active_techs = relevant_techs.filter(d => active_techs.includes(d.attributes['name'].value))
-            console.log(unit, active_techs)
             updateUnitStats(unit, active_techs, side)
             updateBreakpoints('left', 'right')
             updateBreakpoints('right', 'left')
@@ -630,8 +638,6 @@ let civs = [
     updateTags(unit, "right")
     updateBreakpoints('left', 'right')
     updateBreakpoints('right', 'left')
-  
-  console.log(breakpoints_data)
   })
   
 
