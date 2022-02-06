@@ -40,6 +40,14 @@
   </coffers>
   <cards>
     <card>
+      <name>DEHCTeaExport</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>0</age>
+      <displayunitcount>1</displayunitcount>
+    </card>
+    <card>
       <name>YPHCSpawnRefugees1</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -268,6 +276,13 @@
       <age>0</age>
       <displayunitcount>5</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCTigerYear</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>YPHCChineseMonkMakeDisciple</prereqtech>
+      <age>0</age>
     </card>
     <card>
       <name>YPHCShipMongolScoutTeam</name>
@@ -551,12 +566,29 @@
       <age>3</age>
     </card>
     <card>
+      <name>YPHCShipFlameThrower1</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>1</age>
+      <displayunitcount>2</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
       <name>YPHCShipFlameThrower2</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
-      <displayunitcount>2</displayunitcount>
+      <displayunitcount>3</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCDragonYear</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -565,7 +597,7 @@
       <level>0</level>
       <prereqtech>YPHCShipFlameThrower2</prereqtech>
       <age>3</age>
-      <displayunitcount>4</displayunitcount>
+      <displayunitcount>5</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -618,8 +650,8 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>3</age>
-      <displayunitcount>2</displayunitcount>
+      <age>2</age>
+      <displayunitcount>1</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -647,10 +679,18 @@
       <name>YPHCShipFlyingCrow2</name>
       <maxcount>-1</maxcount>
       <level>40</level>
-      <prereqtech>YPHCArtilleryCombatChinese</prereqtech>
+      <prereqtech>YPHCArtilleryCombatsChinese</prereqtech>
       <age>3</age>
       <displayunitcount>2</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCFireDragonManual</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>3</displayunitcount>
     </card>
     <card>
       <name>YPHCWesternReforms</name>
@@ -895,6 +935,7 @@
       <level>10</level>
       <prereqtech>HCRenderingPlant</prereqtech>
       <age>0</age>
+      <displayunitcount>1</displayunitcount>
     </card>
     <card>
       <name>HCSawmills</name>
@@ -1145,6 +1186,14 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
+      <name>DEHCKoxinga</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>11</displayunitcount>
+    </card>
+    <card>
       <name>YPHCShipManchuTeam</name>
       <maxcount>1</maxcount>
       <level>25</level>
@@ -1307,6 +1356,7 @@
         <card dbid="4812">YPHCSchoonersJapanese</card>
         <card dbid="2211">HCShipWoodCrates2</card>
         <card dbid="3946">YPHCShipFlyingCrow2</card>
+        <card dbid="3946">DEHCFireDragonManual</card>
         <card dbid="4057">YPHCAccupuncture</card>
         <card dbid="3935">YPHCShipMandarinDuckSquad</card>
         <card dbid="4727">YPHCShipSteppeRider2</card>
@@ -1354,6 +1404,7 @@
     <displaynamestringid>63356</displaynamestringid>
     <rolloverstringid>25536</rolloverstringid>
     <obtainabletechs>
+      <tech x="0.5" y="1">DEHCTeaExport</tech>
       <tech x="0.5" y="1">YPHCSpawnRefugees1</tech>
       <tech x="0.5" y="2">YPHCSpawnRefugees2</tech>
       <tech x="0.5" y="5">YPHCSpawnMigrants1</tech>
@@ -1382,8 +1433,10 @@
       <tech x="6.3" y="5">YPHCShipShaolinMaster</tech>
       <tech x="7.1" y="1">YPHCShipMongolScoutTeam</tech>
       <tech x="6.3" y="3">YPHCShipDisciple1</tech>
+      <tech x="6.3" y="3">DEHCTigerYear</tech>
     </obtainabletechs>
     <activetechs>
+      <tech x="0.5" y="1">DEHCTeaExport</tech>
       <tech x="0.5" y="1">YPHCSpawnRefugees1</tech>
       <tech x="0.5" y="2">YPHCSpawnRefugees2</tech>
       <tech x="0.5" y="5">YPHCSpawnMigrants1</tech>
@@ -1412,6 +1465,7 @@
       <tech x="6.3" y="5">YPHCShipShaolinMaster</tech>
       <tech x="7.1" y="1">YPHCShipMongolScoutTeam</tech>
       <tech x="6.3" y="3">YPHCShipDisciple1</tech>
+      <tech x="6.3" y="3">DEHCTigerYear</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1467,6 +1521,8 @@
       <tech x="5.9" y="3">YPHCShipMeteorHammer2</tech>
       <tech x="5.9" y="4">YPHCShipMeteorHammer3</tech>
       <tech x="5.9" y="6">YPHCManchuCombat</tech>
+      <tech x="5.9" y="6">DEHCDragonYear</tech>
+      <tech x="6.6" y="1">YPHCShipFlameThrower1</tech>
       <tech x="6.6" y="1">YPHCShipFlameThrower2</tech>
       <tech x="6.6" y="2">YPHCShipFlameThrower3</tech>
       <tech x="6.6" y="4">YPHCShipIronCapPrincesArmy</tech>
@@ -1479,6 +1535,7 @@
       <tech x="7.8" y="4">YPHCArtilleryDamageChinese</tech>
       <tech x="7.8" y="5">YPHCArtilleryCombatChinese</tech>
       <tech x="7.8" y="7">YPHCShipFlyingCrow2</tech>
+      <tech x="7.8" y="7">DEHCFireDragonManual</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0" y="1">YPHCShipChuKoNu1</tech>
@@ -1514,6 +1571,8 @@
       <tech x="5.9" y="3">YPHCShipMeteorHammer2</tech>
       <tech x="5.9" y="4">YPHCShipMeteorHammer3</tech>
       <tech x="5.9" y="6">YPHCManchuCombat</tech>
+      <tech x="5.9" y="6">DEHCDragonYear</tech>
+      <tech x="6.6" y="1">YPHCShipFlameThrower1</tech>
       <tech x="6.6" y="1">YPHCShipFlameThrower2</tech>
       <tech x="6.6" y="2">YPHCShipFlameThrower3</tech>
       <tech x="6.6" y="4">YPHCShipIronCapPrincesArmy</tech>
@@ -1526,6 +1585,7 @@
       <tech x="7.8" y="4">YPHCArtilleryDamageChinese</tech>
       <tech x="7.8" y="5">YPHCArtilleryCombatChinese</tech>
       <tech x="7.8" y="7">YPHCShipFlyingCrow2</tech>
+      <tech x="7.8" y="7">DEHCFireDragonManual</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1705,6 +1765,7 @@
       <tech x="2.4" y="1">HCAdmirality</tech>
       <tech x="4.2" y="3">HCMercsManchu</tech>
       <tech x="4.2" y="5">YPHCMercsMandarinArmy1</tech>
+      <tech x="4.2" y="5">DEHCKoxinga</tech>
       <tech x="4.2" y="6">YPHCShipManchuTeam</tech>
       <tech x="3.4" y="5">HCMercenaryLoyalty</tech>
       <tech x="3.4" y="1">YPHCAtonementChinese</tech>
@@ -1730,6 +1791,7 @@
       <tech x="2.4" y="1">HCAdmirality</tech>
       <tech x="4.2" y="3">HCMercsManchu</tech>
       <tech x="4.2" y="5">YPHCMercsMandarinArmy1</tech>
+      <tech x="4.2" y="5">DEHCKoxinga</tech>
       <tech x="4.2" y="6">YPHCShipManchuTeam</tech>
       <tech x="3.4" y="5">HCMercenaryLoyalty</tech>
       <tech x="3.4" y="1">YPHCAtonementChinese</tech>
@@ -1937,35 +1999,35 @@
     </waypoint>
     <waypoint>
       <bone>bone_vendor01</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor02</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor03</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor04</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor05</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor06</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor07</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor08</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_firework01</bone>
@@ -2031,5 +2093,6 @@
     <prop>ChineseCHTexture4</prop>
     <prop>ChineseLanterns</prop>
     <prop>ChineseBanners</prop>
+    <prop>ypMonkChinese</prop>
   </obtainableprops>
 </homecity>

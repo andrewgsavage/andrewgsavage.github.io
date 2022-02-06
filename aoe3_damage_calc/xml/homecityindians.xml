@@ -7,6 +7,8 @@
   <watervisual>india\india_homecity_water.xml</watervisual>
   <backgroundvisual>india\india_background.xml</backgroundvisual>
   <pathdata>india\pathable_area_object.gr2</pathdata>
+  <pathdata>india\pathable_area_object_withoutmarket.gr2</pathdata>
+  <pathdata>india\pathable_area_object_market.gr2</pathdata>
   <camera>india\india_homecity_camera.cam</camera>
   <widescreencamera>india\india_homecity_widescreencamera.cam</widescreencamera>
   <transportroundtriptime>1</transportroundtriptime>
@@ -139,15 +141,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>YPHCShipWoodCratesInf3Indians</name>
-      <maxcount>-1</maxcount>
-      <level>10</level>
-      <prereqtech>YPHCShipWoodCratesInf1Indians</prereqtech>
-      <age>2</age>
-      <displayunitcount>800</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>YPHCShipWoodCratesInf4Indians</name>
       <maxcount>-1</maxcount>
       <level>25</level>
@@ -198,6 +191,7 @@
       <level>25</level>
       <prereqtech>-1</prereqtech>
       <age>0</age>
+      <displayunitcount>1</displayunitcount>
     </card>
     <card>
       <name>YPHCShipCoveredWagonsIndians</name>
@@ -741,6 +735,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
+      <displayunitcount>2</displayunitcount>
     </card>
     <card>
       <name>YPHCEastIndiaCompany</name>
@@ -1382,7 +1377,6 @@
       <tech x="1" y="6">YPHCShipWoodCrates5Indians</tech>
       <tech x="2" y="2">YPHCShipWoodCratesInf1Indians</tech>
       <tech x="2" y="4">YPHCShipWoodCratesInf2Indians</tech>
-      <tech x="2" y="3">YPHCShipWoodCratesInf3Indians</tech>
       <tech x="2" y="5">YPHCShipWoodCratesInf4Indians</tech>
       <tech x="3" y="1.0">YPHCShipCoinCrates1Indians</tech>
       <tech x="3" y="2.0">YPHCShipCoinCrates2Indians</tech>
@@ -1409,7 +1403,6 @@
       <tech x="1" y="6">YPHCShipWoodCrates5Indians</tech>
       <tech x="2" y="2">YPHCShipWoodCratesInf1Indians</tech>
       <tech x="2" y="4">YPHCShipWoodCratesInf2Indians</tech>
-      <tech x="2" y="3">YPHCShipWoodCratesInf3Indians</tech>
       <tech x="2" y="5">YPHCShipWoodCratesInf4Indians</tech>
       <tech x="3" y="1.0">YPHCShipCoinCrates1Indians</tech>
       <tech x="3" y="2.0">YPHCShipCoinCrates2Indians</tech>
@@ -1969,35 +1962,35 @@
     </waypoint>
     <waypoint>
       <bone>bone_vendor01</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor02</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor03</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor04</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor05</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor06</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor07</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor08</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_firework01</bone>
@@ -2023,68 +2016,110 @@
       <bone>bone_firework06</bone>
       <fireworks>1</fireworks>
     </waypoint>
+    <waypoint>
+      <bone>bone_parade01</bone>
+      <paradestart>1</paradestart>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade02</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade03</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade04</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade05</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade06</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade07</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade08</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade09</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade10</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade11</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade12</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade13</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade14</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade15</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade16</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade17</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade18</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade19</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade20</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade21</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
   </waypoints>
   <obtainableprops>
-    <prop>Torchy</prop>
-    <prop>Juggler</prop>
-    <prop>PeasantVendor</prop>
-    <prop>MiddleClassMusician</prop>
-    <prop>MiddleClassPreacher</prop>
-    <prop>PeasantPainter</prop>
-    <prop>Drunk</prop>
-    <prop>NiceLady</prop>
-    <prop>Thug</prop>
-    <prop>PeasantFisherman</prop>
-    <prop>UnitChats</prop>
-    <prop>Spanish_LightSet1</prop>
-    <prop>Spanish_LightSet2</prop>
-    <prop>Spanish_AcadProp01</prop>
-    <prop>Spanish_AcadProp02</prop>
-    <prop>Spanish_AcadProp03</prop>
-    <prop>Spanish_AcadProp04</prop>
-    <prop>Church_RiderStatueProp</prop>
-    <prop>Spanish_CathProp01</prop>
-    <prop>Spanish_NWCTProp01</prop>
-    <prop>Spanish_NWCTProp02</prop>
-    <prop>Spanish_NWCTProp03</prop>
-    <prop>Spn_FactProp01</prop>
-    <prop>Spn_FactProp02</prop>
-    <prop>Spn_DockProp01</prop>
-    <prop>Spn_DockProp02</prop>
-    <prop>Spn_DockProp03</prop>
-    <prop>Spn_DockProp04</prop>
-    <prop>Spn_DockProp05</prop>
-    <prop active="1">Spanish_NWTCTexture0</prop>
-    <prop>Spanish_NWTCTexture1</prop>
-    <prop>Spanish_NWTCTexture2</prop>
-    <prop>Spanish_NWTCTexture3</prop>
-    <prop>Spanish_NWTCTexture4</prop>
-    <prop>Spanish_NWTCTexture5</prop>
-    <prop>Spanish_NWTCTexture6</prop>
-    <prop>Spanish_NWTCTexture7</prop>
-    <prop active="1">Spanish_AcademyTexture0</prop>
-    <prop>Spanish_AcademyTexture1</prop>
-    <prop>Spanish_AcademyTexture2</prop>
-    <prop>Spanish_AcademyTexture3</prop>
-    <prop active="1">Spanish_ManuPlantTexture0</prop>
-    <prop>Spanish_ManuPlantTexture1</prop>
-    <prop>Spanish_ManuPlantTexture2</prop>
-    <prop>Spanish_ManuPlantTexture3</prop>
-    <prop>Spanish_ManuPlantTexture4</prop>
-    <prop>Spanish_ManuPlantTexture5</prop>
-    <prop>Spanish_ManuPlantTexture6</prop>
-    <prop>Spanish_ManuPlantTexture7</prop>
-    <prop active="1">Spanish_CathedralTexture0</prop>
-    <prop>Spanish_CathedralTexture1</prop>
-    <prop>Spanish_CathedralTexture2</prop>
-    <prop>Spanish_CathedralTexture3</prop>
-    <prop active="1">Spanish_DockTexture0</prop>
-    <prop>Spanish_DockTexture1</prop>
-    <prop>Spanish_DockTexture2</prop>
-    <prop>Spanish_DockTexture3</prop>
-    <prop>Spanish_DockTexture4</prop>
-    <prop>Spanish_DockTexture5</prop>
-    <prop>Spanish_DockTexture6</prop>
-    <prop>Spanish_DockTexture7</prop>
+    <prop>Indian_MarketDay</prop>
+    <prop active="1">Indian_LightSetDay</prop>
+    <prop>Indian_LightSetSunset</prop>
+    <prop>Indian_LightSetNight</prop>
+    <prop>Indian_LightSetMonsoon</prop>
+    <prop active="1">Indian_TajMahal_Variation0</prop>
+    <prop>Indian_TajMahal_Variation1</prop>
+    <prop active="1">Indian_Tower_Variation0</prop>
+    <prop>Indian_Tower_Variation1</prop>
+    <prop active="1">Indian_Customs_Variation0</prop>
+    <prop>Indian_Customs_Variation1</prop>
+    <prop active="1">Indian_Merchant_Variation0</prop>
+    <prop>Indian_Merchant_Variation1</prop>
+    <prop active="1">Indian_Treasury_Variation0</prop>
+    <prop>Indian_Treasury_Variation1</prop>
+    <prop>Indian_Boats</prop>
+    <prop>Indian_Holi_Festival_1</prop>
+    <prop>Indian_Holi_Festival_2</prop>
+    <prop>Indian_Elephant_Parade</prop>
   </obtainableprops>
 </homecity>

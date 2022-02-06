@@ -210,14 +210,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPShipMedicineMenTeam</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>-1</prereqtech>
-      <age>1</age>
-      <displayunitcount>2</displayunitcount>
-    </card>
-    <card>
       <name>HCXPWarChiefSioux1</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -1011,20 +1003,12 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCAdmirality</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>1</age>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCXPSiouxLakotaSupport</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
-      <displayunitcount>7</displayunitcount>
+      <displayunitcount>16</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1942,12 +1926,5 @@
     </waypoint>
   </waypoints>
   <obtainableprops>
-    <prop active="1">Sioux_LightSet1</prop>
-    <prop active="1">RoamingBrownBuffalo</prop>
-    <prop active="1">RoamingCalfBuffalo</prop>
-    <prop active="1">RoamingDarkBuffalo</prop>
-    <prop active="1">RoamingMaleBuffalo</prop>
-    <prop active="1">StaticMaleBuffalo1</prop>
-    <prop>Sioux_LightSet2</prop>
   </obtainableprops>
 </homecity>

@@ -435,15 +435,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipCuirassiers2</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>HCShipCuirassiers1</prereqtech>
-      <age>3</age>
-      <displayunitcount>4</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCShipCuirassiers3</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -1249,7 +1240,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>7</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1269,7 +1260,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>15</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1290,6 +1281,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
+      <displayunitcount>3</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1298,7 +1290,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>10</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1308,7 +1300,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>10</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1318,7 +1310,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>20</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1328,7 +1320,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1347,7 +1339,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>16</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1358,6 +1350,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
+      <displayunitcount>3</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1386,7 +1379,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>3</age>
       <displayunitcount>3</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1406,7 +1399,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>3</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1709,7 +1702,6 @@
       <tech x="3.8" y="2.0">HCShipHussars2</tech>
       <tech x="3.8" y="3.0">HCShipHussars3</tech>
       <tech x="5.0" y="1.0">HCShipCuirassiers1</tech>
-      <tech x="5.0" y="2.0">HCShipCuirassiers2</tech>
       <tech x="5.0" y="3.0">HCShipCuirassiers3</tech>
       <tech x="5.0" y="4.0">HCShipCuirassiers4</tech>
       <tech x="5.0" y="5.0">HCShipCuirassiers5</tech>
@@ -1754,7 +1746,6 @@
       <tech x="3.8" y="2.0">HCShipHussars2</tech>
       <tech x="3.8" y="3.0">HCShipHussars3</tech>
       <tech x="5.0" y="1.0">HCShipCuirassiers1</tech>
-      <tech x="5.0" y="2.0">HCShipCuirassiers2</tech>
       <tech x="5.0" y="3.0">HCShipCuirassiers3</tech>
       <tech x="5.0" y="4.0">HCShipCuirassiers4</tech>
       <tech x="5.0" y="5.0">HCShipCuirassiers5</tech>

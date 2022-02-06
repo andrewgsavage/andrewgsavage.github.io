@@ -418,6 +418,7 @@
       <displayunitcount>1</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
       <replacecard>HCXPShipMantlets1</replacecard>
+      <overrideicontech>HCShipFalconets3</overrideicontech>
     </card>
     <card>
       <name>HCShipFalconets2</name>
@@ -429,6 +430,7 @@
       <displayunitcount>2</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
       <replacecard>HCXPShipMantlets2</replacecard>
+      <overrideicontech>HCShipFalconets3</overrideicontech>
     </card>
     <card>
       <name>HCXPShipHorseArtillery1</name>

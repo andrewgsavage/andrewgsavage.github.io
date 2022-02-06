@@ -5649,7 +5649,7 @@
     <position>
       <building>Academy</building>
     </position>
-    <icon>homecity\home_city_props\icons\medacademy2</icon>
+    <icon>homecity\home_city_props\icons\medacademy1</icon>
     <variationid>0</variationid>
   </prop>
   <prop>
@@ -5663,7 +5663,7 @@
     <position>
       <building>Academy</building>
     </position>
-    <icon>homecity\home_city_props\icons\medacademy1</icon>
+    <icon>homecity\home_city_props\icons\medacademy2</icon>
     <variationid>1</variationid>
   </prop>
   <prop>
@@ -5705,7 +5705,7 @@
     <position>
       <building>Academy</building>
     </position>
-    <icon>homecity\home_city_props\icons\medacademy6</icon>
+    <icon>homecity\home_city_props\icons\medacademy5</icon>
     <variationid>4</variationid>
   </prop>
   <prop>
@@ -5719,7 +5719,7 @@
     <position>
       <building>Academy</building>
     </position>
-    <icon>homecity\home_city_props\icons\medacademy5</icon>
+    <icon>homecity\home_city_props\icons\medacademy6</icon>
     <variationid>5</variationid>
   </prop>
   <prop>
@@ -9153,6 +9153,12 @@
     <prop>SPCAct3_DockTexture7</prop>
   </exclusiveprops>
   <prop>
+    <name>ypMonkChinese</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
     <name>Swedish_NWTCFlag</name>
     <type>Object</type>
     <displayname>Swedish Flag</displayname>
@@ -9617,6 +9623,12 @@
     <prop>Swedish_HTexture3</prop>
   </exclusiveprops>
   <prop>
+    <name>deGeneralUS</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
     <name>American_HFlag01_Academy</name>
     <type>Object</type>
     <displayname>Star-Spangled Banner Flags</displayname>
@@ -10012,7 +10024,6 @@
     <descriptionstringid>49184</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
-      <bone>bone_guard_soldier</bone>
       <building>Academy</building>
     </position>
     <icon>homecity\home_city_props\icons\usa_soldier</icon>
@@ -10229,5 +10240,1731 @@
     <prop>American_AcademyTexture0</prop>
     <prop>American_AcademyTexture1</prop>
     <prop>American_AcademyTexture2</prop>
+  </exclusiveprops>
+  <prop>
+    <name>EthiopianLightSetDay</name>
+    <type>LightSet</type>
+    <displayname>Daytime Lighting</displayname>
+    <displaynamestringid>42534</displaynamestringid>
+    <description>The city with the sun shining brightly.</description>
+    <descriptionstringid>42535</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian_lightset1</icon>
+    <variationid>0</variationid>
+    <lightset>ethiopia_homecity</lightset>
+  </prop>
+  <prop>
+    <name>EthiopianLightSetEvening</name>
+    <type>LightSet</type>
+    <displayname>Evening Lighting</displayname>
+    <displaynamestringid>43218</displaynamestringid>
+    <description>An evening in the city.</description>
+    <descriptionstringid>49344</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian_lightset2</icon>
+    <variationid>2</variationid>
+    <lightset>ethiopia_homecity_night_clear</lightset>
+    <cost>5</cost>
+  </prop>
+  <prop>
+    <name>EthiopianLightSetEveningRain</name>
+    <type>LightSet</type>
+    <displayname>Evening Rain Lightset</displayname>
+    <displaynamestringid>49345</displaynamestringid>
+    <description>An evening in the rain.</description>
+    <descriptionstringid>49346</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+      <bone>bone_fx</bone>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian_lightset3</icon>
+    <variationid>1</variationid>
+    <lightset>ethiopia_homecity_night_rain</lightset>
+    <visual>homecity\home_city_props\prop_ethiopian_storm.xml</visual>
+    <cost>10</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>EthiopianLightSetDay</prop>
+    <prop>EthiopianLightSetEvening</prop>
+    <prop>EthiopianLightSetEveningRain</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Ahuiani</name>
+    <type>PerformerUnit</type>
+    <displayname>Ahuiani</displayname>
+    <displaynamestringid>37569</displaynamestringid>
+    <description>An entertainer who performs tricks with fire.</description>
+    <descriptionstringid>37570</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\nicelady</icon>
+  </prop>
+  <prop>
+    <name>EthPriestRelic_01</name>
+    <type>Object</type>
+    <displayname>Lost Relic (AoE1)</displayname>
+    <displaynamestringid>49347</displaynamestringid>
+    <description>Ethiopian priests worshiping their new relic.</description>
+    <descriptionstringid>49348</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\ethiopia\ethiopia_relic_aoe1.xml</visual>
+    <variationid>0</variationid>
+    <position>
+      <bone>bone_temple</bone>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian_relic1</icon>
+    <cost>5</cost>
+  </prop>
+  <prop>
+    <name>EthPriestRelic_02</name>
+    <type>Object</type>
+    <displayname>Lost Relic (AoE2)</displayname>
+    <displaynamestringid>49399</displaynamestringid>
+    <description>Ethiopian priests worshiping their new relic.</description>
+    <descriptionstringid>49348</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\ethiopia\ethiopia_relic.xml</visual>
+    <variationid>1</variationid>
+    <position>
+      <bone>bone_temple</bone>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian_relic2</icon>
+    <cost>5</cost>
+  </prop>
+  <prop>
+    <name>EthPriestRelic_03</name>
+    <type>Object</type>
+    <displayname>Lost Relic (AoEM)</displayname>
+    <displaynamestringid>49400</displaynamestringid>
+    <description>Ethiopian priests worshiping their new relic.</description>
+    <descriptionstringid>49348</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\ethiopia\ethiopia_relic_aoem.xml</visual>
+    <variationid>2</variationid>
+    <position>
+      <bone>bone_temple</bone>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian_relic3</icon>
+    <cost>5</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>EthPriestRelic_01</prop>
+    <prop>EthPriestRelic_02</prop>
+    <prop>EthPriestRelic_03</prop>
+  </exclusiveprops>
+  <prop>
+    <name>EthBuntingMonastery</name>
+    <type>Object</type>
+    <displayname>Ethiopian Buntings</displayname>
+    <displaynamestringid>49349</displaynamestringid>
+    <description>Display buntings on this building.</description>
+    <descriptionstringid>49350</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\eth_cath_prop01.xml</visual>
+    <position>
+      <bone>bone_temple</bone>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian_bunting2</icon>
+    <cost>1</cost>
+  </prop>
+  <prop>
+    <name>EthBuntingPalace</name>
+    <type>Object</type>
+    <displayname>Ethiopian Buntings</displayname>
+    <displaynamestringid>49349</displaynamestringid>
+    <description>Display buntings on this building.</description>
+    <descriptionstringid>49350</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\eth_acad_prop01.xml</visual>
+    <position>
+      <bone>bone_palace</bone>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian_bunting1</icon>
+    <cost>1</cost>
+  </prop>
+  <prop>
+    <name>EthBuntingWater</name>
+    <type>Object</type>
+    <displayname>Ethiopian Buntings</displayname>
+    <displaynamestringid>49349</displaynamestringid>
+    <description>Display buntings on this building.</description>
+    <descriptionstringid>49350</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\eth_dock_prop01.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian_bunting2</icon>
+    <cost>1</cost>
+  </prop>
+  <prop>
+    <name>EthTimkatFestival</name>
+    <type>PerformerUnit</type>
+    <displayname>Timkat Festival</displayname>
+    <displaynamestringid>49351</displaynamestringid>
+    <description>The city is celebrating Timkat.</description>
+    <descriptionstringid>49352</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian_timkat</icon>
+    <cost>5</cost>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Ethiopian_MarketTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>The original Market place</displayname>
+    <displaynamestringid>49353</displaynamestringid>
+    <displayname>The original version of the Market place color scheme.</displayname>
+    <descriptionstringid>49354</descriptionstringid>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian-market-0</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Ethiopian_MarketTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>The second Market place</displayname>
+    <displaynamestringid>49355</displaynamestringid>
+    <displayname>The second version of the Market place color scheme.</displayname>
+    <descriptionstringid>49356</descriptionstringid>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian-market-1</icon>
+    <variationid>1</variationid>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Ethiopian_MarketTexture0</prop>
+    <prop>Ethiopian_MarketTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Ethiopian_MonasteryTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>The original Monastery</displayname>
+    <displaynamestringid>49357</displaynamestringid>
+    <displayname>The original version of the Monastery color scheme.</displayname>
+    <descriptionstringid>49358</descriptionstringid>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian-monastery-0</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Ethiopian_MonasteryTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>The second Monastery</displayname>
+    <displaynamestringid>49359</displaynamestringid>
+    <displayname>The second version of the Monastery color scheme.</displayname>
+    <descriptionstringid>49360</descriptionstringid>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian-monastery-1</icon>
+    <variationid>1</variationid>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Ethiopian_MonasteryTexture0</prop>
+    <prop>Ethiopian_MonasteryTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Ethiopian_LibraryTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>The original Library</displayname>
+    <displaynamestringid>49361</displaynamestringid>
+    <displayname>The original version of the Library color scheme.</displayname>
+    <descriptionstringid>49362</descriptionstringid>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian-library-0</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Ethiopian_LibraryTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>The second Library</displayname>
+    <displaynamestringid>49363</displaynamestringid>
+    <displayname>The original version of the Library color scheme.</displayname>
+    <descriptionstringid>49364</descriptionstringid>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ethiopian-library-1</icon>
+    <variationid>1</variationid>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Ethiopian_LibraryTexture0</prop>
+    <prop>Ethiopian_LibraryTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>EthExplorer</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>HausaLightSetDay</name>
+    <type>LightSet</type>
+    <displayname>Daytime Lighting</displayname>
+    <displaynamestringid>42534</displaynamestringid>
+    <description>The city with the sun shining brightly.</description>
+    <descriptionstringid>42535</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa_lightset1</icon>
+    <variationid>0</variationid>
+    <lightset>hausa_homecity</lightset>
+  </prop>
+  <prop>
+    <name>HausaLightSetDusk</name>
+    <type>LightSet</type>
+    <displayname>Dusk Lighting</displayname>
+    <displaynamestringid>42536</displaynamestringid>
+    <description>The city at dusk.</description>
+    <descriptionstringid>42537</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa_lightset2</icon>
+    <variationid>1</variationid>
+    <lightset>hausa_homecity_dusk</lightset>
+    <cost>2</cost>
+  </prop>
+  <prop>
+    <name>HausaLightSetNight</name>
+    <type>LightSet</type>
+    <displayname>Night Lighting</displayname>
+    <displaynamestringid>43218</displaynamestringid>
+    <description>The city at night.</description>
+    <descriptionstringid>49226</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa_lightset3</icon>
+    <variationid>2</variationid>
+    <lightset>hausa_homecity_night</lightset>
+    <cost>5</cost>
+  </prop>
+  <prop>
+    <name>HausaLightSetSandstorm</name>
+    <type>LightSet</type>
+    <displayname>Sandstorm</displayname>
+    <displaynamestringid>49365</displaynamestringid>
+    <description>The city during a sandstorm.</description>
+    <descriptionstringid>49366</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+      <bone>bone_main</bone>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa_lightset4</icon>
+    <variationid>3</variationid>
+    <lightset>hausa_homecity_duststorm</lightset>
+    <visual>homecity\home_city_props\prop_hausa_sandstorm.xml</visual>
+    <cost>10</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>HausaLightSetDay</prop>
+    <prop>HausaLightSetDusk</prop>
+    <prop>HausaLightSetNight</prop>
+    <prop>HausaLightSetSandstorm</prop>
+  </exclusiveprops>
+  <prop>
+    <name>HausaSangaCow</name>
+    <type>PerformerUnit</type>
+    <displayname>Hausa's finest cattle</displayname>
+    <displaynamestringid>49367</displaynamestringid>
+    <description>A herd of cattle roaming the city.</description>
+    <descriptionstringid>49368</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa_cow</icon>
+    <cost>1</cost>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>HausaZebuCow</name>
+    <type>PerformerUnit</type>
+  </prop>
+  <compositeprops>
+    <prop>HausaSangaCow</prop>
+    <prop>HausaZebuCow</prop>
+  </compositeprops>
+  <prop>
+    <name>HausaCamel</name>
+    <type>PerformerUnit</type>
+    <displayname>Loaded Camel Train</displayname>
+    <displaynamestringid>49369</displaynamestringid>
+    <description>A cameller loading his cargo.</description>
+    <descriptionstringid>49370</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa_camel</icon>
+    <cost>1</cost>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>HausaBuntingMosque</name>
+    <type>Object</type>
+    <displayname>Durbar Festival - Buntings</displayname>
+    <displaynamestringid>49372</displaynamestringid>
+    <description>Display Durbar Festival buntings in the market, great mosque and palace.</description>
+    <descriptionstringid>49373</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\hausa_cath_prop01.xml</visual>
+    <position>
+      <bone>bone_mosque</bone>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa_bunting</icon>
+    <cost>2</cost>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>HausaCrowdMarket</name>
+    <type>PerformerUnit</type>
+    <displayname>Durbar Festival - Crowds</displayname>
+    <displaynamestringid>49374</displaynamestringid>
+    <description>The people of Hausa celebrating the Durbar Festival in the market, palace and workshop.</description>
+    <descriptionstringid>49375</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa_crowd</icon>
+    <prereq>HausaBuntingMosque</prereq>
+    <cost>5</cost>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>HausaMilitaryParade</name>
+    <type>PerformerUnit</type>
+    <displayname>Durbar Festival - Military Parade</displayname>
+    <displaynamestringid>49378</displaynamestringid>
+    <description>A parade held for the Durbar Festival.</description>
+    <descriptionstringid>49379</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa_parade</icon>
+    <prereq>HausaCrowdMarket</prereq>
+    <cost>10</cost>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <inclusiveprops>
+    <prop>HausaBuntingMosque</prop>
+    <prop>HausaCrowdMarket</prop>
+    <prop>HausaMilitaryParade</prop>
+  </inclusiveprops>
+  <prop>
+    <name>Hausa_WaterplaceTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>The original Water place</displayname>
+    <displaynamestringid>49380</displaynamestringid>
+    <displayname>The original version of the Water place color scheme.</displayname>
+    <descriptionstringid>49381</descriptionstringid>
+    <position>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa-water-0</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Hausa_WaterplaceTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>The second Water place</displayname>
+    <displaynamestringid>49382</displaynamestringid>
+    <displayname>The second version of the Water place color scheme.</displayname>
+    <descriptionstringid>49383</descriptionstringid>
+    <position>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa-water-1</icon>
+    <variationid>1</variationid>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Hausa_WaterplaceTexture0</prop>
+    <prop>Hausa_WaterplaceTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Hausa_MosqueTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>The original Mosque</displayname>
+    <displaynamestringid>49384</displaynamestringid>
+    <displayname>The original version of the Mosque color scheme.</displayname>
+    <descriptionstringid>49385</descriptionstringid>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa-mosque-0</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Hausa_MosqueTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>The second Mosque</displayname>
+    <displaynamestringid>49386</displaynamestringid>
+    <displayname>The second version of the Mosque color scheme.</displayname>
+    <descriptionstringid>49387</descriptionstringid>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa-mosque-1</icon>
+    <variationid>1</variationid>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Hausa_MosqueTexture0</prop>
+    <prop>Hausa_MosqueTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Hausa_PalaceTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>The original Palace</displayname>
+    <displaynamestringid>49388</displaynamestringid>
+    <displayname>The original version of the Palace color scheme.</displayname>
+    <descriptionstringid>49389</descriptionstringid>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa-palace-0</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Hausa_PalaceTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>The second Palace</displayname>
+    <displaynamestringid>49390</displaynamestringid>
+    <displayname>The second version of the Palace color scheme.</displayname>
+    <descriptionstringid>49391</descriptionstringid>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa-palace-1</icon>
+    <variationid>1</variationid>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Hausa_PalaceTexture0</prop>
+    <prop>Hausa_PalaceTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Hausa_WorkshopsTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>The original Workshop</displayname>
+    <displaynamestringid>49392</displaynamestringid>
+    <displayname>The original version of the Workshop color scheme.</displayname>
+    <descriptionstringid>49393</descriptionstringid>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa-workshops-0</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Hausa_WorkshopsTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>The second Workshop</displayname>
+    <displaynamestringid>49394</displaynamestringid>
+    <displayname>The second version of the Workshop color scheme.</displayname>
+    <descriptionstringid>49395</descriptionstringid>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\hausa-workshops-1</icon>
+    <variationid>1</variationid>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Hausa_WorkshopsTexture0</prop>
+    <prop>Hausa_WorkshopsTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>HausaExplorer</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>Inca_HarbourTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Waterfront (original)</displayname>
+    <displaynamestringid>49600</displaynamestringid>
+    <displayname>The original version of the Waterfront.</displayname>
+    <descriptionstringid>49601</descriptionstringid>
+    <position>
+      <building>Harbour</building>
+    </position>
+    <variationid>0</variationid>
+    <icon>homecity\home_city_props\icons\inca_waterfront1</icon>
+  </prop>
+  <prop>
+    <name>Inca_HarbourTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Waterfront (alternative)</displayname>
+    <displaynamestringid>49602</displaynamestringid>
+    <displayname>The alternate version of the Waterfront displaying red patterned sheets over the roof.</displayname>
+    <descriptionstringid>49603</descriptionstringid>
+    <position>
+      <building>Harbour</building>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_waterfront2</icon>
+    <variationid>1</variationid>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Inca_HarbourTexture0</prop>
+    <prop>Inca_HarbourTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Inca_MarketTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Marketplace (original)</displayname>
+    <displaynamestringid>49596</displaynamestringid>
+    <displayname>The original version of the Marketplace.</displayname>
+    <descriptionstringid>49597</descriptionstringid>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_marketplace1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Inca_MarketTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Marketplace (alternative)</displayname>
+    <displaynamestringid>49598</displaynamestringid>
+    <displayname>The alternate version of the Marketplace with a cross hatched patterned roofing and pink, green, red and yellow market stalls.</displayname>
+    <descriptionstringid>49599</descriptionstringid>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_marketplace2</icon>
+    <variationid>1</variationid>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Inca_MarketTexture0</prop>
+    <prop>Inca_MarketTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Inca_PalaceTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Palace (original)</displayname>
+    <displaynamestringid>49588</displaynamestringid>
+    <displayname>The original version of the Palace.</displayname>
+    <descriptionstringid>49589</descriptionstringid>
+    <position>
+      <building>Palace</building>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_palace1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Inca_PalaceTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Palace (gold)</displayname>
+    <displaynamestringid>49590</displaynamestringid>
+    <displayname>The golden version of the Palace displaying beautiful golden plates and red brick entrances.</displayname>
+    <descriptionstringid>49591</descriptionstringid>
+    <position>
+      <building>Palace</building>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_palace2</icon>
+    <variationid>1</variationid>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Inca_PalaceTexture0</prop>
+    <prop>Inca_PalaceTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Inca_PlazaTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Plaza (original)</displayname>
+    <displaynamestringid>49592</displaynamestringid>
+    <displayname>The original version of the Plaza.</displayname>
+    <descriptionstringid>49593</descriptionstringid>
+    <position>
+      <building>Plaza</building>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_plaza1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Inca_PlazaTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Plaza (alternative)</displayname>
+    <displaynamestringid>49594</displaynamestringid>
+    <displayname>The alternate version of the Plaza with alternate colored market stalls.</displayname>
+    <descriptionstringid>49595</descriptionstringid>
+    <position>
+      <building>Plaza</building>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_plaza2</icon>
+    <variationid>1</variationid>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Inca_PlazaTexture0</prop>
+    <prop>Inca_PlazaTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Inca_TempleTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Temple (original)</displayname>
+    <displaynamestringid>49584</displaynamestringid>
+    <displayname>The original version of the Temple.</displayname>
+    <descriptionstringid>49585</descriptionstringid>
+    <position>
+      <building>Temple</building>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_temple1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Inca_TempleTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Temple (gold)</displayname>
+    <displaynamestringid>49586</displaynamestringid>
+    <displayname>The golden version of the Temple displaying golden and red brick walls.</displayname>
+    <descriptionstringid>49587</descriptionstringid>
+    <position>
+      <building>Temple</building>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_temple2</icon>
+    <variationid>1</variationid>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Inca_TempleTexture0</prop>
+    <prop>Inca_TempleTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Inca_LightSetDay</name>
+    <type>LightSet</type>
+    <displayname>Daytime Lighting</displayname>
+    <displaynamestringid>42534</displaynamestringid>
+    <description>The city with the sun shining brightly.</description>
+    <descriptionstringid>42535</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Temple</building>
+      <bone>bone_centered</bone>
+    </position>
+    <variationid>0</variationid>
+    <icon>homecity\home_city_props\icons\inca_lightset</icon>
+    <lightset>inca_homecity</lightset>
+    <visual>homecity/inca/inca_firepit.xml</visual>
+    <deactivateprops>
+      <prop>Inca_Night_Lights</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Inca_LightSetSunset</name>
+    <type>LightSet</type>
+    <displayname>Sunset Lighting</displayname>
+    <displaynamestringid>49456</displaynamestringid>
+    <description>The city with the sun setting.</description>
+    <descriptionstringid>49457</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Temple</building>
+      <bone>bone_centered</bone>
+    </position>
+    <variationid>2</variationid>
+    <icon>homecity\home_city_props\icons\inca_sunrise_lightset</icon>
+    <lightset>inca_homecity_sunrise</lightset>
+    <visual>homecity/inca/inca_firepit.xml</visual>
+    <deactivateprops>
+      <prop>Inca_Night_Lights</prop>
+    </deactivateprops>
+    <cost>5</cost>
+  </prop>
+  <prop>
+    <name>Inca_LightSetNight</name>
+    <type>LightSet</type>
+    <displayname>Night Lighting</displayname>
+    <displaynamestringid>49058</displaynamestringid>
+    <description>The city at night.</description>
+    <descriptionstringid>49226</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Temple</building>
+      <bone>bone_centered</bone>
+    </position>
+    <variationid>1</variationid>
+    <icon>homecity\home_city_props\icons\inca_night_lightset</icon>
+    <lightset>inca_night</lightset>
+    <visual>homecity/inca/inca_firepit_night.xml</visual>
+    <activateprops>
+      <prop>Inca_Night_Lights</prop>
+    </activateprops>
+    <cost>10</cost>
+  </prop>
+  <prop>
+    <name>Inca_Night_Lights</name>
+    <type>Object</type>
+    <position>
+      <bone>bone_centered</bone>
+    </position>
+    <visual>homecity\home_city_props\inca_night_lights\inca_night_lights.xml</visual>
+  </prop>
+  <prop>
+    <name>Inca_Volcano</name>
+    <type>Lightset</type>
+    <displayname>Sabaucaya Volcano erupting</displayname>
+    <displaynamestringid>49580</displaynamestringid>
+    <description>The Sabaucaya Volcano is erupting! Stay safe everyone!</description>
+    <descriptionstringid>49581</descriptionstringid>
+    <position>
+      <building>Temple</building>
+      <bone>bone_centered</bone>
+    </position>
+    <variationid>3</variationid>
+    <icon>homecity\home_city_props\icons\inca_volcano</icon>
+    <lightset>inca_homecity_volcano_v2</lightset>
+    <visual>homecity\home_city_props\inca_volcano\inca_volcano.xml</visual>
+    <cost>15</cost>
+    <deactivateprops>
+      <prop>Inca_Night_Lights</prop>
+    </deactivateprops>
+  </prop>
+  <exclusiveprops>
+    <prop>Inca_LightSetDay</prop>
+    <prop>Inca_LightSetSunset</prop>
+    <prop>Inca_LightSetNight</prop>
+    <prop>Inca_Volcano</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Inca_Market</name>
+    <type>Unit</type>
+    <displayname>Market Day</displayname>
+    <displaynamestringid>49574</displaynamestringid>
+    <description>Market stalls are set up at the plaza for traders and community gatherings.</description>
+    <descriptionstringid>49575</descriptionstringid>
+    <position>
+      <building>Plaza</building>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_market_day</icon>
+    <cost>5</cost>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Inca_Llamas</name>
+    <type>Unit</type>
+    <displayname>Llamas</displayname>
+    <displaynamestringid>49582</displaynamestringid>
+    <description>A handful of Llamas roaming around the city.</description>
+    <descriptionstringid>49583</descriptionstringid>
+    <position>
+      <building>Plaza</building>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_llamas</icon>
+    <cost>5</cost>
+    <buttonaction>toggle</buttonaction>
+    <deactivateprops>
+      <prop>Inti_Raymi_Festival_2</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Inca_Boats</name>
+    <type>Object</type>
+    <displayname>Boats</displayname>
+    <displaynamestringid>49604</displaynamestringid>
+    <description>Trading and fishing boats docked by the waterfront harbor.</description>
+    <descriptionstringid>49605</descriptionstringid>
+    <position>
+      <building>Harbour</building>
+      <bone>bone_centered</bone>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_boats</icon>
+    <visual>homecity\home_city_props\inca_boats\inca_boats.xml</visual>
+    <cost>5</cost>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Inti_Raymi_Festival_1</name>
+    <type>Unit</type>
+    <displayname>Inti Raymi Festival Part 1/2</displayname>
+    <displaynamestringid>49576</displaynamestringid>
+    <description>The Inca Empire celebrates the Inti Raymi Festival by decorating the stairs, and hanging colourful banners.</description>
+    <descriptionstringid>49577</descriptionstringid>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_inti_raymi_1</icon>
+    <cost>5</cost>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Inti_Raymi_Festival_2</name>
+    <type>Unit</type>
+    <displayname>Inti Raymi Festival Part 2/2</displayname>
+    <displaynamestringid>49578</displaynamestringid>
+    <description>The Inca Empire celebrates the Inti Raymi Festival with crowds marching and dancing around the city.</description>
+    <descriptionstringid>49579</descriptionstringid>
+    <position>
+      <building>Harbour</building>
+    </position>
+    <icon>homecity\home_city_props\icons\inca_inti_raymi_2</icon>
+    <cost>10</cost>
+    <prereq>Inti_Raymi_Festival_1</prereq>
+    <buttonaction>toggle</buttonaction>
+    <deactivateprops>
+      <prop>Inca_Llamas</prop>
+    </deactivateprops>
+  </prop>
+  <exclusiveprops>
+    <prop>Inti_Raymi_Festival_1</prop>
+    <prop>Inti_Raymi_Festival_2</prop>
+  </exclusiveprops>
+  <prop>
+    <name>IncaWarChief</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>Aztec_AcademyTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Palace (original)</displayname>
+    <displaynamestringid>49654</displaynamestringid>
+    <description>The original version of the Palace.</description>
+    <descriptionstringid>49655</descriptionstringid>
+    <position>
+      <building>Academy</building>
+    </position>
+    <variationid>0</variationid>
+    <icon>homecity\home_city_props\icons\az_Academy_var1</icon>
+  </prop>
+  <prop>
+    <name>Aztec_AcademyTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Palace (blue)</displayname>
+    <displaynamestringid>49656</displaynamestringid>
+    <description>The blue version of the Palace with golden tiled stairs.</description>
+    <descriptionstringid>49657</descriptionstringid>
+    <position>
+      <building>Academy</building>
+    </position>
+    <variationid>1</variationid>
+    <icon>homecity\home_city_props\icons\az_Academy_var2</icon>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Aztec_AcademyTexture0</prop>
+    <prop>Aztec_AcademyTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Aztec_CathedralTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Temple (original)</displayname>
+    <displaynamestringid>49650</displaynamestringid>
+    <description>The original version of the Temple.</description>
+    <descriptionstringid>49651</descriptionstringid>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <variationid>0</variationid>
+    <icon>homecity\home_city_props\icons\az_Cathedral_var1</icon>
+    <cost>2</cost>
+  </prop>
+  <prop>
+    <name>Aztec_CathedralTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Temple (red)</displayname>
+    <displaynamestringid>49652</displaynamestringid>
+    <description>The red version of the Temple.</description>
+    <descriptionstringid>49653</descriptionstringid>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <variationid>1</variationid>
+    <icon>homecity\home_city_props\icons\az_Cathedral_var2</icon>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Aztec_CathedralTexture0</prop>
+    <prop>Aztec_CathedralTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Aztec_DockTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Waterfront (original)</displayname>
+    <displaynamestringid>49666</displaynamestringid>
+    <description>The original version of the Waterfront.</description>
+    <descriptionstringid>49667</descriptionstringid>
+    <position>
+      <building>Dock</building>
+    </position>
+    <variationid>0</variationid>
+    <icon>homecity\home_city_props\icons\az_Dock_var1</icon>
+  </prop>
+  <prop>
+    <name>Aztec_DockTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Waterfront (blue and red)</displayname>
+    <displaynamestringid>49668</displaynamestringid>
+    <description>The blue and red version of the Waterfront.</description>
+    <descriptionstringid>49669</descriptionstringid>
+    <position>
+      <building>Dock</building>
+    </position>
+    <variationid>1</variationid>
+    <icon>homecity\home_city_props\icons\az_Dock_var2</icon>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Aztec_DockTexture0</prop>
+    <prop>Aztec_DockTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Aztec_PlantTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Plaza (original)</displayname>
+    <displaynamestringid>49658</displaynamestringid>
+    <description>The original version of the Plaza.</description>
+    <descriptionid>49659</descriptionid>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <variationid>0</variationid>
+    <icon>homecity\home_city_props\icons\az_Manufacturing_var1</icon>
+  </prop>
+  <prop>
+    <name>Aztec_PlantTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Plaza (blue)</displayname>
+    <displaynamestringid>49660</displaynamestringid>
+    <description>The blue version of the Plaza.</description>
+    <descriptionid>49661</descriptionid>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <variationid>1</variationid>
+    <icon>homecity\home_city_props\icons\az_Manufacturing_var2</icon>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Aztec_PlantTexture0</prop>
+    <prop>Aztec_PlantTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Aztec_TradeCenterTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Marketplace (original)</displayname>
+    <displaynamestringid>49662</displaynamestringid>
+    <description>The original version of the Marketplace.</description>
+    <descriptionstringid>49663</descriptionstringid>
+    <position>
+      <building>Market</building>
+    </position>
+    <variationid>0</variationid>
+    <icon>homecity\home_city_props\icons\az_TradeCenter_var1</icon>
+  </prop>
+  <prop>
+    <name>Aztec_TradeCenterTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Marketplace (blue)</displayname>
+    <displaynamestringid>49664</displaynamestringid>
+    <description>The blue version of the Marketplace.</description>
+    <descriptionstringid>49665</descriptionstringid>
+    <position>
+      <building>Market</building>
+    </position>
+    <variationid>1</variationid>
+    <icon>homecity\home_city_props\icons\az_TradeCenter_var2</icon>
+    <cost>2</cost>
+  </prop>
+  <exclusiveprops>
+    <prop>Aztec_TradeCenterTexture0</prop>
+    <prop>Aztec_TradeCenterTexture1</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Aztec_Boats</name>
+    <type>Object</type>
+    <displayname>Boats</displayname>
+    <displaynamestringid>49670</displaynamestringid>
+    <description>Trading and fishing boats docked by the waterfront harbor.</description>
+    <descriptionstringid>49671</descriptionstringid>
+    <position>
+      <building>Dock</building>
+      <bone>bone_centered</bone>
+    </position>
+    <icon>homecity\home_city_props\icons\az_boats</icon>
+    <visual>homecity\home_city_props\aztec_boats\aztec_boats.xml</visual>
+    <cost>5</cost>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Aztec_LightSetDaytime</name>
+    <type>LightSet</type>
+    <displayname>Daytime Lighting</displayname>
+    <displaynamestringid>42534</displaynamestringid>
+    <description>The city with the sun shining brightly.</description>
+    <descriptionstringid>42535</descriptionstringid>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <variationid>0</variationid>
+    <lightset>Tenochtitlan</lightset>
+    <icon>homecity\home_city_props\icons\az_lightset_day</icon>
+    <deactivateprops>
+      <prop>Aztec_Night_Lights_Unlit</prop>
+      <prop>Aztec_Night_Lights_Lit</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Aztec_LightSetThunderstorm</name>
+    <type>LightSet</type>
+    <displayname>Stormy Night Lighting</displayname>
+    <displaynamestringid>49060</displaynamestringid>
+    <description>The city on a stormy night.</description>
+    <descriptionstringid>49061</descriptionstringid>
+    <position>
+      <building>ManufacturingPlant</building>
+      <bone>bone_centered</bone>
+    </position>
+    <variationid>1</variationid>
+    <lightset>tenochtitlan_thunderstorm</lightset>
+    <visual>homecity\home_city_props\aztec_thunderstorm.xml</visual>
+    <cost>15</cost>
+    <icon>homecity\home_city_props\icons\az_lightset_Storm</icon>
+    <deactivateprops>
+      <prop>Aztec_Night_Lights_Unlit</prop>
+      <prop>Aztec_Night_Lights_Lit</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Aztec_LightSetNight</name>
+    <type>LightSet</type>
+    <displayname>Night Lighting</displayname>
+    <displaynamestringid>49058</displaynamestringid>
+    <description>The city at night.</description>
+    <descriptionstringid>49226</descriptionstringid>
+    <position>
+      <building>ManufacturingPlant</building>
+      <bone>bone_centered</bone>
+    </position>
+    <variationid>2</variationid>
+    <lightset>tenochtitlan_night</lightset>
+    <icon>homecity\home_city_props\icons\az_lightset_Night</icon>
+    <visual>homecity\home_city_props\aztec_night_lights\aztec_night_lights.xml</visual>
+    <cost>10</cost>
+    <deactivateprops>
+      <prop>Aztec_Night_Lights_Unlit</prop>
+      <prop>Aztec_Night_Lights_Lit</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Aztec_LightSetSunrise</name>
+    <type>LightSet</type>
+    <displayname>Sunrise Lighting</displayname>
+    <displaynamestringid>43274</displaynamestringid>
+    <description>The sun rises above the city.</description>
+    <descriptionstringid>49641</descriptionstringid>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <variationid>3</variationid>
+    <lightset>tenochtitlan_sunrise</lightset>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\az_lightset_Sunrise</icon>
+    <deactivateprops>
+      <prop>Aztec_Night_Lights_Unlit</prop>
+      <prop>Aztec_Night_Lights_Lit</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Aztec_LightSetEclipse</name>
+    <type>LightSet</type>
+    <displayname>Eclipse Lighting</displayname>
+    <displaynamestringid>49692</displaynamestringid>
+    <description>The city with a total eclipse.</description>
+    <descriptionstringid>49693</descriptionstringid>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <variationid>4</variationid>
+    <lightset>tenochtitlan_eclipse</lightset>
+    <cost>20</cost>
+    <icon>homecity\home_city_props\icons\az_lightset_Eclipse</icon>
+    <deactivateprops>
+      <prop>Aztec_Night_Lights_Unlit</prop>
+      <prop>Aztec_Night_Lights_Lit</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Aztec_Fire_Festival_1</name>
+    <type>LightSet</type>
+    <displayname>IXiuhmolpilli (New Fire Festival) Part 1/2</displayname>
+    <displaynamestringid>49642</displaynamestringid>
+    <description>The Aztec citizens preparing to celebrate the IXiuhmolpilli (New Fire Festival) at dusk.</description>
+    <descriptionstringid>49643</descriptionstringid>
+    <position>
+      <building>cathedral</building>
+      <bone>bone_centered</bone>
+    </position>
+    <variationid>2</variationid>
+    <lightset>tenochtitlan_night</lightset>
+    <icon>homecity\home_city_props\icons\az_festival_1</icon>
+    <visual>homecity\aztec\Bonfires.xml</visual>
+    <cost>5</cost>
+    <activateprops>
+      <prop>Aztec_Night_Lights_Unlit</prop>
+    </activateprops>
+    <deactivateprops>
+      <prop>Aztec_Night_Lights_Lit</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Aztec_Fire_Festival_2</name>
+    <type>LightSet</type>
+    <displayname>IXiuhmolpilli (New Fire Festival) Part 2/2</displayname>
+    <displaynamestringid>49644</displaynamestringid>
+    <description>The Aztec citizens celebrates the IXiuhmolpilli (New Fire Festival) by lighting bonefires throughout the city.</description>
+    <descriptionstringid>49645</descriptionstringid>
+    <position>
+      <building>cathedral</building>
+      <bone>bone_centered</bone>
+    </position>
+    <variationid>2</variationid>
+    <lightset>tenochtitlan_night</lightset>
+    <icon>homecity\home_city_props\icons\az_festival_2</icon>
+    <visual>homecity\aztec\Bonfires_Lit.xml</visual>
+    <cost>10</cost>
+    <activateprops>
+      <prop>Aztec_Night_Lights_Lit</prop>
+    </activateprops>
+    <deactivateprops>
+      <prop>Aztec_Night_Lights_Unlit</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Aztec_Night_Lights_Unlit</name>
+    <type>Object</type>
+    <position>
+      <bone>bone_centered</bone>
+    </position>
+    <visual>homecity\home_city_props\aztec_night_lights\aztec_night_lights_unlit.xml</visual>
+  </prop>
+  <prop>
+    <name>Aztec_Night_Lights_Lit</name>
+    <type>Object</type>
+    <position>
+      <bone>bone_centered</bone>
+    </position>
+    <visual>homecity\home_city_props\aztec_night_lights\aztec_night_lights.xml</visual>
+  </prop>
+  <exclusiveprops>
+    <prop>Aztec_LightSetDaytime</prop>
+    <prop>Aztec_LightSetThunderstorm</prop>
+    <prop>Aztec_LightSetNight</prop>
+    <prop>Aztec_LightSetSunrise</prop>
+    <prop>Aztec_LightSetEclipse</prop>
+    <prop>Aztec_Fire_Festival_1</prop>
+    <prop>Aztec_Fire_Festival_2</prop>
+  </exclusiveprops>
+  <prop>
+    <name>Aztec_Blowgun_Training</name>
+    <type>Unit</type>
+    <displayname>Blowgun Training</displayname>
+    <displaynamestringid>49646</displaynamestringid>
+    <description>Blowgunners from the palace are training along the shore.</description>
+    <descriptionstringid>49647</descriptionstringid>
+    <position>
+      <building>Academy</building>
+    </position>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\az_blowgun</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Aztec_Military_Parade</name>
+    <type>Unit</type>
+    <displayname>Military Parade</displayname>
+    <displaynamestringid>49648</displaynamestringid>
+    <description>The military parade marching through the city.</description>
+    <descriptionstringid>49649</descriptionstringid>
+    <position>
+      <building>Market</building>
+    </position>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\az_parade</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>AztecWarChief</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>deGeneralMexican</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>Mexico_ManufacturingTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Manufacturing Plant (original)</displayname>
+    <displaynamestringid>49836</displaynamestringid>
+    <description>The original version of the Manufacturing Plant.</description>
+    <descriptionstringid>49837</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Mex_Manufacturing_1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Mexico_ManufacturingTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Manufacturing Plant (alternative)</displayname>
+    <displaynamestringid>49838</displaynamestringid>
+    <description>The alternative version of the Manufacturing Plant.</description>
+    <descriptionstringid>49839</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\Mex_Manufacturing_2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Mexico_AcademyTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>National Palace (original)</displayname>
+    <displaynamestringid>49828</displaynamestringid>
+    <description>The original version of the National Palace.</description>
+    <descriptionstringid>49829</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Mex_palace_1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Mexico_AcademyTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>National Palace (alternative)</displayname>
+    <displaynamestringid>49830</displaynamestringid>
+    <description>The alternative version of the National Palace.</description>
+    <descriptionstringid>49831</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\Mex_palace_2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Mexico_TemploMayorTexture0</name>
+    <type>Object</type>
+    <displayname>Temple (Ruin)</displayname>
+    <displaynamestringid>200072</displaynamestringid>
+    <description>The ruined version of the Temple.</description>
+    <descriptionstringid>200073</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <lightset>Mexico</lightset>
+    <visual>homecity\mexico\mexico_templo_mayor_damaged.xml</visual>
+    <position>
+      <bone>bone_centered</bone>
+      <building>Academy</building>
+    </position>
+    <variationid>2</variationid>
+    <icon>homecity\home_city_props\icons\Mex_templo_1</icon>
+  </prop>
+  <prop>
+    <name>Mexico_TemploMayorTexture1</name>
+    <type>Object</type>
+    <displayname>Temple (original)</displayname>
+    <displaynamestringid>49650</displaynamestringid>
+    <description>The original version of the Temple.</description>
+    <descriptionstringid>49651</descriptionstringid>
+    <visual>homecity\mexico\mexico_templo_mayor.xml</visual>
+    <position>
+      <bone>bone_centered</bone>
+      <building>Academy</building>
+    </position>
+    <variationid>3</variationid>
+    <icon>homecity\home_city_props\icons\az_Cathedral_var1</icon>
+    <cost>2</cost>
+  </prop>
+  <prop>
+    <name>Mexico_TemploMayorTexture2</name>
+    <type>Object</type>
+    <displayname>Temple (red)</displayname>
+    <displaynamestringid>49652</displaynamestringid>
+    <description>The red version of the Temple.</description>
+    <descriptionstringid>49653</descriptionstringid>
+    <visual>homecity\mexico\mexico_templo_mayor_red.xml</visual>
+    <position>
+      <bone>bone_centered</bone>
+      <building>Academy</building>
+    </position>
+    <variationid>4</variationid>
+    <icon>homecity\home_city_props\icons\az_Cathedral_var2</icon>
+    <cost>2</cost>
+    <prereq>Mexico_TemploMayorTexture1</prereq>
+  </prop>
+  <prop>
+    <name>Mexico_CathedralTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Metropolitan Cathedral (original)</displayname>
+    <displaynamestringid>49832</displaynamestringid>
+    <description>The original version of the Metropolitan Cathedral.</description>
+    <descriptionstringid>49833</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Mex_cathedral_1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Mexico_CathedralTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Metropolitan Cathedral (alternative)</displayname>
+    <displaynamestringid>49834</displaynamestringid>
+    <description>The alternative version of the Metropolitan Cathedral.</description>
+    <descriptionstringid>49835</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\Mex_cathedral_2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Mexico_CathedralTexture2</name>
+    <type>ReplaceVisual</type>
+    <displayname>Metropolitan Cathedral (sandstone)</displayname>
+    <displaynamestringid>49877</displaynamestringid>
+    <description>The sandstone version of the Metropolitan Cathedral.</description>
+    <descriptionstringid>49878</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\Mex_cathedral_3</icon>
+    <variationid>2</variationid>
+  </prop>
+  <prop>
+    <name>Mexico_CathedralTexture3</name>
+    <type>ReplaceVisual</type>
+    <displayname>Metropolitan Cathedral (light blue)</displayname>
+    <displaynamestringid>49879</displaynamestringid>
+    <description>The light blue version of the Metropolitan Cathedral.</description>
+    <descriptionstringid>49880</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\Mex_cathedral_4</icon>
+    <variationid>3</variationid>
+  </prop>
+  <prop>
+    <name>Mexico_CathedralTexture4</name>
+    <type>ReplaceVisual</type>
+    <displayname>Metropolitan Cathedral (white)</displayname>
+    <displaynamestringid>49881</displaynamestringid>
+    <description>The white version of the Metropolitan Cathedral.</description>
+    <descriptionstringid>49882</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\Mex_cathedral_5</icon>
+    <variationid>4</variationid>
+  </prop>
+  <prop>
+    <name>Mexico_DockProp01</name>
+    <type>Object</type>
+    <displayname>Boats</displayname>
+    <displaynamestringid>49604</displaynamestringid>
+    <description>Trading and fishing boats docked by the harbor.</description>
+    <descriptionstringid>49844</descriptionstringid>
+    <cost>5</cost>
+    <visual>homecity\home_city_props\mexico_boats\mexico_boats.xml</visual>
+    <position>
+      <bone>bone_centered</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Mex_Boats</icon>
+  </prop>
+  <prop>
+    <name>Mexico_DockTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Harbor (original)</displayname>
+    <displaynamestringid>49840</displaynamestringid>
+    <description>The original version of the Harbor.</description>
+    <descriptionstringid>49841</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Mex_dock_1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Mexico_DockTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Harbor (alternative)</displayname>
+    <displaynamestringid>49842</displaynamestringid>
+    <description>The alternative version of the Harbor.</description>
+    <descriptionstringid>49843</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Dock</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\Mex_dock_2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Mexico_NWTCTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Plaza Del Zocalo (original)</displayname>
+    <displaynamestringid>49824</displaynamestringid>
+    <description>The original version of the Plaza Del Zocalo.</description>
+    <descriptionstringid>49825</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Mex_plaza_1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Mexico_NWTCTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Plaza Del Zocalo (alternative)</displayname>
+    <displaynamestringid>49826</displaynamestringid>
+    <description>The alternative version of the Plaza Del Zocalo.</description>
+    <descriptionstringid>49827</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\Mex_plaza_2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Mexico_Night_Lights</name>
+    <type>Object</type>
+    <position>
+      <bone>bone_centered</bone>
+    </position>
+    <visual>homecity\mexico\mexico_night_lights\mexico_night_lights.xml</visual>
+  </prop>
+  <prop>
+    <name>Mexico_Night_Lights_Without_Temple</name>
+    <type>Object</type>
+    <position>
+      <bone>bone_centered</bone>
+    </position>
+    <visual>homecity\mexico\mexico_night_lights\mexico_night_lights_without_temple.xml</visual>
+  </prop>
+  <prop>
+    <name>Mexico_LightSetDaytime</name>
+    <type>LightSet</type>
+    <displayname>Daytime Lighting</displayname>
+    <displaynamestringid>49056</displaynamestringid>
+    <description>The city with the sun shining brightly.</description>
+    <descriptionstringid>42535</descriptionstringid>
+    <position>
+      <building>Academy</building>
+    </position>
+    <variationid>0</variationid>
+    <lightset>Mexico</lightset>
+    <icon>homecity\home_city_props\icons\Mex_Day</icon>
+  </prop>
+  <prop>
+    <name>Mexico_LightSetNight</name>
+    <type>LightSet</type>
+    <displayname>Night Lighting</displayname>
+    <displaynamestringid>49058</displaynamestringid>
+    <description>The city at night.</description>
+    <descriptionstringid>49883</descriptionstringid>
+    <position>
+      <building>Academy</building>
+      <bone>bone_centered</bone>
+    </position>
+    <variationid>1</variationid>
+    <lightset>mexico_night_sunset</lightset>
+    <cost>15</cost>
+    <icon>homecity\home_city_props\icons\Mex_Night</icon>
+    <prereq>Mexico_TemploMayorTexture1</prereq>
+  </prop>
+  <prop>
+    <name>Mexico_LightSetSunset</name>
+    <type>LightSet</type>
+    <displayname>Sunset Lighting</displayname>
+    <displaynamestringid>49456</displaynamestringid>
+    <description>The city with the sun setting.</description>
+    <descriptionstringid>49457</descriptionstringid>
+    <position>
+      <building>Academy</building>
+    </position>
+    <variationid>2</variationid>
+    <lightset>mexico_sunrise</lightset>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\Mex_Sunset</icon>
+  </prop>
+  <prop>
+    <name>Mexico_Military_Parade</name>
+    <type>Unit</type>
+    <displayname>Soldiers marching</displayname>
+    <displaynamestringid>49822</displaynamestringid>
+    <description>Soldiers of Mexico marching through the town.</description>
+    <descriptionstringid>49823</descriptionstringid>
+    <position>
+      <building>Market</building>
+    </position>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\Mex_Military_parade</icon>
+    <buttonaction>toggle</buttonaction>
+    <deactivateprops>
+      <prop>Mexico_DayOfTheDead_Fireworks</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Mexico_DayOfTheDead_Festival_1</name>
+    <type>Unit</type>
+    <displayname>Day of the Dead (Día de Muertos) 1/2</displayname>
+    <displaynamestringid>49818</displaynamestringid>
+    <description>The citizens of Mexico celebrating Day of the Dead by wearing skull masks.</description>
+    <descriptionstringid>49819</descriptionstringid>
+    <position>
+      <building>Market</building>
+    </position>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\Mex_Muertos_P1</icon>
+    <buttonaction>toggle</buttonaction>
+    <deactivateprops>
+      <prop>Mexico_DayOfTheDead_Fireworks</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Mexico_DayOfTheDead_Fireworks</name>
+    <type>Object</type>
+    <position>
+      <bone>bone_centered</bone>
+    </position>
+    <visual>homecity\mexico\mexico_fireworks.xml</visual>
+  </prop>
+  <prop>
+    <name>Mexico_DayOfTheDead_Festival_2</name>
+    <type>Unit</type>
+    <displayname>Day of the Dead (Día de Muertos) 2/2</displayname>
+    <displaynamestringid>49820</displaynamestringid>
+    <description>The citizens of Mexico celebrating Day of the Dead by lighting fireworks and bonfires.</description>
+    <descriptionstringid>49821</descriptionstringid>
+    <position>
+      <building>Market</building>
+    </position>
+    <cost>10</cost>
+    <icon>homecity\home_city_props\icons\Mex_Muertos_P2</icon>
+    <buttonaction>toggle</buttonaction>
+    <prereq>Mexico_DayOfTheDead_Festival_1</prereq>
+    <activateprops>
+      <prop>Mexico_DayOfTheDead_Fireworks</prop>
+    </activateprops>
+  </prop>
+  <inclusiveprops>
+    <prop>Mexico_DayOfTheDead_Fireworks</prop>
+    <prop>Mexico_DayOfTheDead_Festival_2</prop>
+  </inclusiveprops>
+  <exclusiveprops>
+    <prop>Mexico_LightSetDaytime</prop>
+    <prop>Mexico_LightSetNight</prop>
+    <prop>Mexico_LightSetSunset</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Mexico_ManufacturingTexture0</prop>
+    <prop>Mexico_ManufacturingTexture1</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Mexico_AcademyTexture0</prop>
+    <prop>Mexico_AcademyTexture1</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Mexico_TemploMayorTexture0</prop>
+    <prop>Mexico_TemploMayorTexture1</prop>
+    <prop>Mexico_TemploMayorTexture2</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Mexico_TemploMayorTexture0</prop>
+    <prop>Mexico_LightSetNight</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Mexico_CathedralTexture0</prop>
+    <prop>Mexico_CathedralTexture1</prop>
+    <prop>Mexico_CathedralTexture2</prop>
+    <prop>Mexico_CathedralTexture3</prop>
+    <prop>Mexico_CathedralTexture4</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Mexico_DockTexture0</prop>
+    <prop>Mexico_DockTexture1</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Mexico_NWTCTexture0</prop>
+    <prop>Mexico_NWTCTexture1</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Mexico_DockTexture0</prop>
+    <prop>Mexico_DockTexture1</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Mexico_Military_Parade</prop>
+    <prop>Mexico_DayOfTheDead_Festival_1</prop>
+    <prop>Mexico_DayOfTheDead_Festival_2</prop>
   </exclusiveprops>
 </homecityprops>

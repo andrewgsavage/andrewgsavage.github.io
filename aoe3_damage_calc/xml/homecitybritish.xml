@@ -569,15 +569,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipRockets1</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>-1</prereqtech>
-      <age>3</age>
-      <displayunitcount>2</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCShipRockets2</name>
       <maxcount>1</maxcount>
       <level>25</level>
@@ -1076,15 +1067,6 @@
       <age>1</age>
     </card>
     <card>
-      <name>HCMercsHolyRoman</name>
-      <maxcount>-1</maxcount>
-      <level>6</level>
-      <prereqtech>-1</prereqtech>
-      <age>3</age>
-      <displayunitcount>16</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCMercsHighland</name>
       <maxcount>-1</maxcount>
       <level>25</level>
@@ -1276,7 +1258,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>7</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1296,7 +1278,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>15</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1317,6 +1299,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
+      <displayunitcount>3</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1325,7 +1308,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>10</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1335,7 +1318,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>10</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1345,7 +1328,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>20</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1355,7 +1338,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1374,7 +1357,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>16</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1385,6 +1368,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
+      <displayunitcount>3</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1393,7 +1377,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>3</age>
       <displayunitcount>5</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1413,7 +1397,8 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
+      <displayunitcount>4</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1422,7 +1407,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>3</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1448,11 +1433,51 @@
       </revoltcard>
     </card>
     <card>
+      <name>DEHCREVGatlingCamels</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>3</age>
+      <displayunitcount>9</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVAskari</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>3</age>
+      <displayunitcount>11</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVSennarHorsemen</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>3</age>
+      <displayunitcount>5</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVSudaneseAllies</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>3</age>
+      <displayunitcount>15</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
       <name>DEHCREVHuguenots</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1463,6 +1488,7 @@
       <prereqtech>XPRevolution</prereqtech>
       <bindtotech>HCUnlockFactory</bindtotech>
       <age>3</age>
+      <displayunitcount>1</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1472,6 +1498,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>3</age>
+      <displayunitcount>1</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1482,6 +1509,7 @@
       <prereqtech>XPRevolution</prereqtech>
       <bindtotech>HCRobberBarons</bindtotech>
       <age>3</age>
+      <displayunitcount>1</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1496,16 +1524,6 @@
       </revoltcard>
     </card>
     <card>
-      <name>DEHCREVShipHomesteadWagons</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
-      <displayunitcount>5</displayunitcount>
-      <revoltcard>
-      </revoltcard>
-    </card>
-    <card>
       <name>DEHCREVShipOutpostWagons</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -1516,11 +1534,22 @@
       </revoltcard>
     </card>
     <card>
-      <name>DEHCREVDiamondRush</name>
+      <name>DEHCREVShipHomesteadWagons</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
+      <displayunitcount>5</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVDiamondRush</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>1</age>
+      <displayunitcount>1</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1529,7 +1558,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1538,7 +1567,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1700,6 +1729,10 @@
         <card>DEHCREVSuezCanal</card>
         <card>DEHCREVShipHorseArtillery2</card>
         <card>DEHCREVNizamsEgypt</card>
+        <card>DEHCREVGatlingCamels</card>
+        <card>DEHCREVAskari</card>
+        <card>DEHCREVSennarHorsemen</card>
+        <card>DEHCREVSudaneseAllies</card>
       </cards>
     </revoltdeck>
     <revoltdeck civ="DERevSouthAfrica">
@@ -1876,7 +1909,6 @@
       <tech x="6.5" y="1.0">HCAdvancedArtillery</tech>
       <tech x="6.5" y="2.0">HCShipMortars1</tech>
       <tech x="6.5" y="3.0">HCShipMortars2</tech>
-      <tech x="7.2" y="3.0">HCShipRockets1</tech>
       <tech x="7.2" y="5.0">HCShipRockets2</tech>
       <tech x="7.2" y="7.0">HCXPShipRocketsRepeat</tech>
       <tech x="7.2" y="7.0">DEHCHandMortar</tech>
@@ -1917,7 +1949,6 @@
       <tech x="6.5" y="1.0">HCAdvancedArtillery</tech>
       <tech x="6.5" y="2.0">HCShipMortars1</tech>
       <tech x="6.5" y="3.0">HCShipMortars2</tech>
-      <tech x="7.2" y="3.0">HCShipRockets1</tech>
       <tech x="7.2" y="5.0">HCShipRockets2</tech>
       <tech x="7.2" y="7.0">HCXPShipRocketsRepeat</tech>
       <tech x="7.2" y="7.0">DEHCHandMortar</tech>
@@ -2293,35 +2324,35 @@
     </waypoint>
     <waypoint>
       <bone>bone_vendor01</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor02</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor03</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor04</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor05</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor06</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor07</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor08</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_firework01</bone>

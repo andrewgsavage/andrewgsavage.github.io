@@ -12,7 +12,7 @@
   <transportroundtriptime>1</transportroundtriptime>
   <transportactivationtime>0</transportactivationtime>
   <level>1</level>
-  <maxcardsperdeck>20</maxcardsperdeck>
+  <maxcardsperdeck>21</maxcardsperdeck>
   <skillpoints>9</skillpoints>
   <lightset>American_Homecity</lightset>
   <watertype>London</watertype>
@@ -289,15 +289,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipCoveredWagons2</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>3</age>
-      <displayunitcount>2</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>DEHCShipMilitaryWagonsTeam</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -330,11 +321,11 @@
       <age>1</age>
     </card>
     <card>
-      <name>HCShipBalloons</name>
+      <name>DEHCMissouriRiverExpeditions</name>
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>-1</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>HCXPAdvancedBalloon</name>
@@ -386,6 +377,24 @@
       <prereqtech>-1</prereqtech>
       <age>3</age>
       <displayunitcount>10</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCShipCarbineCav2</name>
+      <maxcount>1</maxcount>
+      <level>40</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>5</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCShipCarbineCav3</name>
+      <maxcount>1</maxcount>
+      <level>40</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>4</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -485,24 +494,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>DEHCShipGatlings1</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>2</age>
-      <displayunitcount>3</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
-      <name>DEHCShipGatlingsRepeat1</name>
-      <maxcount>-1</maxcount>
-      <level>10</level>
-      <prereqtech>-1</prereqtech>
-      <age>2</age>
-      <displayunitcount>2</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>DEHCCoffeeMillGun</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -591,14 +582,6 @@
       <displayunitcount>5</displayunitcount>
     </card>
     <card>
-      <name>DEHCShipCulverineMortar</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <age>3</age>
-      <displayunitcount>4</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>DEHCLongRifles</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -627,6 +610,20 @@
       <age>2</age>
     </card>
     <card>
+      <name>DEHCGeorgiaHussars</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+    </card>
+    <card>
+      <name>DEHCRollingArtillery</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+    </card>
+    <card>
       <name>DEHCLouisianaPurchase</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -640,7 +637,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>3</age>
-      <displayunitcount>5</displayunitcount>
+      <displayunitcount>6</displayunitcount>
     </card>
     <card>
       <name>DEHCUSExpedition</name>
@@ -729,7 +726,7 @@
       <displayunitcount>2</displayunitcount>
     </card>
     <card>
-      <name>HCHeavyFortifications</name>
+      <name>HCHeavyFortificationsUS</name>
       <maxcount>1</maxcount>
       <level>25</level>
       <prereqtech>HCImprovedBuildings</prereqtech>
@@ -749,13 +746,6 @@
       <level>25</level>
       <prereqtech>HCImprovedBuildings</prereqtech>
       <age>3</age>
-    </card>
-    <card>
-      <name>DEHCExtensiveFortificationsEuropean</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>HCUnlockFort</prereqtech>
-      <age>1</age>
     </card>
     <card>
       <name>DEHCShipHomesteadWagons1</name>
@@ -791,7 +781,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>3</age>
+      <age>2</age>
     </card>
     <card>
       <name>HCXPShipSpies1</name>
@@ -831,7 +821,14 @@
       <level>10</level>
       <prereqtech>-1</prereqtech>
       <age>3</age>
-      <infiniteinlastage>1</infiniteinlastage>
+      <displayunitcount>10</displayunitcount>
+    </card>
+    <card>
+      <name>DEHCFedGeneralAssembly</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>1</age>
     </card>
     <card>
       <name>HCFishMarket</name>
@@ -1089,6 +1086,7 @@
       <prereqtech>-1</prereqtech>
       <age>2</age>
       <displayunitcount>7</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>DEHCPoker</name>
@@ -1103,7 +1101,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>1</age>
+      <age>3</age>
     </card>
     <card>
       <name>DEHCBlackMesa</name>
@@ -1112,6 +1110,7 @@
       <prereqtech>-1</prereqtech>
       <age>3</age>
       <displayunitcount>6</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>DEHCHireManilamen</name>
@@ -1136,6 +1135,7 @@
       <prereqtech>-1</prereqtech>
       <age>1</age>
       <displayunitcount>12</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>DEHCApacheScouts</name>
@@ -1144,6 +1144,7 @@
       <prereqtech>-1</prereqtech>
       <age>2</age>
       <displayunitcount>8</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>DEHCNavajoScouts</name>
@@ -1152,6 +1153,7 @@
       <prereqtech>-1</prereqtech>
       <age>3</age>
       <displayunitcount>21</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>DEHCLegionLee</name>
@@ -1159,7 +1161,8 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
-      <displayunitcount>9</displayunitcount>
+      <displayunitcount>6</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>DEHCLegionWashington</name>
@@ -1168,6 +1171,7 @@
       <prereqtech>-1</prereqtech>
       <age>3</age>
       <displayunitcount>16</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>DEHCLegionFrench</name>
@@ -1176,6 +1180,7 @@
       <prereqtech>-1</prereqtech>
       <age>2</age>
       <displayunitcount>10</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>DEHCLegionHungarian</name>
@@ -1184,6 +1189,7 @@
       <prereqtech>-1</prereqtech>
       <age>3</age>
       <displayunitcount>9</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>DEHCLegionPolish</name>
@@ -1192,6 +1198,7 @@
       <prereqtech>-1</prereqtech>
       <age>2</age>
       <displayunitcount>12</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>HCREVShipGatlingGuns</name>
@@ -1244,16 +1251,13 @@
         <card dbid="7028">DEHCShipRegulars1</card>
         <card dbid="814">HCUnlockFort</card>
         <card dbid="2220">HCShipCows</card>
-        <card dbid="1688">HCHeavyFortifications</card>
+        <card dbid="1688">HCHeavyFortificationsUS</card>
         <card dbid="3438">HCXPCapitalism</card>
         <card dbid="7067">DEHCImmigrantsIrish</card>
         <card dbid="7196">DEHCHamiltonianEconomics</card>
         <card dbid="7183">DEHCSpringfieldArmory</card>
         <card dbid="2237">HCShipMortars1</card>
         <card dbid="7027">DEHCShipStateMilitiaRepeat1</card>
-        <card dbid="7037">DEHCShipGatlings1</card>
-        <card dbid="6691">DEHCExtensiveFortificationsEuropean</card>
-        <card dbid="2364">HCShipCoveredWagons2</card>
         <card dbid="7215">DEHCApacheScouts</card>
         <card dbid="7225">DEHCUSExpedition</card>
         <card dbid="7210">DEHCLouisianaPurchase</card>
@@ -1270,16 +1274,13 @@
         <card dbid="7028">DEHCShipRegulars1</card>
         <card dbid="814">HCUnlockFort</card>
         <card dbid="2220">HCShipCows</card>
-        <card dbid="1688">HCHeavyFortifications</card>
+        <card dbid="1688">HCHeavyFortificationsUS</card>
         <card dbid="3438">HCXPCapitalism</card>
         <card dbid="7067">DEHCImmigrantsIrish</card>
         <card dbid="7196">DEHCHamiltonianEconomics</card>
         <card dbid="7183">DEHCSpringfieldArmory</card>
         <card dbid="2237">HCShipMortars1</card>
         <card dbid="7027">DEHCShipStateMilitiaRepeat1</card>
-        <card dbid="7037">DEHCShipGatlings1</card>
-        <card dbid="6691">DEHCExtensiveFortificationsEuropean</card>
-        <card dbid="2364">HCShipCoveredWagons2</card>
         <card dbid="7215">DEHCApacheScouts</card>
         <card dbid="7225">DEHCUSExpedition</card>
         <card dbid="7210">DEHCLouisianaPurchase</card>
@@ -1296,7 +1297,6 @@
         <card dbid="7180">DEHCContinentalRangers</card>
         <card dbid="7033">DEHCShipRiflemen1</card>
         <card dbid="7210">DEHCLouisianaPurchase</card>
-        <card dbid="7037">DEHCShipGatlings1</card>
         <card dbid="7067">DEHCImmigrantsIrish</card>
         <card dbid="7196">DEHCHamiltonianEconomics</card>
         <card dbid="7197">DEHCAdvancedSaloon</card>
@@ -1332,7 +1332,6 @@
         <card dbid="2223">HCShipFrigates</card>
         <card dbid="7052">DEHCTrainTimeUS</card>
         <card dbid="7183">DEHCSpringfieldArmory</card>
-        <card dbid="7037">DEHCShipGatlings1</card>
       </cards>
     </deck>
     <revoltdeck>
@@ -1403,13 +1402,12 @@
       <tech x="4.3" y="2.0">HCShipSheep2</tech>
       <tech x="5.0" y="2.0">HCShipCows</tech>
       <tech x="6.0" y="1.0">HCShipCoveredWagons</tech>
-      <tech x="6.0" y="1.0">HCShipCoveredWagons2</tech>
       <tech x="6.0" y="3.0">HCShipSurgeons</tech>
       <tech x="6.0" y="4.0">HCXPShipSurgeons2</tech>
       <tech x="6.0" y="7.0">HCXPCapitalism</tech>
       <tech x="7.0" y="1.0">DEHCGeneralAmericans</tech>
       <tech x="7.0" y="5.0">HCXPAdvancedBalloon</tech>
-      <tech x="7.0" y="5.0">HCShipBalloons</tech>
+      <tech x="7.0" y="5.0">DEHCMissouriRiverExpeditions</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="1.9" y="1.0">HCShipFoodCrates1</tech>
@@ -1430,13 +1428,12 @@
       <tech x="4.3" y="2.0">HCShipSheep2</tech>
       <tech x="5.0" y="2.0">HCShipCows</tech>
       <tech x="6.0" y="1.0">HCShipCoveredWagons</tech>
-      <tech x="6.0" y="1.0">HCShipCoveredWagons2</tech>
       <tech x="6.0" y="3.0">HCShipSurgeons</tech>
       <tech x="6.0" y="4.0">HCXPShipSurgeons2</tech>
       <tech x="6.0" y="7.0">HCXPCapitalism</tech>
       <tech x="7.0" y="1.0">DEHCGeneralAmericans</tech>
       <tech x="7.0" y="5.0">HCXPAdvancedBalloon</tech>
-      <tech x="7.0" y="5.0">HCShipBalloons</tech>
+      <tech x="7.0" y="5.0">DEHCMissouriRiverExpeditions</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1464,6 +1461,8 @@
       <tech x="0.7" y="3.0">DEHCShipStateMilitia3</tech>
       <tech x="0.7" y="4.0">DEHCShipStateMilitiaRepeat1</tech>
       <tech x="1.2" y="7.0">DEHCShipCarbineCav1</tech>
+      <tech x="1.2" y="7.0">DEHCShipCarbineCav2</tech>
+      <tech x="1.2" y="7.0">DEHCShipCarbineCav3</tech>
       <tech x="2.0" y="1.0">DEHCShipRegulars1</tech>
       <tech x="2.0" y="2.0">DEHCShipRegulars3</tech>
       <tech x="1.7" y="4.0">DEHCShipRegulars2</tech>
@@ -1475,14 +1474,11 @@
       <tech x="5.1" y="3.0">DEHCShipRiflemen3</tech>
       <tech x="5.1" y="3.0">DEHCMassachusettsVolunteers</tech>
       <tech x="5.8" y="1.0">DEHCShipGatlingsTeam1</tech>
-      <tech x="5.8" y="2.0">DEHCShipGatlings1</tech>
-      <tech x="5.8" y="3.0">DEHCShipGatlingsRepeat1</tech>
       <tech x="5.8" y="3.0">DEHCCoffeeMillGun</tech>
       <tech x="5.8" y="7.0">HCXPShipHorseArtillery2</tech>
       <tech x="5.8" y="7.0">DEHCShipHorseArtilleryRepeat1</tech>
       <tech x="5.8" y="7.0">DEHCShipCapturedRockets</tech>
       <tech x="5.8" y="7.0">DEHCShipQuakerGunsTeam</tech>
-      <tech x="5.8" y="7.0">DEHCShipCulverineMortar</tech>
       <tech x="6.5" y="1.0">HCAdvancedArtillery</tech>
       <tech x="6.5" y="2.0">HCShipMortars1</tech>
       <tech x="6.5" y="3.0">HCShipMortars2</tech>
@@ -1493,6 +1489,8 @@
       <tech x="7.2" y="7.0">DEHCContinentalRangers</tech>
       <tech x="7.2" y="7.0">DEHCBuffaloSoldiers</tech>
       <tech x="7.2" y="7.0">DEHCUSMarines</tech>
+      <tech x="7.2" y="7.0">DEHCGeorgiaHussars</tech>
+      <tech x="7.2" y="7.0">DEHCRollingArtillery</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.7" y="1.0">DEHCShipStateMilitia1</tech>
@@ -1500,6 +1498,8 @@
       <tech x="0.7" y="3.0">DEHCShipStateMilitia3</tech>
       <tech x="0.7" y="4.0">DEHCShipStateMilitiaRepeat1</tech>
       <tech x="1.2" y="7.0">DEHCShipCarbineCav1</tech>
+      <tech x="1.2" y="7.0">DEHCShipCarbineCav2</tech>
+      <tech x="1.2" y="7.0">DEHCShipCarbineCav3</tech>
       <tech x="2.0" y="1.0">DEHCShipRegulars1</tech>
       <tech x="2.0" y="2.0">DEHCShipRegulars3</tech>
       <tech x="1.7" y="4.0">DEHCShipRegulars2</tech>
@@ -1511,14 +1511,11 @@
       <tech x="5.1" y="3.0">DEHCShipRiflemen3</tech>
       <tech x="5.1" y="3.0">DEHCMassachusettsVolunteers</tech>
       <tech x="5.8" y="1.0">DEHCShipGatlingsTeam1</tech>
-      <tech x="5.8" y="2.0">DEHCShipGatlings1</tech>
-      <tech x="5.8" y="3.0">DEHCShipGatlingsRepeat1</tech>
       <tech x="5.8" y="3.0">DEHCCoffeeMillGun</tech>
       <tech x="5.8" y="7.0">HCXPShipHorseArtillery2</tech>
       <tech x="5.8" y="7.0">DEHCShipHorseArtilleryRepeat1</tech>
       <tech x="5.8" y="7.0">DEHCShipCapturedRockets</tech>
       <tech x="5.8" y="7.0">DEHCShipQuakerGunsTeam</tech>
-      <tech x="5.8" y="7.0">DEHCShipCulverineMortar</tech>
       <tech x="6.5" y="1.0">HCAdvancedArtillery</tech>
       <tech x="6.5" y="2.0">HCShipMortars1</tech>
       <tech x="6.5" y="3.0">HCShipMortars2</tech>
@@ -1529,6 +1526,8 @@
       <tech x="7.2" y="7.0">DEHCContinentalRangers</tech>
       <tech x="7.2" y="7.0">DEHCBuffaloSoldiers</tech>
       <tech x="7.2" y="7.0">DEHCUSMarines</tech>
+      <tech x="7.2" y="7.0">DEHCGeorgiaHussars</tech>
+      <tech x="7.2" y="7.0">DEHCRollingArtillery</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1562,10 +1561,9 @@
       <tech x="4.1" y="3.0">HCNativeTreaties</tech>
       <tech x="1.7" y="2.0">HCPioneers</tech>
       <tech x="3.1" y="1.0">HCUnlockFort</tech>
-      <tech x="3.1" y="2.0">DEHCExtensiveFortificationsEuropean</tech>
       <tech x="3.1" y="3.0">HCImprovedBuildings</tech>
       <tech x="2.4" y="5.0">DEHCKosciuszkoFortifications</tech>
-      <tech x="3.1" y="5.0">HCHeavyFortifications</tech>
+      <tech x="3.1" y="5.0">HCHeavyFortificationsUS</tech>
       <tech x="6.0" y="1.0">DEHCShipMilitaryWagonsTeam</tech>
       <tech x="3.8" y="1.0">DEHCKnoxArtilleryTrain</tech>
       <tech x="3.8" y="4.0">HCFrontierDefenses2</tech>
@@ -1582,6 +1580,7 @@
       <tech x="1.7" y="3.0">DEHCMinutemenCompanies</tech>
       <tech x="4.1" y="3.0">DEHCLouisianaPurchase</tech>
       <tech x="4.1" y="3.0">DEHCAlaskaPurchase</tech>
+      <tech x="4.1" y="3.0">DEHCFedGeneralAssembly</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="7.0" y="3.0">DEHCHamiltonianEconomics</tech>
@@ -1595,10 +1594,9 @@
       <tech x="4.1" y="3.0">HCNativeTreaties</tech>
       <tech x="1.7" y="2.0">HCPioneers</tech>
       <tech x="3.1" y="1.0">HCUnlockFort</tech>
-      <tech x="3.1" y="2.0">DEHCExtensiveFortificationsEuropean</tech>
       <tech x="3.1" y="3.0">HCImprovedBuildings</tech>
       <tech x="2.4" y="5.0">DEHCKosciuszkoFortifications</tech>
-      <tech x="3.1" y="5.0">HCHeavyFortifications</tech>
+      <tech x="3.1" y="5.0">HCHeavyFortificationsUS</tech>
       <tech x="6.0" y="1.0">DEHCShipMilitaryWagonsTeam</tech>
       <tech x="3.8" y="1.0">DEHCKnoxArtilleryTrain</tech>
       <tech x="3.8" y="4.0">HCFrontierDefenses2</tech>
@@ -1614,6 +1612,7 @@
       <tech x="1.7" y="3.0">DEHCMinutemenCompanies</tech>
       <tech x="4.1" y="3.0">DEHCLouisianaPurchase</tech>
       <tech x="4.1" y="3.0">DEHCAlaskaPurchase</tech>
+      <tech x="4.1" y="3.0">DEHCFedGeneralAssembly</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1648,6 +1647,7 @@
       <tech x="3.4" y="3.0">HCSilversmith</tech>
       <tech x="4.3" y="5.0">HCRefrigeration</tech>
       <tech x="5.2" y="1.0">HCStockyards</tech>
+      <tech x="6.0" y="7.0">HCXPCapitalism</tech>
       <tech x="6.1" y="3.0">HCSpiceTrade</tech>
       <tech x="6.1" y="5.0">HCMedicine</tech>
       <tech x="7.0" y="1.0">HCRumDistillery</tech>
@@ -1982,35 +1982,35 @@
     </waypoint>
     <waypoint>
       <bone>bone_vendor01</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor02</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor03</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor04</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor05</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor06</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor07</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor08</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_firework01</bone>
@@ -2083,5 +2083,6 @@
     <prop active="1">American_AcademyTexture0</prop>
     <prop>American_AcademyTexture1</prop>
     <prop>American_AcademyTexture2</prop>
+    <prop>deGeneralUS</prop>
   </obtainableprops>
 </homecity>

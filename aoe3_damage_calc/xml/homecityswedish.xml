@@ -380,7 +380,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
-      <displayunitcount>7</displayunitcount>
+      <displayunitcount>8</displayunitcount>
     </card>
     <card>
       <name>DEHCShipHakkapelits2</name>
@@ -617,7 +617,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>4</displayunitcount>
     </card>
     <card>
@@ -1028,7 +1028,7 @@
     </card>
     <card>
       <name>DEHCMercsMamelukesSwedish</name>
-      <maxcount>-1</maxcount>
+      <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCShipGalleons</prereqtech>
       <age>3</age>
@@ -1122,7 +1122,7 @@
       <level>10</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
-      <displayunitcount>4</displayunitcount>
+      <displayunitcount>3</displayunitcount>
     </card>
     <card>
       <name>DEHCContractMercsFusiliers</name>
@@ -1130,7 +1130,7 @@
       <level>10</level>
       <prereqtech>DEHCContractMercsLandsknechts</prereqtech>
       <age>1</age>
-      <displayunitcount>4</displayunitcount>
+      <displayunitcount>3</displayunitcount>
     </card>
     <card>
       <name>DEHCContractMercsHighlanders</name>
@@ -1364,7 +1364,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>10</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1374,7 +1374,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>20</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1384,7 +1384,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1403,7 +1403,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>16</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1414,6 +1414,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
+      <displayunitcount>3</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1422,7 +1423,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>1600</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1432,7 +1433,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>1600</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1457,40 +1458,12 @@
       </revoltcard>
     </card>
     <card>
-      <name>DEHCREVTurkuAcademy</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
-      <revoltcard>
-      </revoltcard>
-    </card>
-    <card>
       <name>DEHCREVShipElk</name>
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>3</age>
       <displayunitcount>15</displayunitcount>
-      <revoltcard>
-      </revoltcard>
-    </card>
-    <card>
-      <name>DEHCREVNothernWilderness</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
-      <revoltcard>
-      </revoltcard>
-    </card>
-    <card>
-      <name>DEHCREVBlackberries</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>XPRevolution</prereqtech>
-      <bindtotech>DEHCBlackberries</bindtotech>
-      <age>2</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1501,6 +1474,16 @@
       <prereqtech>XPRevolution</prereqtech>
       <age>3</age>
       <displayunitcount>4</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVBlackberries</name>
+      <maxcount>2</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <bindtotech>DEHCBlackberries</bindtotech>
+      <age>3</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1519,8 +1502,27 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>3</age>
+      <age>2</age>
       <displayunitcount>2</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVTurkuAcademy</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>2</age>
+      <displayunitcount>5</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVNothernWilderness</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>2</age>
       <revoltcard>
       </revoltcard>
     </card>

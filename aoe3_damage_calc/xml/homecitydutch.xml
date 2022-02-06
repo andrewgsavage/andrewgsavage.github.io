@@ -1260,7 +1260,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>16</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1290,7 +1290,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1318,7 +1318,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>10</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1328,7 +1328,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>20</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1338,7 +1338,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1347,7 +1347,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>16</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1358,6 +1358,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
+      <displayunitcount>3</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1366,7 +1367,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1377,6 +1378,7 @@
       <prereqtech>XPRevolution</prereqtech>
       <bindtotech>HCUnlockFactory</bindtotech>
       <age>3</age>
+      <displayunitcount>1</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1386,6 +1388,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>3</age>
+      <displayunitcount>1</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1396,6 +1399,7 @@
       <prereqtech>XPRevolution</prereqtech>
       <bindtotech>HCRobberBarons</bindtotech>
       <age>3</age>
+      <displayunitcount>1</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1410,16 +1414,6 @@
       </revoltcard>
     </card>
     <card>
-      <name>DEHCREVShipHomesteadWagons</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
-      <displayunitcount>5</displayunitcount>
-      <revoltcard>
-      </revoltcard>
-    </card>
-    <card>
       <name>DEHCREVShipOutpostWagons</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -1430,11 +1424,22 @@
       </revoltcard>
     </card>
     <card>
-      <name>DEHCREVDiamondRush</name>
+      <name>DEHCREVShipHomesteadWagons</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
+      <displayunitcount>5</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVDiamondRush</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>1</age>
+      <displayunitcount>1</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1443,7 +1448,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1452,7 +1457,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1471,7 +1476,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>10</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1481,7 +1486,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>20</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -2167,35 +2172,35 @@
     </waypoint>
     <waypoint>
       <bone>bone_vendor01</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor02</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor03</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor04</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor05</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor06</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor07</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor08</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_pathnode_01</bone>

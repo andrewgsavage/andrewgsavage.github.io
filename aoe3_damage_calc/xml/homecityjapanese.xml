@@ -759,6 +759,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
+      <displayunitcount>1</displayunitcount>
     </card>
     <card>
       <name>YPHCShipDaimyoSatsuma</name>
@@ -766,6 +767,7 @@
       <level>10</level>
       <prereqtech>YPHCShipDaimyoAizu</prereqtech>
       <age>1</age>
+      <displayunitcount>1</displayunitcount>
     </card>
     <card>
       <name>YPHCShipShogunate</name>
@@ -773,6 +775,7 @@
       <level>10</level>
       <prereqtech>YPHCShipDaimyoSatsuma</prereqtech>
       <age>3</age>
+      <displayunitcount>1</displayunitcount>
     </card>
     <card>
       <name>YPHCBakufu</name>
@@ -1312,10 +1315,6 @@
   </decks>
   <building>
     <name>Estate</name>
-    <visual>
-      <file>japan\tori.xml</file>
-      <bone>bone_tori</bone>
-    </visual>
     <uix>150</uix>
     <uiy>200</uiy>
     <camera>japan\japan_homecity_estate_camera.cam</camera>
@@ -1969,35 +1968,35 @@
     </waypoint>
     <waypoint>
       <bone>bone_vendor01</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor02</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor03</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor04</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor05</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor06</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor07</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor08</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_firework01</bone>
@@ -2025,66 +2024,25 @@
     </waypoint>
   </waypoints>
   <obtainableprops>
-    <prop>Torchy</prop>
-    <prop>Juggler</prop>
-    <prop>PeasantVendor</prop>
-    <prop>MiddleClassMusician</prop>
-    <prop>MiddleClassPreacher</prop>
-    <prop>PeasantPainter</prop>
-    <prop>Drunk</prop>
-    <prop>Thug</prop>
-    <prop>NiceLady</prop>
-    <prop>PeasantFisherman</prop>
-    <prop>UnitChats</prop>
-    <prop active="0">Spanish_LightSet1</prop>
-    <prop>Spanish_LightSet2</prop>
-    <prop>Spanish_AcadProp01</prop>
-    <prop>Spanish_AcadProp02</prop>
-    <prop>Spanish_AcadProp03</prop>
-    <prop>Spanish_AcadProp04</prop>
-    <prop>Church_RiderStatueProp</prop>
-    <prop>Spanish_CathProp01</prop>
-    <prop>Spanish_NWCTProp01</prop>
-    <prop>Spanish_NWCTProp02</prop>
-    <prop>Spanish_NWCTProp03</prop>
-    <prop>Spn_FactProp01</prop>
-    <prop>Spn_FactProp02</prop>
-    <prop>Spn_DockProp01</prop>
-    <prop>Spn_DockProp02</prop>
-    <prop>Spn_DockProp03</prop>
-    <prop>Spn_DockProp04</prop>
-    <prop>Spn_DockProp05</prop>
-    <prop active="1">Spanish_NWTCTexture0</prop>
-    <prop>Spanish_NWTCTexture1</prop>
-    <prop>Spanish_NWTCTexture2</prop>
-    <prop>Spanish_NWTCTexture3</prop>
-    <prop>Spanish_NWTCTexture4</prop>
-    <prop>Spanish_NWTCTexture5</prop>
-    <prop>Spanish_NWTCTexture6</prop>
-    <prop>Spanish_NWTCTexture7</prop>
-    <prop active="1">Spanish_AcademyTexture0</prop>
-    <prop>Spanish_AcademyTexture1</prop>
-    <prop>Spanish_AcademyTexture2</prop>
-    <prop>Spanish_AcademyTexture3</prop>
-    <prop active="1">Spanish_ManuPlantTexture0</prop>
-    <prop>Spanish_ManuPlantTexture1</prop>
-    <prop>Spanish_ManuPlantTexture2</prop>
-    <prop>Spanish_ManuPlantTexture3</prop>
-    <prop>Spanish_ManuPlantTexture4</prop>
-    <prop>Spanish_ManuPlantTexture5</prop>
-    <prop>Spanish_ManuPlantTexture6</prop>
-    <prop>Spanish_ManuPlantTexture7</prop>
-    <prop active="1">Spanish_CathedralTexture0</prop>
-    <prop>Spanish_CathedralTexture1</prop>
-    <prop>Spanish_CathedralTexture2</prop>
-    <prop>Spanish_CathedralTexture3</prop>
-    <prop active="1">Spanish_DockTexture0</prop>
-    <prop>Spanish_DockTexture1</prop>
-    <prop>Spanish_DockTexture2</prop>
-    <prop>Spanish_DockTexture3</prop>
-    <prop>Spanish_DockTexture4</prop>
-    <prop>Spanish_DockTexture5</prop>
-    <prop>Spanish_DockTexture6</prop>
-    <prop>Spanish_DockTexture7</prop>
+    <prop active="1">Japanese_Customs_Variation0</prop>
+    <prop>Japanese_Customs_Variation1</prop>
+    <prop active="1">Japanese_Merchant_Variation0</prop>
+    <prop>Japanese_Merchant_Variation1</prop>
+    <prop active="1">Japanese_Court_Variation0</prop>
+    <prop>Japanese_Court_Variation1</prop>
+    <prop active="1">Japanese_Fortress_Variation0</prop>
+    <prop>Japanese_Fortress_Variation1</prop>
+    <prop active="1">Japanese_Treasury_Variation0</prop>
+    <prop>Japanese_Treasury_Variation1</prop>
+    <prop active="1">Japanese_LightSunset</prop>
+    <prop>Japanese_LightMistyMorning</prop>
+    <prop>Japanese_LightSetNight</prop>
+    <prop>Japanese_LightSetSnow</prop>
+    <prop>Japanese_Kite_Festival</prop>
+    <prop>Japanese_Boats</prop>
+    <prop>Japanese_SnowMonkey</prop>
+    <prop>Japanese_Paper_Balloon_Festival_Part1</prop>
+    <prop>Japanese_Paper_Balloon_Festival_Water_Part2</prop>
+    <prop>Japanese_Paper_Balloon_Festival_Sky_Part2</prop>
   </obtainableprops>
 </homecity>

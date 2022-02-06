@@ -18,6 +18,9 @@
   <numpropunlocksearned>0</numpropunlocksearned>
   <ambientsounds>homecity\aztecambientsounds.xml</ambientsounds>
   <xsai>generic_city</xsai>
+  <heroprotounits>
+    <protounit>xpAztecWarchief</protounit>
+  </heroprotounits>
   <coffers>
     <current>
       <food>0</food>
@@ -180,15 +183,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPCoinCratesAztec2</name>
-      <maxcount>-1</maxcount>
-      <level>0</level>
-      <prereqtech>HCShipCoinCrates1</prereqtech>
-      <age>1</age>
-      <displayunitcount>500</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCXPCoinCratesAztec3</name>
       <maxcount>-1</maxcount>
       <level>10</level>
@@ -258,6 +252,15 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
+      <name>DEHCShipMedicineMen3Aztec</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>5</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
       <name>HCXPWarChiefAztec1</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -310,7 +313,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
-      <displayunitcount>6</displayunitcount>
+      <displayunitcount>5</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -387,7 +390,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
-      <displayunitcount>9</displayunitcount>
+      <displayunitcount>8</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -405,7 +408,7 @@
       <level>10</level>
       <prereqtech>HCXPShipMacehualtins2</prereqtech>
       <age>1</age>
-      <displayunitcount>10</displayunitcount>
+      <displayunitcount>9</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -434,6 +437,13 @@
       <age>3</age>
       <displayunitcount>20</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCMacehualtinCombat</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
     </card>
     <card>
       <name>HCXPWarHutTraining</name>
@@ -482,16 +492,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
-      <displayunitcount>5</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
-      <name>HCXPShipJaguarKnights2</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>HCXPShipJaguarKnights1</prereqtech>
-      <age>3</age>
-      <displayunitcount>8</displayunitcount>
+      <displayunitcount>6</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -500,16 +501,7 @@
       <level>10</level>
       <prereqtech>HCXPShipJaguarKnights2</prereqtech>
       <age>2</age>
-      <displayunitcount>7</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
-      <name>HCXPShipJaguarKnights4</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>HCXPShipJaguarKnights3</prereqtech>
-      <age>3</age>
-      <displayunitcount>9</displayunitcount>
+      <displayunitcount>8</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -518,7 +510,7 @@
       <level>25</level>
       <prereqtech>HCXPShipJaguarKnights4</prereqtech>
       <age>3</age>
-      <displayunitcount>11</displayunitcount>
+      <displayunitcount>14</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -527,6 +519,15 @@
       <level>40</level>
       <prereqtech>HCXPShipJaguarKnights5</prereqtech>
       <age>3</age>
+      <displayunitcount>12</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCShipJaguarKnights6</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
       <displayunitcount>9</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
@@ -699,6 +700,13 @@
       <age>0</age>
     </card>
     <card>
+      <name>HCXPPioneers2</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+    </card>
+    <card>
       <name>HCXPShipNoblesHutTravois1</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -786,6 +794,45 @@
       <age>0</age>
     </card>
     <card>
+      <name>DEHCRitualGladiators</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCSkullWall</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCCalendarCeremony</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>0</age>
+      <displayunitcount>1</displayunitcount>
+    </card>
+    <card>
+      <name>DEHCChichimecaRebellion</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+    </card>
+    <card>
+      <name>DEHCCalmecac</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>0</age>
+      <displayunitcount>1</displayunitcount>
+    </card>
+    <card>
       <name>HCXPShipFarmTravois1</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -824,13 +871,6 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>0</age>
-    </card>
-    <card>
-      <name>HCXPCanoes</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>HCFishMarket</prereqtech>
       <age>0</age>
     </card>
     <card>
@@ -1028,13 +1068,6 @@
       <age>3</age>
     </card>
     <card>
-      <name>HCAdmirality</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>1</age>
-    </card>
-    <card>
       <name>HCXPWaterDance</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -1050,7 +1083,7 @@
     </card>
     <card>
       <name>HCXPZapotecAllies1</name>
-      <maxcount>1</maxcount>
+      <maxcount>2</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
@@ -1059,7 +1092,7 @@
     </card>
     <card>
       <name>HCXPZapotecAllies2</name>
-      <maxcount>1</maxcount>
+      <maxcount>2</maxcount>
       <level>10</level>
       <prereqtech>HCXPZapotecAllies1</prereqtech>
       <age>3</age>
@@ -1076,21 +1109,23 @@
     </card>
     <card>
       <name>HCXPMayanAllies1</name>
-      <maxcount>1</maxcount>
+      <maxcount>2</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
       <displayunitcount>11</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
+      <overrideicontech>HCMayanAlliesHolcanAztecIcon</overrideicontech>
     </card>
     <card>
       <name>HCXPMayanAllies2</name>
-      <maxcount>1</maxcount>
+      <maxcount>2</maxcount>
       <level>10</level>
       <prereqtech>HCXPMayanAllies1</prereqtech>
       <age>3</age>
       <displayunitcount>24</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
+      <overrideicontech>HCMayanAlliesHolcanAztecIcon</overrideicontech>
     </card>
     <card>
       <name>HCXPMayanAlliesRepeat</name>
@@ -1102,7 +1137,7 @@
     </card>
     <card>
       <name>HCXPSpanishAllies1</name>
-      <maxcount>1</maxcount>
+      <maxcount>2</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
@@ -1111,7 +1146,7 @@
     </card>
     <card>
       <name>HCXPSpanishAllies2</name>
-      <maxcount>1</maxcount>
+      <maxcount>2</maxcount>
       <level>10</level>
       <prereqtech>HCXPSpanishAllies1</prereqtech>
       <age>3</age>
@@ -1163,8 +1198,8 @@
       <maxcount>1</maxcount>
       <level>25</level>
       <prereqtech>HCXPTempleXolotl</prereqtech>
-      <age>3</age>
-      <displayunitcount>18</displayunitcount>
+      <age>2</age>
+      <displayunitcount>6</displayunitcount>
     </card>
     <card>
       <name>HCXPTempleXochipilli</name>
@@ -1195,7 +1230,7 @@
       <maxcount>1</maxcount>
       <level>40</level>
       <prereqtech>-1</prereqtech>
-      <age>2</age>
+      <age>0</age>
     </card>
     <card>
       <name>HCXPBuccaneers</name>
@@ -1230,7 +1265,6 @@
         <card>HCXPShipNoblesHutTravois1</card>
         <card>HCXPShipNoblesHutTravois2</card>
         <card>HCXPShipMacehualtinsRepeat</card>
-        <card>HCXPShipJaguarKnights2</card>
         <card>HCXPShipJaguarKnights1</card>
         <card>HCXPShipEagleKnights1</card>
       </cards>
@@ -1378,7 +1412,6 @@
       <tech x="3.9" y="1.0">HCShipCoinCrates1</tech>
       <tech x="2.3" y="2.0">HCShipFoodCrates2</tech>
       <tech x="3.1" y="2.0">HCShipWoodCrates2</tech>
-      <tech x="3.9" y="2.0">HCXPCoinCratesAztec2</tech>
       <tech x="2.3" y="3.0">HCShipFoodCrates3</tech>
       <tech x="3.1" y="3.0">HCShipWoodCrates3</tech>
       <tech x="3.9" y="3.0">HCXPCoinCratesAztec3</tech>
@@ -1393,6 +1426,7 @@
       <tech x="5.5" y="3.0">HCXPWarChiefAztec2</tech>
       <tech x="6.3" y="3.0">HCXPShipMedicineMenTeamAztec</tech>
       <tech x="6.3" y="5.0">HCXPShipMedicineMen2Aztec</tech>
+      <tech x="6.3" y="5.0">DEHCShipMedicineMen3Aztec</tech>
       <tech x="7.1" y="3.0">HCXPShipJaguars2</tech>
       <tech x="7.1" y="5.0">HCXPShipJaguars3</tech>
       <tech x="7.1" y="7.0">HCXPShipJaguarsTeam</tech>
@@ -1410,7 +1444,6 @@
       <tech x="3.9" y="1.0">HCShipCoinCrates1</tech>
       <tech x="2.3" y="2.0">HCShipFoodCrates2</tech>
       <tech x="3.1" y="2.0">HCShipWoodCrates2</tech>
-      <tech x="3.9" y="2.0">HCXPCoinCratesAztec2</tech>
       <tech x="2.3" y="3.0">HCShipFoodCrates3</tech>
       <tech x="3.1" y="3.0">HCShipWoodCrates3</tech>
       <tech x="3.9" y="3.0">HCXPCoinCratesAztec3</tech>
@@ -1425,6 +1458,7 @@
       <tech x="5.5" y="3.0">HCXPWarChiefAztec2</tech>
       <tech x="6.3" y="3.0">HCXPShipMedicineMenTeamAztec</tech>
       <tech x="6.3" y="5.0">HCXPShipMedicineMen2Aztec</tech>
+      <tech x="6.3" y="5.0">DEHCShipMedicineMen3Aztec</tech>
       <tech x="7.1" y="3.0">HCXPShipJaguars2</tech>
       <tech x="7.1" y="5.0">HCXPShipJaguars3</tech>
       <tech x="7.1" y="7.0">HCXPShipJaguarsTeam</tech>
@@ -1466,17 +1500,17 @@
       <tech x="2.4" y="4.0">HCXPShipMacehualtins4</tech>
       <tech x="2.4" y="5.0">HCXPShipMacehualtins5</tech>
       <tech x="2.4" y="7.0">HCXPShipMacehualtinsRepeat</tech>
+      <tech x="2.4" y="7.0">DEHCMacehualtinCombat</tech>
       <tech x="3.2" y="1.0">HCXPShipEagleKnights1</tech>
       <tech x="3.2" y="3.0">HCXPShipEagleKnights2</tech>
       <tech x="3.2" y="4.0">HCXPShipEagleKnights3</tech>
       <tech x="3.2" y="7.0">HCXPRuthlessness</tech>
       <tech x="4.0" y="4.0">HCXPScorchedEarth</tech>
       <tech x="4.8" y="1.0">HCXPShipJaguarKnights1</tech>
-      <tech x="4.8" y="2.0">HCXPShipJaguarKnights2</tech>
       <tech x="4.8" y="3.0">HCXPShipJaguarKnights3</tech>
-      <tech x="4.8" y="4.0">HCXPShipJaguarKnights4</tech>
       <tech x="4.8" y="5.0">HCXPShipJaguarKnights5</tech>
       <tech x="4.8" y="7.0">HCXPShipJaguarKnightsRepeat</tech>
+      <tech x="4.8" y="7.0">DEHCShipJaguarKnights6</tech>
       <tech x="5.6" y="3.0">HCXPKnightHitpoints</tech>
       <tech x="5.6" y="4.0">HCXPKnightDamage</tech>
       <tech x="5.6" y="5.0">HCXPKnightCombat</tech>
@@ -1504,17 +1538,17 @@
       <tech x="2.4" y="4.0">HCXPShipMacehualtins4</tech>
       <tech x="2.4" y="5.0">HCXPShipMacehualtins5</tech>
       <tech x="2.4" y="7.0">HCXPShipMacehualtinsRepeat</tech>
+      <tech x="2.4" y="7.0">DEHCMacehualtinCombat</tech>
       <tech x="3.2" y="1.0">HCXPShipEagleKnights1</tech>
       <tech x="3.2" y="3.0">HCXPShipEagleKnights2</tech>
       <tech x="3.2" y="4.0">HCXPShipEagleKnights3</tech>
       <tech x="3.2" y="7.0">HCXPRuthlessness</tech>
       <tech x="4.0" y="4.0">HCXPScorchedEarth</tech>
       <tech x="4.8" y="1.0">HCXPShipJaguarKnights1</tech>
-      <tech x="4.8" y="2.0">HCXPShipJaguarKnights2</tech>
       <tech x="4.8" y="3.0">HCXPShipJaguarKnights3</tech>
-      <tech x="4.8" y="4.0">HCXPShipJaguarKnights4</tech>
       <tech x="4.8" y="5.0">HCXPShipJaguarKnights5</tech>
       <tech x="4.8" y="7.0">HCXPShipJaguarKnightsRepeat</tech>
+      <tech x="4.8" y="7.0">DEHCShipJaguarKnights6</tech>
       <tech x="5.6" y="3.0">HCXPKnightHitpoints</tech>
       <tech x="5.6" y="4.0">HCXPKnightDamage</tech>
       <tech x="5.6" y="5.0">HCXPKnightCombat</tech>
@@ -1562,6 +1596,7 @@
       <tech x="3.0" y="4.0">HCXPShipNoblesHutTravois2</tech>
       <tech x="3.0" y="5.0">HCXPShipNoblesHutTravois3</tech>
       <tech x="4.0" y="1.0">HCPioneers</tech>
+      <tech x="4.0" y="1.0">HCXPPioneers2</tech>
       <tech x="4.0" y="3.0">HCXPTownDance</tech>
       <tech x="4.0" y="4.0">HCImprovedBuildings</tech>
       <tech x="5.0" y="1.0">HCXPExtensiveFortificationsAztec</tech>
@@ -1570,6 +1605,11 @@
       <tech x="6.0" y="1.0">HCXPAdvancedFarms</tech>
       <tech x="6.0" y="2.0">HCAdvancedMarket</tech>
       <tech x="7.0" y="3.0">HCAdvancedDock</tech>
+      <tech x="7.0" y="3.0">DEHCRitualGladiators</tech>
+      <tech x="7.0" y="3.0">DEHCSkullWall</tech>
+      <tech x="7.0" y="3.0">DEHCCalendarCeremony</tech>
+      <tech x="7.0" y="3.0">DEHCChichimecaRebellion</tech>
+      <tech x="7.0" y="3.0">DEHCCalmecac</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.0" y="1.0">HCNativeLore</tech>
@@ -1588,6 +1628,7 @@
       <tech x="3.0" y="4.0">HCXPShipNoblesHutTravois2</tech>
       <tech x="3.0" y="5.0">HCXPShipNoblesHutTravois3</tech>
       <tech x="4.0" y="1.0">HCPioneers</tech>
+      <tech x="4.0" y="1.0">HCXPPioneers2</tech>
       <tech x="4.0" y="3.0">HCXPTownDance</tech>
       <tech x="4.0" y="4.0">HCImprovedBuildings</tech>
       <tech x="5.0" y="1.0">HCXPExtensiveFortificationsAztec</tech>
@@ -1596,6 +1637,11 @@
       <tech x="6.0" y="1.0">HCXPAdvancedFarms</tech>
       <tech x="6.0" y="2.0">HCAdvancedMarket</tech>
       <tech x="7.0" y="3.0">HCAdvancedDock</tech>
+      <tech x="7.0" y="3.0">DEHCRitualGladiators</tech>
+      <tech x="7.0" y="3.0">DEHCSkullWall</tech>
+      <tech x="7.0" y="3.0">DEHCCalendarCeremony</tech>
+      <tech x="7.0" y="3.0">DEHCChichimecaRebellion</tech>
+      <tech x="7.0" y="3.0">DEHCCalmecac</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1926,21 +1972,94 @@
     <waypoint>
       <bone>bone_storyteller</bone>
     </waypoint>
+    <waypoint>
+      <bone>bone_parade_01</bone>
+      <paradestart>1</paradestart>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_02</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_03</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_04</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_05</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_06</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_07</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_08</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_09</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_10</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_11</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_12</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_13</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_14</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_15</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
+    <waypoint>
+      <bone>bone_parade_16</bone>
+      <paradenext>1</paradenext>
+    </waypoint>
   </waypoints>
   <obtainableprops>
-    <prop active="1">EmperorsGuard</prop>
-    <prop active="1">BuffaloJuggler</prop>
-    <prop active="1">SpanishPriest</prop>
-    <prop active="1">Ahuiani</prop>
-    <prop active="1">IncanWoman</prop>
-    <prop active="1">IncanNoble</prop>
-    <prop active="1">AztecWarChief</prop>
-    <prop active="1">Conquistador</prop>
-    <prop active="1">EagleKnight</prop>
-    <prop active="1">RugPorter</prop>
-    <prop active="1">VasePorter</prop>
-    <prop>UnitChats</prop>
-    <prop active="1">Aztec_LightSet1</prop>
-    <prop>Aztec_LightSet2</prop>
+    <prop active="1">Aztec_AcademyTexture0</prop>
+    <prop>Aztec_AcademyTexture1</prop>
+    <prop active="1">Aztec_CathedralTexture0</prop>
+    <prop>Aztec_CathedralTexture1</prop>
+    <prop active="1">Aztec_DockTexture0</prop>
+    <prop>Aztec_DockTexture1</prop>
+    <prop active="1">Aztec_PlantTexture0</prop>
+    <prop>Aztec_PlantTexture1</prop>
+    <prop active="1">Aztec_TradeCenterTexture0</prop>
+    <prop>Aztec_TradeCenterTexture1</prop>
+    <prop active="1">Aztec_LightSetDaytime</prop>
+    <prop>Aztec_LightSetThunderstorm</prop>
+    <prop>Aztec_LightSetNight</prop>
+    <prop>Aztec_LightSetSunrise</prop>
+    <prop>Aztec_LightSetEclipse</prop>
+    <prop>Aztec_Boats</prop>
+    <prop>Aztec_Blowgun_Training</prop>
+    <prop>Aztec_Military_Parade</prop>
+    <prop>AztecWarChief</prop>
+    <prop>Aztec_Fire_Festival_1</prop>
+    <prop>Aztec_Fire_Festival_2</prop>
+    <prop>Aztec_Night_Lights_Unlit</prop>
+    <prop>Aztec_Night_Lights_Lit</prop>
   </obtainableprops>
 </homecity>

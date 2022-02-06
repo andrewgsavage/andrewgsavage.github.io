@@ -451,6 +451,7 @@
       <age>2</age>
       <displayunitcount>1</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
+      <overrideicontech>HCShipFalconets3</overrideicontech>
     </card>
     <card>
       <name>HCShipFalconets2</name>
@@ -461,6 +462,7 @@
       <age>2</age>
       <displayunitcount>2</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
+      <overrideicontech>HCShipFalconets3</overrideicontech>
     </card>
     <card>
       <name>HCShipCulverins1</name>

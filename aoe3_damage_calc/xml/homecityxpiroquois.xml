@@ -157,15 +157,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPShipMixedCrates4</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>HCXPShipMixedCrates3</prereqtech>
-      <age>3</age>
-      <displayunitcount>1500</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCXPShipMixedCrates5</name>
       <maxcount>1</maxcount>
       <level>25</level>
@@ -1396,7 +1387,6 @@
       <tech x="4.3" y="1.0">HCXPShipMixedCrates1</tech>
       <tech x="4.3" y="2.0">HCXPShipMixedCrates2</tech>
       <tech x="4.3" y="3.0">HCXPShipMixedCrates3</tech>
-      <tech x="4.3" y="4.0">HCXPShipMixedCrates4</tech>
       <tech x="4.3" y="5.0">HCXPShipMixedCrates5</tech>
       <tech x="4.3" y="6.0">HCXPShipMixedCrates6</tech>
       <tech x="4.3" y="7.0">HCXPShipMixedCratesRepeat</tech>
@@ -1426,7 +1416,6 @@
       <tech x="4.3" y="1.0">HCXPShipMixedCrates1</tech>
       <tech x="4.3" y="2.0">HCXPShipMixedCrates2</tech>
       <tech x="4.3" y="3.0">HCXPShipMixedCrates3</tech>
-      <tech x="4.3" y="4.0">HCXPShipMixedCrates4</tech>
       <tech x="4.3" y="5.0">HCXPShipMixedCrates5</tech>
       <tech x="4.3" y="6.0">HCXPShipMixedCrates6</tech>
       <tech x="4.3" y="7.0">HCXPShipMixedCratesRepeat</tech>
@@ -1851,7 +1840,5 @@
     </waypoint>
   </waypoints>
   <obtainableprops>
-    <prop active="1">Iroquois_Lightset1</prop>
-    <prop>Iroquois_Lightset2</prop>
   </obtainableprops>
 </homecity>

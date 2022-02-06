@@ -484,7 +484,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
-      <displayunitcount>5</displayunitcount>
+      <displayunitcount>6</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1232,6 +1232,13 @@
       <age>2</age>
     </card>
     <card>
+      <name>HCFoodSilos</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>-1</prereqtech>
+      <age>0</age>
+    </card>
+    <card>
       <name>HCREVShipGatlingGuns</name>
       <maxcount>-1</maxcount>
       <level>0</level>
@@ -1341,11 +1348,71 @@
       </revoltcard>
     </card>
     <card>
+      <name>DEHCREVSaleRovers</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>1</age>
+      <displayunitcount>11</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVShipXebec</name>
+      <maxcount>-1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>1</age>
+      <displayunitcount>1</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVShipXebec2</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>1</age>
+      <displayunitcount>2</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVBerberNomads</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>3</age>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVShipBerberAllies</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>3</age>
+      <displayunitcount>15</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVShipZenataTeam</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <bindtotech>DEHCShipZenataTeam</bindtotech>
+      <age>3</age>
+      <displayunitcount>4</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
       <name>DEHCREVShipStradiots</name>
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>3</age>
       <displayunitcount>5</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1365,7 +1432,8 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
+      <displayunitcount>4</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1374,7 +1442,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>3</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1400,20 +1468,42 @@
       </revoltcard>
     </card>
     <card>
-      <name>DEHCREVHajduks</name>
+      <name>DEHCREVGatlingCamels</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>3</age>
+      <displayunitcount>9</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
     <card>
-      <name>DEHCREVMagyarGrenadiers</name>
+      <name>DEHCREVAskari</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>3</age>
+      <displayunitcount>11</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVSennarHorsemen</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>3</age>
+      <displayunitcount>5</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVSudaneseAllies</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>3</age>
+      <displayunitcount>15</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1422,7 +1512,25 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVHajduks</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>1</age>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVMagyarGrenadiers</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1451,7 +1559,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1490,7 +1598,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1499,7 +1607,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>3</age>
+      <age>2</age>
       <displayunitcount>2</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1509,7 +1617,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>3</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1638,10 +1746,15 @@
         <card>DEHCREVShipBarbaryMarksman</card>
         <card>DEHCREVShipBarbaryWarrior</card>
         <card>DEHCREVShipFalconets</card>
-        <card>DEHCREVShipPrivateers</card>
         <card>HCREVShipFortWagon</card>
         <card>DEHCREVDhimma</card>
         <card>DEHCREVCorsairCaptain</card>
+        <card>DEHCREVSaleRovers</card>
+        <card>DEHCREVShipXebec</card>
+        <card>DEHCREVShipXebec2</card>
+        <card>DEHCREVBerberNomads</card>
+        <card>DEHCREVShipBerberAllies</card>
+        <card>DEHCREVShipZenataTeam</card>
       </cards>
     </revoltdeck>
     <revoltdeck civ="DERevEgypt">
@@ -1656,6 +1769,10 @@
         <card>DEHCREVSuezCanal</card>
         <card>DEHCREVShipHorseArtillery2</card>
         <card>DEHCREVNizamsEgypt</card>
+        <card>DEHCREVGatlingCamels</card>
+        <card>DEHCREVAskari</card>
+        <card>DEHCREVSennarHorsemen</card>
+        <card>DEHCREVSudaneseAllies</card>
       </cards>
     </revoltdeck>
     <revoltdeck civ="DERevHungary">
@@ -2020,6 +2137,7 @@
       <tech x="3.4" y="6.0">HCXPCapitalism</tech>
       <tech x="3.4" y="7.0">HCXPSublimePorte</tech>
       <tech x="4.3" y="3.0">HCSustainableAgriculture</tech>
+      <tech x="4.3" y="3.0">HCFoodSilos</tech>
       <tech x="4.3" y="5.0">HCRefrigeration</tech>
       <tech x="5.2" y="1.0">HCStockyards</tech>
       <tech x="6.1" y="1.0">HCFurrier</tech>
@@ -2041,6 +2159,7 @@
       <tech x="3.4" y="6.0">HCXPCapitalism</tech>
       <tech x="3.4" y="7.0">HCXPSublimePorte</tech>
       <tech x="4.3" y="3.0">HCSustainableAgriculture</tech>
+      <tech x="4.3" y="3.0">HCFoodSilos</tech>
       <tech x="4.3" y="5.0">HCRefrigeration</tech>
       <tech x="5.2" y="1.0">HCStockyards</tech>
       <tech x="6.1" y="1.0">HCFurrier</tech>
@@ -2287,55 +2406,55 @@
     </waypoint>
     <waypoint>
       <bone>bone_dregs01</bone>
-      <illreputearea>1&gt;</illreputearea>
+      <illreputearea>1</illreputearea>
     </waypoint>
     <waypoint>
       <bone>bone_dregs02</bone>
-      <illreputearea>1&gt;</illreputearea>
+      <illreputearea>1</illreputearea>
     </waypoint>
     <waypoint>
       <bone>bone_dregs03</bone>
-      <illreputearea>1&gt;</illreputearea>
+      <illreputearea>1</illreputearea>
     </waypoint>
     <waypoint>
       <bone>bone_dregs04</bone>
-      <illreputearea>1&gt;</illreputearea>
+      <illreputearea>1</illreputearea>
     </waypoint>
     <waypoint>
       <bone>bone_dregs05</bone>
-      <illreputearea>1&gt;</illreputearea>
+      <illreputearea>1</illreputearea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor01</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor02</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor03</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor04</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor05</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor06</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor07</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor08</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_firework01</bone>

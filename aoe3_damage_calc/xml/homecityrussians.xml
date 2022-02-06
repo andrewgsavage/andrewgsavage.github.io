@@ -249,6 +249,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>0</age>
+      <displayunitcount>1</displayunitcount>
     </card>
     <card>
       <name>HCShipBalloons</name>
@@ -757,7 +758,7 @@
       <maxcount>1</maxcount>
       <level>25</level>
       <prereqtech>HCFencingSchool</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>HCRidingSchool</name>
@@ -1264,7 +1265,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>1600</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1274,7 +1275,7 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <displayunitcount>1600</displayunitcount>
       <revoltcard>
       </revoltcard>
@@ -1299,39 +1300,12 @@
       </revoltcard>
     </card>
     <card>
-      <name>DEHCREVTurkuAcademy</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
-      <revoltcard>
-      </revoltcard>
-    </card>
-    <card>
       <name>DEHCREVShipElk</name>
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>3</age>
       <displayunitcount>15</displayunitcount>
-      <revoltcard>
-      </revoltcard>
-    </card>
-    <card>
-      <name>DEHCREVNothernWilderness</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
-      <revoltcard>
-      </revoltcard>
-    </card>
-    <card>
-      <name>DEHCREVBlackberries</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1342,6 +1316,15 @@
       <prereqtech>XPRevolution</prereqtech>
       <age>3</age>
       <displayunitcount>4</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVBlackberries</name>
+      <maxcount>2</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>3</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1360,22 +1343,23 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>3</age>
+      <age>2</age>
       <displayunitcount>2</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
     <card>
-      <name>DEHCREVHajduks</name>
+      <name>DEHCREVTurkuAcademy</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
+      <displayunitcount>5</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
     <card>
-      <name>DEHCREVMagyarGrenadiers</name>
+      <name>DEHCREVNothernWilderness</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
@@ -1388,7 +1372,25 @@
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVHajduks</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>1</age>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVMagyarGrenadiers</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1417,7 +1419,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>2</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1456,7 +1458,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>3</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1475,7 +1477,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
-      <age>3</age>
+      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -2227,55 +2229,55 @@
     </waypoint>
     <waypoint>
       <bone>bone_dregs01</bone>
-      <illreputearea>1&gt;</illreputearea>
+      <illreputearea>1</illreputearea>
     </waypoint>
     <waypoint>
       <bone>bone_dregs02</bone>
-      <illreputearea>1&gt;</illreputearea>
+      <illreputearea>1</illreputearea>
     </waypoint>
     <waypoint>
       <bone>bone_dregs03</bone>
-      <illreputearea>1&gt;</illreputearea>
+      <illreputearea>1</illreputearea>
     </waypoint>
     <waypoint>
       <bone>bone_dregs04</bone>
-      <illreputearea>1&gt;</illreputearea>
+      <illreputearea>1</illreputearea>
     </waypoint>
     <waypoint>
       <bone>bone_dregs06</bone>
-      <illreputearea>1&gt;</illreputearea>
+      <illreputearea>1</illreputearea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor01</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor02</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor03</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor04</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor05</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor06</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor07</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_vendor08</bone>
-      <vendorarea>1&gt;</vendorarea>
+      <vendorarea>1</vendorarea>
     </waypoint>
     <waypoint>
       <bone>bone_firework01</bone>
