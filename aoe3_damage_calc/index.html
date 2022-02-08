@@ -35,6 +35,7 @@
   <!-- Driver script -->
   <script>
 let civs = [
+  {name: 'Select Civ', age0Civ: 'Age0French', homecity: 'homecityfrench', techs: ['Age0French', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable'] },
   {name: 'French', age0Civ: 'Age0French', homecity: 'homecityfrench', techs: ['Age0French', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable'] },
   {name: 'Russian', age0Civ: 'Age0Russian', homecity: 'homecityrussians', techs: ['Age0Russian', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
   {name: 'British', age0Civ: 'Age0British', homecity: 'homecitybritish', techs: ['Age0British', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
@@ -118,7 +119,7 @@ let civs = [
   
       militaryUnitNames = Array.from(militaryUnits).map(d=>d.attributes["name"].value)
       civMilUnits = new Set(civUnits.filter(d => militaryUnitNames.includes(d)));
-      civMilUnits = Array.from(civMilUnits).sort() 
+      civMilUnits = ["Select Unit"].concat(Array.from(civMilUnits).sort() )
       civMilUnits = civMilUnits.concat(mercUnitNames).concat(natUnitNames)
       // add remove old options from the button
       d3.select(unitButtonID)
@@ -310,7 +311,6 @@ let civs = [
         }
       });
     })    
-    console.log(tech)
     if(tech.getAttribute("name").includes("RG")){
       rg_techs = Array.from(tech.getElementsByTagName("effect")).filter(effect => effect.getAttribute("type") == "TechStatus")
       rg_techs.forEach(function(tech){
@@ -324,7 +324,6 @@ let civs = [
   function calcUnitStats(unit, techs){
     stat_table_data = calcUnmodifiedUnitStats(unit)
     techs.forEach(function(tech){
-      console.log(tech)
       stat_table_data = applyTech(tech, stat_table_data)
     })
     stat_table_data = stat_table_data.map(function(d){
@@ -526,14 +525,12 @@ let civs = [
   
   defender_hp = defender_stat_table_data.filter(d => d['gameName'] == 'maxhitpoints')[0]['modifiedValue']
   
-  console.log(attacker_side, defender_side, defender_stat_table_data.filter(d => d['gameName'] == 'maxhitpoints'))
   
   attackNames = new Set(attacker_stat_table_data.filter(d => d['attackName'] ).map(d => d['attackName']))
   sdf =['BuildingAttack', 'ChopAttack', 'HandAttackCrate']
   sdf.forEach(d => attackNames.delete(d) )
   breakpoints_data = Array.from(attackNames).map(function(attackName){
     attack_stat_table_data = attacker_stat_table_data.filter(d => d['attackName'] ==  attackName)
-    console.log(attackName)
     attack_damage = attack_stat_table_data.filter(d => d['tag'] ==  'damage')[0]['modifiedValue']
     attack_rof = attack_stat_table_data.filter(d => d['tag'] ==  'rof')[0]['modifiedValue']
   
@@ -567,9 +564,43 @@ let civs = [
     })
   return breakpoints_data
   }
+  function reduce_breakpoints_data(breakpoints_data){
+
+        reduced_breakpoints_data = clone = JSON.parse(JSON.stringify(breakpoints_data));
+        reduced_breakpoints_data =  reduced_breakpoints_data.map(function(d){ 
+        d['attackName'] = ""
+        return d})
+        // remove dupes
+        reduced_breakpoints_data = reduced_breakpoints_data.filter((v,i,a)=>a.findIndex(t=>(JSON.stringify(t) === JSON.stringify(v)))===i)
+
+reduced_breakpoints_data = reduced_breakpoints_data.map(function(reduced_row){
+
+
+breakpoints_data.forEach(function(original_row){
+count = 0;
+    for (const [key, value] of Object.entries(original_row)) {
+        if (value == reduced_row[key]){
+        count = count + 1
+    }
+    }
+    console.log(count, Object.keys(original_row).length -1)
+ if (count == Object.keys(original_row).length -1 ){
+ reduced_row['attackName'] = original_row['attackName'] + " " + reduced_row['attackName']
+}
+
+})
+
+        return reduced_row
+        })
+        reduced_breakpoints_data.sort(function(a,b){return a['seconds_required']-b['seconds_required']})
+  return reduced_breakpoints_data
+  }
+        
+        
+
   function updateBreakpoints(attacker_side, defender_side){
     breakpoints_data = calcBreakpoints(attacker_side, defender_side)
-  
+    breakpoints_data = reduce_breakpoints_data(breakpoints_data)
     let columns = [
       { head: 'Attack Name', cl: 'title', html: d => d['attackName'] },
       { head: 'Damage', cl: 'right-align', html: d => d3.format(".2f")(d['damage']) },
