@@ -17,6 +17,14 @@
       <table class="tags left"></table>
     </div>    
    <div class="column">
+   <details>
+    <summary>Help</summary>
+This is a unit stats and damage calculator for aoe3.
+Select a civ and unit on the left. Technologies, cards, team cards and native techs will appear below. Click each technology or card to activate them in the stats calculation below.
+
+Do the same for the unit you're attacking on the right. In the centre a table will appear showing the damage calculation.
+    </details>
+
     <table class="breakpoints left"></table>
     <table class="breakpoints right"></table>
 
@@ -248,15 +256,29 @@ let civs = [
     tags = Array.from(unit.getElementsByTagName("unittype")).map(d => d.textContent)
     tags.push(unit.attributes['name'].value)
     
-    armor = unit.getElementsByTagName("armor")[0]
+    armors = ["Hand", "Ranged", "Siege"]
+    armors.forEach(function(armor){
     stat_table_data.push({
-      gameName: 'armor' + armor.getAttribute("type"),
-      niceName: 'Resists ' + armor.getAttribute("type"),
-      baseValue: parseFloat(armor.getAttribute("value")),
-      armortype: armor.getAttribute("type"),
+      gameName: 'armor' + armor,
+      niceName: 'Resists ' + armor,
+      baseValue: 0.0,
+      armortype: armor,
       BasePercent: 0.0,
       Absolute: 0.0,
     })
+    })
+    
+    armors = Array.from(unit.getElementsByTagName("armor"))
+    armors.forEach(function(armor){
+        stat_table_data.map(function(item){
+            if(item.armortype == armor.getAttribute("type") ){
+                item.baseValue = parseFloat(armor.getAttribute("value"))
+                }
+                return item
+               
+    })
+    })
+    
   
     // cost = Array.from(unit.getElementsByTagName("Cost")).map(d => d.textContent + " " + d.attributes['resourcetype'].value )
     // stat_table_data.push({
@@ -537,9 +559,10 @@ let civs = [
     attack_damagebonus = attack_stat_table_data.filter(d => defender_tags.includes(d['type']) )
     attack_damagebonus = attack_damagebonus.filter(d => d['tag'] == 'damagebonus').map(d => d['modifiedValue'])
     attack_damagebonus = attack_damagebonus.reduce( (a, b) => a * b, 1)
-    
-    defend_armor = defender_stat_table_data.filter(d => d['armortype'])[0]
-    damagetype = attack_stat_table_data.filter(d => d['tag'] ==  'damage')[0]['damagetype']
+
+    damagetype = attack_stat_table_data.filter(d => d['tag'] ==  'damage')[0]['damagetype']    
+    defend_armor = defender_stat_table_data.filter(d => d['armortype']== damagetype)[0]
+    console.log(defend_armor)
     if(defend_armor['armortype'] == damagetype){
       defend_resists = defend_armor['modifiedValue']
     } else{
