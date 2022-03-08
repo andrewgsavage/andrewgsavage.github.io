@@ -196,6 +196,9 @@ let civs = [
     if(selectedCiv['name'] =="Russian"){
       civTechs = civTechs.concat(["Age0Russian"])
     }
+    if(selectedCiv['name'] =="French"){
+      civTechs = civTechs.concat(["VeteranCuirassierShadow"])
+    }
     civTechs = civTechs.concat(selectedCiv['cards'])
     return civTechs
   }
@@ -444,7 +447,10 @@ let civs = [
       return tags.length>0
     }  
     research_techs = relevant_techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
-        (hasElementWithTextContent(d, "flag", "UpgradeTech") || ["PaperCartridge", "Age0Russian"].includes(d.attributes['name'].value) ) )
+        (hasElementWithTextContent(d, "flag", "UpgradeTech")
+        || ["PaperCartridge", "Age0Russian"].includes(d.attributes['name'].value) 
+        || d.attributes['name'].value.includes("Shadow"))
+        )
     hc_techs = relevant_techs.filter(d => civTechs.includes(d.attributes['name'].value) && 
         ( hasElementWithTextContent(d, "flag", "HomeCity") || hasElementWithTextContent(d, "flag", "YPConsulateTech") ))
     team_techs = relevant_techs.filter(d => !hc_techs.includes(d) && 
@@ -456,6 +462,8 @@ let civs = [
   
   function updateUnitTechs(unit, civTechs, side){
     relevant_techs = gatherUnitTechs(unit, civTechs)
+    console.log(relevant_techs)
+    console.log(relevant_techs.map(d=>d.attributes['name'].textContent))
     tech_groups = groupUnitTechs(relevant_techs, civTechs)
     let gallery = d3.select('.cards.'+side).html("")
   
