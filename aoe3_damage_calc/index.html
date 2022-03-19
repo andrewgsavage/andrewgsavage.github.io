@@ -282,7 +282,58 @@ let civs = [
     })
     })
     
-  
+    costs = ["Food", "Wood", "Gold"]
+    costs.forEach(function(cost){
+    stat_table_data.push({
+      gameName: 'cost' + cost,
+      niceName: 'Cost ' + cost,
+      baseValue: 0.0,
+      costtype: cost,
+      BasePercent: 0.0,
+      Absolute: 0.0,
+    })
+    })
+    
+    
+    stat_table_data.push({
+      gameName: 'TotalCost',
+      niceName: 'Total cost (VS)',
+      baseValue: 0.0,
+      BasePercent: 0.0,
+      Absolute: 0.0,
+    })
+    
+    costs = Array.from(unit.getElementsByTagName("cost"))
+    costs.forEach(function(cost){
+        stat_table_data.map(function(item){
+            if(item.costtype == cost.getAttribute("resourcetype") ){
+                console.log(item)
+                item.baseValue = parseFloat(cost.textContent)
+                }
+                
+            if(item.gameName == 'TotalCost'){
+                
+                if(cost.getAttribute("resourcetype")=='Food'){
+                    item.baseValue = item.baseValue + parseFloat(cost.textContent)/0.84
+                    }
+                if(cost.getAttribute("resourcetype")=='Wood'){
+                    item.baseValue = item.baseValue + parseFloat(cost.textContent)/0.5
+                    }
+                if(cost.getAttribute("resourcetype")=='Gold'){
+                    item.baseValue = item.baseValue + parseFloat(cost.textContent)/0.6
+                    }
+            }
+                return item
+               
+    })
+    })
+    
+    stat_table_data.map(function(item){
+        if(item.gameName == 'TotalCost'){
+            item.baseValue = Math.round(item.baseValue * 10) / 10
+        }
+        return item
+        })
     // cost = Array.from(unit.getElementsByTagName("Cost")).map(d => d.textContent + " " + d.attributes['resourcetype'].value )
     // stat_table_data.push({
     //   gameName:'Cost', niceName: 'Cost', baseValue: cost.join(", ")
@@ -557,7 +608,7 @@ let civs = [
   
   
   attackNames = new Set(attacker_stat_table_data.filter(d => d['attackName'] ).map(d => d['attackName']))
-  sdf =['BuildingAttack', 'ChopAttack', 'HandAttackCrate']
+  sdf =['BuildingAttack', 'CoverBuildingAttack', 'ChopAttack', 'HandAttackCrate']
   sdf.forEach(d => attackNames.delete(d) )
   breakpoints_data = Array.from(attackNames).map(function(attackName){
     attack_stat_table_data = attacker_stat_table_data.filter(d => d['attackName'] ==  attackName)
