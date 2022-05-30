@@ -18,6 +18,9 @@
   <numpropunlocksearned>0</numpropunlocksearned>
   <ambientsounds>homecity\britishambientsounds.xml</ambientsounds>
   <xsai>generic_city</xsai>
+  <heroprotounits>
+    <protounit>Explorer</protounit>
+  </heroprotounits>
   <coffers>
     <current>
       <food>0</food>
@@ -299,13 +302,12 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipLongbowmen2</name>
-      <maxcount>1</maxcount>
+      <name>HCShipLongbowmenRepeat</name>
+      <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>HCShipLongbowmen1</prereqtech>
       <age>2</age>
       <displayunitcount>8</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>HCShipLongbowmen3</name>
@@ -605,6 +607,20 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
+      <name>DEHCRangers</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+    </card>
+    <card>
+      <name>DEHCSiegeArchery</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+    </card>
+    <card>
       <name>HCFastHousesTeam</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -672,7 +688,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>DEHCExtensiveFortificationsEuropean</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>HCFrontierDefenses</name>
@@ -978,6 +994,14 @@
       <age>0</age>
     </card>
     <card>
+      <name>DEHCGreenwichTime</name>
+      <maxcount>1</maxcount>
+      <level>40</level>
+      <prereqtech>-1</prereqtech>
+      <age>0</age>
+      <displayunitcount>1</displayunitcount>
+    </card>
+    <card>
       <name>HCShipCaravels1</name>
       <maxcount>-1</maxcount>
       <level>0</level>
@@ -1026,6 +1050,14 @@
       <level>25</level>
       <prereqtech>HCAdmirality</prereqtech>
       <age>2</age>
+    </card>
+    <card>
+      <name>DEHCRuleBritannia</name>
+      <maxcount>-1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>1</displayunitcount>
     </card>
     <card>
       <name>HCShipMonitors</name>
@@ -1117,7 +1149,7 @@
       <level>25</level>
       <prereqtech>HCMercsCorsairs</prereqtech>
       <age>3</age>
-      <displayunitcount>13</displayunitcount>
+      <displayunitcount>8</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1575,24 +1607,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCShipSettlers3</card>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>HCShipLongbowmen1</card>
-        <card>HCShipMusketeers1</card>
-        <card>HCShipMusketeers4</card>
-        <card>HCShipHussars4</card>
-        <card>HCXPShipRocketsRepeat</card>
-        <card>HCFrontierDefenses</card>
-        <card>HCUnlockFort</card>
-        <card>HCUnlockFactory</card>
-        <card>HCShipFalconets2</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1679,6 +1693,36 @@
         <card dbid="2041">HCRefrigeration</card>
         <card dbid="2309">HCShipLongbowmen1</card>
         <card dbid="2213">HCShipWoodCrates4</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="2207">HCShipSettlers3</card>
+        <card dbid="1992">HCColonialMilitia</card>
+        <card dbid="1796">HCAdvancedTradingPost</card>
+        <card dbid="3440">HCXPDistributivism</card>
+        <card dbid="625">HCUnlockFactory</card>
+        <card dbid="2031">HCRobberBarons</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="2216">HCShipCoinCrates4</card>
+        <card dbid="2567">HCShipSettlers5</card>
+        <card dbid="2208">HCShipSettlers4</card>
+        <card dbid="2211">HCShipWoodCrates2</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2214">HCShipCoinCrates2</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="2088">HCExplorerBritish</card>
+        <card dbid="6691">DEHCExtensiveFortificationsEuropean</card>
+        <card dbid="814">HCUnlockFort</card>
+        <card dbid="2093">HCRoyalMint</card>
+        <card dbid="2075">HCCheaperManors</card>
+        <card dbid="2218">HCShipSheep1</card>
+        <card dbid="1950">HCIronmonger</card>
+        <card dbid="2607">HCStockyards</card>
+        <card dbid="2614">HCHouseEstates</card>
+        <card dbid="3450">HCXPSouthSeaBubble</card>
+        <card dbid="2041">HCRefrigeration</card>
       </cards>
     </deck>
     <revoltdeck>
@@ -1876,7 +1920,7 @@
     <obtainabletechs>
       <tech x="0.0" y="2.0">HCShipPikemen2</tech>
       <tech x="0.7" y="1.0">HCShipLongbowmen1</tech>
-      <tech x="0.7" y="2.0">HCShipLongbowmen2</tech>
+      <tech x="0.7" y="2.0">HCShipLongbowmenRepeat</tech>
       <tech x="0.7" y="3.0">HCShipLongbowmen3</tech>
       <tech x="0.7" y="4.0">HCShipLongbowmen4</tech>
       <tech x="0.0" y="5.0">HCImprovedLongbows</tech>
@@ -1912,11 +1956,13 @@
       <tech x="7.2" y="5.0">HCShipRockets2</tech>
       <tech x="7.2" y="7.0">HCXPShipRocketsRepeat</tech>
       <tech x="7.2" y="7.0">DEHCHandMortar</tech>
+      <tech x="7.2" y="7.0">DEHCRangers</tech>
+      <tech x="7.2" y="7.0">DEHCSiegeArchery</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.0" y="2.0">HCShipPikemen2</tech>
       <tech x="0.7" y="1.0">HCShipLongbowmen1</tech>
-      <tech x="0.7" y="2.0">HCShipLongbowmen2</tech>
+      <tech x="0.7" y="2.0">HCShipLongbowmenRepeat</tech>
       <tech x="0.7" y="3.0">HCShipLongbowmen3</tech>
       <tech x="0.7" y="4.0">HCShipLongbowmen4</tech>
       <tech x="0.0" y="5.0">HCImprovedLongbows</tech>
@@ -1952,6 +1998,8 @@
       <tech x="7.2" y="5.0">HCShipRockets2</tech>
       <tech x="7.2" y="7.0">HCXPShipRocketsRepeat</tech>
       <tech x="7.2" y="7.0">DEHCHandMortar</tech>
+      <tech x="7.2" y="7.0">DEHCRangers</tech>
+      <tech x="7.2" y="7.0">DEHCSiegeArchery</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -2004,6 +2052,7 @@
       <tech x="6.7" y="4.0">HCAdvancedDock</tech>
       <tech x="7.4" y="1.0">HCUnlockFactory</tech>
       <tech x="7.4" y="3.0">HCRobberBarons</tech>
+      <tech x="3.4" y="7.0">DEHCGreenwichTime</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.0" y="1.0">HCNativeLore</tech>
@@ -2036,6 +2085,7 @@
       <tech x="6.7" y="4.0">HCAdvancedDock</tech>
       <tech x="7.4" y="1.0">HCUnlockFactory</tech>
       <tech x="7.4" y="3.0">HCRobberBarons</tech>
+      <tech x="3.4" y="7.0">DEHCGreenwichTime</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -2134,6 +2184,7 @@
       <tech x="1.7" y="7.0">HCXPOffshoreSupport</tech>
       <tech x="2.4" y="4.0">HCMonitorCombatTeam</tech>
       <tech x="3.1" y="1.0">HCAdmirality</tech>
+      <tech x="3.1" y="1.0">DEHCRuleBritannia</tech>
       <tech x="3.1" y="5.0">HCNavalGunners</tech>
       <tech x="4.1" y="3.0">HCXPMercsElmeti</tech>
       <tech x="4.1" y="4.0">HCMercsHighlanders</tech>
@@ -2163,6 +2214,7 @@
       <tech x="1.7" y="7.0">HCXPOffshoreSupport</tech>
       <tech x="2.4" y="4.0">HCMonitorCombatTeam</tech>
       <tech x="3.1" y="1.0">HCAdmirality</tech>
+      <tech x="3.1" y="1.0">DEHCRuleBritannia</tech>
       <tech x="3.1" y="5.0">HCNavalGunners</tech>
       <tech x="4.1" y="3.0">HCXPMercsElmeti</tech>
       <tech x="4.1" y="4.0">HCMercsHighlanders</tech>

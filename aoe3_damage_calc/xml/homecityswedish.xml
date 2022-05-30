@@ -683,7 +683,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCPioneers</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>HCHeavyFortifications</name>
@@ -1530,23 +1530,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCShipSettlers1</card>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>HCShipPikemen1</card>
-        <card>DEHCShipLeatherCannons1</card>
-        <card>DEHCDominions</card>
-        <card>HCUnlockFort</card>
-        <card>DEHCShipCaroleansRepeat</card>
-        <card>DEHCShipDragoonsRepeat</card>
-        <card>HCShipMortars2</card>
-        <card>HCUnlockFactory</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1633,6 +1616,36 @@
         <card dbid="814">HCUnlockFort</card>
         <card dbid="6514">DEHCShipBalticFleet</card>
         <card dbid="2099">HCRenderingPlant</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="2268">HCShipFoodCrates5</card>
+        <card dbid="2263">HCShipWoodCrates5</card>
+        <card dbid="625">HCUnlockFactory</card>
+        <card dbid="3345">HCXPIndustrialRevolution</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="2216">HCShipCoinCrates4</card>
+        <card dbid="6589">DEHCKalmarCastle</card>
+        <card dbid="2093">HCRoyalMint</card>
+        <card dbid="2041">HCRefrigeration</card>
+        <card dbid="2211">HCShipWoodCrates2</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="6534">DEHCEngelsbergIronworks</card>
+        <card dbid="6403">DEHCDominions</card>
+        <card dbid="2207">HCShipSettlers3</card>
+        <card dbid="6396">DEHCExplorerSwedish</card>
+        <card dbid="1796">HCAdvancedTradingPost</card>
+        <card dbid="1992">HCColonialMilitia</card>
+        <card dbid="6395">DEHCTorpTeam</card>
+        <card dbid="2032">HCFurrier</card>
+        <card dbid="2091">HCExoticHardwoods</card>
+        <card dbid="6535">DEHCBlueberries</card>
+        <card dbid="6398">DEHCOxenstiernaReforms</card>
+        <card dbid="2102">HCTextileMills</card>
+        <card dbid="474">HCCigarRoller</card>
       </cards>
     </deck>
     <revoltdeck>

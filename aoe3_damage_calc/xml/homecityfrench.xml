@@ -695,7 +695,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCPioneers</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>HCFrontierDefenses</name>
@@ -1109,7 +1109,7 @@
       <level>25</level>
       <prereqtech>-1</prereqtech>
       <age>3</age>
-      <displayunitcount>13</displayunitcount>
+      <displayunitcount>8</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1407,24 +1407,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCShipCoureurs3</card>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>HCShipCrossbowmen1</card>
-        <card>HCShipHussars1</card>
-        <card>HCShipSkirmishers3</card>
-        <card>HCXPShipCuirassiersRepeat</card>
-        <card>HCShipDragoons1</card>
-        <card>HCShipFalconets4</card>
-        <card>HCUnlockFort</card>
-        <card>HCFrontierDefenses</card>
-        <card>HCUnlockFactory</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1511,6 +1493,36 @@
         <card dbid="2093">HCRoyalMint</card>
         <card dbid="2099">HCRenderingPlant</card>
         <card dbid="3383">HCXPGribeauvalSystem</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="3381">HCShipCoureurs4</card>
+        <card dbid="2263">HCShipWoodCrates5</card>
+        <card dbid="625">HCUnlockFactory</card>
+        <card dbid="2031">HCRobberBarons</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="2216">HCShipCoinCrates4</card>
+        <card dbid="814">HCUnlockFort</card>
+        <card dbid="2093">HCRoyalMint</card>
+        <card dbid="2041">HCRefrigeration</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="2261">HCShipCoureurs2</card>
+        <card dbid="2262">HCShipCoureurs3</card>
+        <card dbid="1992">HCColonialMilitia</card>
+        <card dbid="1796">HCAdvancedTradingPost</card>
+        <card dbid="3387">HCXPEconomicTheory</card>
+        <card dbid="3440">HCXPDistributivism</card>
+        <card dbid="2051">HCExplorerFrench</card>
+        <card dbid="2647">HCRoyalDecreeFrench</card>
+        <card dbid="2091">HCExoticHardwoods</card>
+        <card dbid="3388">HCXPLandGrab</card>
+        <card dbid="2066">HCNorthwestPassage</card>
+        <card dbid="3504">HCXPFurTrade</card>
+        <card dbid="2102">HCTextileMills</card>
+        <card dbid="2095">HCSustainableAgriculture</card>
       </cards>
     </deck>
     <revoltdeck>

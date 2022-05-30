@@ -18,6 +18,9 @@
   <numpropunlocksearned>0</numpropunlocksearned>
   <ambientsounds>homecity\spanishambientsounds.xml</ambientsounds>
   <xsai>generic_city</xsai>
+  <heroprotounits>
+    <protounit>Explorer</protounit>
+  </heroprotounits>
   <coffers>
     <current>
       <food>0</food>
@@ -270,7 +273,21 @@
       <level>40</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
-      <displayunitcount>1</displayunitcount>
+    </card>
+    <card>
+      <name>DEHCMarvelousYear</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+    </card>
+    <card>
+      <name>DEHCNewSpainViceroyalty</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>2</displayunitcount>
     </card>
     <card>
       <name>HCCheapBarracksTeam</name>
@@ -401,7 +418,7 @@
       <level>10</level>
       <prereqtech>HCShipRodeleros2</prereqtech>
       <age>3</age>
-      <displayunitcount>13</displayunitcount>
+      <displayunitcount>16</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -410,7 +427,7 @@
       <level>10</level>
       <prereqtech>HCShipRodeleros2</prereqtech>
       <age>3</age>
-      <displayunitcount>10</displayunitcount>
+      <displayunitcount>14</displayunitcount>
     </card>
     <card>
       <name>HCShipRodeleros4</name>
@@ -488,15 +505,6 @@
       <displayunitcount>4</displayunitcount>
     </card>
     <card>
-      <name>HCShipLancers2</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>HCShipLancers1</prereqtech>
-      <age>3</age>
-      <displayunitcount>6</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCShipLancers3</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -507,7 +515,7 @@
     </card>
     <card>
       <name>HCShipLancers4</name>
-      <maxcount>1</maxcount>
+      <maxcount>-1</maxcount>
       <level>10</level>
       <prereqtech>HCShipLancers3</prereqtech>
       <age>3</age>
@@ -609,6 +617,45 @@
       <displayunitcount>2</displayunitcount>
     </card>
     <card>
+      <name>DEHCShipFalconets1Team</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>1</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCShipCannons1Team</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>1</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCPeninsularGuerrillas</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+    </card>
+    <card>
+      <name>DEHCReconquista</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>1</age>
+    </card>
+    <card>
+      <name>DEHCLiberationMarch</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+    </card>
+    <card>
       <name>HCNativeLore</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -662,7 +709,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCPioneers</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>HCFrontierDefenses</name>
@@ -715,20 +762,6 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>HCUnlockFort</prereqtech>
-      <age>1</age>
-    </card>
-    <card>
-      <name>HCFencingSchool</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>HCCheapBarracksTeam</prereqtech>
-      <age>1</age>
-    </card>
-    <card>
-      <name>HCRidingSchool</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>-1</prereqtech>
       <age>1</age>
     </card>
     <card>
@@ -836,6 +869,13 @@
       <age>3</age>
       <displayunitcount>15</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCHouseOfTrastamara</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>1</age>
     </card>
     <card>
       <name>HCFishMarket</name>
@@ -1140,7 +1180,7 @@
       <level>25</level>
       <prereqtech>HCMercsStradiots</prereqtech>
       <age>3</age>
-      <displayunitcount>13</displayunitcount>
+      <displayunitcount>8</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1217,6 +1257,23 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
+    </card>
+    <card>
+      <name>DEHCShipNuestrasSenoras</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <infiniteinlastage>1</infiniteinlastage>
+      <displayunitcount>2</displayunitcount>
+    </card>
+    <card>
+      <name>DEHCShipBattleshipRepeat</name>
+      <maxcount>-1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>1</displayunitcount>
     </card>
     <card>
       <name>HCREVShipGatlingGuns</name>
@@ -1459,24 +1516,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCShipSettlers3</card>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>HCShipPikemen1</card>
-        <card>HCShipRodeleros1</card>
-        <card>HCShipHussars4</card>
-        <card>HCShipLancers3</card>
-        <card>HCXPShipCulverins2</card>
-        <card>HCXPShipRedolerosRepeat</card>
-        <card>HCUnlockFort</card>
-        <card>HCUnlockFactory</card>
-        <card>HCFrontierDefenses</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1494,8 +1533,6 @@
         <card dbid="2619">HCShipSpanishSquare</card>
         <card dbid="2227">HCShipPikemen1</card>
         <card dbid="2674">HCShipRodeleros5</card>
-        <card dbid="2038">HCRidingSchool</card>
-        <card dbid="2037">HCFencingSchool</card>
         <card dbid="2234">HCShipLancers3</card>
         <card dbid="2215">HCShipCoinCrates3</card>
         <card dbid="2212">HCShipWoodCrates3</card>
@@ -1531,7 +1568,6 @@
         <card dbid="2512">HCArchaicTrainingTeam</card>
         <card dbid="2231">HCShipRodeleros4</card>
         <card dbid="2563">HCShipPikemen4</card>
-        <card dbid="2037">HCFencingSchool</card>
         <card dbid="1957">HCAdvancedArsenal</card>
       </cards>
     </deck>
@@ -1554,7 +1590,6 @@
         <card dbid="2025">HCHandCavalryHitpointsSpanish</card>
         <card dbid="2045">HCHandCavalryCombatSpanish</card>
         <card dbid="2622">HCCaballeros</card>
-        <card dbid="2038">HCRidingSchool</card>
         <card dbid="2099">HCRenderingPlant</card>
         <card dbid="2208">HCShipSettlers4</card>
         <card dbid="1848">HCInquisition</card>
@@ -1563,6 +1598,36 @@
         <card dbid="469">HCFishMarket</card>
         <card dbid="2234">HCShipLancers3</card>
         <card dbid="2670">HCFrontierDefenses2</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="2268">HCShipFoodCrates5</card>
+        <card dbid="625">HCUnlockFactory</card>
+        <card dbid="3345">HCXPIndustrialRevolution</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="2093">HCRoyalMint</card>
+        <card dbid="2041">HCRefrigeration</card>
+        <card dbid="814">HCUnlockFort</card>
+        <card dbid="2623">HCColonialEstancias</card>
+        <card dbid="2208">HCShipSettlers4</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2206">HCShipSettlers2</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="2207">HCShipSettlers3</card>
+        <card dbid="1849">HCExplorerSpanish</card>
+        <card dbid="1796">HCAdvancedTradingPost</card>
+        <card dbid="1992">HCColonialMilitia</card>
+        <card dbid="3387">HCXPEconomicTheory</card>
+        <card dbid="3438">HCXPCapitalism</card>
+        <card dbid="2032">HCFurrier</card>
+        <card dbid="2091">HCExoticHardwoods</card>
+        <card dbid="2090">HCSawmills</card>
+        <card dbid="2190">HCShipCoveredWagons</card>
+        <card dbid="2102">HCTextileMills</card>
+        <card dbid="3464">HCXPSpanishGold</card>
+        <card dbid="2095">HCSustainableAgriculture</card>
       </cards>
     </deck>
     <revoltdeck>
@@ -1706,6 +1771,8 @@
       <tech x="7.0" y="2.0">HCExplorerCombatTeam</tech>
       <tech x="7.0" y="5.0">HCXPAdvancedBalloon</tech>
       <tech x="7.0" y="5.0">HCShipBalloons</tech>
+      <tech x="7.2" y="7.0">DEHCMarvelousYear</tech>
+      <tech x="7.2" y="7.0">DEHCNewSpainViceroyalty</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.7" y="1.0">HCShipSettlers1</tech>
@@ -1735,6 +1802,8 @@
       <tech x="7.0" y="2.0">HCExplorerCombatTeam</tech>
       <tech x="7.0" y="5.0">HCXPAdvancedBalloon</tech>
       <tech x="7.0" y="5.0">HCShipBalloons</tech>
+      <tech x="7.2" y="7.0">DEHCMarvelousYear</tech>
+      <tech x="7.2" y="7.0">DEHCNewSpainViceroyalty</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1782,7 +1851,6 @@
       <tech x="4.6" y="4.0">HCHandCavalryDamageSpanish</tech>
       <tech x="4.6" y="5.0">HCHandCavalryCombatSpanish</tech>
       <tech x="5.7" y="1.0">HCShipLancers1</tech>
-      <tech x="5.7" y="2.0">HCShipLancers2</tech>
       <tech x="5.7" y="3.0">HCShipLancers3</tech>
       <tech x="6.0" y="4.0">HCCaballeros</tech>
       <tech x="5.3" y="4.0">HCShipLancers4</tech>
@@ -1797,6 +1865,11 @@
       <tech x="7.4" y="4.0">HCShipCannons1</tech>
       <tech x="7.4" y="7.0">HCXPShipMortarsTeam</tech>
       <tech x="7.2" y="7.0">DEHCHandMortar</tech>
+      <tech x="7.2" y="7.0">DEHCShipFalconets1Team</tech>
+      <tech x="7.2" y="7.0">DEHCShipCannons1Team</tech>
+      <tech x="7.2" y="7.0">DEHCPeninsularGuerrillas</tech>
+      <tech x="7.2" y="7.0">DEHCReconquista</tech>
+      <tech x="7.2" y="7.0">DEHCLiberationMarch</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.0" y="3.0">HCArchaicTrainingTeam</tech>
@@ -1824,7 +1897,6 @@
       <tech x="4.6" y="4.0">HCHandCavalryDamageSpanish</tech>
       <tech x="4.6" y="5.0">HCHandCavalryCombatSpanish</tech>
       <tech x="5.7" y="1.0">HCShipLancers1</tech>
-      <tech x="5.7" y="2.0">HCShipLancers2</tech>
       <tech x="5.7" y="3.0">HCShipLancers3</tech>
       <tech x="6.0" y="4.0">HCCaballeros</tech>
       <tech x="5.3" y="4.0">HCShipLancers4</tech>
@@ -1839,6 +1911,11 @@
       <tech x="7.4" y="4.0">HCShipCannons1</tech>
       <tech x="7.4" y="7.0">HCXPShipMortarsTeam</tech>
       <tech x="7.2" y="7.0">DEHCHandMortar</tech>
+      <tech x="7.2" y="7.0">DEHCShipFalconets1Team</tech>
+      <tech x="7.2" y="7.0">DEHCShipCannons1Team</tech>
+      <tech x="7.2" y="7.0">DEHCPeninsularGuerrillas</tech>
+      <tech x="7.2" y="7.0">DEHCReconquista</tech>
+      <tech x="7.2" y="7.0">DEHCLiberationMarch</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1867,8 +1944,6 @@
       <tech x="0.9" y="5.0">HCXPBloodBrothers</tech>
       <tech x="0.0" y="5.0">HCAdvancedTradingPost</tech>
       <tech x="0.9" y="1.0">HCCheapBarracksTeam</tech>
-      <tech x="0.9" y="3.0">HCFencingSchool</tech>
-      <tech x="1.6" y="3.0">HCRidingSchool</tech>
       <tech x="2.8" y="1.0">HCFrontierDefenses</tech>
       <tech x="3.2" y="2.0">HCColonialMilitia</tech>
       <tech x="2.5" y="2.0">HCPioneers</tech>
@@ -1893,6 +1968,7 @@
       <tech x="7.4" y="1.0">HCUnlockFactory</tech>
       <tech x="7.4" y="3.0">HCXPIndustrialRevolution</tech>
       <tech x="7.4" y="5.0">HCColonialEstancias</tech>
+      <tech x="7.4" y="5.0">DEHCHouseOfTrastamara</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.0" y="1.0">HCNativeLore</tech>
@@ -1901,8 +1977,6 @@
       <tech x="0.9" y="5.0">HCXPBloodBrothers</tech>
       <tech x="0.0" y="5.0">HCAdvancedTradingPost</tech>
       <tech x="0.9" y="1.0">HCCheapBarracksTeam</tech>
-      <tech x="0.9" y="3.0">HCFencingSchool</tech>
-      <tech x="1.6" y="3.0">HCRidingSchool</tech>
       <tech x="2.8" y="1.0">HCFrontierDefenses</tech>
       <tech x="3.2" y="2.0">HCColonialMilitia</tech>
       <tech x="2.5" y="2.0">HCPioneers</tech>
@@ -1927,6 +2001,7 @@
       <tech x="7.4" y="1.0">HCUnlockFactory</tech>
       <tech x="7.4" y="3.0">HCXPIndustrialRevolution</tech>
       <tech x="7.4" y="5.0">HCColonialEstancias</tech>
+      <tech x="7.4" y="5.0">DEHCHouseOfTrastamara</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -2041,6 +2116,8 @@
       <tech x="7.2" y="1.0">HCXPMayanAllies1</tech>
       <tech x="7.2" y="3.0">HCXPMayanAllies2</tech>
       <tech x="7.2" y="7.0">HCXPMayanAlliesRepeat</tech>
+      <tech x="7.2" y="7.0">DEHCShipNuestrasSenoras</tech>
+      <tech x="7.2" y="7.0">DEHCShipBattleshipRepeat</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="1.3" y="1.0">HCShipCaravels1</tech>
@@ -2071,6 +2148,8 @@
       <tech x="7.2" y="1.0">HCXPMayanAllies1</tech>
       <tech x="7.2" y="3.0">HCXPMayanAllies2</tech>
       <tech x="7.2" y="7.0">HCXPMayanAlliesRepeat</tech>
+      <tech x="7.2" y="7.0">DEHCShipNuestrasSenoras</tech>
+      <tech x="7.2" y="7.0">DEHCShipBattleshipRepeat</tech>
     </activetechs>
     <validunits>
     </validunits>

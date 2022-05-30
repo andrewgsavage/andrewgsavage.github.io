@@ -620,7 +620,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>YPHCZenDiet</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>YPHCShipCastleWagons1</name>
@@ -1206,24 +1206,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>YPHCShipSettlersAsian1</card>
-        <card>YPHCShipYumi1</card>
-        <card>YPHCShipAshigaru2</card>
-        <card>YPHCShipSamurai3</card>
-        <card>YPHCShipNaginataRider2</card>
-        <card>YPHCShipFlamingArrow2</card>
-        <card>YPHCShipMorutaru1</card>
-        <card>YPHCShipSamurai4</card>
-        <card>YPHCShipDaimyoSatsuma</card>
-        <card>YPHCDojoGenbukan</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1310,6 +1292,36 @@
         <card dbid="3985">YPHCWokouJapanese2</card>
         <card dbid="5143">YPHCShipFlamingArrow3</card>
         <card dbid="4075">YPHCMercsNinja1</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="1842">HCImprovedBuildings</card>
+        <card dbid="4269">YPHCShipSettlersAsian5</card>
+        <card dbid="5226">ypHCShipFoodCrates4</card>
+        <card dbid="5228">ypHCShipWoodCrates4</card>
+        <card dbid="5224">ypHCShipCoinCrates4</card>
+        <card dbid="2093">HCRoyalMint</card>
+        <card dbid="2041">HCRefrigeration</card>
+        <card dbid="4268">YPHCShipSettlersAsian2</card>
+        <card dbid="5225">ypHCShipFoodCrates2</card>
+        <card dbid="5227">ypHCShipWoodCrates2</card>
+        <card dbid="5223">ypHCShipCoinCrates2</card>
+        <card dbid="4682">YPHCShipShrineWagon2</card>
+        <card dbid="5033">YPHCShrineLearning</card>
+        <card dbid="4267">YPHCShipSettlersAsian1</card>
+        <card dbid="4215">YPHCShipShrineWagon</card>
+        <card dbid="4216">YPHCIncreasedTribute</card>
+        <card dbid="3583">YPHCJapaneseMonkCombat</card>
+        <card dbid="4128">YPHCExpandedTradingPost</card>
+        <card dbid="3965">YPHCAdvancedRicePaddy</card>
+        <card dbid="4228">YPHCAdvancedWonders</card>
+        <card dbid="3967">YPHCAdvancedConsulate</card>
+        <card dbid="4760">YPHCBerryGrove</card>
+        <card dbid="474">HCCigarRoller</card>
+        <card dbid="4871">YPHCStoneCastles</card>
+        <card dbid="2102">HCTextileMills</card>
       </cards>
     </deck>
   </decks>

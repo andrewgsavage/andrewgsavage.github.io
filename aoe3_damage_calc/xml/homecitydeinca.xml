@@ -634,7 +634,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>DEHCExtensiveFortificationsInca</name>
@@ -805,7 +805,7 @@
     </card>
     <card>
       <name>HCXPSpanishAllies1</name>
-      <maxcount>1</maxcount>
+      <maxcount>2</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
@@ -814,7 +814,7 @@
     </card>
     <card>
       <name>HCXPSpanishAllies2</name>
-      <maxcount>1</maxcount>
+      <maxcount>2</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>3</age>
@@ -1188,24 +1188,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCShipFoodCrates1</card>
-        <card>DEHCResettlements</card>
-        <card>DEHCWarChiefInca1</card>
-        <card>DEHCShipIncaRunners1</card>
-        <card>DEHCShipIncaRunners2</card>
-        <card>DEHCShipIncaSpearmen1</card>
-        <card>DEHCShipJungleBowmen1</card>
-        <card>DEHCShipJungleBowmen2</card>
-        <card>HCPioneers</card>
-        <card>HCXPAdvancedFarms</card>
-        <card>DEHCExtensiveFortificationsInca</card>
-        <card>HCXPShipFarmTravois1</card>
-        <card>DEHCShipFatLlamasRepeat</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1292,6 +1274,36 @@
         <card dbid="6076">DEHCIncaWallsTeam</card>
         <card dbid="6152">DEHCIncaFortifications</card>
         <card dbid="8486">DEHCAutarky</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="2263">HCShipWoodCrates5</card>
+        <card dbid="6073">HCShipWoodCrates6</card>
+        <card dbid="6098">DEHCShipVillagersInca</card>
+        <card dbid="6117">DEHCTerraceFarming</card>
+        <card dbid="2917">HCXPShipVillagers5</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="6085">DEHCResettlements</card>
+        <card dbid="2799">HCXPShipVillagers4</card>
+        <card dbid="2209">HCShipFoodCrates3</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="6086">DEHCShipWoodCratesInfInca</card>
+        <card dbid="2798">HCXPShipVillagers3</card>
+        <card dbid="6154">DEHCLlamaLifestyle</card>
+        <card dbid="6087">DEHCWarChiefInca1</card>
+        <card dbid="2091">HCExoticHardwoods</card>
+        <card dbid="2032">HCFurrier</card>
+        <card dbid="6107">DEHCCequeSystem</card>
+        <card dbid="6143">DEHCAdvancedTambos</card>
+        <card dbid="6108">DEHCChichaBrewing</card>
+        <card dbid="3474">HCXPAgrarianWays</card>
+        <card dbid="3327">HCXPShipFarmTravois2</card>
+        <card dbid="6116">DEHCShipBuilderTravois1</card>
+        <card dbid="8486">DEHCAutarky</card>
+        <card dbid="6084">DEHCShipPriestessRepeat2</card>
+        <card dbid="6144">DEHCShipCoveredWagons2Inca</card>
       </cards>
     </deck>
   </decks>

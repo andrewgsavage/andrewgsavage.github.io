@@ -125,7 +125,7 @@
     <descriptionstringid>42505</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
-      <building>Academy</building>
+      <building>Cathedral</building>
     </position>
     <icon>homecity\home_city_props\icons\stagecoach</icon>
   </prop>
@@ -6948,8 +6948,8 @@
     <type>ReplaceVisual</type>
     <displayname>The Maltese New World Trade Center</displayname>
     <displaynamestringid>42726</displaynamestringid>
-    <description>The original version of the Maltese New World Trade Center.</description>
-    <descriptionstringid>42727</descriptionstringid>
+    <description>The original version of the New World Trading Company.</description>
+    <descriptionstringid>126064</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
       <building>Market</building>
@@ -6962,13 +6962,13 @@
     <type>ReplaceVisual</type>
     <displayname>Mediterranean Merchant Exchange</displayname>
     <displaynamestringid>42728</displaynamestringid>
-    <description>The red version of the Maltese New World Trade Center.</description>
-    <descriptionstringid>42729</descriptionstringid>
+    <description>The merigold version of the New World Trading Company.</description>
+    <descriptionstringid>126066</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
       <building>Market</building>
     </position>
-    <icon>homecity\home_city_props\icons\MedNWTC3</icon>
+    <icon>homecity\home_city_props\icons\MedNWTC0</icon>
     <variationid>1</variationid>
   </prop>
   <prop>
@@ -6976,13 +6976,13 @@
     <type>ReplaceVisual</type>
     <displayname>Knights Hospitaler Supply</displayname>
     <displaynamestringid>42730</displaynamestringid>
-    <description>This is blue version of the Maltese New World Trade Center.</description>
-    <descriptionstringid>42731</descriptionstringid>
+    <description>The orange version of the New World Trading Company with a weathered brick finish.</description>
+    <descriptionstringid>126068</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
       <building>Market</building>
     </position>
-    <icon>homecity\home_city_props\icons\MedNWTC2</icon>
+    <icon>homecity\home_city_props\icons\MedNWTC3</icon>
     <variationid>2</variationid>
   </prop>
   <prop>
@@ -6990,13 +6990,13 @@
     <type>ReplaceVisual</type>
     <displayname>Pilgrim and Wayfarer Mercantile</displayname>
     <displaynamestringid>42732</displaynamestringid>
-    <description>The green version of the Maltese New World Trade Center.</description>
-    <descriptionstringid>42733</descriptionstringid>
+    <description>The blue version of the New World Trading Company with a weathered brick finish.</description>
+    <descriptionstringid>126070</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
       <building>Market</building>
     </position>
-    <icon>homecity\home_city_props\icons\MedNWTC1</icon>
+    <icon>homecity\home_city_props\icons\MedNWTC2</icon>
     <variationid>3</variationid>
   </prop>
   <prop>
@@ -7004,13 +7004,13 @@
     <type>ReplaceVisual</type>
     <displayname>The Maltese Market</displayname>
     <displaynamestringid>42734</displaynamestringid>
-    <description>The upgraded original version of the Maltese New World Trade Center.</description>
-    <descriptionstringid>42735</descriptionstringid>
+    <description>The green version of the New World Trading Company with a weathered brick finish.</description>
+    <descriptionstringid>126072</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
       <building>Market</building>
     </position>
-    <icon>homecity\home_city_props\icons\MedNWTC5</icon>
+    <icon>homecity\home_city_props\icons\MedNWTC1</icon>
     <variationid>4</variationid>
   </prop>
   <prop>
@@ -7024,7 +7024,7 @@
     <position>
       <building>Market</building>
     </position>
-    <icon>homecity\home_city_props\icons\MedNWTC7</icon>
+    <icon>homecity\home_city_props\icons\MedNWTC5</icon>
     <variationid>5</variationid>
   </prop>
   <prop>
@@ -7075,13 +7075,13 @@
     <type>ReplaceVisual</type>
     <displayname>The Knight's Garrison</displayname>
     <displaynamestringid>42742</displaynamestringid>
-    <description>Original version of the Military Academy of Malta.</description>
-    <descriptionstringid>42743</descriptionstringid>
+    <description>The original version of the Fort St.Elmo.</description>
+    <descriptionstringid>126080</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
       <building>Academy</building>
     </position>
-    <icon>homecity\home_city_props\icons\medacademy1</icon>
+    <icon>homecity\home_city_props\icons\malta_fort1</icon>
     <variationid>0</variationid>
   </prop>
   <prop>
@@ -7089,13 +7089,13 @@
     <type>ReplaceVisual</type>
     <displayname>Peregrine Institute of Malta</displayname>
     <displaynamestringid>42744</displaynamestringid>
-    <description>Gold and brown version of Maltese Military Academy.</description>
-    <descriptionstringid>42745</descriptionstringid>
+    <description>The alternate version of the Fort St.Elmo.</description>
+    <descriptionstringid>126082</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
       <building>Academy</building>
     </position>
-    <icon>homecity\home_city_props\icons\medacademy2</icon>
+    <icon>homecity\home_city_props\icons\malta_fort2</icon>
     <variationid>1</variationid>
   </prop>
   <prop>
@@ -7208,7 +7208,7 @@
     <position>
       <building>Cathedral</building>
     </position>
-    <icon>homecity\home_city_props\icons\ItalianMedCathedral1</icon>
+    <icon>homecity\home_city_props\icons\malta_cathedral1</icon>
     <variationid>0</variationid>
   </prop>
   <prop>
@@ -7216,13 +7216,13 @@
     <type>ReplaceVisual</type>
     <displayname>The Temple of the Knights of Malta</displayname>
     <displaynamestringid>42762</displaynamestringid>
-    <description>The red version of the Maltese cathedral.</description>
-    <descriptionstringid>42763</descriptionstringid>
+    <description>The Cathedral with an ashen grey roofing finish.</description>
+    <descriptionstringid>126106</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
       <building>Cathedral</building>
     </position>
-    <icon>homecity\home_city_props\icons\ItalianMedCathedral2</icon>
+    <icon>homecity\home_city_props\icons\malta_cathedral2</icon>
     <variationid>1</variationid>
   </prop>
   <prop>
@@ -7230,13 +7230,13 @@
     <type>ReplaceVisual</type>
     <displayname>Conventual Church of St. John of Valletta</displayname>
     <displaynamestringid>42764</displaynamestringid>
-    <description>Orange version of the Maltese cathedral.</description>
-    <descriptionstringid>42767</descriptionstringid>
+    <description>The Cathedral with an purple roofing finish.</description>
+    <descriptionstringid>126108</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
       <building>Cathedral</building>
     </position>
-    <icon>homecity\home_city_props\icons\ItalianMedCathedral4</icon>
+    <icon>homecity\home_city_props\icons\MedCathedral2</icon>
     <variationid>2</variationid>
   </prop>
   <prop>
@@ -7244,14 +7244,28 @@
     <type>ReplaceVisual</type>
     <displayname>Cathedral of All Tongues</displayname>
     <displaynamestringid>42766</displaynamestringid>
-    <description>The green version of the Maltese cathedral.</description>
-    <descriptionstringid>42765</descriptionstringid>
+    <description>The Cathedral with an yellow roofing finish.</description>
+    <descriptionstringid>126110</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
       <building>Cathedral</building>
     </position>
-    <icon>homecity\home_city_props\icons\ItalianMedCathedral3</icon>
+    <icon>homecity\home_city_props\icons\MedCathedral4</icon>
     <variationid>3</variationid>
+  </prop>
+  <prop>
+    <name>SPCAct1_CathedralTexture4</name>
+    <type>ReplaceVisual</type>
+    <displayname>Cathedral (green)</displayname>
+    <displaynamestringid>126111</displaynamestringid>
+    <description>The Cathedral with an green roofing finish.</description>
+    <descriptionstringid>126112</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\MedCathedral3</icon>
+    <variationid>4</variationid>
   </prop>
   <prop>
     <name>SPCAct2_AcadProp01</name>
@@ -11966,5 +11980,1816 @@
     <prop>Mexico_Military_Parade</prop>
     <prop>Mexico_DayOfTheDead_Festival_1</prop>
     <prop>Mexico_DayOfTheDead_Festival_2</prop>
+  </exclusiveprops>
+  <prop>
+    <name>ExplorerBritish</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>ExplorerSpanish</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>Italy_HarborTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Harbor (orignal)</displayname>
+    <displaynamestringid>126051</displaynamestringid>
+    <description>The original version of the Harbor.</description>
+    <descriptionstringid>126052</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\italy_arsenal1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Italy_HarborTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Harbor (red)</displayname>
+    <displaynamestringid>126053</displaynamestringid>
+    <description>The red version of the Harbor.</description>
+    <descriptionstringid>126054</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Dock</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\italy_arsenal2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Italy_HarborTexture2</name>
+    <type>ReplaceVisual</type>
+    <displayname>Harbor (green)</displayname>
+    <displaynamestringid>126055</displaynamestringid>
+    <description>The green version of the Harbor.</description>
+    <descriptionstringid>126056</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Dock</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\italy_arsenal3</icon>
+    <variationid>2</variationid>
+  </prop>
+  <prop>
+    <name>Italy_Italian_Flag_Dock</name>
+    <type>Object</type>
+    <displayname>Italian Flag</displayname>
+    <displaynamestringid>126031</displaynamestringid>
+    <description>Display Italian flags on this building.</description>
+    <descriptionstringid>126032</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_italy_flag_Harbor.xml</visual>
+    <position>
+      <bone>bone_dock_flg_01</bone>
+      <building>Dock</building>
+    </position>
+    <activateprops>
+      <prop>Italy_Italian_Flag_Dock_02</prop>
+    </activateprops>
+    <icon>homecity\home_city_props\icons\italy_Flag</icon>
+  </prop>
+  <prop>
+    <name>Italy_Venetian_Flag_Dock</name>
+    <type>Object</type>
+    <displayname>Venetian Flag</displayname>
+    <displaynamestringid>126033</displaynamestringid>
+    <description>Display Venetian flags on this building.</description>
+    <descriptionstringid>126034</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_italy_flag_Venetian_Harbor.xml</visual>
+    <position>
+      <bone>bone_dock_flg_01</bone>
+      <building>Dock</building>
+    </position>
+    <activateprops>
+      <prop>Italy_Venetian_Flag_Dock_02</prop>
+    </activateprops>
+    <icon>homecity\home_city_props\icons\italy_Venetian_Flag</icon>
+  </prop>
+  <prop>
+    <name>Italy_Italian_Flag_Dock_02</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_italy_flag_Harbor.xml</visual>
+    <position>
+      <bone>bone_dock_flg_02</bone>
+      <parentbuilding>Dock</parentbuilding>
+    </position>
+  </prop>
+  <prop>
+    <name>Italy_Venetian_Flag_Dock_02</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_italy_flag_Venetian_Harbor.xml</visual>
+    <position>
+      <bone>bone_dock_flg_02</bone>
+      <parentbuilding>Dock</parentbuilding>
+    </position>
+  </prop>
+  <prop>
+    <name>Italy_Harbor_Boats</name>
+    <type>Object</type>
+    <displayname>Boats</displayname>
+    <displaynamestringid>49604</displaynamestringid>
+    <description>Trading and fishing boats docked by the waterfront harbor.</description>
+    <descriptionstringid>49605</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_main</bone>
+      <building>Dock</building>
+    </position>
+    <visual>homecity\italy\italy_boat_upgrade_01\italy_boat_upgrade_01.xml</visual>
+    <icon>homecity\home_city_props\icons\usa_ship</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Italy_Harbor_Mooring</name>
+    <type>Object</type>
+    <displayname>Harbor Mooring</displayname>
+    <displaynamestringid>126057</displaynamestringid>
+    <description>Mooring posts installed in front of the Harbor.</description>
+    <descriptionstringid>126058</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_main</bone>
+      <building>Dock</building>
+    </position>
+    <visual>homecity\home_city_props\italy_mooring_poles\italy_mooring_poles_harbor.xml</visual>
+    <icon>homecity\home_city_props\icons\italy_dock_mooring</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>italy_Dock_bunting</name>
+    <type>Object</type>
+    <displayname>Patriotic Bunting</displayname>
+    <displaynamestringid>
+    </displaynamestringid>
+    <description>The citizens show their national pride by decorating with patriotic banners.</description>
+    <descriptionstringid>
+    </descriptionstringid>
+    <levelprereq>5</levelprereq>
+    <visual>homecity\home_city_props\italy_harbor_bunting.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Italy_RialtoTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Rialto (orignal)</displayname>
+    <displaynamestringid>126045</displaynamestringid>
+    <description>The original version of the Rialto.</description>
+    <descriptionstringid>126046</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\italy_manufacturingplant1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Italy_RialtoTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Rialto (white)</displayname>
+    <displaynamestringid>126047</displaynamestringid>
+    <description>The white version of the Rialto.</description>
+    <descriptionstringid>126048</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\italy_manufacturingplant2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Italy_RialtoTexture2</name>
+    <type>ReplaceVisual</type>
+    <displayname>Rialto (Italy)</displayname>
+    <displaynamestringid>126049</displaynamestringid>
+    <description>The Italian themed version of the Rialto.</description>
+    <descriptionstringid>126050</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\italy_manufacturingplant3</icon>
+    <variationid>2</variationid>
+  </prop>
+  <prop>
+    <name>italy_ManufacturingPlant_bunting</name>
+    <type>Object</type>
+    <displayname>Patriotic Bunting</displayname>
+    <displaynamestringid>
+    </displaynamestringid>
+    <description>The citizens show their national pride by decorating with patriotic banners.</description>
+    <descriptionstringid>
+    </descriptionstringid>
+    <levelprereq>5</levelprereq>
+    <visual>homecity\home_city_props\italy_rialto_bunting.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Italy_CustomHouseTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Custom House (original)</displayname>
+    <displaynamestringid>126003</displaynamestringid>
+    <description>The original version of the Custom House.</description>
+    <descriptionstringid>126004</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\italy_Customs_House1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Italy_CustomHouseTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Custom House (Green)</displayname>
+    <displaynamestringid>126005</displaynamestringid>
+    <description>The green version of the Custom House.</description>
+    <descriptionstringid>126006</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\italy_Customs_House2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Italy_CustomHouseTexture2</name>
+    <type>ReplaceVisual</type>
+    <displayname>Custom House (Blue)</displayname>
+    <displaynamestringid>126007</displaynamestringid>
+    <description>The blue version of the Custom House.</description>
+    <descriptionstringid>126008</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\italy_Customs_House3</icon>
+    <variationid>2</variationid>
+  </prop>
+  <prop>
+    <name>Italy_gondolas</name>
+    <type>Unit</type>
+    <displayname>Gondolas</displayname>
+    <displaynamestringid>126011</displaynamestringid>
+    <description>Gondolas cruising around the river banks.</description>
+    <descriptionstringid>126012</descriptionstringid>
+    <position>
+      <building>Market</building>
+    </position>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\italy_gondola</icon>
+    <buttonaction>toggle</buttonaction>
+    <variationmaxid>2</variationmaxid>
+  </prop>
+  <prop>
+    <name>italy_stalls</name>
+    <type>Object</type>
+    <displayname>Custom house stalls</displayname>
+    <displaynamestringid>126009</displaynamestringid>
+    <description>Red and green stalls set up around the Custom House.</description>
+    <descriptionstringid>126010</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_main</bone>
+      <building>Market</building>
+    </position>
+    <visual>homecity\home_city_props\italy_stalls\italy_stalls.xml</visual>
+    <icon>homecity\home_city_props\icons\italy_stalls</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>italy_NWTC_boxes</name>
+    <type>Object</type>
+    <displayname>Crates</displayname>
+    <displaynamestringid>42625</displaynamestringid>
+    <description>These crates might be ready for Shipment to the New World.</description>
+    <descriptionstringid>42626</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_main</bone>
+      <building>Market</building>
+    </position>
+    <visual>homecity\home_city_props\italy_NWTC_boxes.xml</visual>
+    <icon>homecity\home_city_props\icons\crate</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>italy_Market_bunting</name>
+    <type>Object</type>
+    <displayname>Patriotic Bunting</displayname>
+    <displaynamestringid>
+    </displaynamestringid>
+    <description>The citizens show their national pride by decorating with patriotic banners.</description>
+    <descriptionstringid>
+    </descriptionstringid>
+    <levelprereq>5</levelprereq>
+    <visual>homecity\home_city_props\italy_NWTC_bunting.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Italy_PalazzoDucaleTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Palazzo Ducale (original)</displayname>
+    <displaynamestringid>126017</displaynamestringid>
+    <description>The original version of the Palazzo Ducale.</description>
+    <descriptionstringid>126018</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\italy_PalazzoDucale1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Italy_PalazzoDucaleTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Palazzo Ducale (Italy)</displayname>
+    <displaynamestringid>126019</displaynamestringid>
+    <description>The Italian themed version of the Palazzo Ducale.</description>
+    <descriptionstringid>126020</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\italy_PalazzoDucale2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Italy_PalazzoDucaleTexture2</name>
+    <type>ReplaceVisual</type>
+    <displayname>Palazzo Ducale (blue and gold)</displayname>
+    <displaynamestringid>126021</displaynamestringid>
+    <description>The blue and gold version of the Palazzo Ducale.</description>
+    <descriptionstringid>126022</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\italy_PalazzoDucale3</icon>
+    <variationid>2</variationid>
+  </prop>
+  <prop>
+    <name>Italy_LightSetDaytime</name>
+    <type>LightSet</type>
+    <displayname>Daytime Lighting</displayname>
+    <displaynamestringid>49056</displaynamestringid>
+    <description>The city with the sun shining brightly.</description>
+    <descriptionstringid>42535</descriptionstringid>
+    <position>
+      <building>Academy</building>
+    </position>
+    <variationid>0</variationid>
+    <lightset>Italy</lightset>
+    <icon>homecity\home_city_props\icons\Italy_HC_Day</icon>
+  </prop>
+  <prop>
+    <name>Italy_LightSetNight</name>
+    <type>LightSet</type>
+    <displayname>Night Lighting</displayname>
+    <displaynamestringid>49058</displaynamestringid>
+    <description>The city at night.</description>
+    <descriptionstringid>49883</descriptionstringid>
+    <position>
+      <building>Academy</building>
+      <bone>bone_centered</bone>
+    </position>
+    <variationid>1</variationid>
+    <lightset>italy_night</lightset>
+    <cost>15</cost>
+    <icon>homecity\home_city_props\icons\Italy_HC_Night</icon>
+    <prereq>
+    </prereq>
+  </prop>
+  <prop>
+    <name>Italy_LightSetDust</name>
+    <type>LightSet</type>
+    <displayname>Dust Lighting</displayname>
+    <displaynamestringid>126001</displaynamestringid>
+    <description>A dusty city.</description>
+    <descriptionstringid>126002</descriptionstringid>
+    <position>
+      <building>Academy</building>
+    </position>
+    <variationid>2</variationid>
+    <lightset>italy_dust</lightset>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\Italy_HC_Dust</icon>
+  </prop>
+  <prop>
+    <name>Italy_LightSetRain</name>
+    <type>LightSet</type>
+    <displayname>Rain Lighting</displayname>
+    <displaynamestringid>49060</displaynamestringid>
+    <description>A rainy city.</description>
+    <descriptionstringid>49061</descriptionstringid>
+    <position>
+      <bone>bone_main</bone>
+      <building>Academy</building>
+    </position>
+    <variationid>2</variationid>
+    <cityvariationid>1</cityvariationid>
+    <lightset>italy_rain</lightset>
+    <visual>homecity\home_city_props\prop_italy_rain.xml</visual>
+    <weathereffect>Rain</weathereffect>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\Italy_HC_Rain</icon>
+  </prop>
+  <prop>
+    <name>Italy_Street_lights</name>
+    <type>Object</type>
+    <displayname>Basic Street Lamps</displayname>
+    <displaynamestringid>43226</displaynamestringid>
+    <description>Simple technology to make streets just a little safer at night.</description>
+    <descriptionstringid>43227</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_centered</bone>
+      <building>Academy</building>
+    </position>
+    <visual>homecity\home_city_props\italy_streetlamps\italy_streetlamps.xml</visual>
+    <icon>homecity\home_city_props\icons\street_light</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Italy_Carnevale_1</name>
+    <type>Unit</type>
+    <displayname>Palazzo party (formal)</displayname>
+    <displaynamestringid>126013</displaynamestringid>
+    <description>Citizens of Italy gather at Palazzo Ducale before the party.</description>
+    <descriptionstringid>126014</descriptionstringid>
+    <position>
+      <building>Academy</building>
+    </position>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\italy_carnevale_1</icon>
+    <buttonaction>toggle</buttonaction>
+    <deactivateprops>
+      <prop>
+      </prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Italy_Carnevale_2</name>
+    <type>Unit</type>
+    <displayname>Palazzo party (celebration)</displayname>
+    <displaynamestringid>126015</displaynamestringid>
+    <description>Citizens of Italy celebrating at Palazzo Ducale.</description>
+    <descriptionstringid>126016</descriptionstringid>
+    <position>
+      <building>Academy</building>
+    </position>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\italy_carnivale_2</icon>
+    <buttonaction>toggle</buttonaction>
+    <deactivateprops>
+      <prop>
+      </prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>italy_Academy_bunting</name>
+    <type>Object</type>
+    <displayname>Patriotic Bunting</displayname>
+    <displaynamestringid>
+    </displaynamestringid>
+    <description>The citizens show their national pride by decorating with patriotic banners.</description>
+    <descriptionstringid>
+    </descriptionstringid>
+    <levelprereq>5</levelprereq>
+    <visual>homecity\home_city_props\italy_palazzo_bunting.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Italy_BasilicaTexture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Basilica (original)</displayname>
+    <displaynamestringid>126023</displaynamestringid>
+    <description>The original version of the Basilica.</description>
+    <descriptionstringid>126024</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\italy_basilica1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Italy_BasilicaTexture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Basilica (red)</displayname>
+    <displaynamestringid>126025</displaynamestringid>
+    <description>The red brick version of the Basilica.</description>
+    <descriptionstringid>126026</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\italy_basilica2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Italy_BasilicaTexture2</name>
+    <type>ReplaceVisual</type>
+    <displayname>Basilica (gold)</displayname>
+    <displaynamestringid>126027</displaynamestringid>
+    <description>The golden tiled version of the Basilica.</description>
+    <descriptionstringid>126028</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\italy_basilica3</icon>
+    <variationid>2</variationid>
+  </prop>
+  <prop>
+    <name>Italy_Cathedral_Mooring</name>
+    <type>Object</type>
+    <displayname>Basilica Mooring</displayname>
+    <displaynamestringid>126029</displaynamestringid>
+    <description>Mooring posts installed in front of the Basilica.</description>
+    <descriptionstringid>126030</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_main</bone>
+      <building>Cathedral</building>
+    </position>
+    <visual>homecity\home_city_props\italy_mooring_poles\italy_mooring_poles_cathedral.xml</visual>
+    <icon>homecity\home_city_props\icons\italy_cathedral_mooring</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Italy_CampanileTexture0</name>
+    <type>Object</type>
+    <displayname>Campanile (original)</displayname>
+    <displaynamestringid>126039</displaynamestringid>
+    <description>The original version of the Campanile.</description>
+    <descriptionstringid>126040</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_centered</bone>
+      <building>Cathedral</building>
+    </position>
+    <visual>homecity\italy\italy_campanile_V1.xml</visual>
+    <icon>homecity\home_city_props\icons\italy_Campanile1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Italy_CampanileTexture1</name>
+    <type>Object</type>
+    <displayname>Campanile (Italy)</displayname>
+    <displaynamestringid>126041</displaynamestringid>
+    <description>The Italian themed version of the Campanile.</description>
+    <descriptionstringid>126042</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_centered</bone>
+      <building>Cathedral</building>
+    </position>
+    <cost>2</cost>
+    <visual>homecity\italy\italy_campanile_V2.xml</visual>
+    <icon>homecity\home_city_props\icons\italy_Campanile2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Italy_CampanileTexture2</name>
+    <type>Object</type>
+    <displayname>Campanile (Blue)</displayname>
+    <displaynamestringid>126043</displaynamestringid>
+    <description>The blue and golden version of the Campanile.</description>
+    <descriptionstringid>126044</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_centered</bone>
+      <building>Cathedral</building>
+    </position>
+    <cost>2</cost>
+    <visual>homecity\italy\italy_campanile_V3.xml</visual>
+    <icon>homecity\home_city_props\icons\italy_Campanile3</icon>
+    <variationid>2</variationid>
+  </prop>
+  <prop>
+    <name>Italy_Italian_Flag_Academy</name>
+    <type>Object</type>
+    <displayname>Italian Flag</displayname>
+    <displaynamestringid>126031</displaynamestringid>
+    <description>Display Italian flags on this building.</description>
+    <descriptionstringid>126032</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_italy_flag_Cathedral.xml</visual>
+    <position>
+      <bone>bone_cath_flg_01</bone>
+      <building>Cathedral</building>
+    </position>
+    <activateprops>
+      <prop>Italy_Italian_Flag_Academy_02</prop>
+    </activateprops>
+    <icon>homecity\home_city_props\icons\italy_Flag</icon>
+  </prop>
+  <prop>
+    <name>Italy_Italian_Flag_Academy_02</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_italy_flag_Cathedral.xml</visual>
+    <position>
+      <bone>bone_cath_flg_02</bone>
+      <parentbuilding>Cathedral</parentbuilding>
+    </position>
+  </prop>
+  <prop>
+    <name>Italy_Venetian_Flag_Academy</name>
+    <type>Object</type>
+    <displayname>Venetian Flag</displayname>
+    <displaynamestringid>126033</displaynamestringid>
+    <description>Display Venetian flags on this building.</description>
+    <descriptionstringid>126034</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_italy_flag_Venetian_Cathedral.xml</visual>
+    <position>
+      <bone>bone_cath_flg_01</bone>
+      <building>Cathedral</building>
+    </position>
+    <activateprops>
+      <prop>Italy_Venetian_Flag_Academy_02</prop>
+    </activateprops>
+    <icon>homecity\home_city_props\icons\italy_Venetian_Flag</icon>
+  </prop>
+  <prop>
+    <name>Italy_Venetian_Flag_Academy_02</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_italy_flag_Venetian_Cathedral.xml</visual>
+    <position>
+      <bone>bone_cath_flg_02</bone>
+      <parentbuilding>Cathedral</parentbuilding>
+    </position>
+  </prop>
+  <prop>
+    <name>Italy_Italian_Flag_poles_Academy</name>
+    <type>Object</type>
+    <displayname>Italian Flag (pole)</displayname>
+    <displaynamestringid>126035</displaynamestringid>
+    <description>Display Italian flags on the poles in front of this building.</description>
+    <descriptionstringid>126036</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_italy_flag_Cathedral_poles.xml</visual>
+    <position>
+      <bone>bone_flg_pole_01</bone>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\italy_Flag_poles</icon>
+    <activateprops>
+      <prop>Italy_Italian_Flag_poles_Academy_02</prop>
+      <prop>Italy_Italian_Flag_poles_Academy_03</prop>
+    </activateprops>
+  </prop>
+  <prop>
+    <name>Italy_Italian_Flag_poles_Academy_02</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_italy_flag_Cathedral_poles.xml</visual>
+    <position>
+      <bone>bone_flg_pole_02</bone>
+      <parentbuilding>Cathedral</parentbuilding>
+    </position>
+    <icon>homecity\home_city_props\icons\italy_Flag_poles</icon>
+  </prop>
+  <prop>
+    <name>Italy_Italian_Flag_poles_Academy_03</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_italy_flag_Cathedral_poles.xml</visual>
+    <position>
+      <bone>bone_flg_pole_03</bone>
+      <parentbuilding>Cathedral</parentbuilding>
+    </position>
+    <icon>homecity\home_city_props\icons\italy_Flag_poles</icon>
+  </prop>
+  <prop>
+    <name>Italy_Venetian_Flag_poles_Academy</name>
+    <type>Object</type>
+    <displayname>Venetian Flag (pole)</displayname>
+    <displaynamestringid>126037</displaynamestringid>
+    <description>Display Venetian flags on the poles in front of this building.</description>
+    <descriptionstringid>126038</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_italy_flag_Venetian_Cathedral_poles.xml</visual>
+    <position>
+      <bone>bone_flg_pole_01</bone>
+      <building>Cathedral</building>
+    </position>
+    <activateprops>
+      <prop>Italy_Venetian_Flag_poles_Academy_02</prop>
+      <prop>Italy_Venetian_Flag_poles_Academy_03</prop>
+    </activateprops>
+    <icon>homecity\home_city_props\icons\italy_Venetian_Flag_poles</icon>
+  </prop>
+  <prop>
+    <name>Italy_Venetian_Flag_poles_Academy_02</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_italy_flag_Venetian_Cathedral_poles.xml</visual>
+    <position>
+      <bone>bone_flg_pole_02</bone>
+      <parentbuilding>Cathedral</parentbuilding>
+    </position>
+    <icon>homecity\home_city_props\icons\italy_Venetian_Flag_poles</icon>
+  </prop>
+  <prop>
+    <name>Italy_Venetian_Flag_poles_Academy_03</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_italy_flag_Venetian_Cathedral_poles.xml</visual>
+    <position>
+      <bone>bone_flg_pole_03</bone>
+      <parentbuilding>Cathedral</parentbuilding>
+    </position>
+    <icon>homecity\home_city_props\icons\italy_Venetian_Flag_poles</icon>
+  </prop>
+  <prop>
+    <name>italy_Cathedral_bunting</name>
+    <type>Object</type>
+    <displayname>Patriotic Bunting</displayname>
+    <displaynamestringid>
+    </displaynamestringid>
+    <description>The citizens show their national pride by decorating with patriotic banners.</description>
+    <descriptionstringid>
+    </descriptionstringid>
+    <levelprereq>5</levelprereq>
+    <visual>homecity\home_city_props\italy_cathedral_bunting.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <exclusiveprops>
+    <prop>Italy_LightSetDaytime</prop>
+    <prop>Italy_LightSetNight</prop>
+    <prop>Italy_LightSetDust</prop>
+    <prop>Italy_LightSetRain</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_PalazzoDucaleTexture0</prop>
+    <prop>Italy_PalazzoDucaleTexture1</prop>
+    <prop>Italy_PalazzoDucaleTexture2</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_BasilicaTexture0</prop>
+    <prop>Italy_BasilicaTexture1</prop>
+    <prop>Italy_BasilicaTexture2</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_CustomHouseTexture0</prop>
+    <prop>Italy_CustomHouseTexture1</prop>
+    <prop>Italy_CustomHouseTexture2</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_HarborTexture0</prop>
+    <prop>Italy_HarborTexture1</prop>
+    <prop>Italy_HarborTexture2</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_RialtoTexture0</prop>
+    <prop>Italy_RialtoTexture1</prop>
+    <prop>Italy_RialtoTexture2</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_Italian_Flag_Academy</prop>
+    <prop>Italy_Venetian_Flag_Academy</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_Italian_Flag_Academy_02</prop>
+    <prop>Italy_Venetian_Flag_Academy_02</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_Italian_Flag_poles_Academy</prop>
+    <prop>Italy_Venetian_Flag_poles_Academy</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_Italian_Flag_poles_Academy_02</prop>
+    <prop>Italy_Venetian_Flag_poles_Academy_02</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_Italian_Flag_poles_Academy_03</prop>
+    <prop>Italy_Venetian_Flag_poles_Academy_03</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_Italian_Flag_Dock</prop>
+    <prop>Italy_Venetian_Flag_Dock</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_Venetian_Flag_Dock_02</prop>
+    <prop>Italy_Italian_Flag_Dock_02</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_BasilicaTexture0</prop>
+    <prop>Italy_BasilicaTexture1</prop>
+    <prop>Italy_BasilicaTexture2</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_CampanileTexture0</prop>
+    <prop>Italy_CampanileTexture1</prop>
+    <prop>Italy_CampanileTexture2</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_Carnevale_1</prop>
+    <prop>Italy_Carnevale_2</prop>
+  </exclusiveprops>
+  <prop>
+    <name>deExplorerItalian</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>deGrandMaster</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Grandmaster</description>
+    <descriptionstringid>124751</descriptionstringid>
+  </prop>
+  <prop>
+    <name>Malta_NWTC_Texture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>New World Trading Company (original)</displayname>
+    <displaynamestringid>126063</displaynamestringid>
+    <description>The original version of the New World Trading Company.</description>
+    <descriptionstringid>126064</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\MedNWTC4</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Malta_NWTC_Texture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>New World Trading Company (merigold)</displayname>
+    <displaynamestringid>126065</displaynamestringid>
+    <description>The merigold version of the New World Trading Company.</description>
+    <descriptionstringid>126066</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\MedNWTC0</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Malta_NWTC_Texture2</name>
+    <type>ReplaceVisual</type>
+    <displayname>New World Trading Company (orange)</displayname>
+    <displaynamestringid>126067</displaynamestringid>
+    <description>The orange version of the New World Trading Company with a weathered brick finish.</description>
+    <descriptionstringid>126068</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\MedNWTC3</icon>
+    <variationid>2</variationid>
+  </prop>
+  <prop>
+    <name>Malta_NWTC_Texture3</name>
+    <type>ReplaceVisual</type>
+    <displayname>New World Trading Company (blue)</displayname>
+    <displaynamestringid>126069</displaynamestringid>
+    <description>The blue version of the New World Trading Company with a weathered brick finish.</description>
+    <descriptionstringid>126070</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\MedNWTC2</icon>
+    <variationid>3</variationid>
+  </prop>
+  <prop>
+    <name>Malta_NWTC_Texture4</name>
+    <type>ReplaceVisual</type>
+    <displayname>New World Trading Company (green)</displayname>
+    <displaynamestringid>126071</displaynamestringid>
+    <description>The green version of the New World Trading Company with a weathered brick finish.</description>
+    <descriptionstringid>126072</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\MedNWTC1</icon>
+    <variationid>4</variationid>
+  </prop>
+  <prop>
+    <name>malta_cannons_NWTC</name>
+    <type>Object</type>
+    <displayname>Cannons</displayname>
+    <displaynamestringid>126073</displaynamestringid>
+    <description>Display Cannons in front of this building.</description>
+    <descriptionstringid>126074</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>malta_ground_bone</bone>
+      <building>Market</building>
+    </position>
+    <visual>homecity\home_city_props\malta_cannons\malta_cannons_NWTC.xml</visual>
+    <icon>homecity\home_city_props\icons\malta_cannons</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>malta_NWTC_bunting</name>
+    <type>Object</type>
+    <displayname>Patriotic Bunting</displayname>
+    <displaynamestringid>
+    </displaynamestringid>
+    <description>The citizens show their national pride by decorating with patriotic banners.</description>
+    <descriptionstringid>
+    </descriptionstringid>
+    <levelprereq>5</levelprereq>
+    <visual>homecity\home_city_props\malta_NWTC_bunting.xml</visual>
+    <position>
+      <bone>bone_prop</bone>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+  </prop>
+  <prop>
+    <name>malta_street_lights</name>
+    <type>Object</type>
+    <displayname>Basic Street Lamps</displayname>
+    <displaynamestringid>43226</displaynamestringid>
+    <description>Simple technology to make streets just a little safer at night.</description>
+    <descriptionstringid>43227</descriptionstringid>
+    <levelprereq>5</levelprereq>
+    <visual>homecity\home_city_props\malta_street_lights.xml</visual>
+    <position>
+      <bone>malta_ground_bone</bone>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\street_light</icon>
+  </prop>
+  <prop>
+    <name>ScottishKnight</name>
+    <type>Unit</type>
+    <displayname>Morgan Black</displayname>
+    <displaynamestringid>126059</displaynamestringid>
+    <description>Morgan Black roaming around the streets of Malta.</description>
+    <descriptionstringid>126060</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\malta_ScottishKnight</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>OldCoot</name>
+    <type>Unit</type>
+    <displayname>Old Coot</displayname>
+    <displaynamestringid>126061</displaynamestringid>
+    <description>Old Coot roaming around the streents of Malta.</description>
+    <descriptionstringid>126062</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\malta_OldCoot</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Malta_ManufacturingPlant_Texture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Barrakka Gardens (original)</displayname>
+    <displaynamestringid>126117</displaynamestringid>
+    <description>The original version of the Barrakka Gardens.</description>
+    <descriptionstringid>126118</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\malta_manufacturingplant2</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Malta_ManufacturingPlant_Texture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Barrakka Gardens (sand)</displayname>
+    <displaynamestringid>126119</displaynamestringid>
+    <description>The Barrakka Gardens with a sand brick finish.</description>
+    <descriptionstringid>126120</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\malta_manufacturingplant1</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Malta_ManufacturingPlant_Texture2</name>
+    <type>ReplaceVisual</type>
+    <displayname>Barrakka Gardens (red)</displayname>
+    <displaynamestringid>126121</displaynamestringid>
+    <description>The Barrakka Gardens with a red brick finish.</description>
+    <descriptionstringid>126122</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\malta_manufacturingplant3</icon>
+    <variationid>2</variationid>
+  </prop>
+  <prop>
+    <name>Malta_ManufacturingPlant_Texture3</name>
+    <type>ReplaceVisual</type>
+    <displayname>Barrakka Gardens (sienna)</displayname>
+    <displaynamestringid>126123</displaynamestringid>
+    <description>The Barrakka Gardens with a sienna brick finish.</description>
+    <descriptionstringid>126124</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\malta_manufacturingplant4</icon>
+    <variationid>3</variationid>
+  </prop>
+  <prop>
+    <name>Malta_ManufacturingPlant_Texture4</name>
+    <type>ReplaceVisual</type>
+    <displayname>Barrakka Gardens (copper)</displayname>
+    <displaynamestringid>126125</displaynamestringid>
+    <description>The Barrakka Gardens with a copper brick finish.</description>
+    <descriptionstringid>126126</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\malta_manufacturingplant5</icon>
+    <variationid>4</variationid>
+  </prop>
+  <prop>
+    <name>malta_cannons_Garden</name>
+    <type>Object</type>
+    <displayname>Cannons</displayname>
+    <displaynamestringid>126073</displaynamestringid>
+    <description>Display Cannons in front of this building.</description>
+    <descriptionstringid>126074</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>malta_ground_bone</bone>
+      <building>ManufacturingPlant</building>
+    </position>
+    <visual>homecity\home_city_props\malta_cannons\malta_cannons_Garden.xml</visual>
+    <icon>homecity\home_city_props\icons\malta_cannons</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>malta_ManufacturingPlant_bunting</name>
+    <type>Object</type>
+    <displayname>Patriotic Bunting</displayname>
+    <displaynamestringid>
+    </displaynamestringid>
+    <description>The citizens show their national pride by decorating with patriotic banners.</description>
+    <descriptionstringid>
+    </descriptionstringid>
+    <levelprereq>5</levelprereq>
+    <visual>homecity\home_city_props\malta_manufacturing_bunting.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+  </prop>
+  <prop>
+    <name>Malta_plants</name>
+    <type>Object</type>
+    <displayname>City Vegetation</displayname>
+    <displaynamestringid>126127</displaynamestringid>
+    <description>Display street vegetation along the streets of the Barrakka Gardens.</description>
+    <descriptionstringid>126128</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\malta_plants.xml</visual>
+    <position>
+      <bone>malta_ground_bone</bone>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\sw_green_trees</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Boneguard</name>
+    <type>Unit</type>
+    <displayname>Boneguard</displayname>
+    <displaynamestringid>126113</displaynamestringid>
+    <description>Assign Bone Guard at the Barrakka Gardens.</description>
+    <descriptionstringid>126114</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\malta_Boneguard</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>BritishPirate</name>
+    <type>Unit</type>
+    <displayname>British Pirate</displayname>
+    <displaynamestringid>126115</displaynamestringid>
+    <description>Assign British Pirate at the Barrakka Gardens.</description>
+    <descriptionstringid>126116</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\malta_BritishPirate</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Malta_FortStElmo_Texture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Fort St.Elmo (original)</displayname>
+    <displaynamestringid>126079</displaynamestringid>
+    <description>The original version of the Fort St.Elmo.</description>
+    <descriptionstringid>126080</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\malta_fort1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>Malta_FortStElmo_Texture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Fort St.Elmo (alternative)</displayname>
+    <displaynamestringid>126081</displaynamestringid>
+    <description>The alternate version of the Fort St.Elmo.</description>
+    <descriptionstringid>126082</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\malta_fort2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>Malta_Fixed_Cannons</name>
+    <type>Object</type>
+    <displayname>Fixed Cannons</displayname>
+    <displaynamestringid>126083</displaynamestringid>
+    <description>Display Fixed Cannons on this building.</description>
+    <descriptionstringid>126084</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_main</bone>
+      <building>Academy</building>
+    </position>
+    <visual>homecity\home_city_props\malta_Fixedcannons\Malta_FixedCannons.xml</visual>
+    <icon>homecity\home_city_props\icons\Malta_Fixed_Cannons</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>MaltaFlag_Academy</name>
+    <type>Object</type>
+    <displayname>Maltese Flag</displayname>
+    <displaynamestringid>126087</displaynamestringid>
+    <description>Display Maltese flags on this building.</description>
+    <descriptionstringid>126088</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_malta_flags_academy.xml</visual>
+    <position>
+      <bone>Flg_01</bone>
+      <building>Academy</building>
+    </position>
+    <activateprops>
+      <prop>MaltaFlag_Academy_02</prop>
+    </activateprops>
+    <icon>homecity\home_city_props\icons\malta_flag</icon>
+  </prop>
+  <prop>
+    <name>MaltaBoneGuardFlag_Academy</name>
+    <type>Object</type>
+    <displayname>Bone Guard Flag</displayname>
+    <displaynamestringid>126089</displaynamestringid>
+    <description>Display Bone Guard flags on this building.</description>
+    <descriptionstringid>126090</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_maltaBoneGuard_flags_academy.xml</visual>
+    <position>
+      <bone>Flg_01</bone>
+      <building>Academy</building>
+    </position>
+    <activateprops>
+      <prop>MaltaBoneGuardFlag_Academy_02</prop>
+    </activateprops>
+    <icon>homecity\home_city_props\icons\malta_BoneGuard_flag</icon>
+  </prop>
+  <prop>
+    <name>MaltaBlackFlag_Academy</name>
+    <type>Object</type>
+    <displayname>Black Family Flag</displayname>
+    <displaynamestringid>126091</displaynamestringid>
+    <description>Display Black Family flags on this building.</description>
+    <descriptionstringid>126092</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_maltaBlack_flags_academy.xml</visual>
+    <position>
+      <bone>Flg_01</bone>
+      <building>Academy</building>
+    </position>
+    <activateprops>
+      <prop>MaltaBlackFlag_Academy_02</prop>
+    </activateprops>
+    <icon>homecity\home_city_props\icons\malta_BlackFam_flag</icon>
+  </prop>
+  <prop>
+    <name>MaltaFlagCross_Academy</name>
+    <type>Object</type>
+    <displayname>Maltese Flag (Alternative)</displayname>
+    <displaynamestringid>126093</displaynamestringid>
+    <description>Display the alternate version of the Maltese Flag on this building.</description>
+    <descriptionstringid>126094</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_maltaCross_flags_academy.xml</visual>
+    <position>
+      <bone>Flg_01</bone>
+      <building>Academy</building>
+    </position>
+    <activateprops>
+      <prop>MaltaFlagCross_Academy_02</prop>
+    </activateprops>
+    <icon>homecity\home_city_props\icons\malta_Cross_flag</icon>
+  </prop>
+  <prop>
+    <name>MaltaFlagBritish_Academy</name>
+    <type>Object</type>
+    <displayname>British Flag</displayname>
+    <displaynamestringid>126095</displaynamestringid>
+    <description>Display British flags on this building.</description>
+    <descriptionstringid>126096</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_maltaBritish_flags_academy.xml</visual>
+    <position>
+      <bone>Flg_01</bone>
+      <building>Academy</building>
+    </position>
+    <activateprops>
+      <prop>MaltaFlagBritish_Academy_02</prop>
+    </activateprops>
+    <icon>homecity\home_city_props\icons\malta_British_flag</icon>
+  </prop>
+  <prop>
+    <name>MaltaFlagFrench_Academy</name>
+    <type>Object</type>
+    <displayname>French Flag</displayname>
+    <displaynamestringid>126097</displaynamestringid>
+    <description>Display French flags on this building.</description>
+    <descriptionstringid>126098</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\prop_maltaFrench_flags_academy.xml</visual>
+    <position>
+      <bone>Flg_01</bone>
+      <building>Academy</building>
+    </position>
+    <activateprops>
+      <prop>MaltaFlagFrench_Academy_02</prop>
+    </activateprops>
+    <icon>homecity\home_city_props\icons\malta_French_flag</icon>
+  </prop>
+  <prop>
+    <name>MaltaFlag_Academy_02</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_malta_flags_academy.xml</visual>
+    <position>
+      <bone>Flg_02</bone>
+      <parentbuilding>Academy</parentbuilding>
+    </position>
+  </prop>
+  <prop>
+    <name>MaltaBoneGuardFlag_Academy_02</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_maltaBoneGuard_flags_academy.xml</visual>
+    <position>
+      <bone>Flg_02</bone>
+      <parentbuilding>Academy</parentbuilding>
+    </position>
+  </prop>
+  <prop>
+    <name>MaltaBlackFlag_Academy_02</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_maltaBlack_flags_academy.xml</visual>
+    <position>
+      <bone>Flg_02</bone>
+      <parentbuilding>Academy</parentbuilding>
+    </position>
+  </prop>
+  <prop>
+    <name>MaltaFlagCross_Academy_02</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_maltaCross_flags_academy.xml</visual>
+    <position>
+      <bone>Flg_02</bone>
+      <parentbuilding>Academy</parentbuilding>
+    </position>
+  </prop>
+  <prop>
+    <name>MaltaFlagBritish_Academy_02</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_maltaBritish_flags_academy.xml</visual>
+    <position>
+      <bone>Flg_02</bone>
+      <parentbuilding>Academy</parentbuilding>
+    </position>
+  </prop>
+  <prop>
+    <name>MaltaFlagFrench_Academy_02</name>
+    <type>Object</type>
+    <visual>homecity\home_city_props\prop_maltaFrench_flags_academy.xml</visual>
+    <position>
+      <bone>Flg_02</bone>
+      <parentbuilding>Academy</parentbuilding>
+    </position>
+  </prop>
+  <prop>
+    <name>maltaGuard</name>
+    <type>Unit</type>
+    <displayname>Malta Guard</displayname>
+    <displaynamestringid>126085</displaynamestringid>
+    <description>Assign Malta Guards in front of the building.</description>
+    <descriptionstringid>126086</descriptionstringid>
+    <position>
+      <building>Academy</building>
+    </position>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\Malta_Guards</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>PirateQueen</name>
+    <type>Unit</type>
+    <displayname>Lizzie</displayname>
+    <displaynamestringid>126075</displaynamestringid>
+    <description>Lizzie roaming around the streets of Malta.</description>
+    <descriptionstringid>126076</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\malta_PirateQueen</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>OttomanAlly</name>
+    <type>Unit</type>
+    <displayname>Ottoman Ally</displayname>
+    <displaynamestringid>126077</displaynamestringid>
+    <description>An Ottoman ally roaming around the streets of Malta.</description>
+    <descriptionstringid>126078</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\malta_OttomanAlly</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>New_Malta_Cathedral_Texture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Cathedral (original)</displayname>
+    <displaynamestringid>126103</displaynamestringid>
+    <description>The original version of the Cathedral.</description>
+    <descriptionstringid>126104</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\malta_cathedral1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>New_Malta_Cathedral_Texture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Cathedral (ashen grey)</displayname>
+    <displaynamestringid>126105</displaynamestringid>
+    <description>The Cathedral with an ashen grey roofing finish.</description>
+    <descriptionstringid>126106</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\malta_cathedral2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>New_Malta_Cathedral_Texture2</name>
+    <type>ReplaceVisual</type>
+    <displayname>Cathedral (purple)</displayname>
+    <displaynamestringid>126107</displaynamestringid>
+    <description>The Cathedral with an purple roofing finish.</description>
+    <descriptionstringid>126108</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\MedCathedral2</icon>
+    <variationid>2</variationid>
+  </prop>
+  <prop>
+    <name>New_Malta_Cathedral_Texture3</name>
+    <type>ReplaceVisual</type>
+    <displayname>Cathedral (yellow)</displayname>
+    <displaynamestringid>126109</displaynamestringid>
+    <description>The Cathedral with an yellow roofing finish.</description>
+    <descriptionstringid>126110</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\MedCathedral4</icon>
+    <variationid>3</variationid>
+  </prop>
+  <prop>
+    <name>New_Malta_Cathedral_Texture4</name>
+    <type>ReplaceVisual</type>
+    <displayname>Cathedral (green)</displayname>
+    <displaynamestringid>126111</displaynamestringid>
+    <description>The Cathedral with an green roofing finish.</description>
+    <descriptionstringid>126112</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\MedCathedral3</icon>
+    <variationid>4</variationid>
+  </prop>
+  <prop>
+    <name>malta_cathedral_bunting</name>
+    <type>Object</type>
+    <displayname>Patriotic Bunting</displayname>
+    <displaynamestringid>
+    </displaynamestringid>
+    <description>The citizens show their national pride by decorating with patriotic banners.</description>
+    <descriptionstringid>
+    </descriptionstringid>
+    <levelprereq>5</levelprereq>
+    <visual>homecity\home_city_props\malta_cathedral_bunting.xml</visual>
+    <position>
+      <bone>bone_prop</bone>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+  </prop>
+  <prop>
+    <name>RogueGrandMaster</name>
+    <type>Unit</type>
+    <displayname>Alain Magnan</displayname>
+    <displaynamestringid>126099</displaynamestringid>
+    <description>Alain Magnan roaming around the streets of Malta.</description>
+    <descriptionstringid>126100</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\malta_RogueGrandMaster</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Crossbowman</name>
+    <type>Unit</type>
+    <displayname>Malta Crossbowmen</displayname>
+    <displaynamestringid>126101</displaynamestringid>
+    <description>Assign Crossbowmen at the Cathedral building.</description>
+    <descriptionstringid>126102</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\malta_Crossbowman</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Malta_Daytime</name>
+    <type>LightSet</type>
+    <displayname>Daytime Lighting</displayname>
+    <displaynamestringid>42534</displaynamestringid>
+    <description>The city with the sun shining brightly.</description>
+    <descriptionstringid>42535</descriptionstringid>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <variationid>0</variationid>
+    <lightset>Malta</lightset>
+    <icon>homecity\home_city_props\icons\malta_day</icon>
+  </prop>
+  <prop>
+    <name>Malta_Sunset</name>
+    <type>LightSet</type>
+    <displayname>Dusk Lighting</displayname>
+    <displaynamestringid>42536</displaynamestringid>
+    <description>The city at dusk.</description>
+    <descriptionstringid>42537</descriptionstringid>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <variationid>1</variationid>
+    <lightset>malta_sunset</lightset>
+    <icon>homecity\home_city_props\icons\malta_sunset</icon>
+  </prop>
+  <prop>
+    <name>Malta_Night</name>
+    <type>LightSet</type>
+    <displayname>Night Lighting</displayname>
+    <displaynamestringid>49058</displaynamestringid>
+    <description>The city at night.</description>
+    <descriptionstringid>49226</descriptionstringid>
+    <position>
+      <building>Cathedral</building>
+    </position>
+    <variationid>2</variationid>
+    <lightset>mexico_night_sunset</lightset>
+    <icon>homecity\home_city_props\icons\malta_night</icon>
+  </prop>
+  <prop>
+    <name>malta_harbor_Texture0</name>
+    <type>ReplaceVisual</type>
+    <displayname>Harbor (orignal)</displayname>
+    <displaynamestringid>126133</displaynamestringid>
+    <description>The original version of the Harbor.</description>
+    <descriptionstringid>126134</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\malta_harbor1</icon>
+    <variationid>0</variationid>
+  </prop>
+  <prop>
+    <name>malta_harbor_Texture1</name>
+    <type>ReplaceVisual</type>
+    <displayname>Harbor (Malta)</displayname>
+    <displaynamestringid>126135</displaynamestringid>
+    <description>The Malta themed version of the Harbor.</description>
+    <descriptionstringid>126136</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Dock</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\malta_harbor2</icon>
+    <variationid>1</variationid>
+  </prop>
+  <prop>
+    <name>malta_harbor_Texture2</name>
+    <type>ReplaceVisual</type>
+    <displayname>Harbor (red)</displayname>
+    <displaynamestringid>126137</displaynamestringid>
+    <description>The red version of the Harbor.</description>
+    <descriptionstringid>126138</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Dock</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\malta_harbor3</icon>
+    <variationid>2</variationid>
+  </prop>
+  <prop>
+    <name>malta_harbor_Texture3</name>
+    <type>ReplaceVisual</type>
+    <displayname>Harbor (pistachio)</displayname>
+    <displaynamestringid>126139</displaynamestringid>
+    <description>The pistachio version of the Harbor.</description>
+    <descriptionstringid>126140</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Dock</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\malta_harbor4</icon>
+    <variationid>3</variationid>
+  </prop>
+  <prop>
+    <name>malta_harbor_Texture4</name>
+    <type>ReplaceVisual</type>
+    <displayname>Harbor (green)</displayname>
+    <displaynamestringid>126141</displaynamestringid>
+    <description>The green version of the Harbor.</description>
+    <descriptionstringid>126142</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Dock</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\malta_harbor5</icon>
+    <variationid>4</variationid>
+  </prop>
+  <prop>
+    <name>malta_cannons_harbor</name>
+    <type>Object</type>
+    <displayname>Cannons</displayname>
+    <displaynamestringid>126073</displaynamestringid>
+    <description>Display Cannons in front of this building.</description>
+    <descriptionstringid>126074</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>malta_ground_bone</bone>
+      <building>Dock</building>
+    </position>
+    <visual>homecity\home_city_props\malta_cannons\malta_cannons_harbor.xml</visual>
+    <icon>homecity\home_city_props\icons\malta_cannons</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>malta_Dock_bunting</name>
+    <type>Object</type>
+    <displayname>Patriotic Bunting</displayname>
+    <displaynamestringid>
+    </displaynamestringid>
+    <description>The citizens show their national pride by decorating with patriotic banners.</description>
+    <descriptionstringid>
+    </descriptionstringid>
+    <levelprereq>5</levelprereq>
+    <visual>homecity\home_city_props\malta_dock_bunting.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\bunting</icon>
+  </prop>
+  <prop>
+    <name>malta_Clock</name>
+    <type>Object</type>
+    <displayname>Gold Clock</displayname>
+    <displaynamestringid>42627</displaynamestringid>
+    <description>A golden clock. How time flies when you're having fun.</description>
+    <descriptionstringid>43304</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\med_harbor_prop_clock.xml</visual>
+    <position>
+      <bone>bone_prop</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\ee-dock-clock</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>malta_dock_props</name>
+    <type>Object</type>
+    <displayname>Harbor Hardware</displayname>
+    <displaynamestringid>43252</displaynamestringid>
+    <description>Crates, boats, oars, nets -- everything for the disorganized harbor master.</description>
+    <descriptionstringid>43253</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\malta_dock_props.xml</visual>
+    <position>
+      <bone>malta_ground_bone</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\crate</icon>
+  </prop>
+  <prop>
+    <name>Malta_gondolas</name>
+    <type>Unit</type>
+    <displayname>Gondolas</displayname>
+    <displaynamestringid>126011</displaynamestringid>
+    <description>Gondolas cruising around the river banks.</description>
+    <descriptionstringid>126012</descriptionstringid>
+    <position>
+      <building>Dock</building>
+    </position>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\italy_gondola</icon>
+    <buttonaction>toggle</buttonaction>
+    <variationmaxid>2</variationmaxid>
+  </prop>
+  <prop>
+    <name>Malta_carnival_1</name>
+    <type>Unit</type>
+    <displayname>126129'&gt;Maltese Carnival 1</displayname>
+    <displaynamestringid>126129'&gt;Maltese Carnival 1</displaynamestringid>
+    <description>126130'&gt;Citizens of Malta gathering in front of the harbor to party.</description>
+    <descriptionstringid>126130'&gt;Citizens of Malta gathering in front of the harbor to party.</descriptionstringid>
+    <position>
+      <bone>malta_ground_bone</bone>
+      <building>Dock</building>
+    </position>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\italy_carnevale_1</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Malta_carnival_2</name>
+    <type>Unit</type>
+    <displayname>Maltese Carnival 2</displayname>
+    <displaynamestringid>126131</displaynamestringid>
+    <description>Citizens of Malta gathering in front of the harbor to party.</description>
+    <descriptionstringid>126132</descriptionstringid>
+    <position>
+      <bone>malta_ground_bone</bone>
+      <building>Dock</building>
+    </position>
+    <cost>5</cost>
+    <icon>homecity\home_city_props\icons\italy_carnivale_2</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <exclusiveprops>
+    <prop>Malta_NWTC_Texture0</prop>
+    <prop>Malta_NWTC_Texture1</prop>
+    <prop>Malta_NWTC_Texture2</prop>
+    <prop>Malta_NWTC_Texture3</prop>
+    <prop>Malta_NWTC_Texture4</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Malta_ManufacturingPlant_Texture0</prop>
+    <prop>Malta_ManufacturingPlant_Texture1</prop>
+    <prop>Malta_ManufacturingPlant_Texture2</prop>
+    <prop>Malta_ManufacturingPlant_Texture3</prop>
+    <prop>Malta_ManufacturingPlant_Texture4</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Malta_FortStElmo_Texture0</prop>
+    <prop>Malta_FortStElmo_Texture1</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>New_Malta_Cathedral_Texture0</prop>
+    <prop>New_Malta_Cathedral_Texture1</prop>
+    <prop>New_Malta_Cathedral_Texture2</prop>
+    <prop>New_Malta_Cathedral_Texture3</prop>
+    <prop>New_Malta_Cathedral_Texture4</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>malta_harbor_Texture0</prop>
+    <prop>malta_harbor_Texture1</prop>
+    <prop>malta_harbor_Texture2</prop>
+    <prop>malta_harbor_Texture3</prop>
+    <prop>malta_harbor_Texture4</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>ScottishKnight</prop>
+    <prop>OldCoot</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Malta_carnival_1</prop>
+    <prop>Malta_carnival_2</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>MaltaFlag_Academy</prop>
+    <prop>MaltaBoneGuardFlag_Academy</prop>
+    <prop>MaltaBlackFlag_Academy</prop>
+    <prop>MaltaFlagCross_Academy</prop>
+    <prop>MaltaFlagBritish_Academy</prop>
+    <prop>MaltaFlagFrench_Academy</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>MaltaFlag_Academy_02</prop>
+    <prop>MaltaBoneGuardFlag_Academy_02</prop>
+    <prop>MaltaBlackFlag_Academy_02</prop>
+    <prop>MaltaFlagCross_Academy_02</prop>
+    <prop>MaltaFlagBritish_Academy_02</prop>
+    <prop>MaltaFlagFrench_Academy_02</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Malta_Daytime</prop>
+    <prop>Malta_Sunset</prop>
+    <prop>Malta_Night</prop>
   </exclusiveprops>
 </homecityprops>

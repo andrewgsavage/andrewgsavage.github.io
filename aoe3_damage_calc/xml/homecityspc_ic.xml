@@ -867,26 +867,6 @@
   </cards>
   <decks>
     <deck>
-      <name>$$41681$$</name>
-      <cards>
-        <card>YPHCShipWoodCratesInf1Indians</card>
-        <card>YPHCShipCastleWagons1Indians</card>
-        <card>YPHCShipRajput2</card>
-        <card>YPHCShipUrumi1</card>
-        <card>YPHCShipUrumi2</card>
-        <card>YPHCShipSepoy1</card>
-        <card>YPHCShipSepoy2</card>
-        <card>YPHCShipSepoy3</card>
-        <card>YPHCShipSepoy4</card>
-        <card>YPHCShipIndianHandCavalry1</card>
-        <card>YPHCShipIndianHandCavalry3</card>
-        <card>YPHCMinorTaxationIndians</card>
-        <card>YPHCShipGroveWagonIndians1</card>
-        <card>YPHCShipFlailiphant1</card>
-        <card>YPHCShipSiegeElephant1</card>
-      </cards>
-    </deck>
-    <deck>
       <name>$$41682$$</name>
       <default>
       </default>

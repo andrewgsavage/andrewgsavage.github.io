@@ -875,26 +875,6 @@
   </cards>
   <decks>
     <deck>
-      <name>$$41681$$</name>
-      <cards>
-        <card>YPHCSpawnRefugees1</card>
-        <card>YPHCSpawnRefugees2</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>HCShipCoinCrates2</card>
-        <card>ypHCShipCastleWagons1</card>
-        <card>YPHCShipCoveredWagonsAsian</card>
-        <card>YPHCShipChuKoNu1</card>
-        <card>YPHCShipChuKoNu2</card>
-        <card>YPHCShipQiangPikeman2</card>
-        <card>YPHCShipArquebusier1</card>
-        <card>YPHCShipKeshik2</card>
-        <card>YPHCShipKeshik3</card>
-        <card>YPHCWokouChinese1</card>
-        <card>HCFurrier</card>
-      </cards>
-    </deck>
-    <deck>
       <name>$$41682$$</name>
       <default>
       </default>

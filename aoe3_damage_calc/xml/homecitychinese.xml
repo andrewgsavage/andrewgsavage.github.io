@@ -833,7 +833,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>YPHCAdvancedIrregulars</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>YPHCGreatWall</name>
@@ -1124,7 +1124,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>YPHCShipWarJunk1</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>YPHCEuropeanCannons</name>
@@ -1256,24 +1256,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>YPHCShipDisciple1</card>
-        <card>YPHCShipChuKoNu1</card>
-        <card>YPHCShipQiangPikeman2</card>
-        <card>YPHCShipArquebusier1</card>
-        <card>YPHCShipChangdao2</card>
-        <card>YPHCShipMandarinDuckSquad</card>
-        <card>YPHCShipEverVictoriousArmy</card>
-        <card>YPHCShipMeteorHammer3</card>
-        <card>YPHCShipSteppeRider3</card>
-        <card>YPHCShipIronCapPrincesArmy</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1361,6 +1343,36 @@
         <card dbid="3935">YPHCShipMandarinDuckSquad</card>
         <card dbid="4727">YPHCShipSteppeRider2</card>
         <card dbid="2216">HCShipCoinCrates4</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="4823">YPHCSpawnMigrants1</card>
+        <card dbid="2268">HCShipFoodCrates5</card>
+        <card dbid="2263">HCShipWoodCrates5</card>
+        <card dbid="3521">HCShipCoinCrates5</card>
+        <card dbid="4825">YPHCSpawnRefugees2</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="2216">HCShipCoinCrates4</card>
+        <card dbid="4802">YPHCSpawnLivestock2</card>
+        <card dbid="3962">YPHCConfusciousGift</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="2043">HCSilversmith</card>
+        <card dbid="2098">HCSpiceTrade</card>
+        <card dbid="4189">YPHCExtensiveFortifications</card>
+        <card dbid="8515">DEHCTeaExport</card>
+        <card dbid="4824">YPHCSpawnRefugees1</card>
+        <card dbid="4801">YPHCSpawnLivestock1</card>
+        <card dbid="3551">YPHCShipVillageWagon1</card>
+        <card dbid="5038">YPHCRainbowTrickle</card>
+        <card dbid="2032">HCFurrier</card>
+        <card dbid="2094">HCFoodSilos</card>
+        <card dbid="4228">YPHCAdvancedWonders</card>
+        <card dbid="2093">HCRoyalMint</card>
+        <card dbid="2041">HCRefrigeration</card>
+        <card dbid="2102">HCTextileMills</card>
       </cards>
     </deck>
   </decks>
@@ -2093,6 +2105,5 @@
     <prop>ChineseCHTexture4</prop>
     <prop>ChineseLanterns</prop>
     <prop>ChineseBanners</prop>
-    <prop>ypMonkChinese</prop>
   </obtainableprops>
 </homecity>

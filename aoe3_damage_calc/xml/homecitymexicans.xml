@@ -323,7 +323,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
-      <displayunitcount>11</displayunitcount>
+      <displayunitcount>10</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -767,7 +767,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCPioneers</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>HCFrontierDefenses</name>
@@ -2149,7 +2149,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <bindtotech>HCXPBloodBrothers</bindtotech>
-      <age>2</age>
+      <age>3</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -2570,31 +2570,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card dbid="7600">DEHCAlhondigaDeGranaditas</card>
-        <card dbid="7864">DEHCBarbacoa</card>
-        <card dbid="2206">HCShipSettlers2</card>
-        <card dbid="2236">HCShipFalconets3</card>
-        <card dbid="7613">DEHCPorfiriato</card>
-        <card dbid="625">HCUnlockFactory</card>
-        <card dbid="7467">DEHCShipHaciendaWagon1</card>
-        <card dbid="7626">DEHCLiberationMarch</card>
-        <card dbid="7618">DEHCChipotles</card>
-        <card dbid="814">HCUnlockFort</card>
-        <card dbid="7588">DEHCPinatas</card>
-        <card dbid="2212">HCShipWoodCrates3</card>
-        <card dbid="2215">HCShipCoinCrates3</card>
-        <card dbid="7569">DEHCShipInsurgente1</card>
-        <card dbid="7573">DEHCShipEmboscador1</card>
-        <card dbid="7576">DEHCShipChinaco1</card>
-        <card dbid="7574">DEHCShipEmboscador2</card>
-        <card dbid="7577">DEHCShipChinaco2</card>
-        <card dbid="2192">HCShipFalconets1</card>
-        <card dbid="3382">HCXPAdvancedBalloon</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -2670,6 +2645,32 @@
         <card dbid="7040">DEHCShipSloops1</card>
         <card dbid="7574">DEHCShipEmboscador2</card>
         <card dbid="2239">HCShipCannons1</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="2263">HCShipWoodCrates5</card>
+        <card dbid="3521">HCShipCoinCrates5</card>
+        <card dbid="625">HCUnlockFactory</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="2216">HCShipCoinCrates4</card>
+        <card dbid="814">HCUnlockFort</card>
+        <card dbid="2623">HCColonialEstancias</card>
+        <card dbid="7594">DEHCMexicanMint</card>
+        <card dbid="2206">HCShipSettlers2</card>
+        <card dbid="2208">HCShipSettlers4</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="7600">DEHCAlhondigaDeGranaditas</card>
+        <card dbid="7607">DEHCGeneralMexicans</card>
+        <card dbid="1796">HCAdvancedTradingPost</card>
+        <card dbid="7815">DEHCCathedralConstruction</card>
+        <card dbid="2032">HCFurrier</card>
+        <card dbid="1950">HCIronmonger</card>
+        <card dbid="2041">HCRefrigeration</card>
+        <card dbid="2102">HCTextileMills</card>
+        <card dbid="474">HCCigarRoller</card>
       </cards>
     </deck>
     <revoltdeck>
@@ -2811,6 +2812,9 @@
         <card>DEHCREVMXJungleWarfare</card>
         <card>DEHCREVMXMayaPootsPlan</card>
         <card>DEHCREVMXMayaMariaUicab</card>
+        <card>HCNativeWarriors</card>
+        <card>DEHCREVMXFoodSilos</card>
+        <card>HCSustainableAgriculture</card>
       </cards>
     </revoltdeck>
     <revoltdeck civ="DERevMXCalifornia">
@@ -3581,7 +3585,6 @@
     <prop>Mexico_DockTexture1</prop>
     <prop active="1">Mexico_NWTCTexture0</prop>
     <prop>Mexico_NWTCTexture1</prop>
-    <prop>deGeneralMexican</prop>
     <prop>Mexico_DayOfTheDead_Festival_1</prop>
     <prop>Mexico_DayOfTheDead_Festival_2</prop>
     <prop>Mexico_Night_Lights</prop>

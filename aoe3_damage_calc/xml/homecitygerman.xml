@@ -496,7 +496,7 @@
       <level>25</level>
       <prereqtech>HCCavalryDamageGermanTeam</prereqtech>
       <age>3</age>
-      <displayunitcount>10</displayunitcount>
+      <displayunitcount>6</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -696,7 +696,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCPioneers</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>HCTeamTeutonTownCenter</name>
@@ -1153,7 +1153,7 @@
       <level>25</level>
       <prereqtech>-1</prereqtech>
       <age>3</age>
-      <displayunitcount>15</displayunitcount>
+      <displayunitcount>9</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1283,7 +1283,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
-      <displayunitcount>5</displayunitcount>
+      <displayunitcount>12</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1293,7 +1293,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
-      <displayunitcount>7</displayunitcount>
+      <displayunitcount>10</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1420,24 +1420,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>HCShipSettlerWagons1</card>
-        <card>HCXPShipCannonsRepeat</card>
-        <card>HCShipWarWagons2</card>
-        <card>HCShipCrossbowmen3German</card>
-        <card>HCShipDopplesoldners1</card>
-        <card>HCShipSkirmishers3German</card>
-        <card>HCShipUhlans4</card>
-        <card>HCPalatineSettlements</card>
-        <card>HCUnlockFortGerman</card>
-        <card>HCUnlockFactoryGerman</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1522,6 +1504,36 @@
         <card dbid="3415">HCXPShipCannonsRepeat</card>
         <card dbid="2508">HCRenderingPlantGerman</card>
         <card dbid="2515">HCRoyalMintGerman</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="3511">HCXPShipSettlerWagons5</card>
+        <card dbid="2502">HCUnlockFactoryGerman</card>
+        <card dbid="2677">HCRobberBaronsGerman</card>
+        <card dbid="2466">HCShipWoodCrates4German</card>
+        <card dbid="2463">HCShipCoinCrates4German</card>
+        <card dbid="2494">HCUnlockFortGerman</card>
+        <card dbid="2515">HCRoyalMintGerman</card>
+        <card dbid="2517">HCRefrigerationGerman</card>
+        <card dbid="2456">HCShipSettlerWagons4</card>
+        <card dbid="2465">HCShipWoodCrates3German</card>
+        <card dbid="2462">HCShipCoinCrates3German</card>
+        <card dbid="2455">HCShipSettlerWagons3</card>
+        <card dbid="2156">HCExplorerGerman</card>
+        <card dbid="1796">HCAdvancedTradingPost</card>
+        <card dbid="1992">HCColonialMilitia</card>
+        <card dbid="3438">HCXPCapitalism</card>
+        <card dbid="3387">HCXPEconomicTheory</card>
+        <card dbid="3388">HCXPLandGrab</card>
+        <card dbid="2518">HCFurrierGerman</card>
+        <card dbid="2538">HCGuildArtisans</card>
+        <card dbid="2450">HCTeamTeutonTownCenter</card>
+        <card dbid="2514">HCSilversmithGerman</card>
+        <card dbid="2658">HCGermantownFarmers</card>
+        <card dbid="2523">HCTextileMillsGerman</card>
+        <card dbid="2516">HCSustainableAgricultureGerman</card>
       </cards>
     </deck>
     <revoltdeck>

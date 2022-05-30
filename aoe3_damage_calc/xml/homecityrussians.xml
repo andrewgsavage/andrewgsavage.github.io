@@ -691,7 +691,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>-1</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>HCFrontierDefensesRussian</name>
@@ -1400,7 +1400,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
-      <displayunitcount>5</displayunitcount>
+      <displayunitcount>12</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1410,7 +1410,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
-      <displayunitcount>7</displayunitcount>
+      <displayunitcount>10</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1483,23 +1483,6 @@
     </card>
   </cards>
   <decks>
-    <deck>
-      <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>HCShipStrelets1</card>
-        <card>HCShipCossacks4</card>
-        <card>HCShipMusketeersRussian2</card>
-        <card>HCShipOprichniks1</card>
-        <card>HCXPShipCavArchersRepeat</card>
-        <card>HCShipFalconets2</card>
-        <card>HCUnlockFort</card>
-        <card>HCUnlockFactory</card>
-        <card>HCFrontierDefensesRussian</card>
-      </cards>
-    </deck>
     <deck>
       <name>$$71332$$Beginner</name>
       <default>
@@ -1588,6 +1571,36 @@
         <card dbid="2621">HCCoastalDefensesTeam</card>
         <card dbid="2225">HCNavalCombat</card>
         <card dbid="2306">HCCavalryLOSTeam</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="2263">HCShipWoodCrates5</card>
+        <card dbid="3521">HCShipCoinCrates5</card>
+        <card dbid="625">HCUnlockFactory</card>
+        <card dbid="3345">HCXPIndustrialRevolution</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="2216">HCShipCoinCrates4</card>
+        <card dbid="814">HCUnlockFort</card>
+        <card dbid="2093">HCRoyalMint</card>
+        <card dbid="2041">HCRefrigeration</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="2170">HCExplorerRussian</card>
+        <card dbid="1796">HCAdvancedTradingPost</card>
+        <card dbid="1992">HCColonialMilitia</card>
+        <card dbid="3387">HCXPEconomicTheory</card>
+        <card dbid="3440">HCXPDistributivism</card>
+        <card dbid="2094">HCFoodSilos</card>
+        <card dbid="2286">HCFurrierTeam</card>
+        <card dbid="2209">HCShipFoodCrates3</card>
+        <card dbid="2210">HCShipFoodCrates4</card>
+        <card dbid="2268">HCShipFoodCrates5</card>
+        <card dbid="2043">HCSilversmith</card>
+        <card dbid="2102">HCTextileMills</card>
+        <card dbid="474">HCCigarRoller</card>
+        <card dbid="2095">HCSustainableAgriculture</card>
       </cards>
     </deck>
     <revoltdeck>

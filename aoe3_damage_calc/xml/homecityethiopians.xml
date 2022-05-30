@@ -1152,35 +1152,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card dbid="8300">DEHCShipInfluence2</card>
-        <card dbid="8302">DEHCShipInfluence1</card>
-        <card dbid="6727">DEHCFasilidesCastle</card>
-        <card dbid="8269">DEHCShipZebu3</card>
-        <card dbid="6762">DEHCShipGascenya1</card>
-        <card dbid="6773">DEHCShipSebastopolMortar1</card>
-        <card dbid="6774">DEHCShipSebastopolMortar2</card>
-        <card dbid="6748">DEHCAdvancedLivestockMarket</card>
-        <card dbid="8359">DEHCShipChonkyCattle</card>
-        <card dbid="6763">DEHCShipGascenya2</card>
-        <card dbid="6767">DEHCShipShotel2</card>
-        <card dbid="2215">HCShipCoinCrates3</card>
-        <card dbid="2212">HCShipWoodCrates3</card>
-        <card dbid="8270">DEHCShipVillagersAbunRepeat</card>
-        <card dbid="6879">DEHCShipVillagers2</card>
-        <card dbid="8348">DEHCCartridgeCurrency</card>
-        <card dbid="6750">DEHCShipVillagerRepeat</card>
-        <card dbid="6766">DEHCShipShotel1</card>
-        <card dbid="8220">DEHCJesuitInfluence</card>
-        <card dbid="8226">DEHCOromoMigrations</card>
-        <card dbid="8470">DEHCGascenyaRepeat</card>
-        <card dbid="6751">DEHCShipJavelinRidersRepeat1</card>
-        <card dbid="8354">DEHCKingKings</card>
-        <card dbid="8389">DEHCIyasuReforms</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1268,6 +1239,36 @@
         <card dbid="8392">DEHCRoofAfrica</card>
         <card dbid="8388">DEHCShipMercWarDhows2</card>
         <card dbid="8349">DEHCEraChaos</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="2268">HCShipFoodCrates5</card>
+        <card dbid="3521">HCShipCoinCrates5</card>
+        <card dbid="8270">DEHCShipVillagersAbunRepeat</card>
+        <card dbid="6879">DEHCShipVillagers2</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="2216">HCShipCoinCrates4</card>
+        <card dbid="8380">DEHCHeyWat</card>
+        <card dbid="2090">HCSawmills</card>
+        <card dbid="8442">DEHCIronmongerEthiopians</card>
+        <card dbid="2032">HCFurrier</card>
+        <card dbid="8301">DEHCShipInfluence3</card>
+        <card dbid="8302">DEHCShipInfluence1</card>
+        <card dbid="6750">DEHCShipVillagerRepeat</card>
+        <card dbid="6743">DEHCShipCoveredWagonsAfrica</card>
+        <card dbid="6727">DEHCFasilidesCastle</card>
+        <card dbid="8352">DEHCDejazmach</card>
+        <card dbid="8386">DEHCMountainRelics</card>
+        <card dbid="8381">DEHCBushburning</card>
+        <card dbid="8220">DEHCJesuitInfluence</card>
+        <card dbid="6758">DEHCShipAbuns1</card>
+        <card dbid="8391">DEHCFazogli</card>
+        <card dbid="8389">DEHCIyasuReforms</card>
+        <card dbid="8392">DEHCRoofAfrica</card>
       </cards>
     </deck>
     <revoltdeck>
@@ -1894,6 +1895,5 @@
     <prop>Ethiopian_LibraryTexture1</prop>
     <prop>EthBuntingWater</prop>
     <prop>EthTimkatFestival</prop>
-    <prop>EthExplorer</prop>
   </obtainableprops>
 </homecity>

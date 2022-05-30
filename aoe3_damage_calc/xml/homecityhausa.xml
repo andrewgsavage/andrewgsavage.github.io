@@ -554,7 +554,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
-      <displayunitcount>5</displayunitcount>
+      <displayunitcount>4</displayunitcount>
     </card>
     <card>
       <name>DEHCKingslayer</name>
@@ -582,7 +582,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>2</age>
+      <age>3</age>
     </card>
     <card>
       <name>DEHCZazzauCavalry</name>
@@ -624,7 +624,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>1</age>
+      <age>2</age>
     </card>
     <card>
       <name>DEHCTsetseSabotage</name>
@@ -1226,34 +1226,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card dbid="8122">DEHCFulaniCrossingFestival</card>
-        <card dbid="8268">DEHCShipSanga3</card>
-        <card dbid="8300">DEHCShipInfluence2</card>
-        <card dbid="8302">DEHCShipInfluence1</card>
-        <card dbid="8301">DEHCShipInfluence3</card>
-        <card dbid="6775">DEHCShipFulaWarriors1</card>
-        <card dbid="6780">DEHCShipRaiders1</card>
-        <card dbid="6782">DEHCShipLifidiKnights1</card>
-        <card dbid="2209">HCShipFoodCrates3</card>
-        <card dbid="2215">HCShipCoinCrates3</card>
-        <card dbid="6776">DEHCShipFulaWarriors2</card>
-        <card dbid="6750">DEHCShipVillagerRepeat</card>
-        <card dbid="8271">DEHCShipVillagersGriots</card>
-        <card dbid="8331">DEHCBerberNomads</card>
-        <card dbid="6879">DEHCShipVillagers2</card>
-        <card dbid="8324">DEHCEmirKatsina</card>
-        <card dbid="6748">DEHCAdvancedLivestockMarket</card>
-        <card dbid="6781">DEHCShipRaidersRepeat</card>
-        <card dbid="8399">DEHCMercsSennarHorsemen</card>
-        <card dbid="8332">DEHCGaananci</card>
-        <card dbid="8376">DEHCFutaToro</card>
-        <card dbid="6878">DEHCShipVillagers1Repeat</card>
-        <card dbid="8322">DEHCShipSanga2</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1340,6 +1312,36 @@
         <card dbid="8375">DEHCFutaJallon</card>
         <card dbid="6878">DEHCShipVillagers1Repeat</card>
         <card dbid="8371">DEHCExtensiveFortificationsHausa</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="6878">DEHCShipVillagers1Repeat</card>
+        <card dbid="8338">DEHCKoose</card>
+        <card dbid="8316">DEHCHausaKingdom</card>
+        <card dbid="8319">DEHCGidanSarkin</card>
+        <card dbid="8141">DEHCMoroccanLeather</card>
+        <card dbid="2090">HCSawmills</card>
+        <card dbid="1950">HCIronmonger</card>
+        <card dbid="2032">HCFurrier</card>
+        <card dbid="6879">DEHCShipVillagers2</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="8302">DEHCShipInfluence1</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="2216">HCShipCoinCrates4</card>
+        <card dbid="8271">DEHCShipVillagersGriots</card>
+        <card dbid="6750">DEHCShipVillagerRepeat</card>
+        <card dbid="2268">HCShipFoodCrates5</card>
+        <card dbid="3521">HCShipCoinCrates5</card>
+        <card dbid="8301">DEHCShipInfluence3</card>
+        <card dbid="2210">HCShipFoodCrates4</card>
+        <card dbid="8393">DEHCDraftOxen</card>
+        <card dbid="8335">DEHCRanoIndigoProduction</card>
+        <card dbid="6743">DEHCShipCoveredWagonsAfrica</card>
+        <card dbid="8318">DEHCMassinaMadrasahs</card>
+        <card dbid="8333">DEHCKolaNutCultivation</card>
       </cards>
     </deck>
     <revoltdeck>
@@ -2053,6 +2055,5 @@
     <prop>Hausa_WorkshopsTexture1</prop>
     <prop active="1">Hausa_WaterplaceTexture0</prop>
     <prop>Hausa_WaterplaceTexture1</prop>
-    <prop>HausaExplorer</prop>
   </obtainableprops>
 </homecity>

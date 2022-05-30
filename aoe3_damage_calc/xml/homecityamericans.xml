@@ -715,7 +715,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>DEHCExtensiveFortificationsEuropean</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>HCFrontierDefenses</name>
@@ -1244,27 +1244,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card dbid="3382">HCXPAdvancedBalloon</card>
-        <card dbid="2218">HCShipSheep1</card>
-        <card dbid="2212">HCShipWoodCrates3</card>
-        <card dbid="7028">DEHCShipRegulars1</card>
-        <card dbid="814">HCUnlockFort</card>
-        <card dbid="2220">HCShipCows</card>
-        <card dbid="1688">HCHeavyFortificationsUS</card>
-        <card dbid="3438">HCXPCapitalism</card>
-        <card dbid="7067">DEHCImmigrantsIrish</card>
-        <card dbid="7196">DEHCHamiltonianEconomics</card>
-        <card dbid="7183">DEHCSpringfieldArmory</card>
-        <card dbid="2237">HCShipMortars1</card>
-        <card dbid="7027">DEHCShipStateMilitiaRepeat1</card>
-        <card dbid="7215">DEHCApacheScouts</card>
-        <card dbid="7225">DEHCUSExpedition</card>
-        <card dbid="7210">DEHCLouisianaPurchase</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1332,6 +1311,32 @@
         <card dbid="2223">HCShipFrigates</card>
         <card dbid="7052">DEHCTrainTimeUS</card>
         <card dbid="7183">DEHCSpringfieldArmory</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="3521">HCShipCoinCrates5</card>
+        <card dbid="3438">HCXPCapitalism</card>
+        <card dbid="2211">HCShipWoodCrates2</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="2216">HCShipCoinCrates4</card>
+        <card dbid="814">HCUnlockFort</card>
+        <card dbid="2041">HCRefrigeration</card>
+        <card dbid="2102">HCTextileMills</card>
+        <card dbid="2032">HCFurrier</card>
+        <card dbid="2091">HCExoticHardwoods</card>
+        <card dbid="1950">HCIronmonger</card>
+        <card dbid="7056">DEHCImmigrantsDutch</card>
+        <card dbid="7067">DEHCImmigrantsIrish</card>
+        <card dbid="7115">DEHCFedGeneralAssembly</card>
+        <card dbid="7017">DEHCImmigrantsBritish</card>
+        <card dbid="2268">HCShipFoodCrates5</card>
+        <card dbid="7199">DEHCMinneapolisMills</card>
+        <card dbid="7342">DEHCKosciuszkoFortifications</card>
+        <card dbid="474">HCCigarRoller</card>
       </cards>
     </deck>
     <revoltdeck>
@@ -2083,6 +2088,5 @@
     <prop active="1">American_AcademyTexture0</prop>
     <prop>American_AcademyTexture1</prop>
     <prop>American_AcademyTexture2</prop>
-    <prop>deGeneralUS</prop>
   </obtainableprops>
 </homecity>

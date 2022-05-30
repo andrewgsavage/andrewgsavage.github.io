@@ -680,7 +680,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCImprovedWallsTeam</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>HCFrontierDefenses</name>
@@ -1074,7 +1074,7 @@
       <level>25</level>
       <prereqtech>HCMercsMamelukes</prereqtech>
       <age>3</age>
-      <displayunitcount>13</displayunitcount>
+      <displayunitcount>8</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1571,23 +1571,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>HCShipCrossbowmen1</card>
-        <card>HCShipMusketeers1</card>
-        <card>HCShipPikemen2</card>
-        <card>HCShipHalberdiers3</card>
-        <card>HCShipOrganGuns2</card>
-        <card>HCShipDragoons4</card>
-        <card>HCFrontierDefenses</card>
-        <card>HCUnlockFort</card>
-        <card>HCUnlockFactory</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1673,6 +1656,36 @@
         <card dbid="465">HCPrivateers</card>
         <card dbid="2548">HCMercsRonin</card>
         <card dbid="2629">HCShipPortugueseExpForce</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="2263">HCShipWoodCrates5</card>
+        <card dbid="3521">HCShipCoinCrates5</card>
+        <card dbid="625">HCUnlockFactory</card>
+        <card dbid="2031">HCRobberBarons</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="2216">HCShipCoinCrates4</card>
+        <card dbid="814">HCUnlockFort</card>
+        <card dbid="2093">HCRoyalMint</card>
+        <card dbid="2041">HCRefrigeration</card>
+        <card dbid="2211">HCShipWoodCrates2</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="2657">HCShipBandeirantes</card>
+        <card dbid="2650">HCRoyalDecreePortuguese</card>
+        <card dbid="2105">HCExplorerPortuguese</card>
+        <card dbid="1796">HCAdvancedTradingPost</card>
+        <card dbid="1992">HCColonialMilitia</card>
+        <card dbid="3368">HCXPRanchingLlama</card>
+        <card dbid="3387">HCXPEconomicTheory</card>
+        <card dbid="2032">HCFurrier</card>
+        <card dbid="1950">HCIronmonger</card>
+        <card dbid="3388">HCXPLandGrab</card>
+        <card dbid="2209">HCShipFoodCrates3</card>
+        <card dbid="2102">HCTextileMills</card>
+        <card dbid="474">HCCigarRoller</card>
       </cards>
     </deck>
     <revoltdeck>

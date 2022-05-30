@@ -702,7 +702,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>DEHCExtensiveFortificationsWarchief</name>
@@ -1239,24 +1239,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCXPShipVillagers3</card>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>HCXPShipWarBows1</card>
-        <card>HCXPShipWarClubs1</card>
-        <card>HCXPShipWarHutTravois1</card>
-        <card>HCXPShipWarRifles1</card>
-        <card>HCXPShipAxeRiders2</card>
-        <card>HCXPShipAxeRidersRepeat</card>
-        <card>HCXPShipCoupRiders3</card>
-        <card>HCXPShipDogsoldiers2</card>
-        <card>HCXPShipFarmTravois2</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1341,6 +1323,36 @@
         <card dbid="3476">HCXPMarauders</card>
         <card dbid="3495">HCXPEveningStar</card>
         <card dbid="3027">HCXPShipDogsoldiersTeam2</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="2268">HCShipFoodCrates5</card>
+        <card dbid="3051">HCXPTeamFoodCrates2</card>
+        <card dbid="2996">HCXPBuffalo2</card>
+        <card dbid="2210">HCShipFoodCrates4</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="2190">HCShipCoveredWagons</card>
+        <card dbid="3000">HCXPAdoption</card>
+        <card dbid="2799">HCXPShipVillagers4</card>
+        <card dbid="2211">HCShipWoodCrates2</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2214">HCShipCoinCrates2</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="3327">HCXPShipFarmTravois2</card>
+        <card dbid="6618">deHCSilversmithNative</card>
+        <card dbid="2098">HCSpiceTrade</card>
+        <card dbid="2798">HCXPShipVillagers3</card>
+        <card dbid="2797">HCXPShipVillagers2</card>
+        <card dbid="2881">HCXPWarChiefSioux1</card>
+        <card dbid="1796">HCAdvancedTradingPost</card>
+        <card dbid="3411">HCXPNomadicExpansion</card>
+        <card dbid="3049">HCXPWoodcrafting</card>
+        <card dbid="2094">HCFoodSilos</card>
+        <card dbid="2032">HCFurrier</card>
+        <card dbid="3494">HCXPEarthBounty</card>
+        <card dbid="2999">HCXPGreatHunter</card>
       </cards>
     </deck>
   </decks>

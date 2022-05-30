@@ -77,15 +77,6 @@
   </cards>
   <decks>
     <deck>
-      <name>$$41681$$</name>
-      <cards>
-        <card>HCREVShipColonialMilitia</card>
-        <card>HCREVShipGatlingGuns</card>
-        <card>HCREVShipFortWagon</card>
-        <card>HCREVShipIronclads</card>
-      </cards>
-    </deck>
-    <deck>
       <name>$$41682$$</name>
       <default>
       </default>

@@ -712,7 +712,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCPioneers</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>HCBastionsTeam</name>
@@ -1114,6 +1114,15 @@
     </card>
     <card>
       <name>HCMercsMediterranean</name>
+      <maxcount>-1</maxcount>
+      <level>25</level>
+      <prereqtech>HCMercsCorsairs</prereqtech>
+      <age>3</age>
+      <displayunitcount>8</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCMercsOttoman</name>
       <maxcount>-1</maxcount>
       <level>25</level>
       <prereqtech>HCMercsCorsairs</prereqtech>
@@ -1540,7 +1549,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
-      <displayunitcount>5</displayunitcount>
+      <displayunitcount>12</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1550,7 +1559,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
-      <displayunitcount>7</displayunitcount>
+      <displayunitcount>10</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1623,24 +1632,6 @@
     </card>
   </cards>
   <decks>
-    <deck>
-      <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCShipSettlers3</card>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>HCShipJanissaries1</card>
-        <card>HCShipHussars1</card>
-        <card>HCShipSpahis3</card>
-        <card>HCShipCavArchers1</card>
-        <card>HCShipAbusGuns3</card>
-        <card>HCXPShipGrenadiersRepeat</card>
-        <card>HCFrontierDefenses</card>
-        <card>HCFrontierDefenses2</card>
-        <card>HCUnlockFactory</card>
-      </cards>
-    </deck>
     <deck>
       <name>$$71332$$Beginner</name>
       <default>
@@ -1729,6 +1720,36 @@
         <card dbid="2236">HCShipFalconets3</card>
         <card dbid="3458">HCShipSpahisTeam</card>
         <card dbid="2038">HCRidingSchool</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="2207">HCShipSettlers3</card>
+        <card dbid="2340">HCSilkRoadTeam</card>
+        <card dbid="1993">HCPioneers</card>
+        <card dbid="1992">HCColonialMilitia</card>
+        <card dbid="2341">HCExplorerOttoman</card>
+        <card dbid="1796">HCAdvancedTradingPost</card>
+        <card dbid="3438">HCXPCapitalism</card>
+        <card dbid="3455">HCXPSublimePorte</card>
+        <card dbid="3387">HCXPEconomicTheory</card>
+        <card dbid="2094">HCFoodSilos</card>
+        <card dbid="2208">HCShipSettlers4</card>
+        <card dbid="2211">HCShipWoodCrates2</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="2214">HCShipCoinCrates2</card>
+        <card dbid="2215">HCShipCoinCrates3</card>
+        <card dbid="6691">DEHCExtensiveFortificationsEuropean</card>
+        <card dbid="2095">HCSustainableAgriculture</card>
+        <card dbid="474">HCCigarRoller</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="814">HCUnlockFort</card>
+        <card dbid="2093">HCRoyalMint</card>
+        <card dbid="2598">HCTeamCoinCrates2</card>
+        <card dbid="625">HCUnlockFactory</card>
+        <card dbid="2031">HCRobberBarons</card>
+        <card dbid="2041">HCRefrigeration</card>
       </cards>
     </deck>
     <revoltdeck>
@@ -2202,6 +2223,7 @@
       <tech x="3.9" y="4.0">HCMercsCorsairs</tech>
       <tech x="3.1" y="7.0">HCXPMercsCorsairsRepeat</tech>
       <tech x="4.2" y="5.0">HCMercsMediterranean</tech>
+      <tech x="4.2" y="5.0">DEHCMercsOttoman</tech>
       <tech x="4.6" y="1.0">DEHCTheaters</tech>
       <tech x="4.6" y="4.0">HCXPMercsNinja</tech>
       <tech x="5.4" y="3.0">HCMercsManchu</tech>
@@ -2229,6 +2251,7 @@
       <tech x="3.9" y="4.0">HCMercsCorsairs</tech>
       <tech x="3.1" y="7.0">HCXPMercsCorsairsRepeat</tech>
       <tech x="4.2" y="5.0">HCMercsMediterranean</tech>
+      <tech x="4.2" y="5.0">DEHCMercsOttoman</tech>
       <tech x="4.6" y="1.0">DEHCTheaters</tech>
       <tech x="4.6" y="4.0">HCXPMercsNinja</tech>
       <tech x="5.4" y="3.0">HCMercsManchu</tech>

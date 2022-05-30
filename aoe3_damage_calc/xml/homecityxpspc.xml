@@ -862,24 +862,6 @@
   </cards>
   <decks>
     <deck>
-      <name>$$41681$$</name>
-      <cards>
-        <card>HCXPShipVillagers1</card>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCXPShipMixedCrates1</card>
-        <card>HCXPShipBears</card>
-        <card>HCXPShipFarmTravois1</card>
-        <card>HCXPShipTomahawk1</card>
-        <card>HCXPShipTomahawk2</card>
-        <card>HCXPShipHorsemen1</card>
-        <card>HCPioneers</card>
-        <card>HCFurrier</card>
-        <card>HCShipSheep1Team</card>
-        <card>HCXPShipFishingBoats</card>
-      </cards>
-    </deck>
-    <deck>
       <name>$$41682$$</name>
       <default>
       </default>

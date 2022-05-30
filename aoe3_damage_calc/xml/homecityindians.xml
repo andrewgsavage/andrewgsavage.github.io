@@ -683,7 +683,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>YPHCTheRaj</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>YPHCMughalArchitecture</name>
@@ -1219,24 +1219,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card>YPHCShipCoinCrates1Indians</card>
-        <card>YPHCShipWoodCrates1Indians</card>
-        <card>YPHCShipFoodCrates1Indians</card>
-        <card>YPHCShipLions1</card>
-        <card>YPHCShipRajput1</card>
-        <card>YPHCShipIndianHandCavalry1</card>
-        <card>YPHCShipSepoy3</card>
-        <card>YPHCShipUrumi2</card>
-        <card>YPHCShipHowdah1</card>
-        <card>YPHCShipSiegeElephant2</card>
-        <card>YPHCShipCoveredWagons2Indians</card>
-        <card>YPHCShipCoveredWagonsIndians</card>
-        <card>YPHCShipGroveWagonIndians2</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1323,6 +1305,36 @@
         <card dbid="4345">YPHCRidingSchoolIndians</card>
         <card dbid="4548">YPHCArmedFishermenIndians</card>
         <card dbid="4009">YPHCBombayMarine</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="4314">YPHCShipWoodCrates5Indians</card>
+        <card dbid="4679">YPHCShipWoodCratesInf4Indians</card>
+        <card dbid="4327">YPHCShipCoveredWagons2Indians</card>
+        <card dbid="4313">YPHCShipWoodCrates4Indians</card>
+        <card dbid="4318">YPHCShipCoinCrates4Indians</card>
+        <card dbid="4371">YPHCRoyalMintIndians</card>
+        <card dbid="4310">YPHCShipWoodCrates2Indians</card>
+        <card dbid="4316">YPHCShipCoinCrates2Indians</card>
+        <card dbid="4872">YPHCExtensiveFortificationsIndians</card>
+        <card dbid="5030">YPHCSmoothRelationsIndians</card>
+        <card dbid="4993">YPHCShipGroveWagonIndians2</card>
+        <card dbid="3554">YPHCIndianMonkCombat</card>
+        <card dbid="4354">YPHCAdvancedMonasteryIndians</card>
+        <card dbid="4355">YPHCAdvancedRicePaddyIndians</card>
+        <card dbid="4359">YPHCAdvancedWondersIndians</card>
+        <card dbid="4369">YPHCWoodcraftingIndians</card>
+        <card dbid="4370">YPHCIronmongerIndians</card>
+        <card dbid="4373">YPHCFoodSilosIndians</card>
+        <card dbid="5053">YPHCRainbowTrickleTeam</card>
+        <card dbid="4307">YPHCShipFoodCrates3Indians</card>
+        <card dbid="4308">YPHCShipFoodCrates4Indians</card>
+        <card dbid="4376">YPHCFurTradeIndians</card>
+        <card dbid="4374">YPHCSustainableAgricultureIndians</card>
+        <card dbid="4756">YPHCRumDistilleryIndians</card>
+        <card dbid="3689">YPHCForeignLogging</card>
       </cards>
     </deck>
   </decks>

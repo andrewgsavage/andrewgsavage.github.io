@@ -742,7 +742,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCXPTownDance</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>HCXPExtensiveFortificationsAztec</name>
@@ -1254,23 +1254,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>HCXPShipVillagers3</card>
-        <card>HCXPShipMedicineMen2Aztec</card>
-        <card>HCXPShipCoyoteMen1</card>
-        <card>HCXPShipWarHutTravois1</card>
-        <card>HCXPShipNoblesHutTravois1</card>
-        <card>HCXPShipNoblesHutTravois2</card>
-        <card>HCXPShipMacehualtinsRepeat</card>
-        <card>HCXPShipJaguarKnights1</card>
-        <card>HCXPShipEagleKnights1</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1357,6 +1340,36 @@
         <card dbid="3491">HCXPShipMedicineMenTeamAztec</card>
         <card dbid="2984">HCXPExoticHardwoodsTeam</card>
         <card dbid="2942">HCXPScorchedEarth</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="2263">HCShipWoodCrates5</card>
+        <card dbid="2982">HCXPChinampa1</card>
+        <card dbid="2983">HCXPChinampa2</card>
+        <card dbid="2217">HCXPCoinCratesAztec5</card>
+        <card dbid="2917">HCXPShipVillagers5</card>
+        <card dbid="2213">HCShipWoodCrates4</card>
+        <card dbid="2981">HCXPAztecMining</card>
+        <card dbid="3328">HCXPShipFarmTravois3</card>
+        <card dbid="2797">HCXPShipVillagers2</card>
+        <card dbid="2799">HCXPShipVillagers4</card>
+        <card dbid="2211">HCShipWoodCrates2</card>
+        <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="3360">HCXPCoinCratesAztec4</card>
+        <card dbid="3359">HCXPCoinCratesAztec3</card>
+        <card dbid="2798">HCXPShipVillagers3</card>
+        <card dbid="2880">HCXPWarChiefAztec1</card>
+        <card dbid="1796">HCAdvancedTradingPost</card>
+        <card dbid="8492">DEHCCalendarCeremony</card>
+        <card dbid="2091">HCExoticHardwoods</card>
+        <card dbid="2094">HCFoodSilos</card>
+        <card dbid="2032">HCFurrier</card>
+        <card dbid="2033">HCGrainMarket</card>
+        <card dbid="3327">HCXPShipFarmTravois2</card>
+        <card dbid="2980">HCXPSilversmithTeam</card>
+        <card dbid="2190">HCShipCoveredWagons</card>
       </cards>
     </deck>
   </decks>

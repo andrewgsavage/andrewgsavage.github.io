@@ -668,7 +668,7 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>DEHCExtensiveFortificationsWarchief</prereqtech>
-      <age>0</age>
+      <age>3</age>
     </card>
     <card>
       <name>HCCheapOutpostsTeam</name>
@@ -1225,24 +1225,6 @@
   <decks>
     <deck>
       <name>$$71332$$Beginner</name>
-      <cards>
-        <card>HCXPShipVillagers3</card>
-        <card>HCShipFoodCrates1</card>
-        <card>HCShipWoodCrates1</card>
-        <card>HCShipCoinCrates1</card>
-        <card>HCXPShipAennas2</card>
-        <card>HCXPShipTomahawk1</card>
-        <card>HCXPShipMusketWarriors3</card>
-        <card>HCXPShipMusketRiders1</card>
-        <card>HCXPShipMantletsRepeat</card>
-        <card>HCXPShipSiege</card>
-        <card>HCXPShipTravois2</card>
-        <card>HCXPShipTravois3</card>
-        <card>HCXPShipLightCannon1</card>
-      </cards>
-    </deck>
-    <deck>
-      <name>$$71332$$Beginner</name>
       <default>
       </default>
       <cards>
@@ -1329,6 +1311,36 @@
         <card dbid="2091">HCExoticHardwoods</card>
         <card dbid="2862">HCXPExtensiveFortifications2</card>
         <card dbid="3407">HCXPFrenchAllies1</card>
+      </cards>
+    </deck>
+    <deck version="8">
+      <name>$$55547$$Tycoon</name>
+      <cards>
+        <card dbid="2884">HCXPShipMixedCrates6</card>
+        <card dbid="3422">HCXPShipMixedCratesRepeat</card>
+        <card dbid="1842">HCImprovedBuildings</card>
+        <card dbid="2802">HCXPShipMixedCrates3</card>
+        <card dbid="2878">HCXPShipMixedCrates5</card>
+        <card dbid="2190">HCShipCoveredWagons</card>
+        <card dbid="2862">HCXPExtensiveFortifications2</card>
+        <card dbid="2885">HCXPShipTravois3</card>
+        <card dbid="2797">HCXPShipVillagers2</card>
+        <card dbid="2799">HCXPShipVillagers4</card>
+        <card dbid="2184">HCShipFoodCrates2</card>
+        <card dbid="2211">HCShipWoodCrates2</card>
+        <card dbid="2214">HCShipCoinCrates2</card>
+        <card dbid="2801">HCXPShipMixedCrates2</card>
+        <card dbid="2098">HCSpiceTrade</card>
+        <card dbid="2853">HCXPShipTravois2</card>
+        <card dbid="2798">HCXPShipVillagers3</card>
+        <card dbid="2879">HCXPWarChiefIroquois1</card>
+        <card dbid="1796">HCAdvancedTradingPost</card>
+        <card dbid="2833">HCXPShipTravois1</card>
+        <card dbid="2091">HCExoticHardwoods</card>
+        <card dbid="3388">HCXPLandGrab</card>
+        <card dbid="2285">HCFoodSilosTeam</card>
+        <card dbid="2286">HCFurrierTeam</card>
+        <card dbid="3504">HCXPFurTrade</card>
       </cards>
     </deck>
   </decks>
