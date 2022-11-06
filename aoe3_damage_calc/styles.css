@@ -57,8 +57,34 @@ td {
 .center {
   text-align: center
 }
+.vertical {
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+}
 
+.CellComment{
+  display:none;
+  position:absolute; 
+  z-index:100;
+  border:1px;
+  background-color:white;
+  border-style:solid;
+  border-width:1px;
+  /* border-color:red; */
+  padding:3px;
+  /* color:red;  */
+  top:0; 
+  left:50%;
+}
 
+.CellWithComment:hover span.CellComment{
+  display:block;
+}
 
 
 
