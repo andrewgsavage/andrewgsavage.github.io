@@ -73,16 +73,6 @@
       <overrideicontech>DEHCVillagerAztecIcon</overrideicontech>
     </card>
     <card>
-      <name>HCXPShipVillagers4</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>HCXPShipVillagers3</prereqtech>
-      <age>1</age>
-      <displayunitcount>5</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-      <overrideicontech>DEHCVillagerAztecIcon</overrideicontech>
-    </card>
-    <card>
       <name>HCXPShipVillagers5</name>
       <maxcount>1</maxcount>
       <level>25</level>
@@ -206,7 +196,7 @@
       <level>25</level>
       <prereqtech>HCXPCoinCratesAztec4</prereqtech>
       <age>3</age>
-      <displayunitcount>1000</displayunitcount>
+      <displayunitcount>1300</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -627,13 +617,6 @@
       <age>1</age>
     </card>
     <card>
-      <name>HCNativeWarriors</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>HCNativeTreaties</prereqtech>
-      <age>2</age>
-    </card>
-    <card>
       <name>HCXPShipTradingPostTravois</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -643,7 +626,7 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCNativeChampionsDutchTeam</name>
+      <name>YPHCNativeIncorporation</name>
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCNativeWarriors</prereqtech>
@@ -653,14 +636,14 @@
       <name>HCXPBloodBrothers</name>
       <maxcount>1</maxcount>
       <level>25</level>
-      <prereqtech>HCNativeChampionsDutchTeam</prereqtech>
+      <prereqtech>YPHCNativeIncorporation</prereqtech>
       <age>3</age>
     </card>
     <card>
       <name>HCAdvancedTradingPost</name>
       <maxcount>1</maxcount>
       <level>25</level>
-      <prereqtech>HCNativeChampionsDutchTeam</prereqtech>
+      <prereqtech>YPHCNativeIncorporation</prereqtech>
       <age>0</age>
     </card>
     <card>
@@ -1259,7 +1242,7 @@
       <cards>
         <card dbid="2798">HCXPShipVillagers3</card>
         <card dbid="2880">HCXPWarChiefAztec1</card>
-        <card dbid="2799">HCXPShipVillagers4</card>
+        <card dbid="2797">HCXPShipVillagers2</card>
         <card dbid="3506">HCXPShipMedicineMen2Aztec</card>
         <card dbid="2917">HCXPShipVillagers5</card>
         <card dbid="3360">HCXPCoinCratesAztec4</card>
@@ -1268,6 +1251,7 @@
         <card dbid="2974">HCXPGreatTempleHuitzilopochtli</card>
         <card dbid="3488">HCXPShipMacehualtinsRepeat</card>
         <card dbid="2212">HCShipWoodCrates3</card>
+        <card dbid="5075">YPHCNativeIncorporation</card>
         <card dbid="2929">HCXPShipMacehualtins3</card>
         <card dbid="3473">HCXPShipTradingPostTravois</card>
         <card dbid="2918">HCXPShipCoyoteMen1</card>
@@ -1285,7 +1269,7 @@
     <deck>
       <name>$$20310$$Land</name>
       <cards>
-        <card dbid="2799">HCXPShipVillagers4</card>
+        <card dbid="2797">HCXPShipVillagers2</card>
         <card dbid="2798">HCXPShipVillagers3</card>
         <card dbid="2212">HCShipWoodCrates3</card>
         <card dbid="3359">HCXPCoinCratesAztec3</card>
@@ -1294,6 +1278,7 @@
         <card dbid="2968">HCXPTempleCenteotl</card>
         <card dbid="3081">HCXPWarChiefAztec2</card>
         <card dbid="2983">HCXPChinampa2</card>
+        <card dbid="5075">YPHCNativeIncorporation</card>
         <card dbid="3360">HCXPCoinCratesAztec4</card>
         <card dbid="2880">HCXPWarChiefAztec1</card>
         <card dbid="2931">HCXPWarHutTraining</card>
@@ -1315,7 +1300,7 @@
     <deck>
       <name>$$71333$$Naval</name>
       <cards>
-        <card dbid="2799">HCXPShipVillagers4</card>
+        <card dbid="2797">HCXPShipVillagers2</card>
         <card dbid="2798">HCXPShipVillagers3</card>
         <card dbid="2212">HCShipWoodCrates3</card>
         <card dbid="3359">HCXPCoinCratesAztec3</card>
@@ -1324,6 +1309,7 @@
         <card dbid="3360">HCXPCoinCratesAztec4</card>
         <card dbid="3286">HCXPWaterDance</card>
         <card dbid="2953">HCXPArtificialIslands</card>
+        <card dbid="5075">YPHCNativeIncorporation</card>
         <card dbid="3404">HCXPBuccaneers</card>
         <card dbid="469">HCFishMarket</card>
         <card dbid="2973">HCXPTempleTlaloc</card>
@@ -1349,17 +1335,18 @@
         <card dbid="2982">HCXPChinampa1</card>
         <card dbid="2983">HCXPChinampa2</card>
         <card dbid="2217">HCXPCoinCratesAztec5</card>
+        <card dbid="2797">HCXPShipVillagers2</card>
+        <card dbid="2798">HCXPShipVillagers3</card>
+        <card dbid="2983">HCXPChinampa2</card>
         <card dbid="2917">HCXPShipVillagers5</card>
         <card dbid="2213">HCShipWoodCrates4</card>
         <card dbid="2981">HCXPAztecMining</card>
+        <card dbid="5075">YPHCNativeIncorporation</card>
         <card dbid="3328">HCXPShipFarmTravois3</card>
-        <card dbid="2797">HCXPShipVillagers2</card>
-        <card dbid="2799">HCXPShipVillagers4</card>
         <card dbid="2211">HCShipWoodCrates2</card>
         <card dbid="2212">HCShipWoodCrates3</card>
         <card dbid="3360">HCXPCoinCratesAztec4</card>
         <card dbid="3359">HCXPCoinCratesAztec3</card>
-        <card dbid="2798">HCXPShipVillagers3</card>
         <card dbid="2880">HCXPWarChiefAztec1</card>
         <card dbid="1796">HCAdvancedTradingPost</card>
         <card dbid="8492">DEHCCalendarCeremony</card>
@@ -1416,7 +1403,6 @@
       <tech x="0.7" y="1.0">HCXPShipVillagers1</tech>
       <tech x="0.7" y="2.0">HCXPShipVillagers2</tech>
       <tech x="0.7" y="3.0">HCXPShipVillagers3</tech>
-      <tech x="0.7" y="4.0">HCXPShipVillagers4</tech>
       <tech x="0.7" y="5.0">HCXPShipVillagers5</tech>
       <tech x="1.5" y="3.0">HCXPShipVillagersTeam</tech>
       <tech x="1.5" y="5.0">HCXPAdvancedScouts</tech>
@@ -1448,7 +1434,6 @@
       <tech x="0.7" y="1.0">HCXPShipVillagers1</tech>
       <tech x="0.7" y="2.0">HCXPShipVillagers2</tech>
       <tech x="0.7" y="3.0">HCXPShipVillagers3</tech>
-      <tech x="0.7" y="4.0">HCXPShipVillagers4</tech>
       <tech x="0.7" y="5.0">HCXPShipVillagers5</tech>
       <tech x="1.5" y="3.0">HCXPShipVillagersTeam</tech>
       <tech x="1.5" y="5.0">HCXPAdvancedScouts</tech>
@@ -1595,10 +1580,9 @@
     <obtainabletechs>
       <tech x="0.0" y="1.0">HCNativeLore</tech>
       <tech x="0.0" y="2.0">HCNativeTreaties</tech>
-      <tech x="0.0" y="3.0">HCNativeWarriors</tech>
       <tech x="0.0" y="4.0">HCXPShipTradingPostTravois</tech>
       <tech x="0.7" y="5.0">HCAdvancedTradingPost</tech>
-      <tech x="1.05" y="4.0">HCNativeChampionsDutchTeam</tech>
+      <tech x="1.05" y="4.0">YPHCNativeIncorporation</tech>
       <tech x="1.4" y="5.0">HCXPBloodBrothers</tech>
       <tech x="1.4" y="6.0">HCXPKinshipTies</tech>
       <tech x="2.1" y="1.0">HCXPCheapWarHuts</tech>
@@ -1627,10 +1611,9 @@
     <activetechs>
       <tech x="0.0" y="1.0">HCNativeLore</tech>
       <tech x="0.0" y="2.0">HCNativeTreaties</tech>
-      <tech x="0.0" y="3.0">HCNativeWarriors</tech>
       <tech x="0.0" y="4.0">HCXPShipTradingPostTravois</tech>
       <tech x="0.7" y="5.0">HCAdvancedTradingPost</tech>
-      <tech x="1.05" y="4.0">HCNativeChampionsDutchTeam</tech>
+      <tech x="1.05" y="4.0">YPHCNativeIncorporation</tech>
       <tech x="1.4" y="5.0">HCXPBloodBrothers</tech>
       <tech x="1.4" y="6.0">HCXPKinshipTies</tech>
       <tech x="2.1" y="1.0">HCXPCheapWarHuts</tech>

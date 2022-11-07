@@ -7,6 +7,7 @@
   <watervisual>iroquois\iroquois_homecity_water.xml</watervisual>
   <backgroundvisual>iroquois\iroquois_background.xml</backgroundvisual>
   <pathdata>iroquois\pathable_area.gr2</pathdata>
+  <pathdata>iroquois\pathable_area_water.gr2</pathdata>
   <camera>iroquois\iroquois_homecity_camera.cam</camera>
   <widescreencamera>iroquois\iroquois_homecity_widescreencamera.cam</widescreencamera>
   <transportroundtriptime>1</transportroundtriptime>
@@ -17,7 +18,10 @@
   <watertype>Berlin</watertype>
   <numpropunlocksearned>0</numpropunlocksearned>
   <ambientsounds>homecity\iroquoisambientsounds.xml</ambientsounds>
-  <xsai>generic_city</xsai>
+  <xsai>city_with_waterpaths</xsai>
+  <heroprotounits>
+    <protounit>xpIroquoisWarChief</protounit>
+  </heroprotounits>
   <coffers>
     <current>
       <food>0</food>
@@ -49,21 +53,21 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPShipVillagers2</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>HCXPShipVillagers1</prereqtech>
-      <age>1</age>
-      <displayunitcount>4</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCXPShipVillagers3</name>
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCXPShipVillagers2</prereqtech>
       <age>0</age>
       <displayunitcount>3</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>HCXPShipVillagers2</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>HCXPShipVillagers1</prereqtech>
+      <age>1</age>
+      <displayunitcount>4</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -191,6 +195,14 @@
       <displayunitcount>2</displayunitcount>
     </card>
     <card>
+      <name>DEHCShipHealers</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>1</age>
+      <displayunitcount>4</displayunitcount>
+    </card>
+    <card>
       <name>HCXPAdvancedScouts</name>
       <maxcount>1</maxcount>
       <level>25</level>
@@ -250,13 +262,6 @@
       <displayunitcount>4</displayunitcount>
     </card>
     <card>
-      <name>DEHCShipBearPelts</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>0</age>
-    </card>
-    <card>
       <name>HCXPWarChiefIroquois1</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -282,15 +287,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPShipMusketWarriors2</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>HCXPShipMusketWarriors1</prereqtech>
-      <age>3</age>
-      <displayunitcount>9</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCXPShipMusketWarriors3</name>
       <maxcount>1</maxcount>
       <level>25</level>
@@ -300,12 +296,12 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPShipAennas1</name>
+      <name>HCXPShipMusketWarriors2</name>
       <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>2</age>
-      <displayunitcount>8</displayunitcount>
+      <level>10</level>
+      <prereqtech>HCXPShipMusketWarriors1</prereqtech>
+      <age>3</age>
+      <displayunitcount>9</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -318,12 +314,21 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPShipAennas3</name>
+      <name>HCXPShipAennas5</name>
       <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>HCXPShipAennas2</prereqtech>
-      <age>3</age>
-      <displayunitcount>11</displayunitcount>
+      <level>25</level>
+      <prereqtech>HCXPShipAennas4</prereqtech>
+      <age>1</age>
+      <displayunitcount>7</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>HCXPShipAennas1</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>8</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -336,12 +341,12 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPShipAennas5</name>
+      <name>HCXPShipAennas3</name>
       <maxcount>1</maxcount>
-      <level>25</level>
-      <prereqtech>HCXPShipAennas4</prereqtech>
-      <age>1</age>
-      <displayunitcount>7</displayunitcount>
+      <level>10</level>
+      <prereqtech>HCXPShipAennas2</prereqtech>
+      <age>3</age>
+      <displayunitcount>11</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -363,21 +368,21 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPShipTomahawk3</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>HCXPShipTomahawk2</prereqtech>
-      <age>3</age>
-      <displayunitcount>13</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCXPShipTomahawk4</name>
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCXPShipTomahawk3</prereqtech>
       <age>2</age>
       <displayunitcount>9</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>HCXPShipTomahawk3</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>HCXPShipTomahawk2</prereqtech>
+      <age>3</age>
+      <displayunitcount>13</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -436,24 +441,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPShipHorsemen1</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>2</age>
-      <displayunitcount>5</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
-      <name>HCXPShipHorsemen2</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>HCXPShipHorsemen1</prereqtech>
-      <age>3</age>
-      <displayunitcount>7</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCXPShipHorsemen3</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -463,12 +450,30 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
+      <name>HCXPShipHorsemen1</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>5</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
       <name>HCXPShipHorsemen4</name>
       <maxcount>1</maxcount>
       <level>25</level>
       <prereqtech>HCXPShipHorsemen3</prereqtech>
       <age>2</age>
       <displayunitcount>6</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>HCXPShipHorsemen2</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>HCXPShipHorsemen1</prereqtech>
+      <age>3</age>
+      <displayunitcount>7</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -525,7 +530,32 @@
       <level>10</level>
       <prereqtech>HCXPShipMantlets3</prereqtech>
       <age>3</age>
+      <displayunitcount>10</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>HCXPShipMantletsRepeat</name>
+      <maxcount>-1</maxcount>
+      <level>40</level>
+      <prereqtech>HCXPShipSiege</prereqtech>
+      <age>3</age>
       <displayunitcount>7</displayunitcount>
+    </card>
+    <card>
+      <name>DEHCTeamShipMantlets</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>3</displayunitcount>
+    </card>
+    <card>
+      <name>HCXPShipRams1</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>4</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -538,12 +568,37 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPShipMantletsRepeat</name>
-      <maxcount>-1</maxcount>
-      <level>40</level>
-      <prereqtech>HCXPShipSiege</prereqtech>
+      <name>DEHCBeaverWars</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
       <age>3</age>
-      <displayunitcount>7</displayunitcount>
+    </card>
+    <card>
+      <name>HCXPShipLightCannon1</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>2</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>HCXPShipLightCannon2</name>
+      <maxcount>1</maxcount>
+      <level>25</level>
+      <prereqtech>HCXPShipLightCannon1</prereqtech>
+      <age>3</age>
+      <displayunitcount>4</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCTeamShipLightCannons</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>2</displayunitcount>
     </card>
     <card>
       <name>HCXPSiegeHitpoints</name>
@@ -572,33 +627,6 @@
       <level>40</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
-    </card>
-    <card>
-      <name>HCXPShipLightCannon1</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>3</age>
-      <displayunitcount>2</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
-      <name>HCXPShipLightCannon2</name>
-      <maxcount>1</maxcount>
-      <level>25</level>
-      <prereqtech>HCXPShipLightCannon1</prereqtech>
-      <age>3</age>
-      <displayunitcount>4</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
-      <name>HCXPShipRams1</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>2</age>
-      <displayunitcount>4</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>HCXPRanching</name>
@@ -821,13 +849,6 @@
       <age>0</age>
     </card>
     <card>
-      <name>HCXPCanoes</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>HCFishMarket</prereqtech>
-      <age>1</age>
-    </card>
-    <card>
       <name>HCSawmills</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -884,6 +905,13 @@
       <level>10</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
+    </card>
+    <card>
+      <name>DEHCShipCougarPelts</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>0</age>
     </card>
     <card>
       <name>HCMedicine</name>
@@ -1147,6 +1175,13 @@
       <age>0</age>
     </card>
     <card>
+      <name>HCXPCanoes</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>HCFishMarket</prereqtech>
+      <age>1</age>
+    </card>
+    <card>
       <name>HCXPBirchbarkTeam</name>
       <maxcount>1</maxcount>
       <level>25</level>
@@ -1168,7 +1203,7 @@
       <level>10</level>
       <prereqtech>HCXPFrenchAllies1</prereqtech>
       <age>3</age>
-      <displayunitcount>8</displayunitcount>
+      <displayunitcount>5</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1186,7 +1221,7 @@
       <level>10</level>
       <prereqtech>HCXPDutchAllies1</prereqtech>
       <age>3</age>
-      <displayunitcount>20</displayunitcount>
+      <displayunitcount>11</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1220,6 +1255,65 @@
       <level>40</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
+    </card>
+    <card>
+      <name>DEHCEnvironmentalism</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+    </card>
+    <card>
+      <name>DEHCNorthAmericaTrade</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+    </card>
+    <card>
+      <name>DEHCMedicineWheels</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>0</age>
+    </card>
+    <card>
+      <name>DEHCSiegeConstruction</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+    </card>
+    <card>
+      <name>DEHCWampum</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+    </card>
+    <card>
+      <name>DEHCCovenantChain</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>17</displayunitcount>
+    </card>
+    <card>
+      <name>DEHCCanadianLoyalists</name>
+      <maxcount>-1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>10</displayunitcount>
+    </card>
+    <card>
+      <name>DEHCLenapeAllies</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>22</displayunitcount>
     </card>
   </cards>
   <decks>
@@ -1386,8 +1480,8 @@
     <rolloverstringid>25536</rolloverstringid>
     <obtainabletechs>
       <tech x="0.7" y="1.0">HCXPShipVillagers1</tech>
-      <tech x="0.7" y="2.0">HCXPShipVillagers2</tech>
       <tech x="0.7" y="3.0">HCXPShipVillagers3</tech>
+      <tech x="0.7" y="2.0">HCXPShipVillagers2</tech>
       <tech x="0.7" y="4.0">HCXPShipVillagers4</tech>
       <tech x="0.7" y="5.0">HCXPAdvancedScouts</tech>
       <tech x="1.7" y="1.0">HCShipFoodCrates1</tech>
@@ -1407,16 +1501,16 @@
       <tech x="6.2" y="1.0">HCShipSheep1Team</tech>
       <tech x="6.2" y="2.0">HCShipSheep2</tech>
       <tech x="6.2" y="3.0">HCShipSheep3</tech>
-      <tech x="7.1" y="1.0">DEHCShipBearPelts</tech>
       <tech x="7.1" y="2.0">HCXPWarChiefIroquois1</tech>
       <tech x="7.1" y="3.0">HCXPWarChiefIroquois2</tech>
       <tech x="7.1" y="3.0">DEHCShipNativeScoutTeam</tech>
       <tech x="7.1" y="3.0">DEHCShipNativeScout</tech>
+      <tech x="7.1" y="3.0">DEHCShipHealers</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.7" y="1.0">HCXPShipVillagers1</tech>
-      <tech x="0.7" y="2.0">HCXPShipVillagers2</tech>
       <tech x="0.7" y="3.0">HCXPShipVillagers3</tech>
+      <tech x="0.7" y="2.0">HCXPShipVillagers2</tech>
       <tech x="0.7" y="4.0">HCXPShipVillagers4</tech>
       <tech x="0.7" y="5.0">HCXPAdvancedScouts</tech>
       <tech x="1.7" y="1.0">HCShipFoodCrates1</tech>
@@ -1436,11 +1530,11 @@
       <tech x="6.2" y="1.0">HCShipSheep1Team</tech>
       <tech x="6.2" y="2.0">HCShipSheep2</tech>
       <tech x="6.2" y="3.0">HCShipSheep3</tech>
-      <tech x="7.1" y="1.0">DEHCShipBearPelts</tech>
       <tech x="7.1" y="2.0">HCXPWarChiefIroquois1</tech>
       <tech x="7.1" y="3.0">HCXPWarChiefIroquois2</tech>
       <tech x="7.1" y="3.0">DEHCShipNativeScoutTeam</tech>
       <tech x="7.1" y="3.0">DEHCShipNativeScout</tech>
+      <tech x="7.1" y="3.0">DEHCShipHealers</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1490,18 +1584,19 @@
       <tech x="4.8" y="4.0">HCXPShipHorsemen3</tech>
       <tech x="4.8" y="5.0">HCXPShipHorsemen4</tech>
       <tech x="5.6" y="1.0">HCXPShipMantlets1</tech>
-      <tech x="5.6" y="2.0">HCXPShipMantlets2</tech>
       <tech x="5.6" y="3.0">HCXPShipMantlets3</tech>
       <tech x="5.6" y="4.0">HCXPShipMantlets4</tech>
+      <tech x="5.6" y="4.0">DEHCTeamShipMantlets</tech>
       <tech x="5.6" y="5.0">HCXPShipSiege</tech>
       <tech x="5.6" y="7.0">HCXPShipMantletsRepeat</tech>
       <tech x="6.4" y="1.0">HCXPShipRams1</tech>
       <tech x="6.4" y="3.0">HCXPSiegeHitpoints</tech>
       <tech x="6.4" y="4.0">HCXPSiegeDamage</tech>
       <tech x="6.4" y="5.0">HCXPSiegeCombat</tech>
-      <tech x="6.4" y="7.0">HCXPSiegeDiscipline</tech>
-      <tech x="7.2" y="1.0">HCXPShipLightCannon1</tech>
+      <tech x="6.4" y="7.0">DEHCBeaverWars</tech>
       <tech x="7.2" y="5.0">HCXPShipLightCannon2</tech>
+      <tech x="7.2" y="5.0">DEHCTeamShipLightCannons</tech>
+      <tech x="7.2" y="5.0">DEHCSiegeConstruction</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.0" y="2.0">HCXPShipMusketWarriors1</tech>
@@ -1530,18 +1625,19 @@
       <tech x="4.8" y="4.0">HCXPShipHorsemen3</tech>
       <tech x="4.8" y="5.0">HCXPShipHorsemen4</tech>
       <tech x="5.6" y="1.0">HCXPShipMantlets1</tech>
-      <tech x="5.6" y="2.0">HCXPShipMantlets2</tech>
       <tech x="5.6" y="3.0">HCXPShipMantlets3</tech>
       <tech x="5.6" y="4.0">HCXPShipMantlets4</tech>
+      <tech x="5.6" y="4.0">DEHCTeamShipMantlets</tech>
       <tech x="5.6" y="5.0">HCXPShipSiege</tech>
       <tech x="5.6" y="7.0">HCXPShipMantletsRepeat</tech>
       <tech x="6.4" y="1.0">HCXPShipRams1</tech>
       <tech x="6.4" y="3.0">HCXPSiegeHitpoints</tech>
       <tech x="6.4" y="4.0">HCXPSiegeDamage</tech>
       <tech x="6.4" y="5.0">HCXPSiegeCombat</tech>
-      <tech x="6.4" y="7.0">HCXPSiegeDiscipline</tech>
-      <tech x="7.2" y="1.0">HCXPShipLightCannon1</tech>
+      <tech x="6.4" y="7.0">DEHCBeaverWars</tech>
       <tech x="7.2" y="5.0">HCXPShipLightCannon2</tech>
+      <tech x="7.2" y="5.0">DEHCTeamShipLightCannons</tech>
+      <tech x="7.2" y="5.0">DEHCSiegeConstruction</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1585,13 +1681,13 @@
       <tech x="4.7" y="4.0">HCXPExtensiveFortifications2</tech>
       <tech x="4.7" y="5.0">HCXPBattleFieldConstructionIroquois</tech>
       <tech x="5.5" y="1.0">HCXPRanching</tech>
-      <tech x="5.5" y="3.0">HCEngineeringSchool</tech>
       <tech x="5.5" y="5.0">HCXPConservativeTactics</tech>
       <tech x="6.3" y="1.0">HCXPAdvancedFarms</tech>
       <tech x="6.3" y="2.0">HCAdvancedMarket</tech>
       <tech x="7.1" y="1.0">HCCheapDocksTeam</tech>
       <tech x="7.1" y="3.0">HCAdvancedDock</tech>
       <tech x="7.1" y="3.0">HCXPWarHutTrainingIroquois</tech>
+      <tech x="7.1" y="3.0">DEHCWampum</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.7" y="1.0">HCNativeLore</tech>
@@ -1615,13 +1711,13 @@
       <tech x="4.7" y="4.0">HCXPExtensiveFortifications2</tech>
       <tech x="4.7" y="5.0">HCXPBattleFieldConstructionIroquois</tech>
       <tech x="5.5" y="1.0">HCXPRanching</tech>
-      <tech x="5.5" y="3.0">HCEngineeringSchool</tech>
       <tech x="5.5" y="5.0">HCXPConservativeTactics</tech>
       <tech x="6.3" y="1.0">HCXPAdvancedFarms</tech>
       <tech x="6.3" y="2.0">HCAdvancedMarket</tech>
       <tech x="7.1" y="1.0">HCCheapDocksTeam</tech>
       <tech x="7.1" y="3.0">HCAdvancedDock</tech>
       <tech x="7.1" y="3.0">HCXPWarHutTrainingIroquois</tech>
+      <tech x="7.1" y="3.0">DEHCWampum</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1649,13 +1745,13 @@
       <tech x="1.4" y="3.0">HCXPShipTravois2</tech>
       <tech x="1.4" y="4.0">HCXPShipTravois3</tech>
       <tech x="2.2" y="1.0">HCFishMarket</tech>
-      <tech x="2.2" y="3.0">HCXPCanoes</tech>
       <tech x="3.0" y="3.0">HCSawmills</tech>
       <tech x="3.0" y="5.0">HCExoticHardwoods</tech>
       <tech x="3.0" y="7.0">HCXPOldWaysIroquois</tech>
       <tech x="4.1" y="1.0">HCFoodSilosTeam</tech>
       <tech x="4.1" y="3.0">HCSustainableAgriculture</tech>
       <tech x="4.1" y="4.0">deHCSilversmithNative</tech>
+      <tech x="7.1" y="1.0">DEHCShipCougarPelts</tech>
       <tech x="4.1" y="5.0">HCMedicine</tech>
       <tech x="4.1" y="6.0">HCXPMedicineTeam</tech>
       <tech x="4.9" y="6.0">HCXPAgrarianWays</tech>
@@ -1668,19 +1764,22 @@
       <tech x="6.5" y="6.0">HCXPLandGrab</tech>
       <tech x="7.3" y="1.0">HCStockyards</tech>
       <tech x="7.3" y="3.0">HCFullingMills</tech>
+      <tech x="7.0" y="5.0">DEHCNorthAmericaTrade</tech>
+      <tech x="7.0" y="5.0">DEHCMedicineWheels</tech>
+      <tech x="7.0" y="5.0">DEHCEnvironmentalism</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="1.4" y="1.0">HCXPShipTravois1</tech>
       <tech x="1.4" y="3.0">HCXPShipTravois2</tech>
       <tech x="1.4" y="4.0">HCXPShipTravois3</tech>
       <tech x="2.2" y="1.0">HCFishMarket</tech>
-      <tech x="2.2" y="3.0">HCXPCanoes</tech>
       <tech x="3.0" y="3.0">HCSawmills</tech>
       <tech x="3.0" y="5.0">HCExoticHardwoods</tech>
       <tech x="3.0" y="7.0">HCXPOldWaysIroquois</tech>
       <tech x="4.1" y="1.0">HCFoodSilosTeam</tech>
       <tech x="4.1" y="3.0">HCSustainableAgriculture</tech>
       <tech x="4.1" y="4.0">deHCSilversmithNative</tech>
+      <tech x="7.1" y="1.0">DEHCShipCougarPelts</tech>
       <tech x="4.1" y="5.0">HCMedicine</tech>
       <tech x="4.1" y="6.0">HCXPMedicineTeam</tech>
       <tech x="4.9" y="6.0">HCXPAgrarianWays</tech>
@@ -1693,6 +1792,9 @@
       <tech x="6.5" y="6.0">HCXPLandGrab</tech>
       <tech x="7.3" y="1.0">HCStockyards</tech>
       <tech x="7.3" y="3.0">HCFullingMills</tech>
+      <tech x="7.3" y="3.0">DEHCNorthAmericaTrade</tech>
+      <tech x="7.3" y="3.0">DEHCMedicineWheels</tech>
+      <tech x="7.3" y="3.0">DEHCEnvironmentalism</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1721,6 +1823,7 @@
       <tech x="1.0" y="5.0">HCXPShipWarCanoes3</tech>
       <tech x="2.0" y="3.0">HCNavalCombat</tech>
       <tech x="2.0" y="4.0">HCXPWaterDance</tech>
+      <tech x="2.2" y="3.0">HCXPCanoes</tech>
       <tech x="2.0" y="5.0">HCXPBirchbarkTeam</tech>
       <tech x="5.0" y="3.0">HCXPIroquoisMohawkSupport</tech>
       <tech x="4.0" y="1.0">HCXPIroquoisOnondagaSupport</tech>
@@ -1744,6 +1847,9 @@
       <tech x="7.0" y="3.0">HCXPDutchAllies2</tech>
       <tech x="7.0" y="4.0">HCXPBuccaneers</tech>
       <tech x="7.0" y="5.0">HCXPBuccaneers2</tech>
+      <tech x="7.0" y="5.0">DEHCCovenantChain</tech>
+      <tech x="7.0" y="5.0">DEHCCanadianLoyalists</tech>
+      <tech x="7.0" y="5.0">DEHCLenapeAllies</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="1.0" y="1.0">HCXPShipFishingBoats</tech>
@@ -1753,6 +1859,7 @@
       <tech x="1.0" y="5.0">HCXPShipWarCanoes3</tech>
       <tech x="2.0" y="3.0">HCNavalCombat</tech>
       <tech x="2.0" y="4.0">HCXPWaterDance</tech>
+      <tech x="2.2" y="3.0">HCXPCanoes</tech>
       <tech x="2.0" y="5.0">HCXPBirchbarkTeam</tech>
       <tech x="5.0" y="3.0">HCXPIroquoisMohawkSupport</tech>
       <tech x="4.0" y="1.0">HCXPIroquoisOnondagaSupport</tech>
@@ -1776,6 +1883,9 @@
       <tech x="7.0" y="3.0">HCXPDutchAllies2</tech>
       <tech x="7.0" y="4.0">HCXPBuccaneers</tech>
       <tech x="7.0" y="5.0">HCXPBuccaneers2</tech>
+      <tech x="7.0" y="5.0">DEHCCovenantChain</tech>
+      <tech x="7.0" y="5.0">DEHCCanadianLoyalists</tech>
+      <tech x="7.0" y="5.0">DEHCLenapeAllies</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1850,7 +1960,84 @@
       <bone>bone_shipment_end</bone>
       <shipmentend>1</shipmentend>
     </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_01</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_02</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_03</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_04</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_05</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_06</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_07</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_08</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_09</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_010</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_011</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_012</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_013</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_014</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_015</bone>
+      <gondola>1</gondola>
+    </waypoint>
+    <waypoint>
+      <bone>bone_boat_node_016</bone>
+      <gondola>1</gondola>
+    </waypoint>
   </waypoints>
   <obtainableprops>
+    <prop active="1">Iroquois_Moonlight_night</prop>
+    <prop>Iroquois_Sunset_lighting</prop>
+    <prop>Iroquois_NightLighting</prop>
+    <prop>Iroquois_NightLighting_Fireflies</prop>
+    <prop>Iroquois_Snowy_season</prop>
+    <prop>Iroquois_fishrack</prop>
+    <prop active="1">Iroquois_pelt_rack</prop>
+    <prop>Iroquois_pelt_rack_fox</prop>
+    <prop>Iroquois_canoe</prop>
+    <prop active="1">Iroquois_longhouse</prop>
+    <prop>Iroquois_alternate_longhouse</prop>
+    <prop>Iroquois_Fireflies</prop>
+    <prop active="1">Iroquois_longhouse_variation</prop>
   </obtainableprops>
 </homecity>

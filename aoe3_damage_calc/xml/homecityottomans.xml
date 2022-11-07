@@ -18,6 +18,9 @@
   <numpropunlocksearned>0</numpropunlocksearned>
   <ambientsounds>homecity\ottomanambientsounds.xml</ambientsounds>
   <xsai>generic_city</xsai>
+  <heroprotounits>
+    <protounit>Explorer</protounit>
+  </heroprotounits>
   <coffers>
     <current>
       <food>0</food>
@@ -40,7 +43,7 @@
   </coffers>
   <cards>
     <card>
-      <name>HCShipSettlers1</name>
+      <name>DEHCShipSettlersOttomanRepeat</name>
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
@@ -49,16 +52,16 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipSettlers4</name>
+      <name>DEHCShipSettlersOttoman2</name>
       <maxcount>1</maxcount>
       <level>0</level>
-      <prereqtech>HCShipSettlers1</prereqtech>
+      <prereqtech>DEHCShipSettlersOttomanRepeat</prereqtech>
       <age>1</age>
       <displayunitcount>5</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipSettlers3</name>
+      <name>DEHCShipSettlersOttoman1</name>
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>-1</prereqtech>
@@ -227,15 +230,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipCoveredWagons</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>2</age>
-      <displayunitcount>1</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCShipCoveredWagons2</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -334,6 +328,22 @@
       <displayunitcount>9</displayunitcount>
     </card>
     <card>
+      <name>DEHCShipNizamFusiliers1</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>6</displayunitcount>
+    </card>
+    <card>
+      <name>DEHCShipNizamFusiliersRepeat</name>
+      <maxcount>-1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>7</displayunitcount>
+    </card>
+    <card>
       <name>HCJanissaryCombatOttoman</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -348,7 +358,14 @@
       <age>3</age>
     </card>
     <card>
-      <name>HCShipHussars1</name>
+      <name>DEHCHeavyInfHitpointsOttoman</name>
+      <maxcount>1</maxcount>
+      <level>25</level>
+      <prereqtech>HCJanissaryCombatOttoman</prereqtech>
+      <age>3</age>
+    </card>
+    <card>
+      <name>DEHCShipDelis1</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
@@ -357,37 +374,37 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipHussars2</name>
+      <name>DEHCShipDelis2</name>
       <maxcount>1</maxcount>
       <level>0</level>
-      <prereqtech>HCShipHussars1</prereqtech>
+      <prereqtech>DEHCShipDelis1</prereqtech>
       <age>2</age>
       <displayunitcount>4</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipHussars3</name>
+      <name>DEHCShipDelis3</name>
       <maxcount>1</maxcount>
       <level>10</level>
-      <prereqtech>HCShipHussars2</prereqtech>
+      <prereqtech>DEHCShipDelis2</prereqtech>
       <age>3</age>
       <displayunitcount>7</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipHussars4</name>
+      <name>DEHCShipDelis4</name>
       <maxcount>1</maxcount>
       <level>10</level>
-      <prereqtech>HCShipHussars3</prereqtech>
+      <prereqtech>DEHCShipDelis3</prereqtech>
       <age>2</age>
       <displayunitcount>5</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipHussars5</name>
+      <name>DEHCShipDelis5</name>
       <maxcount>1</maxcount>
       <level>25</level>
-      <prereqtech>HCShipHussars4</prereqtech>
+      <prereqtech>DEHCShipDelis4</prereqtech>
       <age>3</age>
       <displayunitcount>8</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
@@ -472,6 +489,13 @@
       <age>2</age>
     </card>
     <card>
+      <name>DEHCFlightArchery</name>
+      <maxcount>1</maxcount>
+      <level>25</level>
+      <prereqtech>HCCavalryCombatOttoman</prereqtech>
+      <age>3</age>
+    </card>
+    <card>
       <name>HCCavalryCombatOttoman</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -497,13 +521,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCLightArtilleryHitpointsOttoman</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>-1</prereqtech>
-      <age>1</age>
-    </card>
-    <card>
       <name>HCShipAbusGuns3</name>
       <maxcount>1</maxcount>
       <level>40</level>
@@ -513,7 +530,7 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipGrenadiers1</name>
+      <name>DEHCShipHumbaracis1</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
@@ -522,34 +539,27 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipGrenadiers2</name>
+      <name>DEHCShipHumbaracis2</name>
       <maxcount>1</maxcount>
       <level>0</level>
-      <prereqtech>HCShipGrenadiers1</prereqtech>
+      <prereqtech>DEHCShipHumbaracis1</prereqtech>
       <age>3</age>
       <displayunitcount>7</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPShipGrenadiersRepeat</name>
+      <name>DEHCShipHumbaracisRepeat</name>
       <maxcount>-1</maxcount>
       <level>10</level>
-      <prereqtech>HCShipGrenadiers2</prereqtech>
+      <prereqtech>DEHCShipHumbaracis2</prereqtech>
       <age>3</age>
       <displayunitcount>6</displayunitcount>
     </card>
     <card>
-      <name>HCArtilleryHitpointsOttomanTeam</name>
+      <name>HCLightArtilleryHitpointsOttoman</name>
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>-1</prereqtech>
-      <age>1</age>
-    </card>
-    <card>
-      <name>HCArtilleryDamageOttoman</name>
-      <maxcount>1</maxcount>
-      <level>25</level>
-      <prereqtech>HCArtilleryHitpointsOttomanTeam</prereqtech>
       <age>1</age>
     </card>
     <card>
@@ -659,6 +669,13 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
+      <name>HCArtilleryCombatOttoman</name>
+      <maxcount>1</maxcount>
+      <level>25</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+    </card>
+    <card>
       <name>HCNativeLore</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -694,7 +711,7 @@
       <age>0</age>
     </card>
     <card>
-      <name>HCColonialMilitia</name>
+      <name>DEHCColonialMilitiaOttoman</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>HCFrontierDefenses</prereqtech>
@@ -734,7 +751,7 @@
       <name>HCAdvancedArsenal</name>
       <maxcount>1</maxcount>
       <level>10</level>
-      <prereqtech>HCColonialMilitia</prereqtech>
+      <prereqtech>DEHCColonialMilitiaOttoman</prereqtech>
       <age>1</age>
     </card>
     <card>
@@ -985,11 +1002,11 @@
       <age>1</age>
     </card>
     <card>
-      <name>HCCigarRoller</name>
+      <name>HCTextileMills</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>1</age>
+      <age>2</age>
     </card>
     <card>
       <name>HCStonemasons</name>
@@ -1113,10 +1130,17 @@
       <age>1</age>
     </card>
     <card>
+      <name>HCCoastalDefensesTeam</name>
+      <maxcount>1</maxcount>
+      <level>25</level>
+      <prereqtech>-1</prereqtech>
+      <age>0</age>
+    </card>
+    <card>
       <name>HCMercsMediterranean</name>
       <maxcount>-1</maxcount>
       <level>25</level>
-      <prereqtech>HCMercsCorsairs</prereqtech>
+      <prereqtech>DEHCShipBerberAllies2Ottoman</prereqtech>
       <age>3</age>
       <displayunitcount>8</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
@@ -1125,7 +1149,7 @@
       <name>DEHCMercsOttoman</name>
       <maxcount>-1</maxcount>
       <level>25</level>
-      <prereqtech>HCMercsCorsairs</prereqtech>
+      <prereqtech>DEHCShipBerberAllies2Ottoman</prereqtech>
       <age>3</age>
       <displayunitcount>13</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
@@ -1149,16 +1173,25 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPMercsNinja</name>
+      <name>DEHCMercsAskaris</name>
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCMercsManchu</prereqtech>
       <age>3</age>
-      <displayunitcount>12</displayunitcount>
+      <displayunitcount>11</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>HCMercsStradiots</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>6</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCMercsBosniaks</name>
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>-1</prereqtech>
@@ -1176,30 +1209,57 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPMercsElmeti</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>HCMercsMamelukes</prereqtech>
+      <name>HCXPMercsCorsairsRepeat</name>
+      <maxcount>-1</maxcount>
+      <level>40</level>
+      <prereqtech>DEHCShipBerberAllies2Ottoman</prereqtech>
       <age>3</age>
-      <displayunitcount>6</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
+      <displayunitcount>15</displayunitcount>
     </card>
     <card>
-      <name>HCMercsCorsairs</name>
+      <name>DEHCShipBerberAllies2Ottoman</name>
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCMercsMamelukes</prereqtech>
       <age>2</age>
+      <displayunitcount>8</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCTengriAllies1</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>-1</prereqtech>
+      <age>1</age>
+      <displayunitcount>7</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCPhanarAllies2</name>
+      <maxcount>-1</maxcount>
+      <level>10</level>
+      <prereqtech>-1</prereqtech>
+      <age>1</age>
       <displayunitcount>9</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPMercsCorsairsRepeat</name>
+      <name>DEHCPhanarAllies1</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>7</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCSufiAllies</name>
       <maxcount>-1</maxcount>
-      <level>40</level>
-      <prereqtech>HCMercsCorsairs</prereqtech>
+      <level>10</level>
+      <prereqtech>HCMercsMamelukes</prereqtech>
       <age>3</age>
-      <displayunitcount>15</displayunitcount>
+      <displayunitcount>9</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>HCMercenaryLoyalty</name>
@@ -1227,6 +1287,15 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
+      <name>DEHCShipMercXebecOttoman</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>HCPrivateers</prereqtech>
+      <age>3</age>
+      <displayunitcount>2</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
       <name>DEHCTheaters</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -1234,11 +1303,19 @@
       <age>1</age>
     </card>
     <card>
-      <name>DEHCHandMortar</name>
+      <name>DEHCHandMortarOttoman</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
+    </card>
+    <card>
+      <name>DEHCShipBattleshipRepeat</name>
+      <maxcount>-1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>1</displayunitcount>
     </card>
     <card>
       <name>HCFoodSilos</name>
@@ -1472,7 +1549,7 @@
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
-      <displayunitcount>3</displayunitcount>
+      <displayunitcount>4</displayunitcount>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1623,7 +1700,7 @@
     </card>
     <card>
       <name>DEHCREVRoshiorDragoons</name>
-      <maxcount>1</maxcount>
+      <maxcount>2</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>1</age>
@@ -1644,21 +1721,21 @@
         <card dbid="2604">HCJanissaryCost</card>
         <card dbid="814">HCUnlockFort</card>
         <card dbid="2236">HCShipFalconets3</card>
-        <card dbid="6615">DEHCHandMortar</card>
+        <card dbid="6615">DEHCHandMortarOttoman</card>
         <card dbid="2571">HCFrontierDefenses</card>
-        <card dbid="2188">HCShipHussars1</card>
+        <card dbid="2188">DEHCShipDelis1</card>
         <card dbid="2342">HCShipJanissaries1</card>
         <card dbid="2215">HCShipCoinCrates3</card>
         <card dbid="2214">HCShipCoinCrates2</card>
         <card dbid="2212">HCShipWoodCrates3</card>
         <card dbid="2211">HCShipWoodCrates2</card>
         <card dbid="2209">HCShipFoodCrates3</card>
-        <card dbid="2207">HCShipSettlers3</card>
+        <card dbid="10329">DEHCShipSettlersOttoman1</card>
         <card dbid="3387">HCXPEconomicTheory</card>
         <card dbid="2345">HCShipJanissaries4</card>
-        <card dbid="2318">HCShipHussars4</card>
+        <card dbid="2318">DEHCShipDelis4</card>
         <card dbid="2350">HCShipSpahis3</card>
-        <card dbid="2183">HCShipSettlers1</card>
+        <card dbid="10252">DEHCShipSettlersOttomanRepeat</card>
         <card dbid="3386">HCXPIrregulars</card>
       </cards>
     </deck>
@@ -1677,12 +1754,12 @@
         <card dbid="625">HCUnlockFactory</card>
         <card dbid="2358">HCShipGreatBombards2</card>
         <card dbid="2345">HCShipJanissaries4</card>
-        <card dbid="2354">HCArtilleryHitpointsOttomanTeam</card>
+        <card dbid="2353">HCLightArtilleryHitpointsOttoman</card>
         <card dbid="1957">HCAdvancedArsenal</card>
-        <card dbid="2207">HCShipSettlers3</card>
+        <card dbid="2207">DEHCShipSettlersOttoman1</card>
         <card dbid="2604">HCJanissaryCost</card>
         <card dbid="3387">HCXPEconomicTheory</card>
-        <card dbid="2355">HCArtilleryDamageOttoman</card>
+        <card dbid="2355">HCArtilleryCombatOttoman</card>
         <card dbid="2093">HCRoyalMint</card>
         <card dbid="2598">HCTeamCoinCrates2</card>
         <card dbid="2346">HCJanissaryCombatOttoman</card>
@@ -1695,7 +1772,7 @@
     <deck>
       <name>$$71333$$Naval</name>
       <cards>
-        <card dbid="2207">HCShipSettlers3</card>
+        <card dbid="2207">DEHCShipSettlersOttoman1</card>
         <card dbid="2212">HCShipWoodCrates3</card>
         <card dbid="2211">HCShipWoodCrates2</card>
         <card dbid="2215">HCShipCoinCrates3</card>
@@ -1725,24 +1802,24 @@
     <deck version="8">
       <name>$$55547$$Tycoon</name>
       <cards>
-        <card dbid="2207">HCShipSettlers3</card>
+        <card dbid="10329">DEHCShipSettlersOttoman1</card>
         <card dbid="2340">HCSilkRoadTeam</card>
         <card dbid="1993">HCPioneers</card>
-        <card dbid="1992">HCColonialMilitia</card>
+        <card dbid="10416">DEHCColonialMilitiaOttoman</card>
         <card dbid="2341">HCExplorerOttoman</card>
         <card dbid="1796">HCAdvancedTradingPost</card>
         <card dbid="3438">HCXPCapitalism</card>
         <card dbid="3455">HCXPSublimePorte</card>
         <card dbid="3387">HCXPEconomicTheory</card>
         <card dbid="2094">HCFoodSilos</card>
-        <card dbid="2208">HCShipSettlers4</card>
+        <card dbid="10330">DEHCShipSettlersOttoman2</card>
         <card dbid="2211">HCShipWoodCrates2</card>
         <card dbid="2212">HCShipWoodCrates3</card>
         <card dbid="2214">HCShipCoinCrates2</card>
         <card dbid="2215">HCShipCoinCrates3</card>
         <card dbid="6691">DEHCExtensiveFortificationsEuropean</card>
         <card dbid="2095">HCSustainableAgriculture</card>
-        <card dbid="474">HCCigarRoller</card>
+        <card dbid="2102">HCTextileMills</card>
         <card dbid="2213">HCShipWoodCrates4</card>
         <card dbid="814">HCUnlockFort</card>
         <card dbid="2093">HCRoyalMint</card>
@@ -1866,9 +1943,9 @@
     <displaynamestringid>24970</displaynamestringid>
     <rolloverstringid>25536</rolloverstringid>
     <obtainabletechs>
-      <tech x="0.2" y="1.0">HCShipSettlers1</tech>
-      <tech x="0.2" y="2.0">HCShipSettlers4</tech>
-      <tech x="0.2" y="3.0">HCShipSettlers3</tech>
+      <tech x="0.2" y="1.0">DEHCShipSettlersOttomanRepeat</tech>
+      <tech x="0.2" y="2.0">DEHCShipSettlersOttoman2</tech>
+      <tech x="0.2" y="3.0">DEHCShipSettlersOttoman1</tech>
       <tech x="1.3" y="1.0">HCShipFoodCrates1</tech>
       <tech x="2.0" y="1.0">HCShipWoodCrates1</tech>
       <tech x="3.0" y="1.0">HCShipCoinCrates1</tech>
@@ -1897,9 +1974,9 @@
       <tech x="7.1" y="4.0">HCXPMasterSurgeons</tech>
     </obtainabletechs>
     <activetechs>
-      <tech x="0.2" y="1.0">HCShipSettlers1</tech>
-      <tech x="0.2" y="2.0">HCShipSettlers4</tech>
-      <tech x="0.2" y="3.0">HCShipSettlers3</tech>
+      <tech x="0.2" y="1.0">DEHCShipSettlersOttomanRepeat</tech>
+      <tech x="0.2" y="2.0">DEHCShipSettlersOttoman2</tech>
+      <tech x="0.2" y="3.0">DEHCShipSettlersOttoman1</tech>
       <tech x="1.3" y="1.0">HCShipFoodCrates1</tech>
       <tech x="2.0" y="1.0">HCShipWoodCrates1</tech>
       <tech x="3.0" y="1.0">HCShipCoinCrates1</tech>
@@ -1954,12 +2031,15 @@
       <tech x="0.5" y="5.0">HCShipJanissaries4</tech>
       <tech x="0.5" y="5.0">DEHCShipJanissariesRepeat</tech>
       <tech x="1.2" y="1.0">HCJanissaryCombatOttoman</tech>
+      <tech x="0.5" y="5.0">DEHCShipNizamFusiliers1</tech>
+      <tech x="0.5" y="5.0">DEHCShipNizamFusiliersRepeat</tech>
       <tech x="1.2" y="5.0">HCJanissaryCost</tech>
-      <tech x="2.0" y="1.0">HCShipHussars1</tech>
-      <tech x="2.0" y="2.0">HCShipHussars2</tech>
-      <tech x="2.0" y="3.0">HCShipHussars3</tech>
-      <tech x="2.0" y="4.0">HCShipHussars4</tech>
-      <tech x="2.0" y="5.0">HCShipHussars5</tech>
+      <tech x="1.2" y="5.0">DEHCHeavyInfHitpointsOttoman</tech>
+      <tech x="2.0" y="1.0">DEHCShipDelis1</tech>
+      <tech x="2.0" y="2.0">DEHCShipDelis2</tech>
+      <tech x="2.0" y="3.0">DEHCShipDelis3</tech>
+      <tech x="2.0" y="4.0">DEHCShipDelis4</tech>
+      <tech x="2.0" y="5.0">DEHCShipDelis5</tech>
       <tech x="2.7" y="1.0">HCShipSpahis1</tech>
       <tech x="2.7" y="3.0">HCShipSpahis2</tech>
       <tech x="2.7" y="4.0">HCShipSpahis3</tech>
@@ -1968,17 +2048,17 @@
       <tech x="3.4" y="1.0">HCShipCavArchers1</tech>
       <tech x="3.4" y="2.0">HCShipCavArchers2</tech>
       <tech x="3.4" y="3.0">HCShipCavArchers3</tech>
-      <tech x="3.4" y="4.0">HCCavalryCombatOttoman</tech>
       <tech x="3.4" y="5.0">HCXPIrregulars</tech>
+      <tech x="3.4" y="3.0">DEHCFlightArchery</tech>
+      <tech x="3.4" y="4.0">HCCavalryCombatOttoman</tech>
       <tech x="4.4" y="1.0">HCShipAbusGuns1</tech>
       <tech x="4.4" y="2.0">HCShipAbusGuns2</tech>
       <tech x="4.4" y="3.0">HCLightArtilleryHitpointsOttoman</tech>
       <tech x="4.4" y="7.0">HCShipAbusGuns3</tech>
-      <tech x="5.1" y="1.0">HCShipGrenadiers1</tech>
-      <tech x="5.1" y="2.0">HCShipGrenadiers2</tech>
-      <tech x="5.1" y="3.0">HCXPShipGrenadiersRepeat</tech>
-      <tech x="5.1" y="4.0">HCArtilleryHitpointsOttomanTeam</tech>
-      <tech x="5.1" y="5.0">HCArtilleryDamageOttoman</tech>
+      <tech x="5.1" y="1.0">DEHCShipHumbaracis1</tech>
+      <tech x="5.1" y="2.0">DEHCShipHumbaracis2</tech>
+      <tech x="5.1" y="3.0">DEHCShipHumbaracisRepeat</tech>
+      <tech x="5.1" y="5.0">HCArtilleryCombatOttoman</tech>
       <tech x="5.8" y="1.0">HCShipFalconets1</tech>
       <tech x="5.8" y="2.0">HCShipFalconets2</tech>
       <tech x="5.8" y="3.0">HCShipFalconets3</tech>
@@ -1991,7 +2071,7 @@
       <tech x="7.4" y="1.0">HCShipGreatBombards1</tech>
       <tech x="7.4" y="3.0">HCShipGreatBombards2</tech>
       <tech x="7.4" y="5.0">HCShipArtilleryDivision</tech>
-      <tech x="7.2" y="7.0">DEHCHandMortar</tech>
+      <tech x="7.2" y="7.0">DEHCHandMortarOttoman</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.5" y="1.0">HCShipJanissaries1</tech>
@@ -1999,13 +2079,16 @@
       <tech x="0.5" y="3.0">HCShipJanissaries3</tech>
       <tech x="0.5" y="5.0">HCShipJanissaries4</tech>
       <tech x="0.5" y="5.0">DEHCShipJanissariesRepeat</tech>
+      <tech x="0.5" y="5.0">DEHCShipNizamFusiliers1</tech>
+      <tech x="0.5" y="5.0">DEHCShipNizamFusiliersRepeat</tech>
       <tech x="1.2" y="1.0">HCJanissaryCombatOttoman</tech>
       <tech x="1.2" y="5.0">HCJanissaryCost</tech>
-      <tech x="2.0" y="1.0">HCShipHussars1</tech>
-      <tech x="2.0" y="2.0">HCShipHussars2</tech>
-      <tech x="2.0" y="3.0">HCShipHussars3</tech>
-      <tech x="2.0" y="4.0">HCShipHussars4</tech>
-      <tech x="2.0" y="5.0">HCShipHussars5</tech>
+      <tech x="1.2" y="5.0">DEHCHeavyInfHitpointsOttoman</tech>
+      <tech x="2.0" y="1.0">DEHCShipDelis1</tech>
+      <tech x="2.0" y="2.0">DEHCShipDelis2</tech>
+      <tech x="2.0" y="3.0">DEHCShipDelis3</tech>
+      <tech x="2.0" y="4.0">DEHCShipDelis4</tech>
+      <tech x="2.0" y="5.0">DEHCShipDelis5</tech>
       <tech x="2.7" y="1.0">HCShipSpahis1</tech>
       <tech x="2.7" y="3.0">HCShipSpahis2</tech>
       <tech x="2.7" y="4.0">HCShipSpahis3</tech>
@@ -2014,17 +2097,17 @@
       <tech x="3.4" y="1.0">HCShipCavArchers1</tech>
       <tech x="3.4" y="2.0">HCShipCavArchers2</tech>
       <tech x="3.4" y="3.0">HCShipCavArchers3</tech>
-      <tech x="3.4" y="4.0">HCCavalryCombatOttoman</tech>
       <tech x="3.4" y="5.0">HCXPIrregulars</tech>
+      <tech x="3.4" y="3.0">DEHCFlightArchery</tech>
+      <tech x="3.4" y="4.0">HCCavalryCombatOttoman</tech>
       <tech x="4.4" y="1.0">HCShipAbusGuns1</tech>
       <tech x="4.4" y="2.0">HCShipAbusGuns2</tech>
       <tech x="4.4" y="3.0">HCLightArtilleryHitpointsOttoman</tech>
       <tech x="4.4" y="7.0">HCShipAbusGuns3</tech>
-      <tech x="5.1" y="1.0">HCShipGrenadiers1</tech>
-      <tech x="5.1" y="2.0">HCShipGrenadiers2</tech>
-      <tech x="5.1" y="3.0">HCXPShipGrenadiersRepeat</tech>
-      <tech x="5.1" y="4.0">HCArtilleryHitpointsOttomanTeam</tech>
-      <tech x="5.1" y="5.0">HCArtilleryDamageOttoman</tech>
+      <tech x="5.1" y="1.0">DEHCShipHumbaracis1</tech>
+      <tech x="5.1" y="2.0">DEHCShipHumbaracis2</tech>
+      <tech x="5.1" y="3.0">DEHCShipHumbaracisRepeat</tech>
+      <tech x="5.1" y="5.0">HCArtilleryCombatOttoman</tech>
       <tech x="5.8" y="1.0">HCShipFalconets1</tech>
       <tech x="5.8" y="2.0">HCShipFalconets2</tech>
       <tech x="5.8" y="3.0">HCShipFalconets3</tech>
@@ -2037,7 +2120,7 @@
       <tech x="7.4" y="1.0">HCShipGreatBombards1</tech>
       <tech x="7.4" y="3.0">HCShipGreatBombards2</tech>
       <tech x="7.4" y="5.0">HCShipArtilleryDivision</tech>
-      <tech x="7.2" y="7.0">DEHCHandMortar</tech>
+      <tech x="7.2" y="7.0">DEHCHandMortarOttoman</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -2072,7 +2155,7 @@
       <tech x="1.6" y="3.0">HCXPShipSpies2</tech>
       <tech x="1.6" y="5.0">HCBattlefieldConstruction</tech>
       <tech x="1.6" y="7.0">HCXPAssassins</tech>
-      <tech x="3.2" y="2.0">HCColonialMilitia</tech>
+      <tech x="3.2" y="2.0">DEHCColonialMilitiaOttoman</tech>
       <tech x="2.5" y="2.0">HCPioneers</tech>
       <tech x="2.5" y="3.0">HCImprovedBuildings</tech>
       <tech x="2.5" y="5.0">HCBastionsTeam</tech>
@@ -2104,7 +2187,7 @@
       <tech x="1.6" y="3.0">HCXPShipSpies2</tech>
       <tech x="1.6" y="5.0">HCBattlefieldConstruction</tech>
       <tech x="1.6" y="7.0">HCXPAssassins</tech>
-      <tech x="3.2" y="2.0">HCColonialMilitia</tech>
+      <tech x="3.2" y="2.0">DEHCColonialMilitiaOttoman</tech>
       <tech x="2.5" y="2.0">HCPioneers</tech>
       <tech x="2.5" y="3.0">HCImprovedBuildings</tech>
       <tech x="2.5" y="5.0">HCBastionsTeam</tech>
@@ -2163,7 +2246,7 @@
       <tech x="5.2" y="1.0">HCStockyards</tech>
       <tech x="6.1" y="1.0">HCFurrier</tech>
       <tech x="6.1" y="3.0">HCSpiceTrade</tech>
-      <tech x="7.0" y="1.0">HCCigarRoller</tech>
+      <tech x="7.0" y="1.0">HCTextileMills</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.0" y="3.0">HCStonemasons</tech>
@@ -2185,7 +2268,7 @@
       <tech x="5.2" y="1.0">HCStockyards</tech>
       <tech x="6.1" y="1.0">HCFurrier</tech>
       <tech x="6.1" y="3.0">HCSpiceTrade</tech>
-      <tech x="7.0" y="1.0">HCCigarRoller</tech>
+      <tech x="7.0" y="1.0">HCTextileMills</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -2218,20 +2301,27 @@
       <tech x="1.7" y="4.0">HCShipMonitors</tech>
       <tech x="2.4" y="7.0">HCXPShipMonitorsTeam</tech>
       <tech x="3.1" y="1.0">HCAdmirality</tech>
-      <tech x="3.1" y="4.0">HCXPMercsElmeti</tech>
+      <tech x="2.6" y="1.0">HCCoastalDefensesTeam</tech>
+      <tech x="3.1" y="4.0">DEHCTengriAllies1</tech>
+      <tech x="3.1" y="4.0">DEHCPhanarAllies2</tech>
+      <tech x="3.1" y="4.0">DEHCPhanarAllies1</tech>
+      <tech x="3.1" y="4.0">DEHCSufiAllies</tech>
+      <tech x="4.6" y="4.0">DEHCMercsBosniaks</tech>
       <tech x="3.9" y="3.0">HCMercsMamelukes</tech>
-      <tech x="3.9" y="4.0">HCMercsCorsairs</tech>
+      <tech x="3.9" y="4.0">DEHCShipBerberAllies2Ottoman</tech>
       <tech x="3.1" y="7.0">HCXPMercsCorsairsRepeat</tech>
       <tech x="4.2" y="5.0">HCMercsMediterranean</tech>
       <tech x="4.2" y="5.0">DEHCMercsOttoman</tech>
       <tech x="4.6" y="1.0">DEHCTheaters</tech>
-      <tech x="4.6" y="4.0">HCXPMercsNinja</tech>
+      <tech x="4.6" y="4.0">DEHCMercsAskaris</tech>
       <tech x="5.4" y="3.0">HCMercsManchu</tech>
       <tech x="5.4" y="5.0">HCMercsAsian</tech>
       <tech x="6.1" y="3.0">HCMercsStradiots</tech>
       <tech x="6.1" y="5.0">HCMercenaryLoyalty</tech>
       <tech x="6.8" y="1.0">HCPrivateers</tech>
       <tech x="6.8" y="3.0">HCPrivateers2</tech>
+      <tech x="6.8" y="3.0">DEHCShipMercXebecOttoman</tech>
+      <tech x="6.8" y="3.0">DEHCShipBattleshipRepeat</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="1.3" y="1.0">HCShipGalleys1</tech>
@@ -2246,20 +2336,27 @@
       <tech x="1.7" y="4.0">HCShipMonitors</tech>
       <tech x="2.4" y="7.0">HCXPShipMonitorsTeam</tech>
       <tech x="3.1" y="1.0">HCAdmirality</tech>
-      <tech x="3.1" y="4.0">HCXPMercsElmeti</tech>
+      <tech x="2.6" y="1.0">HCCoastalDefensesTeam</tech>
+      <tech x="3.1" y="4.0">DEHCTengriAllies1</tech>
+      <tech x="3.1" y="4.0">DEHCPhanarAllies2</tech>
+      <tech x="3.1" y="4.0">DEHCPhanarAllies1</tech>
+      <tech x="3.1" y="4.0">DEHCSufiAllies</tech>
+      <tech x="4.6" y="4.0">DEHCMercsBosniaks</tech>
       <tech x="3.9" y="3.0">HCMercsMamelukes</tech>
-      <tech x="3.9" y="4.0">HCMercsCorsairs</tech>
+      <tech x="3.9" y="4.0">DEHCShipBerberAllies2Ottoman</tech>
       <tech x="3.1" y="7.0">HCXPMercsCorsairsRepeat</tech>
       <tech x="4.2" y="5.0">HCMercsMediterranean</tech>
       <tech x="4.2" y="5.0">DEHCMercsOttoman</tech>
       <tech x="4.6" y="1.0">DEHCTheaters</tech>
-      <tech x="4.6" y="4.0">HCXPMercsNinja</tech>
+      <tech x="4.6" y="4.0">DEHCMercsAskaris</tech>
       <tech x="5.4" y="3.0">HCMercsManchu</tech>
       <tech x="5.4" y="5.0">HCMercsAsian</tech>
       <tech x="6.1" y="3.0">HCMercsStradiots</tech>
       <tech x="6.1" y="5.0">HCMercenaryLoyalty</tech>
       <tech x="6.8" y="1.0">HCPrivateers</tech>
       <tech x="6.8" y="3.0">HCPrivateers2</tech>
+      <tech x="6.8" y="3.0">DEHCShipMercXebecOttoman</tech>
+      <tech x="6.8" y="3.0">DEHCShipBattleshipRepeat</tech>
     </activetechs>
     <validunits>
     </validunits>

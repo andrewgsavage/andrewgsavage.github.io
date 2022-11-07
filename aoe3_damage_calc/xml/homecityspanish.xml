@@ -272,7 +272,7 @@
       <maxcount>1</maxcount>
       <level>40</level>
       <prereqtech>-1</prereqtech>
-      <age>1</age>
+      <age>0</age>
     </card>
     <card>
       <name>DEHCMarvelousYear</name>
@@ -654,6 +654,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
+      <bindtotech>DEHCREVMXLiberationMarch</bindtotech>
     </card>
     <card>
       <name>HCNativeLore</name>
@@ -689,6 +690,7 @@
       <level>25</level>
       <prereqtech>HCNativeWarriors</prereqtech>
       <age>0</age>
+      <bindtotech>HCAdvancedTradingPost</bindtotech>
     </card>
     <card>
       <name>HCColonialMilitia</name>
@@ -776,7 +778,8 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCRoyalDecreeSpanish</prereqtech>
-      <age>0</age>
+      <age>1</age>
+      <displayunitcount>1</displayunitcount>
     </card>
     <card>
       <name>HCAdvancedMill</name>
@@ -805,6 +808,7 @@
       <level>10</level>
       <prereqtech>-1</prereqtech>
       <age>0</age>
+      <bindtotech>HCAdvancedDock</bindtotech>
     </card>
     <card>
       <name>HCUnlockFactory</name>
@@ -883,6 +887,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>0</age>
+      <bindtotech>HCFishMarket</bindtotech>
     </card>
     <card>
       <name>HCRenderingPlant</name>
@@ -890,6 +895,7 @@
       <level>10</level>
       <prereqtech>HCFishMarket</prereqtech>
       <age>1</age>
+      <bindtotech>HCRenderingPlant</bindtotech>
     </card>
     <card>
       <name>HCSchooners</name>
@@ -897,6 +903,7 @@
       <level>10</level>
       <prereqtech>HCFishMarket</prereqtech>
       <age>0</age>
+      <bindtotech>HCSchooners</bindtotech>
     </card>
     <card>
       <name>HCSawmills</name>
@@ -932,13 +939,6 @@
       <level>25</level>
       <prereqtech>HCSilversmith</prereqtech>
       <age>2</age>
-    </card>
-    <card>
-      <name>HCXPEconomicTheory</name>
-      <maxcount>1</maxcount>
-      <level>40</level>
-      <prereqtech>HCRoyalMint</prereqtech>
-      <age>0</age>
     </card>
     <card>
       <name>HCSustainableAgriculture</name>
@@ -1009,6 +1009,7 @@
       <level>25</level>
       <prereqtech>HCTextileMills</prereqtech>
       <age>0</age>
+      <bindtotech>HCXPCapitalism</bindtotech>
     </card>
     <card>
       <name>HCStonemasons</name>
@@ -1096,6 +1097,7 @@
       <level>10</level>
       <prereqtech>HCShipFrigates</prereqtech>
       <age>1</age>
+      <bindtotech>HCNavalCombat</bindtotech>
     </card>
     <card>
       <name>HCArmada</name>
@@ -1130,19 +1132,26 @@
       <age>1</age>
     </card>
     <card>
-      <name>HCMercsStradiots</name>
+      <name>DEHCMercsIrishBrigadiers</name>
+      <maxcount>1</maxcount>
+      <age>1</age>
+      <displayunitcount>9</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCMercsArmoredPistoleers</name>
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
-      <displayunitcount>6</displayunitcount>
+      <displayunitcount>8</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>HCXPMercsElmeti</name>
       <maxcount>1</maxcount>
       <level>10</level>
-      <prereqtech>HCMercsStradiots</prereqtech>
+      <prereqtech>DEHCMercsArmoredPistoleers</prereqtech>
       <age>3</age>
       <displayunitcount>6</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
@@ -1166,6 +1175,15 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
+      <name>HCXPMercsFusiliers</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>HCMercsHessians</prereqtech>
+      <age>3</age>
+      <displayunitcount>8</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
       <name>HCMercsHighland</name>
       <maxcount>-1</maxcount>
       <level>25</level>
@@ -1178,18 +1196,18 @@
       <name>HCMercsMediterranean</name>
       <maxcount>-1</maxcount>
       <level>25</level>
-      <prereqtech>HCMercsStradiots</prereqtech>
+      <prereqtech>DEHCMercsArmoredPistoleers</prereqtech>
       <age>3</age>
       <displayunitcount>8</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCMercsAsian</name>
+      <name>HCMercsHolyRoman</name>
       <maxcount>-1</maxcount>
       <level>25</level>
       <prereqtech>-1</prereqtech>
       <age>3</age>
-      <displayunitcount>12</displayunitcount>
+      <displayunitcount>16</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1209,37 +1227,28 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPMercsNinja</name>
+      <name>DEHCHabsburgAllies1</name>
       <maxcount>1</maxcount>
-      <level>10</level>
+      <level>25</level>
       <prereqtech>-1</prereqtech>
-      <age>3</age>
-      <displayunitcount>12</displayunitcount>
+      <age>2</age>
+      <displayunitcount>9</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPMayanAllies1</name>
+      <name>DEHCBourbonAllies1</name>
       <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>1</age>
-      <displayunitcount>11</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
-      <name>HCXPMayanAllies2</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>HCXPMayanAllies1</prereqtech>
+      <level>25</level>
+      <prereqtech>HCXPHuronAllies1</prereqtech>
       <age>3</age>
-      <displayunitcount>24</displayunitcount>
+      <displayunitcount>25</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>HCXPMayanAlliesRepeat</name>
       <maxcount>-1</maxcount>
       <level>40</level>
-      <prereqtech>HCXPMayanAllies2</prereqtech>
+      <prereqtech>DEHCBourbonAllies1</prereqtech>
       <age>3</age>
       <displayunitcount>17</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
@@ -1296,7 +1305,55 @@
       </revoltcard>
     </card>
     <card>
+      <name>DEHCREVShipBolasRider</name>
+      <maxcount>-1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>2</age>
+      <displayunitcount>7</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVMXLiberationMarch</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>1</age>
+      <revoltcard>
+      </revoltcard>
+      <bindtotech>DEHCLiberationMarch</bindtotech>
+    </card>
+    <card>
+      <name>DEHCREVSalitrera</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>1</age>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVFishingFleet</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>1</age>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
       <name>HCREVShipIronclads</name>
+      <maxcount>-1</maxcount>
+      <level>0</level>
+      <prereqtech>XPRevolution</prereqtech>
+      <age>2</age>
+      <displayunitcount>2</displayunitcount>
+      <revoltcard>
+      </revoltcard>
+    </card>
+    <card>
+      <name>DEHCREVShipSteamers</name>
       <maxcount>-1</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
@@ -1312,25 +1369,6 @@
       <prereqtech>XPRevolution</prereqtech>
       <age>2</age>
       <displayunitcount>1</displayunitcount>
-      <revoltcard>
-      </revoltcard>
-    </card>
-    <card>
-      <name>DEHCREVShipBolasRider</name>
-      <maxcount>-1</maxcount>
-      <level>0</level>
-      <prereqtech>XPRevolution</prereqtech>
-      <age>1</age>
-      <displayunitcount>7</displayunitcount>
-      <revoltcard>
-      </revoltcard>
-    </card>
-    <card>
-      <name>DEHCREVSalitrera</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>XPRevolution</prereqtech>
-      <age>1</age>
       <revoltcard>
       </revoltcard>
     </card>
@@ -1525,7 +1563,7 @@
         <card dbid="2318">HCShipHussars4</card>
         <card dbid="2239">HCShipCannons1</card>
         <card dbid="2190">HCShipCoveredWagons</card>
-        <card dbid="3387">HCXPEconomicTheory</card>
+        <card dbid="10003">DEHCMarvelousYear</card>
         <card dbid="625">HCUnlockFactory</card>
         <card dbid="3345">HCXPIndustrialRevolution</card>
         <card dbid="2623">HCColonialEstancias</card>
@@ -1553,7 +1591,7 @@
         <card dbid="625">HCUnlockFactory</card>
         <card dbid="3441">HCXPUnction</card>
         <card dbid="3464">HCXPSpanishGold</card>
-        <card dbid="3387">HCXPEconomicTheory</card>
+        <card dbid="10003">DEHCMarvelousYear</card>
         <card dbid="2236">HCShipFalconets3</card>
         <card dbid="2213">HCShipWoodCrates4</card>
         <card dbid="1796">HCAdvancedTradingPost</card>
@@ -1582,7 +1620,7 @@
         <card dbid="3441">HCXPUnction</card>
         <card dbid="2606">HCSchooners</card>
         <card dbid="2225">HCNavalCombat</card>
-        <card dbid="3387">HCXPEconomicTheory</card>
+        <card dbid="10003">DEHCMarvelousYear</card>
         <card dbid="814">HCUnlockFort</card>
         <card dbid="2596">HCSpanishGalleons</card>
         <card dbid="2620">HCSpanishTreasureFleet</card>
@@ -1619,7 +1657,7 @@
         <card dbid="1849">HCExplorerSpanish</card>
         <card dbid="1796">HCAdvancedTradingPost</card>
         <card dbid="1992">HCColonialMilitia</card>
-        <card dbid="3387">HCXPEconomicTheory</card>
+        <card dbid="10003">DEHCMarvelousYear</card>
         <card dbid="3438">HCXPCapitalism</card>
         <card dbid="2032">HCFurrier</card>
         <card dbid="2091">HCExoticHardwoods</card>
@@ -1642,12 +1680,21 @@
     <revoltdeck civ="DERevChile">
       <name>$$45518$$</name>
       <cards>
+        <card>HCFishMarket</card>
+        <card>HCSchooners</card>
+        <card>HCAdvancedDock</card>
+        <card>HCAdvancedTradingPost</card>
+        <card>HCXPCapitalism</card>
+        <card>HCRenderingPlant</card>
+        <card>DEHCREVMXLiberationMarch</card>
+        <card>DEHCREVSalitrera</card>
+        <card>DEHCREVFishingFleet</card>
         <card>HCREVShipGatlingGuns</card>
         <card>HCREVShipColonialMilitia</card>
+        <card>DEHCREVShipBolasRider</card>
+        <card>DEHCREVShipSteamers</card>
         <card>HCREVShipIronclads</card>
         <card>HCREVShipFortWagon</card>
-        <card>DEHCREVShipBolasRider</card>
-        <card>DEHCREVSalitrera</card>
       </cards>
     </revoltdeck>
     <revoltdeck civ="DERevPeru">
@@ -2106,15 +2153,16 @@
       <tech x="4.4" y="3.0">HCMercsSwissPikemen</tech>
       <tech x="4.4" y="4.0">HCMercsHighlanders</tech>
       <tech x="4.4" y="5.0">HCMercsHighland</tech>
-      <tech x="5.1" y="3.0">HCMercsStradiots</tech>
+      <tech x="5.1" y="3.0">DEHCMercsArmoredPistoleers</tech>
       <tech x="5.1" y="5.0">HCMercsMediterranean</tech>
       <tech x="5.8" y="4.0">HCXPMercsElmeti</tech>
-      <tech x="5.8" y="5.0">HCMercsAsian</tech>
-      <tech x="6.5" y="4.0">HCXPMercsNinja</tech>
+      <tech x="5.8" y="5.0">HCMercsHolyRoman</tech>
+      <tech x="6.5" y="4.0">HCXPMercsFusiliers</tech>
       <tech x="6.5" y="5.0">HCMercenaryLoyalty</tech>
       <tech x="6.5" y="1.0">HCPrivateers</tech>
-      <tech x="7.2" y="1.0">HCXPMayanAllies1</tech>
-      <tech x="7.2" y="3.0">HCXPMayanAllies2</tech>
+      <tech x="7.2" y="1.0">DEHCMercsIrishBrigadiers</tech>
+      <tech x="7.2" y="3.0">DEHCHabsburgAllies1</tech>
+      <tech x="7.2" y="3.0">DEHCBourbonAllies1</tech>
       <tech x="7.2" y="7.0">HCXPMayanAlliesRepeat</tech>
       <tech x="7.2" y="7.0">DEHCShipNuestrasSenoras</tech>
       <tech x="7.2" y="7.0">DEHCShipBattleshipRepeat</tech>
@@ -2138,15 +2186,16 @@
       <tech x="4.4" y="3.0">HCMercsSwissPikemen</tech>
       <tech x="4.4" y="4.0">HCMercsHighlanders</tech>
       <tech x="4.4" y="5.0">HCMercsHighland</tech>
-      <tech x="5.1" y="3.0">HCMercsStradiots</tech>
+      <tech x="5.1" y="3.0">DEHCMercsArmoredPistoleers</tech>
       <tech x="5.1" y="5.0">HCMercsMediterranean</tech>
       <tech x="5.8" y="4.0">HCXPMercsElmeti</tech>
-      <tech x="5.8" y="5.0">HCMercsAsian</tech>
-      <tech x="6.5" y="4.0">HCXPMercsNinja</tech>
+      <tech x="5.8" y="5.0">HCMercsHolyRoman</tech>
+      <tech x="6.5" y="4.0">HCXPMercsFusiliers</tech>
       <tech x="6.5" y="5.0">HCMercenaryLoyalty</tech>
       <tech x="6.5" y="1.0">HCPrivateers</tech>
-      <tech x="7.2" y="1.0">HCXPMayanAllies1</tech>
-      <tech x="7.2" y="3.0">HCXPMayanAllies2</tech>
+      <tech x="7.2" y="1.0">DEHCMercsIrishBrigadiers</tech>
+      <tech x="7.2" y="3.0">DEHCHabsburgAllies1</tech>
+      <tech x="7.2" y="3.0">DEHCBourbonAllies1</tech>
       <tech x="7.2" y="7.0">HCXPMayanAlliesRepeat</tech>
       <tech x="7.2" y="7.0">DEHCShipNuestrasSenoras</tech>
       <tech x="7.2" y="7.0">DEHCShipBattleshipRepeat</tech>

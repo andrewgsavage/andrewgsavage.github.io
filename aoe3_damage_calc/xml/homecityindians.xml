@@ -20,6 +20,9 @@
   <numpropunlocksearned>0</numpropunlocksearned>
   <ambientsounds>homecity\indiansambientsounds.xml</ambientsounds>
   <xsai>generic_city</xsai>
+  <heroprotounits>
+    <protounit>ypMonkIndian</protounit>
+  </heroprotounits>
   <coffers>
     <current>
       <food>0</food>
@@ -368,11 +371,61 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>YPHCInfantrySpeedHitpointsTeam</name>
+      <name>DEHCCheapSepoys</name>
       <maxcount>1</maxcount>
-      <level>25</level>
-      <prereqtech>YPHCShipSepoy4</prereqtech>
+      <level>10</level>
+      <prereqtech>YPHCShipSepoy3</prereqtech>
       <age>3</age>
+    </card>
+    <card>
+      <name>YPHCSepoyRebellion</name>
+      <maxcount>1</maxcount>
+      <level>40</level>
+      <prereqtech>YPHCBattlefieldConstruction</prereqtech>
+      <age>3</age>
+    </card>
+    <card>
+      <name>YPHCShipGurkha1</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>7</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>YPHCShipGurkha2</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>YPHCShipGurkha1</prereqtech>
+      <age>3</age>
+      <displayunitcount>12</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>YPHCShipGurkha3</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>YPHCShipGurkha2</prereqtech>
+      <age>2</age>
+      <displayunitcount>8</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>YPHCShipGurkha4</name>
+      <maxcount>1</maxcount>
+      <level>0</level>
+      <prereqtech>YPHCShipGurkha3</prereqtech>
+      <age>3</age>
+      <displayunitcount>14</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>YPHCGurkhaAid</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>YPHCAdvancedConsulateIndians</prereqtech>
+      <age>2</age>
     </card>
     <card>
       <name>YPHCShipIndianHandCavalry1</name>
@@ -402,11 +455,11 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>YPHCCamelDamageIndians</name>
+      <name>YPHCEastIndiaCompany</name>
       <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>YPHCShipIndianHandCavalry3</prereqtech>
-      <age>1</age>
+      <level>25</level>
+      <prereqtech>YPHCConscriptSepoys</prereqtech>
+      <age>2</age>
     </card>
     <card>
       <name>YPHCShipIndianRangedCavalry1</name>
@@ -445,6 +498,20 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
+      <name>YPHCCamelDamageIndians</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>YPHCShipIndianHandCavalry3</prereqtech>
+      <age>1</age>
+    </card>
+    <card>
+      <name>YPHCCamelFrightening</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>YPHCShipIndianRangedCavalry3</prereqtech>
+      <age>1</age>
+    </card>
+    <card>
       <name>YPHCShipHowdah1</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -470,13 +537,6 @@
       <age>3</age>
       <displayunitcount>3</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
-      <name>YPHCCamelFrightening</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>YPHCShipIndianRangedCavalry3</prereqtech>
-      <age>1</age>
     </card>
     <card>
       <name>YPHCShipSiegeElephant1</name>
@@ -572,47 +632,33 @@
       <age>2</age>
     </card>
     <card>
-      <name>YPHCGrazing</name>
+      <name>DEHCElephantArmors</name>
       <maxcount>1</maxcount>
-      <level>40</level>
-      <prereqtech>YPHCCamelFrightening</prereqtech>
-      <age>1</age>
-    </card>
-    <card>
-      <name>YPHCShipGurkha1</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>2</age>
-      <displayunitcount>7</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
-      <name>YPHCShipGurkha2</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>YPHCShipGurkha1</prereqtech>
+      <level>10</level>
+      <prereqtech>YPHCShipMahout2</prereqtech>
       <age>3</age>
-      <displayunitcount>12</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>YPHCShipGurkha3</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>YPHCShipGurkha2</prereqtech>
-      <age>2</age>
-      <displayunitcount>8</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
-      <name>YPHCShipGurkha4</name>
+      <name>DEShipRocketeersIndians</name>
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>YPHCShipGurkha3</prereqtech>
       <age>3</age>
-      <displayunitcount>14</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEShipRocketsRepeatIndians</name>
+      <maxcount>-1</maxcount>
+      <level>0</level>
+      <prereqtech>YPHCShipGurkha3</prereqtech>
+      <age>3</age>
+      <displayunitcount>2</displayunitcount>
+    </card>
+    <card>
+      <name>YPHCInfantrySpeedHitpointsTeam</name>
+      <maxcount>1</maxcount>
+      <level>25</level>
+      <prereqtech>YPHCShipSepoy4</prereqtech>
+      <age>3</age>
     </card>
     <card>
       <name>YPHCNativeLearningIndians</name>
@@ -738,25 +784,11 @@
       <displayunitcount>2</displayunitcount>
     </card>
     <card>
-      <name>YPHCEastIndiaCompany</name>
-      <maxcount>1</maxcount>
-      <level>25</level>
-      <prereqtech>YPHCConscriptSepoys</prereqtech>
-      <age>2</age>
-    </card>
-    <card>
       <name>YPHCBattlefieldConstruction</name>
       <maxcount>1</maxcount>
       <level>25</level>
       <prereqtech>YPHCEastIndiaCompany</prereqtech>
       <age>1</age>
-    </card>
-    <card>
-      <name>YPHCSepoyRebellion</name>
-      <maxcount>1</maxcount>
-      <level>40</level>
-      <prereqtech>YPHCBattlefieldConstruction</prereqtech>
-      <age>3</age>
     </card>
     <card>
       <name>YPHCBazaar</name>
@@ -796,13 +828,6 @@
       <age>0</age>
     </card>
     <card>
-      <name>YPHCGurkhaAid</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>YPHCAdvancedConsulateIndians</prereqtech>
-      <age>2</age>
-    </card>
-    <card>
       <name>YPHCConsulateRelationsIndians</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -818,6 +843,13 @@
       <displayunitcount>300</displayunitcount>
     </card>
     <card>
+      <name>DEHCExportTradeIndians</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>YPHCConsulateRelationsIndians</prereqtech>
+      <age>3</age>
+    </card>
+    <card>
       <name>YPHCAdvancedWondersIndians</name>
       <maxcount>1</maxcount>
       <level>25</level>
@@ -830,6 +862,13 @@
       <level>10</level>
       <prereqtech>-1</prereqtech>
       <age>0</age>
+    </card>
+    <card>
+      <name>YPHCGrazing</name>
+      <maxcount>1</maxcount>
+      <level>40</level>
+      <prereqtech>YPHCCamelFrightening</prereqtech>
+      <age>1</age>
     </card>
     <card>
       <name>YPHCVillagemasonsIndians</name>
@@ -1155,6 +1194,15 @@
       <age>1</age>
     </card>
     <card>
+      <name>DEHCShipMercWarDhowsIndians</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>2</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
       <name>YPHCMercsJatLancer1</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -1459,19 +1507,23 @@
       <tech x="0.7" y="2">YPHCShipGurkha2</tech>
       <tech x="0.7" y="3">YPHCShipGurkha3</tech>
       <tech x="0.7" y="5">YPHCShipGurkha4</tech>
+      <tech x="7.4" y="3">YPHCGurkhaAid</tech>
       <tech x="1.4" y="1">YPHCShipSepoy1</tech>
       <tech x="1.4" y="2">YPHCShipSepoy2</tech>
       <tech x="1.4" y="3">YPHCShipSepoy3</tech>
       <tech x="1.4" y="4">YPHCShipSepoy4</tech>
+      <tech x="5" y="7">DEHCCheapSepoys</tech>
+      <tech x="5" y="7">YPHCSepoyRebellion</tech>
       <tech x="1.4" y="5">YPHCInfantrySpeedHitpointsTeam</tech>
       <tech x="2.2" y="1">YPHCShipIndianHandCavalry1</tech>
       <tech x="2.2" y="3">YPHCShipIndianHandCavalry3</tech>
-      <tech x="2.7" y="4">YPHCCamelDamageIndians</tech>
       <tech x="2.2" y="5">YPHCShipSowarRegiment</tech>
+      <tech x="5" y="5">YPHCEastIndiaCompany</tech>
       <tech x="3.2" y="1">YPHCShipIndianRangedCavalry1</tech>
       <tech x="3.2" y="2">YPHCShipIndianRangedCavalry3</tech>
-      <tech x="3.6" y="3">YPHCCamelFrightening</tech>
       <tech x="3.2" y="5">YPHCShipIndianRangedCavalry4</tech>
+      <tech x="2.7" y="4">YPHCCamelDamageIndians</tech>
+      <tech x="3.6" y="3">YPHCCamelFrightening</tech>
       <tech x="4.3" y="1">YPHCShipHowdah1</tech>
       <tech x="4.3" y="3">YPHCShipHowdahRegiment</tech>
       <tech x="4.3" y="4">YPHCShipHowdah2</tech>
@@ -1483,14 +1535,16 @@
       <tech x="6.0" y="2">YPHCShipSiegeElephant2</tech>
       <tech x="6.0" y="3">YPHCElephantLimit</tech>
       <tech x="5.0" y="4">YPHCElephantTrampling</tech>
-      <tech x="3.6" y="7">YPHCGrazing</tech>
       <tech x="6.8" y="1">YPHCShipFlailiphant1</tech>
       <tech x="6.8" y="2">YPHCShipFlailiphant2</tech>
       <tech x="6.8" y="3">YPHCShipFlailiphant3</tech>
+      <tech x="6.8" y="3">DEHCElephantArmors</tech>
       <tech x="7.6" y="1">YPHCShipUrumi1</tech>
       <tech x="7.6" y="3">YPHCShipUrumiRegiment</tech>
       <tech x="7.6" y="4">YPHCShipUrumiTeam</tech>
       <tech x="7.6" y="5">YPHCShipUrumi2</tech>
+      <tech x="7.6" y="5">DEShipRocketeersIndians</tech>
+      <tech x="7.6" y="5">DEShipRocketsRepeatIndians</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.0" y="1">YPHCShipRajput1</tech>
@@ -1502,15 +1556,19 @@
       <tech x="0.7" y="2">YPHCShipGurkha2</tech>
       <tech x="0.7" y="3">YPHCShipGurkha3</tech>
       <tech x="0.7" y="5">YPHCShipGurkha4</tech>
+      <tech x="7.4" y="3">YPHCGurkhaAid</tech>
       <tech x="1.4" y="1">YPHCShipSepoy1</tech>
       <tech x="1.4" y="2">YPHCShipSepoy2</tech>
       <tech x="1.4" y="3">YPHCShipSepoy3</tech>
       <tech x="1.4" y="4">YPHCShipSepoy4</tech>
+      <tech x="5" y="7">DEHCCheapSepoys</tech>
+      <tech x="5" y="7">YPHCSepoyRebellion</tech>
       <tech x="1.4" y="5">YPHCInfantrySpeedHitpointsTeam</tech>
       <tech x="2.2" y="1">YPHCShipIndianHandCavalry1</tech>
       <tech x="2.2" y="3">YPHCShipIndianHandCavalry3</tech>
       <tech x="2.7" y="4">YPHCCamelDamageIndians</tech>
       <tech x="2.2" y="5">YPHCShipSowarRegiment</tech>
+      <tech x="5" y="5">YPHCEastIndiaCompany</tech>
       <tech x="3.2" y="1">YPHCShipIndianRangedCavalry1</tech>
       <tech x="3.2" y="2">YPHCShipIndianRangedCavalry3</tech>
       <tech x="3.6" y="3">YPHCCamelFrightening</tech>
@@ -1526,14 +1584,16 @@
       <tech x="6.0" y="2">YPHCShipSiegeElephant2</tech>
       <tech x="6.0" y="3">YPHCElephantLimit</tech>
       <tech x="5.0" y="4">YPHCElephantTrampling</tech>
-      <tech x="3.6" y="7">YPHCGrazing</tech>
       <tech x="6.8" y="1">YPHCShipFlailiphant1</tech>
       <tech x="6.8" y="2">YPHCShipFlailiphant2</tech>
       <tech x="6.8" y="3">YPHCShipFlailiphant3</tech>
+      <tech x="6.8" y="3">DEHCElephantArmors</tech>
       <tech x="7.6" y="1">YPHCShipUrumi1</tech>
       <tech x="7.6" y="3">YPHCShipUrumiRegiment</tech>
       <tech x="7.6" y="4">YPHCShipUrumiTeam</tech>
       <tech x="7.6" y="5">YPHCShipUrumi2</tech>
+      <tech x="7.6" y="5">DEShipRocketeersIndians</tech>
+      <tech x="7.6" y="5">DEShipRocketsRepeatIndians</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1573,18 +1633,16 @@
       <tech x="1.7" y="1">YPHCEnlistIrregularsIndians</tech>
       <tech x="2.5" y="2">YPHCCallToArms1</tech>
       <tech x="5" y="2">YPHCConscriptSepoys</tech>
-      <tech x="5" y="5">YPHCEastIndiaCompany</tech>
       <tech x="5" y="6">YPHCBattlefieldConstruction</tech>
-      <tech x="5" y="7">YPHCSepoyRebellion</tech>
       <tech x="5.8" y="1">YPHCBazaar</tech>
       <tech x="5.8" y="2">YPHCAdvancedMonasteryIndians</tech>
       <tech x="5.8" y="3">YPHCAdvancedRicePaddyIndians</tech>
       <tech x="5.8" y="4">YPHCAdvancedDockIndians</tech>
       <tech x="6.6" y="2">YPHCAdvancedConsulateIndians</tech>
       <tech x="5.8" y="6">YPHCAdvancedWondersIndians</tech>
-      <tech x="7.4" y="3">YPHCGurkhaAid</tech>
       <tech x="6.6" y="3">YPHCConsulateRelationsIndians</tech>
       <tech x="6.6" y="4">YPHCSmoothRelationsIndians</tech>
+      <tech x="6.6" y="4">DEHCExportTradeIndians</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="0.4" y="1">YPHCNativeLearningIndians</tech>
@@ -1604,18 +1662,16 @@
       <tech x="1.7" y="1">YPHCEnlistIrregularsIndians</tech>
       <tech x="2.5" y="2">YPHCCallToArms1</tech>
       <tech x="5" y="2">YPHCConscriptSepoys</tech>
-      <tech x="5" y="5">YPHCEastIndiaCompany</tech>
       <tech x="5" y="6">YPHCBattlefieldConstruction</tech>
-      <tech x="5" y="7">YPHCSepoyRebellion</tech>
       <tech x="5.8" y="1">YPHCBazaar</tech>
       <tech x="5.8" y="2">YPHCAdvancedMonasteryIndians</tech>
       <tech x="5.8" y="3">YPHCAdvancedRicePaddyIndians</tech>
       <tech x="5.8" y="4">YPHCAdvancedDockIndians</tech>
       <tech x="6.6" y="2">YPHCAdvancedConsulateIndians</tech>
       <tech x="5.8" y="6">YPHCAdvancedWondersIndians</tech>
-      <tech x="7.4" y="3">YPHCGurkhaAid</tech>
       <tech x="6.6" y="3">YPHCConsulateRelationsIndians</tech>
       <tech x="6.6" y="4">YPHCSmoothRelationsIndians</tech>
+      <tech x="6.6" y="4">DEHCExportTradeIndians</tech>
     </activetechs>
     <validunits>
     </validunits>
@@ -1639,6 +1695,7 @@
     <rolloverstringid>25535</rolloverstringid>
     <obtainabletechs>
       <tech x="6.8" y="3">YPHCGoraksha</tech>
+      <tech x="3.6" y="7">YPHCGrazing</tech>
       <tech x="0.0" y="3">YPHCVillagemasonsIndians</tech>
       <tech x="2.2" y="1">YPHCShipGroveWagonIndians1</tech>
       <tech x="2.2" y="2">YPHCShipGroveWagonIndians2</tech>
@@ -1666,6 +1723,7 @@
     </obtainabletechs>
     <activetechs>
       <tech x="6.8" y="3">YPHCGoraksha</tech>
+      <tech x="3.6" y="7">YPHCGrazing</tech>
       <tech x="0.0" y="3">YPHCVillagemasonsIndians</tech>
       <tech x="2.2" y="1">YPHCShipGroveWagonIndians1</tech>
       <tech x="2.2" y="2">YPHCShipGroveWagonIndians2</tech>
@@ -1727,6 +1785,7 @@
       <tech x="5.1" y="5">YPHCMercsTigerClaw2</tech>
       <tech x="5.1" y="7">YPHCMercsTigerClaw3</tech>
       <tech x="3.5" y="1">YPHCAtonementIndians</tech>
+      <tech x="5.9" y="3">DEHCShipMercWarDhowsIndians</tech>
       <tech x="5.9" y="3">YPHCMercsJatLancer1</tech>
       <tech x="5.9" y="7">YPHCMercsWarElephant1</tech>
       <tech x="6.7" y="4">YPHCMercsArsonist1</tech>
@@ -1754,6 +1813,7 @@
       <tech x="5.1" y="5">YPHCMercsTigerClaw2</tech>
       <tech x="5.1" y="7">YPHCMercsTigerClaw3</tech>
       <tech x="3.5" y="1">YPHCAtonementIndians</tech>
+      <tech x="5.9" y="3">DEHCShipMercWarDhowsIndians</tech>
       <tech x="5.9" y="3">YPHCMercsJatLancer1</tech>
       <tech x="5.9" y="7">YPHCMercsWarElephant1</tech>
       <tech x="6.7" y="4">YPHCMercsArsonist1</tech>

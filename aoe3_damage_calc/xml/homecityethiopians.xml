@@ -70,15 +70,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>DEHCShipVillagers2</name>
-      <maxcount>1</maxcount>
-      <level>0</level>
-      <prereqtech>-1</prereqtech>
-      <age>1</age>
-      <displayunitcount>4</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>DEHCOromoMigrations</name>
       <maxcount>1</maxcount>
       <age>0</age>
@@ -448,7 +439,7 @@
     </card>
     <card>
       <name>DEHCShipSebastopolMortarRepeat</name>
-      <maxcount>-1</maxcount>
+      <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>3</age>
@@ -676,7 +667,7 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>0</age>
+      <age>2</age>
     </card>
     <card>
       <name>DEHCJesuitSpirituality</name>
@@ -1111,7 +1102,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>1</age>
-      <displayunitcount>12</displayunitcount>
+      <displayunitcount>10</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1169,7 +1160,7 @@
         <card dbid="2215">HCShipCoinCrates3</card>
         <card dbid="2212">HCShipWoodCrates3</card>
         <card dbid="8270">DEHCShipVillagersAbunRepeat</card>
-        <card dbid="6879">DEHCShipVillagers2</card>
+        <card dbid="6758">DEHCShipAbuns1</card>
         <card dbid="8348">DEHCCartridgeCurrency</card>
         <card dbid="6750">DEHCShipVillagerRepeat</card>
         <card dbid="6766">DEHCShipShotel1</card>
@@ -1197,7 +1188,7 @@
         <card dbid="8440">DEHCBeekeepers</card>
         <card dbid="6770">DEHCShipNeftenya1</card>
         <card dbid="8353">DEHCTigrayMekonnen</card>
-        <card dbid="6879">DEHCShipVillagers2</card>
+        <card dbid="6758">DEHCShipAbuns1</card>
         <card dbid="8359">DEHCShipChonkyCattle</card>
         <card dbid="8407">DEHCGascenyaHitpoints</card>
         <card dbid="2211">HCShipWoodCrates2</card>
@@ -1226,7 +1217,7 @@
         <card dbid="2212">HCShipWoodCrates3</card>
         <card dbid="8346">DEHCChewaWarriors</card>
         <card dbid="6770">DEHCShipNeftenya1</card>
-        <card dbid="6879">DEHCShipVillagers2</card>
+        <card dbid="6758">DEHCShipAbuns1</card>
         <card dbid="8413">DEHCShipBattleCanoes3</card>
         <card dbid="8269">DEHCShipZebu3</card>
         <card dbid="2225">HCNavalCombat</card>
@@ -1247,7 +1238,7 @@
         <card dbid="2268">HCShipFoodCrates5</card>
         <card dbid="3521">HCShipCoinCrates5</card>
         <card dbid="8270">DEHCShipVillagersAbunRepeat</card>
-        <card dbid="6879">DEHCShipVillagers2</card>
+        <card dbid="8359">DEHCShipChonkyCattle</card>
         <card dbid="2212">HCShipWoodCrates3</card>
         <card dbid="2215">HCShipCoinCrates3</card>
         <card dbid="2213">HCShipWoodCrates4</card>
@@ -1324,7 +1315,6 @@
       <tech x="1.0" y="1.0">DEHCShipVillagerRepeat</tech>
       <tech x="1.0" y="1.0">DEHCShipVillagersAbunRepeat</tech>
       <tech x="1.0" y="1.0">DEHCShipZebu2</tech>
-      <tech x="1.0" y="1.0">DEHCShipVillagers2</tech>
       <tech x="1.0" y="1.0">DEHCOromoMigrations</tech>
       <tech x="1.0" y="1.0">HCShipFoodCrates1</tech>
       <tech x="1.7" y="1.0">HCShipWoodCrates1</tech>
@@ -1362,7 +1352,6 @@
       <tech x="1.0" y="1.0">DEHCShipVillagerRepeat</tech>
       <tech x="1.0" y="1.0">DEHCShipVillagersAbunRepeat</tech>
       <tech x="1.0" y="1.0">DEHCShipZebu2</tech>
-      <tech x="1.0" y="1.0">DEHCShipVillagers2</tech>
       <tech x="1.0" y="1.0">DEHCOromoMigrations</tech>
       <tech x="1.0" y="1.0">HCShipFoodCrates1</tech>
       <tech x="1.7" y="1.0">HCShipWoodCrates1</tech>

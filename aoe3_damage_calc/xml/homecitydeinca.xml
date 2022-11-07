@@ -472,7 +472,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>3</age>
-      <displayunitcount>7</displayunitcount>
+      <displayunitcount>8</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -529,7 +529,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>3</age>
-      <displayunitcount>11</displayunitcount>
+      <displayunitcount>10</displayunitcount>
     </card>
     <card>
       <name>DEHCShipSlingersRepeat2</name>
@@ -904,7 +904,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>3</age>
-      <displayunitcount>7</displayunitcount>
+      <displayunitcount>10</displayunitcount>
     </card>
     <card>
       <name>DEHCChachapoyaSupport</name>

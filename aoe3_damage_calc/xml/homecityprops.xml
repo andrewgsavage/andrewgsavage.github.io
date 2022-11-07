@@ -10630,8 +10630,11 @@
     <name>HausaZebuCow</name>
     <type>PerformerUnit</type>
   </prop>
-  <compositeprops>
+  <inclusiveprops>
     <prop>HausaSangaCow</prop>
+    <prop>HausaZebuCow</prop>
+  </inclusiveprops>
+  <compositeprops>
     <prop>HausaZebuCow</prop>
   </compositeprops>
   <prop>
@@ -12053,6 +12056,9 @@
     <activateprops>
       <prop>Italy_Italian_Flag_Dock_02</prop>
     </activateprops>
+    <deactivateprops>
+      <prop>Italy_Venetian_Flag_Dock_02</prop>
+    </deactivateprops>
     <icon>homecity\home_city_props\icons\italy_Flag</icon>
   </prop>
   <prop>
@@ -12071,6 +12077,9 @@
     <activateprops>
       <prop>Italy_Venetian_Flag_Dock_02</prop>
     </activateprops>
+    <deactivateprops>
+      <prop>Italy_Italian_Flag_Dock_02</prop>
+    </deactivateprops>
     <icon>homecity\home_city_props\icons\italy_Venetian_Flag</icon>
   </prop>
   <prop>
@@ -12618,6 +12627,10 @@
     <activateprops>
       <prop>Italy_Italian_Flag_Academy_02</prop>
     </activateprops>
+    <deactivateprops>
+      <prop>Italy_Venetian_Flag_Academy</prop>
+      <prop>Italy_Venetian_Flag_Academy_02</prop>
+    </deactivateprops>
     <icon>homecity\home_city_props\icons\italy_Flag</icon>
   </prop>
   <prop>
@@ -12645,6 +12658,10 @@
     <activateprops>
       <prop>Italy_Venetian_Flag_Academy_02</prop>
     </activateprops>
+    <deactivateprops>
+      <prop>Italy_Italian_Flag_Academy</prop>
+      <prop>Italy_Italian_Flag_Academy_02</prop>
+    </deactivateprops>
     <icon>homecity\home_city_props\icons\italy_Venetian_Flag</icon>
   </prop>
   <prop>
@@ -12674,6 +12691,11 @@
       <prop>Italy_Italian_Flag_poles_Academy_02</prop>
       <prop>Italy_Italian_Flag_poles_Academy_03</prop>
     </activateprops>
+    <deactivateprops>
+      <prop>Italy_Venetian_Flag_poles_Academy</prop>
+      <prop>Italy_Venetian_Flag_poles_Academy_02</prop>
+      <prop>Italy_Venetian_Flag_poles_Academy_03</prop>
+    </deactivateprops>
   </prop>
   <prop>
     <name>Italy_Italian_Flag_poles_Academy_02</name>
@@ -12712,6 +12734,11 @@
       <prop>Italy_Venetian_Flag_poles_Academy_02</prop>
       <prop>Italy_Venetian_Flag_poles_Academy_03</prop>
     </activateprops>
+    <deactivateprops>
+      <prop>Italy_Italian_Flag_poles_Academy</prop>
+      <prop>Italy_Italian_Flag_poles_Academy_02</prop>
+      <prop>Italy_Italian_Flag_poles_Academy_03</prop>
+    </deactivateprops>
     <icon>homecity\home_city_props\icons\italy_Venetian_Flag_poles</icon>
   </prop>
   <prop>
@@ -12784,34 +12811,6 @@
     <prop>Italy_RialtoTexture2</prop>
   </exclusiveprops>
   <exclusiveprops>
-    <prop>Italy_Italian_Flag_Academy</prop>
-    <prop>Italy_Venetian_Flag_Academy</prop>
-  </exclusiveprops>
-  <exclusiveprops>
-    <prop>Italy_Italian_Flag_Academy_02</prop>
-    <prop>Italy_Venetian_Flag_Academy_02</prop>
-  </exclusiveprops>
-  <exclusiveprops>
-    <prop>Italy_Italian_Flag_poles_Academy</prop>
-    <prop>Italy_Venetian_Flag_poles_Academy</prop>
-  </exclusiveprops>
-  <exclusiveprops>
-    <prop>Italy_Italian_Flag_poles_Academy_02</prop>
-    <prop>Italy_Venetian_Flag_poles_Academy_02</prop>
-  </exclusiveprops>
-  <exclusiveprops>
-    <prop>Italy_Italian_Flag_poles_Academy_03</prop>
-    <prop>Italy_Venetian_Flag_poles_Academy_03</prop>
-  </exclusiveprops>
-  <exclusiveprops>
-    <prop>Italy_Italian_Flag_Dock</prop>
-    <prop>Italy_Venetian_Flag_Dock</prop>
-  </exclusiveprops>
-  <exclusiveprops>
-    <prop>Italy_Venetian_Flag_Dock_02</prop>
-    <prop>Italy_Italian_Flag_Dock_02</prop>
-  </exclusiveprops>
-  <exclusiveprops>
     <prop>Italy_BasilicaTexture0</prop>
     <prop>Italy_BasilicaTexture1</prop>
     <prop>Italy_BasilicaTexture2</prop>
@@ -12825,6 +12824,46 @@
     <prop>Italy_Carnevale_1</prop>
     <prop>Italy_Carnevale_2</prop>
   </exclusiveprops>
+  <compositeprops>
+    <prop>Italy_Italian_Flag_poles_Academy_02</prop>
+    <prop>Italy_Italian_Flag_poles_Academy_03</prop>
+  </compositeprops>
+  <compositeprops>
+    <prop>Italy_Venetian_Flag_poles_Academy_02</prop>
+    <prop>Italy_Venetian_Flag_poles_Academy_03</prop>
+  </compositeprops>
+  <exclusiveprops>
+    <prop>Italy_Italian_Flag_poles_Academy</prop>
+    <prop>Italy_Venetian_Flag_poles_Academy</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_Venetian_Flag_Academy</prop>
+    <prop>Italy_Italian_Flag_Academy</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Italy_Venetian_Flag_Dock</prop>
+    <prop>Italy_Italian_Flag_Dock</prop>
+  </exclusiveprops>
+  <compositeprops>
+    <prop>Italy_Venetian_Flag_Academy_02</prop>
+  </compositeprops>
+  <compositeprops>
+    <prop>Italy_Italian_Flag_Academy_02</prop>
+  </compositeprops>
+  <compositeprops>
+    <prop>Italy_Italian_Flag_Dock_02</prop>
+  </compositeprops>
+  <compositeprops>
+    <prop>Italy_Venetian_Flag_Dock_02</prop>
+  </compositeprops>
+  <compositeprops>
+    <prop>Italy_Italian_Flag_poles_Academy_02</prop>
+    <prop>Italy_Italian_Flag_poles_Academy_03</prop>
+  </compositeprops>
+  <compositeprops>
+    <prop>Italy_Venetian_Flag_poles_Academy_02</prop>
+    <prop>Italy_Venetian_Flag_poles_Academy_03</prop>
+  </compositeprops>
   <prop>
     <name>deExplorerItalian</name>
     <type>Unit</type>
@@ -13199,6 +13238,13 @@
     <activateprops>
       <prop>MaltaFlag_Academy_02</prop>
     </activateprops>
+    <deactivateprops>
+      <prop>MaltaBoneGuardFlag_Academy_02</prop>
+      <prop>MaltaBlackFlag_Academy_02</prop>
+      <prop>MaltaFlagCross_Academy_02</prop>
+      <prop>MaltaFlagBritish_Academy_02</prop>
+      <prop>MaltaFlagFrench_Academy_02</prop>
+    </deactivateprops>
     <icon>homecity\home_city_props\icons\malta_flag</icon>
   </prop>
   <prop>
@@ -13217,6 +13263,13 @@
     <activateprops>
       <prop>MaltaBoneGuardFlag_Academy_02</prop>
     </activateprops>
+    <deactivateprops>
+      <prop>MaltaFlag_Academy_02</prop>
+      <prop>MaltaBlackFlag_Academy_02</prop>
+      <prop>MaltaFlagCross_Academy_02</prop>
+      <prop>MaltaFlagBritish_Academy_02</prop>
+      <prop>MaltaFlagFrench_Academy_02</prop>
+    </deactivateprops>
     <icon>homecity\home_city_props\icons\malta_BoneGuard_flag</icon>
   </prop>
   <prop>
@@ -13235,6 +13288,13 @@
     <activateprops>
       <prop>MaltaBlackFlag_Academy_02</prop>
     </activateprops>
+    <deactivateprops>
+      <prop>MaltaFlag_Academy_02</prop>
+      <prop>MaltaBoneGuardFlag_Academy_02</prop>
+      <prop>MaltaFlagCross_Academy_02</prop>
+      <prop>MaltaFlagBritish_Academy_02</prop>
+      <prop>MaltaFlagFrench_Academy_02</prop>
+    </deactivateprops>
     <icon>homecity\home_city_props\icons\malta_BlackFam_flag</icon>
   </prop>
   <prop>
@@ -13253,6 +13313,13 @@
     <activateprops>
       <prop>MaltaFlagCross_Academy_02</prop>
     </activateprops>
+    <deactivateprops>
+      <prop>MaltaFlag_Academy_02</prop>
+      <prop>MaltaBoneGuardFlag_Academy_02</prop>
+      <prop>MaltaBlackFlag_Academy_02</prop>
+      <prop>MaltaFlagBritish_Academy_02</prop>
+      <prop>MaltaFlagFrench_Academy_02</prop>
+    </deactivateprops>
     <icon>homecity\home_city_props\icons\malta_Cross_flag</icon>
   </prop>
   <prop>
@@ -13271,6 +13338,13 @@
     <activateprops>
       <prop>MaltaFlagBritish_Academy_02</prop>
     </activateprops>
+    <deactivateprops>
+      <prop>MaltaFlag_Academy_02</prop>
+      <prop>MaltaBoneGuardFlag_Academy_02</prop>
+      <prop>MaltaBlackFlag_Academy_02</prop>
+      <prop>MaltaFlagCross_Academy_02</prop>
+      <prop>MaltaFlagFrench_Academy_02</prop>
+    </deactivateprops>
     <icon>homecity\home_city_props\icons\malta_British_flag</icon>
   </prop>
   <prop>
@@ -13289,6 +13363,13 @@
     <activateprops>
       <prop>MaltaFlagFrench_Academy_02</prop>
     </activateprops>
+    <deactivateprops>
+      <prop>MaltaFlag_Academy_02</prop>
+      <prop>MaltaBoneGuardFlag_Academy_02</prop>
+      <prop>MaltaBlackFlag_Academy_02</prop>
+      <prop>MaltaFlagCross_Academy_02</prop>
+      <prop>MaltaFlagBritish_Academy_02</prop>
+    </deactivateprops>
     <icon>homecity\home_city_props\icons\malta_French_flag</icon>
   </prop>
   <prop>
@@ -13689,15 +13770,15 @@
   <prop>
     <name>Malta_gondolas</name>
     <type>Unit</type>
-    <displayname>Gondolas</displayname>
-    <displaynamestringid>126011</displaynamestringid>
-    <description>Gondolas cruising around the river banks.</description>
-    <descriptionstringid>126012</descriptionstringid>
+    <displayname>Luzzus</displayname>
+    <displaynamestringid>126150</displaynamestringid>
+    <description>Maltese Luzzu boats cruising around the harbor.</description>
+    <descriptionstringid>126151</descriptionstringid>
     <position>
       <building>Dock</building>
     </position>
     <cost>5</cost>
-    <icon>homecity\home_city_props\icons\italy_gondola</icon>
+    <icon>homecity\home_city_props\icons\malta_luzzu</icon>
     <buttonaction>toggle</buttonaction>
     <variationmaxid>2</variationmaxid>
   </prop>
@@ -13779,17 +13860,534 @@
     <prop>MaltaFlagBritish_Academy</prop>
     <prop>MaltaFlagFrench_Academy</prop>
   </exclusiveprops>
-  <exclusiveprops>
+  <compositeprops>
     <prop>MaltaFlag_Academy_02</prop>
+  </compositeprops>
+  <compositeprops>
     <prop>MaltaBoneGuardFlag_Academy_02</prop>
+  </compositeprops>
+  <compositeprops>
     <prop>MaltaBlackFlag_Academy_02</prop>
+  </compositeprops>
+  <compositeprops>
     <prop>MaltaFlagCross_Academy_02</prop>
+  </compositeprops>
+  <compositeprops>
     <prop>MaltaFlagBritish_Academy_02</prop>
+  </compositeprops>
+  <compositeprops>
     <prop>MaltaFlagFrench_Academy_02</prop>
-  </exclusiveprops>
+  </compositeprops>
   <exclusiveprops>
     <prop>Malta_Daytime</prop>
     <prop>Malta_Sunset</prop>
     <prop>Malta_Night</prop>
   </exclusiveprops>
+  <prop>
+    <name>Lakota_Daytime</name>
+    <type>LightSet</type>
+    <displayname>Daytime Lighting</displayname>
+    <displaynamestringid>55684</displaynamestringid>
+    <description>The Lakota camp in the middle of the day.</description>
+    <descriptionstringid>55685</descriptionstringid>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <variationid>0</variationid>
+    <lightset>sioux_hc</lightset>
+    <icon>homecity\home_city_props\icons\La_HC_Day</icon>
+    <deactivateprops>
+      <prop>Lakota_Fireflies</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Lakota_Sunrise</name>
+    <type>LightSet</type>
+    <displayname>Sunrise Lighting</displayname>
+    <displaynamestringid>43274</displaynamestringid>
+    <description>The sun rise above the Lakota campsite.</description>
+    <descriptionstringid>55667</descriptionstringid>
+    <cost>1</cost>
+    <variationid>2</variationid>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <lightset>Lakota_sunrise</lightset>
+    <icon>homecity\home_city_props\icons\La_HC_Sunrise</icon>
+    <deactivateprops>
+      <prop>Lakota_Fireflies</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Lakota_Night</name>
+    <type>LightSet</type>
+    <displayname>Night Lighting</displayname>
+    <displaynamestringid>49058</displaynamestringid>
+    <description>The Lakota campsite in the middle of the night.</description>
+    <descriptionstringid>55669</descriptionstringid>
+    <cost>5</cost>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <variationid>1</variationid>
+    <lightset>Lakota_night</lightset>
+    <icon>homecity\home_city_props\icons\La_HC_Night</icon>
+    <deactivateprops>
+      <prop>Lakota_Fireflies</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Lakota_NightFF</name>
+    <type>LightSet</type>
+    <displayname>Night Lighting - Fireflies</displayname>
+    <displaynamestringid>55670</displaynamestringid>
+    <description>The Lakota campsite in the middle of the night.</description>
+    <descriptionstringid>55671</descriptionstringid>
+    <cost>10</cost>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <variationid>1</variationid>
+    <lightset>Lakota_night</lightset>
+    <icon>homecity\home_city_props\icons\La_HC_NightFF</icon>
+    <activateprops>
+      <prop>Lakota_Fireflies</prop>
+    </activateprops>
+  </prop>
+  <prop>
+    <name>Lakota_SeasonsChange</name>
+    <type>LightSet</type>
+    <displayname>Season change</displayname>
+    <displaynamestringid>55648</displaynamestringid>
+    <description>Seasons changing at the Lakota campsite.</description>
+    <descriptionstringid>55668</descriptionstringid>
+    <visual>
+    </visual>
+    <cost>10</cost>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <lightset>Lakota_snow</lightset>
+    <variationid>3</variationid>
+    <cityvariationid>1</cityvariationid>
+    <applyvariationoffset>snow</applyvariationoffset>
+    <lightset>Lakota_snow</lightset>
+    <icon>homecity\home_city_props\icons\La_HC_Snow</icon>
+    <weathereffect>Snow</weathereffect>
+  </prop>
+  <prop>
+    <name>lakota_workstation</name>
+    <type>Object</type>
+    <displayname>Hide work station</displayname>
+    <displaynamestringid>55676</displaynamestringid>
+    <description>A hide workstation setup at camp.</description>
+    <descriptionstringid>55677</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <cost>5</cost>
+    <position>
+      <bone>bone_centered</bone>
+      <building>Market</building>
+    </position>
+    <visual>homecity\home_city_props\lakota_workstation\lakota_workstation.xml</visual>
+    <icon>homecity\home_city_props\icons\La_HC_Work</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Lakota_Tipi_New</name>
+    <type>ReplaceVisual</type>
+    <displayname>Alternate Tipi Patterns</displayname>
+    <displaynamestringid>55678</displaynamestringid>
+    <description>Display Alternate tipi pattern designs.</description>
+    <descriptionstringid>55679</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <cost>2</cost>
+    <position>
+      <bone>lakota_ground_bone</bone>
+      <building>Cathedral</building>
+    </position>
+    <variationid>2</variationid>
+    <icon>homecity\home_city_props\icons\La_HC_Teepee2</icon>
+  </prop>
+  <prop>
+    <name>Lakota_Tipi_Original</name>
+    <type>ReplaceVisual</type>
+    <displayname>Original Tipi Patterns</displayname>
+    <displaynamestringid>55682</displaynamestringid>
+    <description>Display Original tipi pattern designs.</description>
+    <descriptionstringid>55683</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>lakota_ground_bone</bone>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\La_HC_Teepee</icon>
+  </prop>
+  <prop>
+    <name>lakota_horses</name>
+    <type>Object</type>
+    <displayname>Horses</displayname>
+    <displaynamestringid>55672</displaynamestringid>
+    <description>Horses galloping in the background.</description>
+    <descriptionstringid>55673</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\lakota_horses\lakota_horses.xml</visual>
+    <cost>2</cost>
+    <position>
+      <bone>bone_centered</bone>
+      <building>Dock</building>
+    </position>
+    <icon>homecity\home_city_props\icons\La_HC_Horses</icon>
+    <visual>homecity\home_city_props\lakota_horses\lakota_horses.xml</visual>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Lakota_Fauna</name>
+    <type>PerformerUnit</type>
+    <displayname>Fauna</displayname>
+    <displaynamestringid>55674</displaynamestringid>
+    <description>Florishing fauna running around the Lakota campsite.</description>
+    <descriptionstringid>55675</descriptionstringid>
+    <levelprereq>1</levelprereq>
+    <cost>2</cost>
+    <position>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\La_HC_Animals</icon>
+    <buttonaction>toggle</buttonaction>
+    <variationmaxid>3</variationmaxid>
+  </prop>
+  <prop>
+    <name>lakota_foxes</name>
+    <type>PerformerUnit</type>
+  </prop>
+  <inclusiveprops>
+    <prop>Lakota_Fauna</prop>
+    <prop>lakota_foxes</prop>
+  </inclusiveprops>
+  <compositeprops>
+    <prop>lakota_foxes</prop>
+  </compositeprops>
+  <prop>
+    <name>Lakota_Fireflies</name>
+    <type>Object</type>
+    <position>
+      <bone>bone_centered</bone>
+    </position>
+    <visual>homecity\home_city_props\lakota_fireflies\lakota_fireflies.xml</visual>
+  </prop>
+  <prop>
+    <name>lakota_tents</name>
+    <type>Object</type>
+    <position>
+      <bone>bone_centered</bone>
+    </position>
+    <visual>homecity\home_city_props\lakota_tents\lakota_tents.xml</visual>
+  </prop>
+  <exclusiveprops>
+    <prop>Lakota_Daytime</prop>
+    <prop>Lakota_Sunrise</prop>
+    <prop>Lakota_Night</prop>
+    <prop>Lakota_NightFF</prop>
+    <prop>Lakota_SeasonsChange</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Lakota_Tipi_New</prop>
+    <prop>Lakota_Tipi_Original</prop>
+  </exclusiveprops>
+  <compositeprops>
+    <prop>Lakota_Fireflies</prop>
+  </compositeprops>
+  <prop>
+    <name>xpLakotaWarchief</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>ExplorerDutch</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>ExplorerFrench</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>ExplorerGerman</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>ypMonkIndian</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>ypMonkJapanese</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>ExplorerOttomans</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>ExplorerPortuguese</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>ExplorerRussian</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>ExplorerDESwedish</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
+  <prop>
+    <name>Iroquois_Moonlight_night</name>
+    <type>LightSet</type>
+    <displayname>Moonlit Night Lighting</displayname>
+    <displaynamestringid>55704</displaynamestringid>
+    <description>A moonlit night at the Haudenosaunee campsite.</description>
+    <descriptionstringid>55705</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Ha_HC_Moonlit</icon>
+    <variationid>3</variationid>
+    <lightset>hc_iroquois1</lightset>
+    <deactivateprops>
+      <prop>Iroquois_Fireflies</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Iroquois_Sunset_lighting</name>
+    <type>LightSet</type>
+    <displayname>Sunset Lighting</displayname>
+    <displaynamestringid>49456</displaynamestringid>
+    <description>The sunset at the Haudenosaunee campsite.</description>
+    <descriptionstringid>55706</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <cost>5</cost>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Ha_HC_Sunset</icon>
+    <variationid>2</variationid>
+    <lightset>hc_iroquois_sunset</lightset>
+    <deactivateprops>
+      <prop>Iroquois_Fireflies</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Iroquois_NightLighting</name>
+    <type>LightSet</type>
+    <displayname>Night Lighting</displayname>
+    <displaynamestringid>49058</displaynamestringid>
+    <description>Haudenosaunee campsite at night.</description>
+    <descriptionstringid>55707</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <cost>10</cost>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Ha_HC_Night</icon>
+    <variationid>1</variationid>
+    <lightset>hc_iroquois_night</lightset>
+    <deactivateprops>
+      <prop>Iroquois_Fireflies</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Iroquois_NightLighting_Fireflies</name>
+    <type>LightSet</type>
+    <displayname>Night Lighting - Fireflies</displayname>
+    <displaynamestringid>55670</displaynamestringid>
+    <description>Haudenosaunee campsite at night with fireflies.</description>
+    <descriptionstringid>55708</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <cost>10</cost>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Ha_HC_NightFF</icon>
+    <variationid>1</variationid>
+    <lightset>hc_iroquois_night</lightset>
+    <activateprops>
+      <prop>Iroquois_Fireflies</prop>
+    </activateprops>
+  </prop>
+  <prop>
+    <name>Iroquois_Snowy_season</name>
+    <type>LightSet</type>
+    <displayname>Snowy Season</displayname>
+    <displaynamestringid>49510</displaynamestringid>
+    <description>Seasons changing at the Haudenosaunee campsite.</description>
+    <descriptionstringid>55709</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <cost>20</cost>
+    <position>
+      <building>ManufacturingPlant</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Ha_HC_Snow</icon>
+    <cityvariationid>1</cityvariationid>
+    <variationid>0</variationid>
+    <applyvariationoffset>snow</applyvariationoffset>
+    <lightset>hc_iroquois_snow</lightset>
+    <weathereffect>Snow</weathereffect>
+    <deactivateprops>
+      <prop>Iroquois_Fireflies</prop>
+    </deactivateprops>
+  </prop>
+  <prop>
+    <name>Iroquois_fishrack</name>
+    <type>Object</type>
+    <displayname>Work station - Fish rack</displayname>
+    <displaynamestringid>55710</displaynamestringid>
+    <description>Fish racks stationed around the campsite.</description>
+    <descriptionstringid>55711</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\Haudenosaunee_fishRacks\Haudenosaunee_fishRacks.xml</visual>
+    <cost>2</cost>
+    <position>
+      <bone>bone_campfire</bone>
+      <building>Market</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Ha_HC_fishRack</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Iroquois_pelt_rack</name>
+    <type>Object</type>
+    <displayname>Work station - Pelt rack</displayname>
+    <displaynamestringid>55712</displaynamestringid>
+    <description>Original pelt rack stationed at the campsite.</description>
+    <descriptionstringid>55721</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\Haudenosaunee_stretcher\Haudenosaunee_stretcher.xml</visual>
+    <position>
+      <bone>bone_main</bone>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Ha_HC_Peltwolf</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Iroquois_pelt_rack_fox</name>
+    <type>Object</type>
+    <displayname>Work station - Pelt rack</displayname>
+    <displaynamestringid>55712</displaynamestringid>
+    <description>New pelt rack stationed at the campsite.</description>
+    <descriptionstringid>55713</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <visual>homecity\home_city_props\Haudenosaunee_stretcher\Haudenosaunee_stretcher_fox.xml</visual>
+    <cost>2</cost>
+    <position>
+      <bone>bone_main</bone>
+      <building>Academy</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Ha_HC_Peltfox</icon>
+    <buttonaction>toggle</buttonaction>
+  </prop>
+  <prop>
+    <name>Iroquois_canoe</name>
+    <type>Unit</type>
+    <displayname>Civilians - Canoes</displayname>
+    <displaynamestringid>55714</displaynamestringid>
+    <description>Civilians sailing in their canoes. </description>
+    <descriptionstringid>55715</descriptionstringid>
+    <position>
+      <building>Dock</building>
+    </position>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\Ha_HC_canoes</icon>
+    <buttonaction>toggle</buttonaction>
+    <variationmaxid>2</variationmaxid>
+  </prop>
+  <prop>
+    <name>Iroquois_longhouse</name>
+    <type>Object</type>
+    <displayname>Original Long House Entry</displayname>
+    <displaynamestringid>55716</displaynamestringid>
+    <description>The original entrance design of the front door.</description>
+    <descriptionstringid>55717</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_main</bone>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Ha_longhouse_Door_01</icon>
+    <visual>homecity\home_city_props\\Haudenosaunee_door\Haudenosaunee_door1.xml</visual>
+  </prop>
+  <prop>
+    <name>Iroquois_alternate_longhouse</name>
+    <type>Object</type>
+    <displayname>Alternate Long House Entry</displayname>
+    <displaynamestringid>55718</displaynamestringid>
+    <description>An alternate entrance design of the front door.</description>
+    <descriptionstringid>55719</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <cost>2</cost>
+    <position>
+      <bone>bone_main</bone>
+      <building>Cathedral</building>
+    </position>
+    <icon>homecity\home_city_props\icons\Ha_longhouse_Door_02</icon>
+    <visual>homecity\home_city_props\\Haudenosaunee_door\Haudenosaunee_door2.xml</visual>
+  </prop>
+  <prop>
+    <name>Iroquois_Fireflies</name>
+    <type>Object</type>
+    <position>
+      <bone>bone_main</bone>
+    </position>
+    <visual>homecity\home_city_props\Haudenosaunee_fireflies\Haudenosaunee_fireflies.xml</visual>
+  </prop>
+  <prop>
+    <name>Iroquois_longhouse_variation</name>
+    <type>ReplaceVisual</type>
+    <position>
+      <parentbuilding>Cathedral</parentbuilding>
+    </position>
+    <variationoffset name="snow">1</variationoffset>
+  </prop>
+  <compositeprops>
+    <prop>Iroquois_Fireflies</prop>
+  </compositeprops>
+  <exclusiveprops>
+    <prop>Iroquois_Moonlight_night</prop>
+    <prop>Iroquois_Sunset_lighting</prop>
+    <prop>Iroquois_NightLighting</prop>
+    <prop>Iroquois_NightLighting_Fireflies</prop>
+    <prop>Iroquois_Snowy_season</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Iroquois_longhouse</prop>
+    <prop>Iroquois_alternate_longhouse</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Iroquois_pelt_rack</prop>
+    <prop>Iroquois_pelt_rack_fox</prop>
+  </exclusiveprops>
+  <prop>
+    <name>xpIroquoisWarChief</name>
+    <type>Unit</type>
+    <description>View and Customize the appearance of your Explorer</description>
+    <descriptionstringid>49566</descriptionstringid>
+  </prop>
 </homecityprops>

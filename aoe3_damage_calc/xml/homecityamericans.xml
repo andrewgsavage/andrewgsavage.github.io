@@ -119,6 +119,13 @@
       <displayunitcount>1</displayunitcount>
     </card>
     <card>
+      <name>DEHCImmigrantsScottish</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+    </card>
+    <card>
       <name>HCShipFoodCrates1</name>
       <maxcount>-1</maxcount>
       <level>0</level>
@@ -326,6 +333,7 @@
       <level>10</level>
       <prereqtech>-1</prereqtech>
       <age>3</age>
+      <displayunitcount>1</displayunitcount>
     </card>
     <card>
       <name>HCXPAdvancedBalloon</name>
@@ -526,15 +534,6 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCShipCulverins1</name>
-      <maxcount>-1</maxcount>
-      <level>10</level>
-      <prereqtech>-1</prereqtech>
-      <age>3</age>
-      <displayunitcount>2</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
       <name>HCShipCannons1</name>
       <maxcount>1</maxcount>
       <level>25</level>
@@ -561,8 +560,8 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>DEHCShipHorseArtilleryRepeat1</name>
-      <maxcount>-1</maxcount>
+      <name>HCXPShipHorseArtillery1</name>
+      <maxcount>1</maxcount>
       <level>0</level>
       <age>3</age>
       <displayunitcount>2</displayunitcount>
@@ -711,13 +710,6 @@
       <age>0</age>
     </card>
     <card>
-      <name>HCImprovedBuildings</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>DEHCExtensiveFortificationsEuropean</prereqtech>
-      <age>3</age>
-    </card>
-    <card>
       <name>HCFrontierDefenses</name>
       <maxcount>-1</maxcount>
       <level>0</level>
@@ -782,6 +774,7 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
+      <displayunitcount>8</displayunitcount>
     </card>
     <card>
       <name>HCXPShipSpies1</name>
@@ -1009,6 +1002,13 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
+      <name>YPHCEuropeanCannons</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>HCShipFrigates</prereqtech>
+      <age>1</age>
+    </card>
+    <card>
       <name>HCNavalGunners</name>
       <maxcount>1</maxcount>
       <level>25</level>
@@ -1041,6 +1041,13 @@
       <age>1</age>
     </card>
     <card>
+      <name>HCCoastalDefensesTeam</name>
+      <maxcount>1</maxcount>
+      <level>25</level>
+      <prereqtech>-1</prereqtech>
+      <age>0</age>
+    </card>
+    <card>
       <name>DEHCMississippiSteamers</name>
       <maxcount>1</maxcount>
       <level>0</level>
@@ -1068,15 +1075,6 @@
       <prereqtech>-1</prereqtech>
       <age>3</age>
       <displayunitcount>16</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
-    </card>
-    <card>
-      <name>HCMercsHighlanders</name>
-      <maxcount>1</maxcount>
-      <level>10</level>
-      <prereqtech>-1</prereqtech>
-      <age>2</age>
-      <displayunitcount>9</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1108,9 +1106,8 @@
       <maxcount>1</maxcount>
       <level>0</level>
       <prereqtech>-1</prereqtech>
-      <age>3</age>
+      <age>2</age>
       <displayunitcount>6</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
       <name>DEHCHireManilamen</name>
@@ -1409,7 +1406,6 @@
       <tech x="6.0" y="1.0">HCShipCoveredWagons</tech>
       <tech x="6.0" y="3.0">HCShipSurgeons</tech>
       <tech x="6.0" y="4.0">HCXPShipSurgeons2</tech>
-      <tech x="6.0" y="7.0">HCXPCapitalism</tech>
       <tech x="7.0" y="1.0">DEHCGeneralAmericans</tech>
       <tech x="7.0" y="5.0">HCXPAdvancedBalloon</tech>
       <tech x="7.0" y="5.0">DEHCMissouriRiverExpeditions</tech>
@@ -1435,7 +1431,6 @@
       <tech x="6.0" y="1.0">HCShipCoveredWagons</tech>
       <tech x="6.0" y="3.0">HCShipSurgeons</tech>
       <tech x="6.0" y="4.0">HCXPShipSurgeons2</tech>
-      <tech x="6.0" y="7.0">HCXPCapitalism</tech>
       <tech x="7.0" y="1.0">DEHCGeneralAmericans</tech>
       <tech x="7.0" y="5.0">HCXPAdvancedBalloon</tech>
       <tech x="7.0" y="5.0">DEHCMissouriRiverExpeditions</tech>
@@ -1481,13 +1476,12 @@
       <tech x="5.8" y="1.0">DEHCShipGatlingsTeam1</tech>
       <tech x="5.8" y="3.0">DEHCCoffeeMillGun</tech>
       <tech x="5.8" y="7.0">HCXPShipHorseArtillery2</tech>
-      <tech x="5.8" y="7.0">DEHCShipHorseArtilleryRepeat1</tech>
+      <tech x="5.8" y="7.0">HCXPShipHorseArtillery1</tech>
       <tech x="5.8" y="7.0">DEHCShipCapturedRockets</tech>
       <tech x="5.8" y="7.0">DEHCShipQuakerGunsTeam</tech>
       <tech x="6.5" y="1.0">HCAdvancedArtillery</tech>
       <tech x="6.5" y="2.0">HCShipMortars1</tech>
       <tech x="6.5" y="3.0">HCShipMortars2</tech>
-      <tech x="7.2" y="3.0">HCShipCulverins1</tech>
       <tech x="7.2" y="5.0">HCShipCannons1</tech>
       <tech x="7.2" y="7.0">HCXPShipCulverins2</tech>
       <tech x="7.2" y="7.0">DEHCLongRifles</tech>
@@ -1518,13 +1512,12 @@
       <tech x="5.8" y="1.0">DEHCShipGatlingsTeam1</tech>
       <tech x="5.8" y="3.0">DEHCCoffeeMillGun</tech>
       <tech x="5.8" y="7.0">HCXPShipHorseArtillery2</tech>
-      <tech x="5.8" y="7.0">DEHCShipHorseArtilleryRepeat1</tech>
+      <tech x="5.8" y="7.0">HCXPShipHorseArtillery1</tech>
       <tech x="5.8" y="7.0">DEHCShipCapturedRockets</tech>
       <tech x="5.8" y="7.0">DEHCShipQuakerGunsTeam</tech>
       <tech x="6.5" y="1.0">HCAdvancedArtillery</tech>
       <tech x="6.5" y="2.0">HCShipMortars1</tech>
       <tech x="6.5" y="3.0">HCShipMortars2</tech>
-      <tech x="7.2" y="3.0">HCShipCulverins1</tech>
       <tech x="7.2" y="5.0">HCShipCannons1</tech>
       <tech x="7.2" y="7.0">HCXPShipCulverins2</tech>
       <tech x="7.2" y="7.0">DEHCLongRifles</tech>
@@ -1566,7 +1559,6 @@
       <tech x="4.1" y="3.0">HCNativeTreaties</tech>
       <tech x="1.7" y="2.0">HCPioneers</tech>
       <tech x="3.1" y="1.0">HCUnlockFort</tech>
-      <tech x="3.1" y="3.0">HCImprovedBuildings</tech>
       <tech x="2.4" y="5.0">DEHCKosciuszkoFortifications</tech>
       <tech x="3.1" y="5.0">HCHeavyFortificationsUS</tech>
       <tech x="6.0" y="1.0">DEHCShipMilitaryWagonsTeam</tech>
@@ -1599,7 +1591,6 @@
       <tech x="4.1" y="3.0">HCNativeTreaties</tech>
       <tech x="1.7" y="2.0">HCPioneers</tech>
       <tech x="3.1" y="1.0">HCUnlockFort</tech>
-      <tech x="3.1" y="3.0">HCImprovedBuildings</tech>
       <tech x="2.4" y="5.0">DEHCKosciuszkoFortifications</tech>
       <tech x="3.1" y="5.0">HCHeavyFortificationsUS</tech>
       <tech x="6.0" y="1.0">DEHCShipMilitaryWagonsTeam</tech>
@@ -1674,6 +1665,7 @@
       <tech x="3.4" y="3.0">HCSilversmith</tech>
       <tech x="4.3" y="5.0">HCRefrigeration</tech>
       <tech x="5.2" y="1.0">HCStockyards</tech>
+      <tech x="6.0" y="7.0">HCXPCapitalism</tech>
       <tech x="6.1" y="3.0">HCSpiceTrade</tech>
       <tech x="6.1" y="5.0">HCMedicine</tech>
       <tech x="7.0" y="1.0">HCRumDistillery</tech>
@@ -1706,14 +1698,15 @@
       <tech x="1.7" y="2.0">DEHCShipSteamers2</tech>
       <tech x="1.7" y="2.0">DEHCShipSteamersRepeat1</tech>
       <tech x="1.7" y="3.0">HCShipFrigates</tech>
+      <tech x="1.0" y="4.0">YPHCEuropeanCannons</tech>
       <tech x="1.7" y="4.0">DEHCShipIroncladsRepeat1</tech>
       <tech x="1.7" y="5.0">DEHCShipIroncladsSteamers1</tech>
       <tech x="3.1" y="1.0">HCAdmirality</tech>
+      <tech x="2.6" y="1.0">HCCoastalDefensesTeam</tech>
       <tech x="3.1" y="1.0">DEHCMississippiSteamers</tech>
       <tech x="3.1" y="1.0">DEHCVirginiaOak</tech>
       <tech x="3.1" y="1.0">DEHCHulks</tech>
       <tech x="3.1" y="5.0">HCNavalGunners</tech>
-      <tech x="4.1" y="4.0">HCMercsHighlanders</tech>
       <tech x="5.5" y="6.0">DEHCRenoGang</tech>
       <tech x="5.5" y="6.0">DEHCPoker</tech>
       <tech x="6.3" y="1.0">HCXPDanceHall</tech>
@@ -1733,6 +1726,7 @@
       <tech x="0.9" y="2.0">DEHCImmigrantsFrench</tech>
       <tech x="2.5" y="6.0">DEHCImmigrantsIrish</tech>
       <tech x="3.8" y="3.0">DEHCImmigrantsSwedish</tech>
+      <tech x="4.1" y="4.0">DEHCImmigrantsScottish</tech>
       <tech x="6.7" y="3.0">DEHCImmigrantsChinese</tech>
       <tech x="3.8" y="1.0">DEHCLegionFrench</tech>
       <tech x="3.4" y="3.0">DEHCLegionHungarian</tech>
@@ -1744,14 +1738,15 @@
       <tech x="1.7" y="2.0">DEHCShipSteamers2</tech>
       <tech x="1.7" y="2.0">DEHCShipSteamersRepeat1</tech>
       <tech x="1.7" y="3.0">HCShipFrigates</tech>
+      <tech x="1.0" y="4.0">YPHCEuropeanCannons</tech>
       <tech x="1.7" y="4.0">DEHCShipIroncladsRepeat1</tech>
       <tech x="1.7" y="5.0">DEHCShipIroncladsSteamers1</tech>
       <tech x="3.1" y="1.0">HCAdmirality</tech>
+      <tech x="2.6" y="1.0">HCCoastalDefensesTeam</tech>
       <tech x="3.1" y="1.0">DEHCMississippiSteamers</tech>
       <tech x="3.1" y="1.0">DEHCVirginiaOak</tech>
       <tech x="3.1" y="1.0">DEHCHulks</tech>
       <tech x="3.1" y="5.0">HCNavalGunners</tech>
-      <tech x="4.1" y="4.0">HCMercsHighlanders</tech>
       <tech x="5.5" y="6.0">DEHCRenoGang</tech>
       <tech x="5.5" y="6.0">DEHCPoker</tech>
       <tech x="6.3" y="1.0">HCXPDanceHall</tech>
@@ -1771,6 +1766,7 @@
       <tech x="0.9" y="2.0">DEHCImmigrantsFrench</tech>
       <tech x="2.5" y="6.0">DEHCImmigrantsIrish</tech>
       <tech x="3.8" y="3.0">DEHCImmigrantsSwedish</tech>
+      <tech x="4.1" y="4.0">DEHCImmigrantsScottish</tech>
       <tech x="6.7" y="3.0">DEHCImmigrantsChinese</tech>
       <tech x="3.8" y="1.0">DEHCLegionFrench</tech>
       <tech x="3.4" y="3.0">DEHCLegionHungarian</tech>

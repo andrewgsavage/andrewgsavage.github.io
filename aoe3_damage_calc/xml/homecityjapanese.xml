@@ -18,6 +18,9 @@
   <numpropunlocksearned>0</numpropunlocksearned>
   <ambientsounds>homecity\japaneseambientsounds.xml</ambientsounds>
   <xsai>generic_city</xsai>
+  <heroprotounits>
+    <protounit>ypMonkJapanese</protounit>
+  </heroprotounits>
   <coffers>
     <current>
       <food>0</food>
@@ -616,6 +619,13 @@
       <age>1</age>
     </card>
     <card>
+      <name>DEHCShrineHitpoints</name>
+      <maxcount>1</maxcount>
+      <level>10</level>
+      <prereqtech>YPHCZenDiet</prereqtech>
+      <age>1</age>
+    </card>
+    <card>
       <name>HCImprovedBuildings</name>
       <maxcount>1</maxcount>
       <level>10</level>
@@ -745,6 +755,14 @@
       <prereqtech>YPHCConsulateRelations</prereqtech>
       <age>1</age>
       <displayunitcount>300</displayunitcount>
+    </card>
+    <card>
+      <name>DEHCNanbanTrade</name>
+      <maxcount>2</maxcount>
+      <level>10</level>
+      <prereqtech>YPHCConsulateRelations</prereqtech>
+      <age>2</age>
+      <displayunitcount>500</displayunitcount>
     </card>
     <card>
       <name>YPHCAdvancedWonders</name>
@@ -1140,6 +1158,13 @@
       <level>25</level>
       <prereqtech>YPHCAtonementJapanese</prereqtech>
       <age>2</age>
+    </card>
+    <card>
+      <name>DEHCFortySevenRonin</name>
+      <maxcount>1</maxcount>
+      <level>40</level>
+      <prereqtech>YPHCMercsJapaneseArmy</prereqtech>
+      <age>3</age>
     </card>
     <card>
       <name>YPHCAtonementJapanese</name>
@@ -1540,6 +1565,7 @@
       <tech x="2.5" y="1">YPHCEnlistIrregulars</tech>
       <tech x="2.5" y="2">YPHCPioneersTeam</tech>
       <tech x="2.5" y="3">YPHCZenDiet</tech>
+      <tech x="2.5" y="4">DEHCShrineHitpoints</tech>
       <tech x="2.5" y="4">HCImprovedBuildings</tech>
       <tech x="4.1" y="2">YPHCShipCastleWagons1</tech>
       <tech x="3.4" y="3">ypHCExtensiveFortificationsJapan</tech>
@@ -1558,6 +1584,7 @@
       <tech x="4.9" y="6">YPHCAdvancedWonders</tech>
       <tech x="7.4" y="3">YPHCConsulateRelations</tech>
       <tech x="7.4" y="4">YPHCSmoothRelations</tech>
+      <tech x="7.4" y="4">DEHCNanbanTrade</tech>
       <tech x="6.5" y="2">YPHCShipDaimyoAizu</tech>
       <tech x="6.5" y="3">YPHCShipDaimyoSatsuma</tech>
       <tech x="6.5" y="4">YPHCShipShogunate</tech>
@@ -1574,6 +1601,7 @@
       <tech x="2.5" y="1">YPHCEnlistIrregulars</tech>
       <tech x="2.5" y="2">YPHCPioneersTeam</tech>
       <tech x="2.5" y="3">YPHCZenDiet</tech>
+      <tech x="2.5" y="4">DEHCShrineHitpoints</tech>
       <tech x="2.5" y="4">HCImprovedBuildings</tech>
       <tech x="4.1" y="2">YPHCShipCastleWagons1</tech>
       <tech x="3.4" y="3">ypHCExtensiveFortificationsJapan</tech>
@@ -1592,6 +1620,7 @@
       <tech x="4.9" y="6">YPHCAdvancedWonders</tech>
       <tech x="7.4" y="3">YPHCConsulateRelations</tech>
       <tech x="7.4" y="4">YPHCSmoothRelations</tech>
+      <tech x="7.4" y="4">DEHCNanbanTrade</tech>
       <tech x="6.5" y="2">YPHCShipDaimyoAizu</tech>
       <tech x="6.5" y="3">YPHCShipDaimyoSatsuma</tech>
       <tech x="6.5" y="4">YPHCShipShogunate</tech>
@@ -1708,6 +1737,7 @@
       <tech x="4.4" y="3">YPHCMercsRonin1</tech>
       <tech x="4.4" y="5">YPHCMercsJapaneseArmy</tech>
       <tech x="4.4" y="7">YPHCMercsRonin2</tech>
+      <tech x="4.4" y="7">DEHCFortySevenRonin</tech>
       <tech x="3.6" y="1">YPHCAtonementJapanese</tech>
       <tech x="3.6" y="6">HCMercenaryLoyalty</tech>
       <tech x="5.3" y="3">YPHCMercsYojimbo1</tech>
@@ -1736,6 +1766,7 @@
       <tech x="4.4" y="3">YPHCMercsRonin1</tech>
       <tech x="4.4" y="5">YPHCMercsJapaneseArmy</tech>
       <tech x="4.4" y="7">YPHCMercsRonin2</tech>
+      <tech x="4.4" y="7">DEHCFortySevenRonin</tech>
       <tech x="3.6" y="1">YPHCAtonementJapanese</tech>
       <tech x="3.6" y="6">HCMercenaryLoyalty</tech>
       <tech x="5.3" y="3">YPHCMercsYojimbo1</tech>

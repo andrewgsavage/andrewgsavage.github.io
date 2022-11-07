@@ -20,6 +20,9 @@
   <snow>
   </snow>
   <xsai>generic_city</xsai>
+  <heroprotounits>
+    <protounit>Explorer</protounit>
+  </heroprotounits>
   <coffers>
     <current>
       <food>0</food>
@@ -175,6 +178,14 @@
       <age>3</age>
       <displayunitcount>1600</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>DEHCREVMXShipWoodCrates4</name>
+      <maxcount>-1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>1000</displayunitcount>
     </card>
     <card>
       <name>HCShipSheep1</name>
@@ -351,6 +362,13 @@
     </card>
     <card>
       <name>HCRansack</name>
+      <maxcount>1</maxcount>
+      <level>25</level>
+      <prereqtech>HCShipHalberdiersRussian3</prereqtech>
+      <age>2</age>
+    </card>
+    <card>
+      <name>DEHCSovnya</name>
       <maxcount>1</maxcount>
       <level>25</level>
       <prereqtech>HCShipHalberdiersRussian3</prereqtech>
@@ -1014,13 +1032,6 @@
       <age>0</age>
     </card>
     <card>
-      <name>HCXPEconomicTheory</name>
-      <maxcount>1</maxcount>
-      <level>40</level>
-      <prereqtech>HCStonemasons</prereqtech>
-      <age>0</age>
-    </card>
-    <card>
       <name>HCShipCaravels1</name>
       <maxcount>-1</maxcount>
       <level>0</level>
@@ -1077,6 +1088,13 @@
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCShipFrigates</prereqtech>
+      <age>1</age>
+    </card>
+    <card>
+      <name>HCNavalGunners</name>
+      <maxcount>1</maxcount>
+      <level>25</level>
+      <prereqtech>HCAdmirality</prereqtech>
       <age>1</age>
     </card>
     <card>
@@ -1156,21 +1174,30 @@
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPMercsNinja</name>
+      <name>DEHCMercsPandours</name>
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>HCMercsManchu</prereqtech>
-      <age>3</age>
-      <displayunitcount>12</displayunitcount>
+      <age>2</age>
+      <displayunitcount>11</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
-      <name>HCXPMercsFusiliers</name>
+      <name>DEHCMercsGiantGrenadiers</name>
       <maxcount>1</maxcount>
       <level>10</level>
       <prereqtech>-1</prereqtech>
-      <age>3</age>
+      <age>2</age>
       <displayunitcount>8</displayunitcount>
+      <infiniteinlastage>1</infiniteinlastage>
+    </card>
+    <card>
+      <name>HCXPMercsGreatCannon</name>
+      <maxcount>1</maxcount>
+      <level>25</level>
+      <prereqtech>HCMercenaryLoyalty</prereqtech>
+      <age>3</age>
+      <displayunitcount>3</displayunitcount>
       <infiniteinlastage>1</infiniteinlastage>
     </card>
     <card>
@@ -1188,21 +1215,36 @@
       <age>1</age>
     </card>
     <card>
-      <name>HCXPMercsGreatCannon</name>
+      <name>DEHCVasaAllies1</name>
       <maxcount>1</maxcount>
-      <level>25</level>
-      <prereqtech>HCMercenaryLoyalty</prereqtech>
-      <age>3</age>
-      <displayunitcount>3</displayunitcount>
-      <infiniteinlastage>1</infiniteinlastage>
+      <level>40</level>
+      <prereqtech>-1</prereqtech>
+      <age>1</age>
+      <displayunitcount>11</displayunitcount>
     </card>
     <card>
-      <name>HCXPNootkaAlliesRepeat</name>
+      <name>DEHCPhanarAllies1</name>
+      <maxcount>1</maxcount>
+      <level>40</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>7</displayunitcount>
+    </card>
+    <card>
+      <name>HCXPNootkaAllies</name>
+      <maxcount>1</maxcount>
+      <level>40</level>
+      <prereqtech>-1</prereqtech>
+      <age>2</age>
+      <displayunitcount>17</displayunitcount>
+    </card>
+    <card>
+      <name>DEHCOldenburgAlliesRepeat</name>
       <maxcount>-1</maxcount>
       <level>40</level>
       <prereqtech>-1</prereqtech>
       <age>3</age>
-      <displayunitcount>17</displayunitcount>
+      <displayunitcount>12</displayunitcount>
     </card>
     <card>
       <name>HCPrivateers</name>
@@ -1219,6 +1261,14 @@
       <level>0</level>
       <prereqtech>-1</prereqtech>
       <age>2</age>
+    </card>
+    <card>
+      <name>DEHCShipBattleshipRepeat</name>
+      <maxcount>-1</maxcount>
+      <level>0</level>
+      <prereqtech>-1</prereqtech>
+      <age>3</age>
+      <displayunitcount>1</displayunitcount>
     </card>
     <card>
       <name>HCREVShipGatlingGuns</name>
@@ -1474,7 +1524,7 @@
     </card>
     <card>
       <name>DEHCREVRoshiorDragoons</name>
-      <maxcount>1</maxcount>
+      <maxcount>2</maxcount>
       <level>0</level>
       <prereqtech>XPRevolution</prereqtech>
       <age>1</age>
@@ -1495,7 +1545,7 @@
         <card dbid="2209">HCShipFoodCrates3</card>
         <card dbid="2220">HCShipCows</card>
         <card dbid="3440">HCXPDistributivism</card>
-        <card dbid="3387">HCXPEconomicTheory</card>
+        <card dbid="2649">HCRoyalDecreeRussian</card>
         <card dbid="814">HCUnlockFort</card>
         <card dbid="2299">HCShipOprichniks2</card>
         <card dbid="2304">HCShipGrenadiers4</card>
@@ -1524,7 +1574,7 @@
         <card dbid="625">HCUnlockFactory</card>
         <card dbid="2291">HCStreletsCombatRussian</card>
         <card dbid="2288">HCShipStrelets2</card>
-        <card dbid="3387">HCXPEconomicTheory</card>
+        <card dbid="2649">HCRoyalDecreeRussian</card>
         <card dbid="3440">HCXPDistributivism</card>
         <card dbid="2212">HCShipWoodCrates3</card>
         <card dbid="2215">HCShipCoinCrates3</card>
@@ -1559,7 +1609,6 @@
         <card dbid="3461">HCXPNationalRedoubt</card>
         <card dbid="2221">HCShipCaravels2</card>
         <card dbid="2223">HCShipFrigates</card>
-        <card dbid="3387">HCXPEconomicTheory</card>
         <card dbid="814">HCUnlockFort</card>
         <card dbid="2444">HCColdWaterPortTeam</card>
         <card dbid="2606">HCSchooners</card>
@@ -1570,6 +1619,7 @@
         <card dbid="2239">HCShipCannons1</card>
         <card dbid="2621">HCCoastalDefensesTeam</card>
         <card dbid="2225">HCNavalCombat</card>
+        <card dbid="2323">HCNavalGunners</card>
         <card dbid="2306">HCCavalryLOSTeam</card>
       </cards>
     </deck>
@@ -1590,7 +1640,7 @@
         <card dbid="2170">HCExplorerRussian</card>
         <card dbid="1796">HCAdvancedTradingPost</card>
         <card dbid="1992">HCColonialMilitia</card>
-        <card dbid="3387">HCXPEconomicTheory</card>
+        <card dbid="2098">HCSpiceTrade</card>
         <card dbid="3440">HCXPDistributivism</card>
         <card dbid="2094">HCFoodSilos</card>
         <card dbid="2286">HCFurrierTeam</card>
@@ -1713,6 +1763,7 @@
       <tech x="1.0" y="5.0">HCShipFoodCrates5</tech>
       <tech x="1.7" y="5.0">HCShipWoodCrates5</tech>
       <tech x="2.4" y="5.0">HCShipCoinCrates5</tech>
+      <tech x="1.7" y="5.0">DEHCREVMXShipWoodCrates4</tech>
       <tech x="4.0" y="1.0">HCShipSheep1</tech>
       <tech x="3.7" y="2.0">HCShipSheep2</tech>
       <tech x="3.7" y="3.0">HCShipSheep3</tech>
@@ -1741,6 +1792,7 @@
       <tech x="1.0" y="5.0">HCShipFoodCrates5</tech>
       <tech x="1.7" y="5.0">HCShipWoodCrates5</tech>
       <tech x="2.4" y="5.0">HCShipCoinCrates5</tech>
+      <tech x="1.7" y="5.0">DEHCREVMXShipWoodCrates4</tech>
       <tech x="4.0" y="1.0">HCShipSheep1</tech>
       <tech x="3.7" y="2.0">HCShipSheep2</tech>
       <tech x="3.7" y="3.0">HCShipSheep3</tech>
@@ -1785,6 +1837,7 @@
       <tech x="1.8" y="2.0">HCShipHalberdiersRussian2</tech>
       <tech x="1.8" y="3.0">HCShipHalberdiersRussian3</tech>
       <tech x="1.8" y="5.0">HCRansack</tech>
+      <tech x="1.8" y="5.0">DEHCSovnya</tech>
       <tech x="2.5" y="1.0">HCShipMusketeersRussian2</tech>
       <tech x="2.5" y="2.0">HCShipMusketeersRussian3</tech>
       <tech x="3.5" y="1.0">HCShipCossacks1</tech>
@@ -1830,6 +1883,7 @@
       <tech x="1.8" y="2.0">HCShipHalberdiersRussian2</tech>
       <tech x="1.8" y="3.0">HCShipHalberdiersRussian3</tech>
       <tech x="1.8" y="5.0">HCRansack</tech>
+      <tech x="1.8" y="5.0">DEHCSovnya</tech>
       <tech x="2.5" y="1.0">HCShipMusketeersRussian2</tech>
       <tech x="2.5" y="2.0">HCShipMusketeersRussian3</tech>
       <tech x="3.5" y="1.0">HCShipCossacks1</tech>
@@ -1977,7 +2031,6 @@
     <rolloverstringid>25535</rolloverstringid>
     <obtainabletechs>
       <tech x="0.0" y="3.0">HCStonemasons</tech>
-      <tech x="0.0" y="7.0">HCXPEconomicTheory</tech>
       <tech x="0.7" y="5.0">HCXPLandGrab</tech>
       <tech x="1.3" y="1.0">HCFishMarket</tech>
       <tech x="0.9" y="3.0">HCRenderingPlant</tech>
@@ -2000,7 +2053,6 @@
     </obtainabletechs>
     <activetechs>
       <tech x="0.0" y="3.0">HCStonemasons</tech>
-      <tech x="0.0" y="7.0">HCXPEconomicTheory</tech>
       <tech x="0.7" y="5.0">HCXPLandGrab</tech>
       <tech x="1.3" y="1.0">HCFishMarket</tech>
       <tech x="0.9" y="3.0">HCRenderingPlant</tech>
@@ -2047,22 +2099,27 @@
       <tech x="1.7" y="3.0">HCShipFrigates</tech>
       <tech x="1.7" y="5.0">HCShipRussianFleet</tech>
       <tech x="1.0" y="4.0">HCNavalCombat</tech>
+      <tech x="3.1" y="5.0">HCNavalGunners</tech>
       <tech x="2.4" y="4.0">HCShipMonitors</tech>
       <tech x="2.4" y="7.0">HCXPShipMonitorsTeam</tech>
       <tech x="3.1" y="1.0">HCAdmirality</tech>
       <tech x="3.1" y="3.0">HCColdWaterPortTeam</tech>
-      <tech x="4.4" y="4.0">HCXPMercsFusiliers</tech>
+      <tech x="4.4" y="4.0">DEHCMercsGiantGrenadiers</tech>
       <tech x="5.1" y="3.0">HCMercsManchu</tech>
-      <tech x="5.1" y="4.0">HCXPMercsNinja</tech>
+      <tech x="5.1" y="4.0">DEHCMercsPandours</tech>
       <tech x="5.8" y="3.0">HCMercsHighlanders</tech>
       <tech x="5.8" y="4.0">HCMercsHackapells</tech>
       <tech x="5.1" y="5.0">HCMercsHolyRoman</tech>
-      <tech x="5.1" y="7.0">HCXPNootkaAlliesRepeat</tech>
+      <tech x="5.1" y="7.0">DEHCVasaAllies1</tech>
+      <tech x="5.1" y="7.0">DEHCPhanarAllies1</tech>
+      <tech x="5.1" y="7.0">HCXPNootkaAllies</tech>
+      <tech x="5.1" y="7.0">DEHCOldenburgAlliesRepeat</tech>
       <tech x="5.8" y="5.0">HCMercsHighland</tech>
       <tech x="6.5" y="5.0">HCMercenaryLoyalty</tech>
       <tech x="6.5" y="6.0">HCXPMercsGreatCannon</tech>
       <tech x="5.1" y="1.0">DEHCTheaters</tech>
       <tech x="7.2" y="1.0">HCPrivateers</tech>
+      <tech x="7.2" y="1.0">DEHCShipBattleshipRepeat</tech>
     </obtainabletechs>
     <activetechs>
       <tech x="1.3" y="1.0">HCShipCaravels1</tech>
@@ -2072,22 +2129,27 @@
       <tech x="1.7" y="3.0">HCShipFrigates</tech>
       <tech x="1.7" y="5.0">HCShipRussianFleet</tech>
       <tech x="1.0" y="4.0">HCNavalCombat</tech>
+      <tech x="3.1" y="5.0">HCNavalGunners</tech>
       <tech x="2.4" y="4.0">HCShipMonitors</tech>
       <tech x="2.4" y="7.0">HCXPShipMonitorsTeam</tech>
       <tech x="3.1" y="1.0">HCAdmirality</tech>
       <tech x="3.1" y="3.0">HCColdWaterPortTeam</tech>
-      <tech x="4.4" y="4.0">HCXPMercsFusiliers</tech>
+      <tech x="4.4" y="4.0">DEHCMercsGiantGrenadiers</tech>
       <tech x="5.1" y="3.0">HCMercsManchu</tech>
-      <tech x="5.1" y="4.0">HCXPMercsNinja</tech>
+      <tech x="5.1" y="4.0">DEHCMercsPandours</tech>
       <tech x="5.8" y="3.0">HCMercsHighlanders</tech>
       <tech x="5.8" y="4.0">HCMercsHackapells</tech>
       <tech x="5.1" y="5.0">HCMercsHolyRoman</tech>
-      <tech x="5.1" y="7.0">HCXPNootkaAlliesRepeat</tech>
+      <tech x="5.1" y="7.0">DEHCVasaAllies1</tech>
+      <tech x="5.1" y="7.0">DEHCPhanarAllies1</tech>
+      <tech x="5.1" y="7.0">HCXPNootkaAllies</tech>
+      <tech x="5.1" y="7.0">DEHCOldenburgAlliesRepeat</tech>
       <tech x="5.8" y="5.0">HCMercsHighland</tech>
       <tech x="6.5" y="5.0">HCMercenaryLoyalty</tech>
       <tech x="6.5" y="6.0">HCXPMercsGreatCannon</tech>
       <tech x="5.1" y="1.0">DEHCTheaters</tech>
       <tech x="7.2" y="1.0">HCPrivateers</tech>
+      <tech x="7.2" y="1.0">DEHCShipBattleshipRepeat</tech>
     </activetechs>
     <validunits>
     </validunits>
