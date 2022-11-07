@@ -27,6 +27,7 @@ Do the same for the unit you're attacking on the right. In the centre a table wi
 
     <table class="breakpoints left"></table>
     <table class="breakpoints right"></table>
+    <table class="lancaster"></table>
 
   </div>    
   <div class="column">
@@ -59,11 +60,13 @@ let civs = [
   {name: 'Chinese', techtree: 'YPAge0Chinese', homecity: 'homecitychinese', techs: ["YPAge0ChineseConsulate", "YPAge0ChineseBuildings", "YPAge0ChineseUnits", "YPAge0ChineseMonks", "YPAge0ChineseTechs", "YPAge0ChineseWonders", "YPAge0ChineseSpecialTechs", "YPAge0ChineseClone6"]},
   {name: 'Indians', techtree: 'YPAge0Indians', homecity: 'homecityindians', techs: ["ypAge0IndiansConsulate", "ypAge0IndiansBuildings", "ypAge0IndiansUnits", "ypAge0IndiansMonks", "ypAge0IndiansTechs", "ypAge0IndiansWonders", "ypAge0IndiansSpecialTechs", ]},
   {name: 'Inca', techtree: 'DEAge0Inca', homecity: 'homecitydeinca', techs: ['DEAge0Inca', ]},
-  {name: 'Swedish', techtree: 'DEAge0Swedish', homecity: 'homecityswedish', techs: ['DEAge0Swedish', 'DEGrenadierEnable']},
+  {name: 'Swedish', techtree: 'DEAge0Swedish', homecity: 'homecityswedish', techs: ['DEAge0Swedish', 'DEGrenadierEnable', 'AAStandardStartingTechs', 'HCAdvancedArsenal']},
   {name: 'Americans', techtree: 'DEAge0Americans', homecity: 'homecityamericans', techs: ['DEAge0Americans', 'HCAdvancedArsenal']},
   {name: 'Hausa', techtree: 'DEAge0Hausa', homecity: 'homecityhausa', techs: ['DEAge0Hausa', 'HCAdvancedArsenal']},
   {name: 'Ethiopians', techtree: 'DEAge0Ethiopian', homecity: 'homecityethiopians', techs: ['DEAge0Ethiopian', 'HCAdvancedArsenal']},
   {name: 'Mexicans', techtree: 'DEAge0Mexicans', homecity: 'homecitymexicans', techs: ['DEAge0Mexicans', 'HCAdvancedArsenal']},
+  {name: 'Italians', techtree: 'DEAge0Italians', homecity: 'homecityitalians', techs: ['DEAge0Italians', 'HCAdvancedArsenal']},
+  {name: 'Maltese', techtree: 'DEAge0Maltese', homecity: 'homecitymaltese', techs: ['DEAge0Maltese', 'HCAdvancedArsenal']},
   ]
   
   // add the options to the button
@@ -534,8 +537,10 @@ let civs = [
             active_techs = Array.from(d3.selectAll('.card.active.'+side)._groups[0]).map(d =>  d.children[0].attributes['title'].value)
             active_techs = relevant_techs.filter(d => active_techs.includes(d.attributes['name'].value))
             updateUnitStats(unit, active_techs, side)
-            updateBreakpoints('left', 'right')
-            updateBreakpoints('right', 'left')
+			breakpoints_data_lhs = updateBreakpoints('left', 'right')
+			breakpoints_data_rhs = updateBreakpoints('right', 'left')
+			lancaster()
+
         })
         .append('img')
         .attr("title", function(d){return d.attributes['name'].value})
@@ -598,6 +603,24 @@ let civs = [
         .html(d => d['html'])
         .attr('class', d => d['cl'])
   }
+  sdf =['BuildingAttack', 'CoverBuildingAttack', 'ChopAttack', 'HandAttackCrate', 'RangedBuildingAttack', 'LanceHandAttack', 'GuardianAttack', 'MortarBuildingAttack']
+
+function getAttackNames(side){
+  attacker_stat_table_data = unit_stats[side]
+  attackNames = new Set(attacker_stat_table_data.filter(d => d['attackName'] ).map(d => d['attackName']))
+
+  sdf.forEach(d => attackNames.delete(d) )
+
+  attackNames = Array.from(attackNames)
+  attackNames = attackNames.sort((a, b) => {
+    if (a.includes('Building') ){
+    return 1
+    } else if (a.includes('BowAttack') || a.includes('Ranged')){
+    return -1
+    }
+    })
+  return attackNames
+  }
   function calcBreakpoints(attacker_side, defender_side){
   
   attacker_stat_table_data = unit_stats[attacker_side]
@@ -605,10 +628,10 @@ let civs = [
   defender_tags = unit_tags[defender_side].map( d => d['tag'])
   
   defender_hp = defender_stat_table_data.filter(d => d['gameName'] == 'maxhitpoints')[0]['modifiedValue']
-  
+  attackNames = getAttackNames(attacker_side)
+
   
   attackNames = new Set(attacker_stat_table_data.filter(d => d['attackName'] ).map(d => d['attackName']))
-  sdf =['BuildingAttack', 'CoverBuildingAttack', 'ChopAttack', 'HandAttackCrate']
   sdf.forEach(d => attackNames.delete(d) )
   breakpoints_data = Array.from(attackNames).map(function(attackName){
     attack_stat_table_data = attacker_stat_table_data.filter(d => d['attackName'] ==  attackName)
@@ -678,7 +701,9 @@ count = 0;
   return reduced_breakpoints_data
   }
         
-        
+                function getUnitName(side){
+        return unit_tags[side].map( d => d['tag']).slice(-1)[0]
+        }
 
   function updateBreakpoints(attacker_side, defender_side){
     breakpoints_data = calcBreakpoints(attacker_side, defender_side)
@@ -696,8 +721,8 @@ count = 0;
       { head: 'Seconds required', cl: 'right-align', html: d => d3.format(".2f")(d['seconds_required']) },
     ]
     let table = d3.select('.breakpoints.'+attacker_side).html("")
-  header = unit_tags[attacker_side].map( d => d['tag']).slice(-1)[0] + " (" + attacker_side + 
-    ") attacking " + unit_tags[defender_side].map( d => d['tag']).slice(-1)[0] + " (" + defender_side +")"
+  header = getUnitName(attacker_side) + " (" + attacker_side + 
+    ") attacking " + getUnitName(defender_side) + " (" + defender_side +")"
   // create table header
   thead = table.append('thead')
   
@@ -734,17 +759,88 @@ count = 0;
     .text(d => d['head'])
     .html(d => d['html'])
     .attr('class', d => d['cl'])
-  
+    return breakpoints_data
   }
+  function lancaster(){
+	start = 0.5
+	end = 2
+	
+    // Log Scale
+    const logScale = d3.scaleLog()
+      .domain([start, end])
+    const colorScaleLog = d3.scaleSequential(
+        (d) => d3.interpolateRdBu(logScale(d))
+      )   
+colorScale = colorScaleLog
+
+  lancater_data = []
+  breakpoints_data_lhs.forEach(function(breakpoint_lhs ){
+	dat = {lhs_attackName: breakpoint_lhs['attackName']}
+	columns = [
+	        { head: 'Attack', cl: 'left-align', html: d => d['lhs_attackName'] },
+	]
+	breakpoints_data_rhs.forEach(function(breakpoint_rhs ){
+		left_deathrate = breakpoint_rhs['seconds_required']
+		right_deathrate = breakpoint_lhs['seconds_required']
+		left_cost = unit_stats['left'].filter(d => d['gameName'] ==  'TotalCost')[0]['modifiedValue']
+		right_cost = unit_stats['right'].filter(d => d['gameName'] ==  'TotalCost')[0]['modifiedValue']
+		dat[breakpoint_rhs['attackName']] =  (left_deathrate * right_cost) / (right_deathrate * left_cost) 
+columns.push(
+	        { head: breakpoint_rhs['attackName'], cl: 'left-align', html: d => d3.format(".2f")(d[breakpoint_rhs['attackName']]), color:d=> colorScale(d[breakpoint_rhs['attackName']]) },
+)
+		})
+	lancater_data.push(dat)
+	})
+console.log(lancater_data)
+
+
+
+
+    // create table
+    let table = d3.select('.lancaster').html("")
+  
+    // create table header
+    table.append('thead').append('tr')
+        .selectAll('th')
+        .data(columns).enter()
+        .append('th')
+        .attr('class', 'title')
+        .text(d => d['head']);
+  
+    // create table body
+    table.append('tbody')
+        .selectAll('tr')
+        .data(lancater_data).enter()
+        .append('tr')
+        .selectAll('td')
+        .data(function(row, i) {
+            return columns.map(function(c) {
+                // compute cell values for this specific row
+                let cell = {};
+                d3.keys(c).forEach(function(k) {
+                    cell[k] = typeof c[k] == 'function' ? c[k](row,i) : c[k];
+                });
+                return cell;
+            });
+        }).enter()
+        .append('td')
+        .text(d => d['head'])
+        .html(d => d['html'])
+        .attr('class', d => d['cl'])
+    .style('background-color', d => d['color'])
+
+  }
+  
   d3.select("#selectUnitButtonLeft").on("change", function(d) {
     let selectedUnit = d3.select(this).property("value")
     unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
     updateUnitStats(unit, [], "left")
     updateUnitTechs(unit, civTechsLeft, "left")
     updateTags(unit, "left")
-    updateBreakpoints('left', 'right')
-    updateBreakpoints('right', 'left')
-  })
+    breakpoints_data_lhs = updateBreakpoints('left', 'right')
+    breakpoints_data_rhs = updateBreakpoints('right', 'left')
+			lancaster()
+	})
   
   d3.select("#selectUnitButtonRight").on("change", function(d) {
     let selectedUnit = d3.select(this).property("value")
@@ -752,8 +848,10 @@ count = 0;
     updateUnitStats(unit, [], "right")
     updateUnitTechs(unit, civTechsRight, "right")
     updateTags(unit, "right")
-    updateBreakpoints('left', 'right')
-    updateBreakpoints('right', 'left')
+    breakpoints_data_lhs = updateBreakpoints('left', 'right')
+    breakpoints_data_rhs = updateBreakpoints('right', 'left')
+				lancaster()
+
   })
   
 
