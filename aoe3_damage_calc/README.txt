@@ -1,12 +1,12 @@
-cd 'C:\Users\A\repos\andrewgsavage.github.io\aoe3_damage_calc'
+cd 'F:\A\repos\andrewgsavage.github.io\aoe3_damage_calc'
 mkdir .temp
 
 # Use Resource manager to extract data
 File -> Open
-    C:\Program Files (x86)\Steam\steamapps\common\AoE3DE\Game\Data\Data.bar
+    F:\SteamLibrary\steamapps\common\AoE3DE\Game\Data\Data.bar
 Extract -> All files
     Check xml and png options
-    C:\Users\A\repos\andrewgsavage.github.io\aoe3_damage_calc\.temp
+    F:\A\repos\andrewgsavage.github.io\aoe3_damage_calc\.temp
 
 rm -r xml
 mv .temp/Data xml
@@ -15,7 +15,7 @@ rm -r .temp
 mkdir .temp
 
 
-C:\Program Files (x86)\Steam\steamapps\common\AoE3DE\Game\UI
+F:\SteamLibrary\steamapps\common\AoE3DE\Game\UI
 
 rm -r UI
 mv .temp/Data UI
