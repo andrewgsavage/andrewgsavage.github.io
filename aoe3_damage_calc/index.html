@@ -49,7 +49,7 @@ let civs = [
   {name: 'Russian', age0Civ: 'Age0Russian', homecity: 'homecityrussians', techs: ['Age0Russian', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
   {name: 'British', age0Civ: 'Age0British', homecity: 'homecitybritish', techs: ['Age0British', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
   {name: 'Dutch', age0Civ: 'Age0Dutch', homecity: 'homecitydutch', techs: ['Age0Dutch', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
-  {name: 'German', age0Civ: 'Age0German', homecity: 'homecitygerman', techs: ['Age0German', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
+  {name: 'German', age0Civ: 'Age0German', homecity: 'homecitygerman', techs: ['Age0German', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable', 'DEHCLandwehr']},
   {name: 'Portuguese', age0Civ: 'Age0Portuguese', homecity: 'homecityportuguese', techs: ['Age0Portuguese', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
   {name: 'Ottoman', age0Civ: 'Age0Ottoman', homecity: 'homecityottomans', techs: ['Age0Ottoman', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEVeteranNizam', 'DEGrenadierEnable']},
   {name: 'Spanish', techtree: 'Age0Spanish', homecity: 'homecityspanish', techs: ['Age0Spanish', 'AAStandardStartingTechs', 'HCAdvancedArsenal', 'DEGrenadierEnable']},
@@ -90,6 +90,9 @@ let civs = [
     data = data.children[0]
     protoy = data;
     units = Array.from(data.children)      
+    
+  
+	
     militaryUnits = units.filter(function(d){
       unittypes = Array.from(d.getElementsByTagName("unittype"))
       unittypes = unittypes.map(d => d.textContent)
@@ -107,11 +110,28 @@ let civs = [
       return unittypes.includes("AbstractNativeWarrior")
     })
     natUnitNames = Array.from(natUnits).map(d=>d.attributes["name"].value).sort()
-    
   })
+  let stringdata = {};
+      d3.xml("./UI/Data/strings/English/stringtabley.xml", function(data) {
+	data=Array.from(data.children[0].children[0].children)
+	stringdata= Object.fromEntries( data.map( x => [x.attributes._locid.value, x.getInnerHTML()]) );
+
+  })
+  function getEditorName(selectedUnitName){
+  units_ = militaryUnits.filter(d => d.attributes['name'].value == selectedUnitName)
+  if (units_.length==0){  return selectedUnitName}
+  unit = units_[0]
+  stringids_ = unit.getElementsByTagName("editornameid")
+    if (stringids_.length==0){  return selectedUnitName}
+stringid = stringids_[0].textContent
+  return stringdata[stringid]
+
+
+  }
+
   
-  civs.map(function(civ){    
-      d3.xml("./xml/"+civ['homecity']+".xml", function(data) {
+  civs.map(function(civ){
+  d3.xml("./xml/"+civ['homecity']+".xml", function(data) {
         data = data.children[0].getElementsByTagName("cards")[0]
         cards = Array.from(data.getElementsByTagName("card"))
         cards = cards.map(d => d.getElementsByTagName("name")[0].textContent)
@@ -144,7 +164,7 @@ let civs = [
         .data(civMilUnits)
         .enter()
         .append('option')
-        .text(function (d) { return d; }) // text showed in the menu
+        .text(function (d) {return getEditorName(d); }) // text showed in the menu
         .attr("value", function (d) { return d; }) // corresponding value returned by the button
     }
   
@@ -207,6 +227,7 @@ let civs = [
   }
   
   function calcModifier(record, effect, relativity){
+  console.log(record, effect, relativity)
     if (effect.attributes['unittype'] != undefined){
       if(effect.attributes['unittype'].value != record['type'] ){
       return record
