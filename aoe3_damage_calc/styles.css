@@ -68,3 +68,12 @@ td {
 .column {
   flex: 50%;
 }
+
+
+.auraValue {
+	display: inline
+}
+
+.auraInput{
+	width: 85%
+}
