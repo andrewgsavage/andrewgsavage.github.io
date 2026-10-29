@@ -80,3 +80,41 @@ td {
 .selectUnitButton {
   width: 220px;
 }
+
+/* 
+  Unit search dropdown
+*/
+.unitPicker {
+  position: relative;
+  display: inline-block;
+}
+.unitList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 100%;
+  max-height: 75vh;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+  background-color: white;
+  border: 1px solid rgb(120, 120, 120);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.unitList li {
+  padding: 2px 8px;
+}
+.unitList .unitOption {
+  cursor: pointer;
+}
+.unitList .unitOption:hover, .unitList .highlighted {
+  background-color: rgb(200, 215, 235);
+}
+.unitList .groupLabel {
+  font-weight: 600;
+  color: rgb(80, 80, 80);
+  background-color: rgb(230, 230, 230);
+}

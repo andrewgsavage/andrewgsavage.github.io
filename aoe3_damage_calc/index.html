@@ -9,8 +9,10 @@
   <!-- One civ/unit panel, filled in for each side: {side} is left/right, {Side} is Left/Right -->
   <template id="sidePanel">
     <select id="selectCivButton{Side}" class="selectCivButton"></select>
-    <input id="selectUnitButton{Side}" class="selectUnitButton" list="unitList{Side}" placeholder="Select civ first" autocomplete="off">
-    <datalist id="unitList{Side}"></datalist>
+    <span class="unitPicker">
+      <input id="selectUnitButton{Side}" class="selectUnitButton" placeholder="Select civ first" autocomplete="off">
+      <ul id="unitList{Side}" class="unitList" hidden></ul>
+    </span>
 
     <div>
       Hp
