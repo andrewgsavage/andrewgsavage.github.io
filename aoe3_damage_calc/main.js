@@ -80,7 +80,7 @@ let civs = [
   let stringdata = {};
       d3.xml("./UI/Data/strings/English/stringtabley.xml", function(data) {
 	data=Array.from(data.children[0].children[0].children)
-	stringdata= Object.fromEntries( data.map( x => [x.attributes._locid.value, x.getInnerHTML()]) );
+	stringdata= Object.fromEntries( data.map( x => [x.attributes._locid.value, x.textContent]) );
 
   })
   function getEditorName(selectedUnitName){
@@ -90,7 +90,7 @@ let civs = [
   stringids_ = unit.getElementsByTagName("editornameid")
     if (stringids_.length==0){  return selectedUnitName}
 stringid = stringids_[0].textContent
-  return stringdata[stringid]
+  return stringdata[stringid] || selectedUnitName
 
 
   }
