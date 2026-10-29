@@ -18,6 +18,13 @@ function renderCivOptions(civs){
     .attr("value", d => d['name'])
 }
 
+// infantry, then cavalry, then artillery, then everything else
+const unitTypeOrder = ["AbstractInfantry", "AbstractCavalry", "AbstractArtillery"]
+function unitTypeRank(unit){
+  let rank = unitTypeOrder.findIndex(tag => unit.tags.includes(tag))
+  return rank == -1 ? unitTypeOrder.length : rank
+}
+
 // Fills a unit search input with the civ's units followed by the mercenary, native and consulate units
 function updateUnitOptions(civ, unitButtonID) {
   let groups = [
@@ -26,11 +33,14 @@ function updateUnitOptions(civ, unitButtonID) {
     {label: "Native", names: gameData.unitGroups["Native"]},
     {label: "Consulate", names: gameData.unitGroups["Consulate"]},
   ]
-  // datalist has no optgroups, so each group is sorted by display name and tagged with a label
+  // each group is sorted by unit type, then display name
   let options = []
   groups.forEach(function(group){
-    let groupOptions = group.names.map(d => ({name: d, text: getUnit(d).displayName, group: group.label}))
-    groupOptions.sort((a, b) => a.text.localeCompare(b.text))
+    let groupOptions = group.names.map(function(d){
+      let unit = getUnit(d)
+      return {name: d, text: unit.displayName, group: group.label, rank: unitTypeRank(unit)}
+    })
+    groupOptions.sort((a, b) => a.rank - b.rank || a.text.localeCompare(b.text))
     options = options.concat(groupOptions)
   })
   // the typed value has to identify one unit, so disambiguate repeated display names
@@ -52,15 +62,7 @@ function updateUnitOptions(civ, unitButtonID) {
     .attr("placeholder", "Search units...")
   input.node().dataset.unit = ""
   input.node().unitsByValue = unitsByValue
-
-  let datalist = d3.select("#" + input.attr("list"))
-  datalist.selectAll('option').remove()
-  datalist.selectAll('option')
-    .data(options)
-    .enter()
-    .append('option')
-    .attr("value", d => d.value)
-    .attr("label", d => d.group)
+  input.node().unitOptions = options
 
   // keep the unit selected when the new civ has it too
   if (previousUnit) { selectUnitByName(unitButtonID, previousUnit) }
@@ -79,23 +81,74 @@ function selectUnitByName(unitButtonID, unitName){
   return true
 }
 
+// Shows the unit options matching the typed text under their group labels
+function renderUnitList(node){
+  let filter = node.value.toLowerCase()
+  let shown = (node.unitOptions || []).filter(d => d.value.toLowerCase().includes(filter))
+  let list = d3.select(node.unitList)
+  list.selectAll("li").remove()
+  let lastGroup = ""
+  shown.forEach(function(d){
+    if (d.group != lastGroup){
+      list.append("li").attr("class", "groupLabel").text(d.group)
+      lastGroup = d.group
+    }
+    list.append("li").attr("class", "unitOption").datum(d).text(d.text)
+  })
+  list.selectAll(".unitOption").on("mousedown", function(d){
+    // keep focus on the input until the unit is picked
+    d3.event.preventDefault()
+    pickUnit(node, d.name)
+  })
+  node.highlighted = filter && shown.length ? 0 : -1
+  highlightUnitOption(node)
+  node.unitList.hidden = false
+}
+
+function highlightUnitOption(node){
+  let items = node.unitList.querySelectorAll(".unitOption")
+  items.forEach((li, i) => li.classList.toggle("highlighted", i == node.highlighted))
+  if (node.highlighted >= 0) { items[node.highlighted].scrollIntoView({block: "nearest"}) }
+}
+
+function pickUnit(node, unitName){
+  node.unitList.hidden = true
+  selectUnitByName("#" + node.id, unitName)
+  node.blur()
+}
+
 // Wires a unit search input; onSelect is called with the internal unit name
 function setupUnitInput(unitButtonID, onSelect){
   let input = d3.select(unitButtonID)
-  input.node().onUnitSelect = onSelect
+  let node = input.node()
+  node.onUnitSelect = onSelect
+  node.unitList = node.parentNode.querySelector(".unitList")
   input.on("focus", function(){
-    // clear so the datalist shows every unit instead of filtering on the current one
+    // clear so the list shows every unit instead of filtering on the current one
     this.dataset.previous = this.value
     this.value = ""
+    renderUnitList(this)
   })
+  input.on("input", function(){ renderUnitList(this) })
   input.on("blur", function(){
+    this.unitList.hidden = true
     if (this.value == "") { this.value = this.dataset.previous || "" }
   })
-  input.on("change", function(){
-    let selectedUnit = (this.unitsByValue || {})[this.value]
-    if (selectedUnit == undefined) { return }
-    this.blur()
-    selectUnitByName(unitButtonID, selectedUnit)
+  input.on("keydown", function(){
+    let count = this.unitList.querySelectorAll(".unitOption").length
+    let key = d3.event.key
+    if (key == "ArrowDown" || key == "ArrowUp"){
+      d3.event.preventDefault()
+      let step = key == "ArrowDown" ? 1 : -1
+      this.highlighted = Math.max(0, Math.min(count - 1, this.highlighted + step))
+      highlightUnitOption(this)
+    } else if (key == "Enter" && this.highlighted >= 0){
+      let d = d3.select(this.unitList.querySelectorAll(".unitOption")[this.highlighted]).datum()
+      pickUnit(this, d.name)
+    } else if (key == "Escape"){
+      this.value = ""
+      this.blur()
+    }
   })
 }
 
