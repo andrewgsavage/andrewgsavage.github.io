@@ -8,11 +8,15 @@ function calcBreakpoints(attacker, defender){
   let attackNames = new Set(attacker.stats.filter(d => d['attackName'] ).map(d => d['attackName']))
   hiddenAttackNames.forEach(d => attackNames.delete(d) )
 
-  return Array.from(attackNames).map(function(attackName){
+  let breakpoints = []
+  attackNames.forEach(function(attackName){
     let attackRows = attacker.stats.filter(d => d['attackName'] == attackName)
     let damageRow = attackRows.filter(d => d['tag'] == 'damage')[0]
+    let rofRow = attackRows.filter(d => d['tag'] == 'rof')[0]
+    // some attacks (e.g. on Bosniaks and monks) only carry a damage bonus, so there's nothing to time
+    if (!damageRow || !rofRow) { return }
     let attackDamage = damageRow['modifiedValue']
-    let attackRof = attackRows.filter(d => d['tag'] == 'rof')[0]['modifiedValue']
+    let attackRof = rofRow['modifiedValue']
 
     let damageBonus = attackRows.filter(d => defender.tags.includes(d['type']) && d['tag'] == 'damagebonus')
       .map(d => d['modifiedValue'])
@@ -43,8 +47,9 @@ function calcBreakpoints(attacker, defender){
     }
     // vs damage per vs cost
     record['vs damage/sec / vs cost'] = defenderCost / record['seconds_required'] / attackerCost
-    return record
+    breakpoints.push(record)
   })
+  return breakpoints
 }
 
 // Merges attacks whose breakpoints are identical into one row named after all of them
@@ -67,7 +72,8 @@ function reduceBreakpoints(breakpoints){
       }
     })
   })
-  if (!reduced[0]["attackName"].includes("vils")){
+  // units with no attacks (e.g. cutscene units) have no rows
+  if (reduced.length && !reduced[0]["attackName"].includes("vils")){
     reduced.sort((a, b) => a['seconds_required'] - b['seconds_required'])
   }
   return reduced

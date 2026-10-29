@@ -2,7 +2,9 @@
 
 Reads xml/protoy.xml, xml/techtreey.xml, xml/homecity*.xml and the English string table,
 and writes data/units.json, data/techs.json and data/civs.json.
+Also copies the card icons the techs use from UI/ into data/icons, shrunk to card size.
 
+    pip install pillow
     python tools/extract_data.py
 
 Element lookups mirror the browser DOM calls the calculator used to make on the XML:
@@ -10,13 +12,20 @@ getElementsByTagName finds the first matching descendant and textContent joins a
 """
 import json
 import re
+import shutil
 import xml.etree.ElementTree as ET
 from pathlib import Path
+
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 XML_DIR = ROOT / "xml"
 STRINGS_XML = ROOT / "UI" / "Data" / "strings" / "English" / "stringtabley.xml"
+ICON_SOURCE_DIR = ROOT / "UI" / "Data" / "wpfg"
 OUT_DIR = ROOT / "data"
+ICON_DIR = OUT_DIR / "icons"
+# cards are shown at 80px, so this stays sharp on 2x screens
+ICON_SIZE = 160
 
 # name shown in the civ select, homecity file, and the techs a civ starts with
 CIVS = [
@@ -146,6 +155,34 @@ def civ_data(civ, techs_by_name, military_names):
     }
 
 
+def copy_icons(techs):
+    """Copies each card's icon into data/icons and points tech["icon"] at the copy, or None if the game has no such file."""
+    shutil.rmtree(ICON_DIR, ignore_errors=True)
+    missing = 0
+    for tech in techs:
+        if tech["icon"] is None:
+            continue
+        # icon paths in the XML use backslashes and mixed case
+        icon = tech["icon"].replace("\\", "/").lower()
+        source = ICON_SOURCE_DIR / icon
+        if not tech["effects"] or not source.exists():
+            # techs without effects never show as cards
+            missing += bool(tech["effects"])
+            tech["icon"] = None
+            continue
+        # webp is a fraction of the size of the game's png art
+        icon = str(Path(icon).with_suffix(".webp").as_posix())
+        target = ICON_DIR / icon
+        if not target.exists():
+            target.parent.mkdir(parents=True, exist_ok=True)
+            image = Image.open(source)
+            image.thumbnail((ICON_SIZE, ICON_SIZE))
+            image.save(target, quality=85)
+        tech["icon"] = icon
+    size = sum(f.stat().st_size for f in ICON_DIR.rglob("*") if f.is_file())
+    print("wrote %s (%d KB), %d icons not found in UI/" % (ICON_DIR.relative_to(ROOT), size // 1024, missing))
+
+
 def main():
     strings_root = ET.parse(STRINGS_XML).getroot()
     strings = {s.get("_locid"): text(s) for s in strings_root[0]}
@@ -175,6 +212,7 @@ def main():
     techs = [t for t in techs if t["effects"] or t["name"] in status_targets]
 
     OUT_DIR.mkdir(exist_ok=True)
+    copy_icons(techs)
     for name, data in [("units", {"units": units, "groups": groups}), ("techs", techs), ("civs", civs)]:
         path = OUT_DIR / (name + ".json")
         path.write_text(json.dumps(data, separators=(",", ":")), encoding="utf-8")

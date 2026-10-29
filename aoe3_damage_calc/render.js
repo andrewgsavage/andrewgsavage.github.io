@@ -80,7 +80,7 @@ function renderCards(side, techGroups, onToggle){
       })
       .append('img')
       .attr("title", d => d.name)
-      .attr('src', d => d.icon == null ? "" : iconRoot + d.icon.toLowerCase())
+      .attr('src', d => d.icon == null ? "" : iconRoot + d.icon)
   })
 }
 
