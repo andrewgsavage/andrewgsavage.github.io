@@ -28,6 +28,8 @@ rm -r .temp
 
 pip install pillow
 python tools/extract_data.py
+# or, when xml/ and UI/ are extracted into another folder
+python tools/extract_data.py --game-dir F:\A\repos\andrewgsavage.github.io\aoe3_damage_calc
 
 # Commands to update data
 

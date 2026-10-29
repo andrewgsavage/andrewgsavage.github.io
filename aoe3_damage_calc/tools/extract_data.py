@@ -5,11 +5,12 @@ and writes data/units.json, data/techs.json and data/civs.json.
 Also copies the card icons the techs use from UI/ into data/icons, shrunk to card size.
 
     pip install pillow
-    python tools/extract_data.py
+    python tools/extract_data.py [--game-dir FOLDER_WITH_xml_AND_UI]
 
 Element lookups mirror the browser DOM calls the calculator used to make on the XML:
 getElementsByTagName finds the first matching descendant and textContent joins all descendant text.
 """
+import argparse
 import json
 import re
 import shutil
@@ -19,6 +20,7 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
+# game files extracted into xml/ and UI/; set_game_dir points these elsewhere
 XML_DIR = ROOT / "xml"
 STRINGS_XML = ROOT / "UI" / "Data" / "strings" / "English" / "stringtabley.xml"
 ICON_SOURCE_DIR = ROOT / "UI" / "Data" / "wpfg"
@@ -39,7 +41,6 @@ AGE_ICONS = {
 
 # name shown in the civ select, homecity file, and the techs a civ starts with
 CIVS = [
-    {"name": "Select Civ", "homecity": "homecityfrench", "techs": ["Age0French", "AAStandardStartingTechs", "HCAdvancedArsenal", "DEGrenadierEnable"]},
     {"name": "French", "homecity": "homecityfrench", "techs": ["Age0French", "AAStandardStartingTechs", "HCAdvancedArsenal", "DEGrenadierEnable", "ColonializeFrench"]},
     {"name": "Russian", "homecity": "homecityrussians", "techs": ["Age0Russian", "AAStandardStartingTechs", "HCAdvancedArsenal", "DEGrenadierEnable"]},
     {"name": "British", "homecity": "homecitybritish", "techs": ["Age0British", "AAStandardStartingTechs", "HCAdvancedArsenal", "DEGrenadierEnable"]},
@@ -71,6 +72,15 @@ UNIT_STATS = ["populationcount", "maxvelocity", "maxrunvelocity", "turnrate", "m
 ATTACK_VALUES = ["damage", "maxrange", "rof", "damagecap", "damagearea", "damagebonus"]
 # extra unit lists offered to every civ, by the unittype that marks them
 UNIT_GROUPS = {"Mercenary": "Mercenary", "Native": "AbstractNativeWarrior", "Consulate": "AbstractConsulateUnit"}
+# guard upgrades (RGRedcoats, DERGArbalester, ...) also apply the techs they turn on, e.g. GuardMusketeers
+GUARD_UPGRADE = re.compile(r"(DE)?RG[A-Z]")
+
+
+def set_game_dir(game_dir):
+    global XML_DIR, STRINGS_XML, ICON_SOURCE_DIR
+    XML_DIR = game_dir / "xml"
+    STRINGS_XML = game_dir / "UI" / "Data" / "strings" / "English" / "stringtabley.xml"
+    ICON_SOURCE_DIR = game_dir / "UI" / "Data" / "wpfg"
 
 
 def text(el):
@@ -131,20 +141,31 @@ def extract_unit(unit, strings):
     }
 
 
-def extract_tech(tech):
+def string_for(tech, tag, strings):
+    el = first(tech, tag)
+    return strings.get(text(el)) if el is not None else None
+
+
+def extract_tech(tech, strings):
+    name = tech.get("name")
     effects_el = first(tech, "effects")
     effects = []
     if effects_el is not None:
         for effect in effects_el:
             effects.append(dict(effect.attrib, targets=[text(t) for t in effect.iter("target")]))
     icon = first(tech, "icon")
+    status_techs = []
+    if GUARD_UPGRADE.match(name):
+        status_techs = [text(e) for e in tech.iter("effect") if e.get("type") == "TechStatus"]
     return {
-        "name": tech.get("name"),
+        "name": name,
+        "displayName": string_for(tech, "displaynameid", strings) or name,
+        "description": string_for(tech, "rollovertextid", strings) or "",
         "flags": [text(f) for f in tech.iter("flag")],
         "icon": text(icon) if icon is not None else None,
         "effects": effects,
-        # techs this one turns on, e.g. the techs bundled into a revolution
-        "statusTechs": [text(e) for e in tech.iter("effect") if e.get("type") == "TechStatus"],
+        # techs applied along with this one
+        "statusTechs": status_techs,
     }
 
 
@@ -198,6 +219,10 @@ def copy_icons(techs):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("--game-dir", type=Path, default=ROOT, help="folder holding the extracted xml/ and UI/ folders")
+    set_game_dir(parser.parse_args().game_dir)
+
     strings_root = ET.parse(STRINGS_XML).getroot()
     strings = {s.get("_locid"): text(s) for s in strings_root[0]}
 
@@ -219,7 +244,7 @@ def main():
 
     # only effects that can reach a military unit matter, and only techs that keep one, or are turned on by another
     unit_tags = {tag for u in units for tag in u["tags"] + [u["name"]]}
-    techs = [extract_tech(t) for t in techtree]
+    techs = [extract_tech(t, strings) for t in techtree]
     for tech in techs:
         tech["effects"] = [e for e in tech["effects"] if unit_tags.intersection(e["targets"])]
     status_targets = {name for t in techs for name in t["statusTechs"]}

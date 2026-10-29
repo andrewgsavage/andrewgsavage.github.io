@@ -1,8 +1,11 @@
-"use strict"
+import { textStats, armorTypes, costTypes, gatherRates } from "./config.js"
+import { getTech, unitTargetTags } from "./data.js"
 
 // A unit's stats are a list of rows, one per stat:
 // {niceName, baseValue, BasePercent, Absolute, aura, modifiedValue} plus fields saying what the row is:
-// gameName for unit stats/armor/costs, attackName/damagetype/tag/type for attack values
+// gameName for unit stats/armor/costs; attackName/action/damagetype/tag/type for attack values.
+// action is the game's action name that tech effects target; attackName is the row's attack in the
+// damage tables, which differs only for a town center's garrisoned attacks (garrison = villager count)
 
 function calcModifier(record, effect, relativity){
   if (effect.unittype != undefined){
@@ -41,12 +44,12 @@ function applyEffect(effect, rows){
       record = calcModifier(record, {amount: '0.0'}, 'BasePercent')
     }
     if(effect.subtype=="ArmorType" && record['gameName'] != undefined && record['gameName'].includes(effect.newtype)){
-      let value = rows.filter(d => d['baseValue'] != 0.0 && d['gameName'] != undefined && d['gameName'].includes("armor"))[0]['baseValue']
-      record = calcModifier(record, {amount: value}, 'Absolute')
+      let oldArmor = rows.find(d => d['baseValue'] != 0.0 && d['gameName'] != undefined && d['gameName'].includes("armor"))
+      record = calcModifier(record, {amount: oldArmor ? oldArmor['baseValue'] : 0}, 'Absolute')
     }
     if(effect.action != undefined){
       // record['tag'] = damagebonus, record['type'] = Building
-      if(effect.subtype.toLowerCase() == record['tag'] && record['niceName'].includes(effect.action) ){
+      if(effect.subtype.toLowerCase() == record['tag'] && record['action'] == effect.action){
         record = calcModifier(record, effect, effect.relativity)
       }
     }
@@ -139,13 +142,14 @@ function calcUnmodifiedUnitStats(unit){
         damagetype: attack.damagetype,
         tag: tag,
         attackName: attack.name,
+        action: attack.name,
       }
       if(type != undefined){
         record['niceName'] = record['niceName'] + " " + type
         record['type'] = type
       }
       rows.push(record)
-      if (record['niceName'] == "BuildingAttack (Siege) damage"){
+      if (attack.name == "BuildingAttack" && attack.damagetype == "Siege" && tag == "damage" && type == undefined){
         rows.push({
           Absolute: 0,
           BasePercent: 0,
@@ -153,7 +157,9 @@ function calcUnmodifiedUnitStats(unit){
           damagetype: "Siege",
           niceName: "BuildingAttack (Siege) damagebonus Building",
           tag: "damagebonus",
-          type: "Building"
+          type: "Building",
+          attackName: attack.name,
+          action: attack.name,
         })
       }
     })
@@ -170,11 +176,11 @@ function applyTech(tech, rows, tags){
       }
     })
   })
-  if(tech.name.includes("RG")){
-    tech.statusTechs.forEach(function(name){
-      rows = applyTech(getTech(name), rows, tags)
-    })
-  }
+  // techs this one turns on, which tools/extract_data.py only lists for guard upgrades
+  tech.statusTechs.forEach(function(name){
+    let statusTech = getTech(name)
+    if (statusTech) { rows = applyTech(statusTech, rows, tags) }
+  })
   return rows
 }
 
@@ -182,7 +188,7 @@ function applyTech(tech, rows, tags){
 function addGarrisonedVillagerAttacks(rows){
   let newRows = rows.filter(d => d["gameName"])
   for (let nVils = 1; nVils <= 10; nVils++) {
-    let attackRows = JSON.parse(JSON.stringify(rows.filter(d => d["attackName"]=="RangedAttack" && d["tag"]!="damage")))
+    let attackRows = rows.filter(d => d["action"]=="RangedAttack" && d["tag"]!="damage").map(d => Object.assign({}, d))
     attackRows.push({
       "niceName": "RangedAttack (Ranged) damage",
       "baseValue": 9 * nVils,
@@ -190,11 +196,12 @@ function addGarrisonedVillagerAttacks(rows){
       "Absolute": 0,
       "damagetype": "Ranged",
       "tag": "damage",
-      "attackName": "RangedAttack",
+      "action": "RangedAttack",
     })
     attackRows.forEach(function(d){
       d["attackName"] = nVils + " vils RangedAttack"
       d["niceName"] = nVils + " vils " + d["niceName"]
+      d["garrison"] = nVils
     })
     newRows = newRows.concat(attackRows)
   }
@@ -202,7 +209,7 @@ function addGarrisonedVillagerAttacks(rows){
 }
 
 // auras: {hitpoints, attack} as fractions
-function calcUnitStats(unit, techs, auras){
+export function calcUnitStats(unit, techs, auras){
   let rows = calcUnmodifiedUnitStats(unit)
   if (unit.name == "TownCenter"){
     rows = addGarrisonedVillagerAttacks(rows)
@@ -224,6 +231,8 @@ function calcUnitStats(unit, techs, auras){
   return rows
 }
 
-function getStat(rows, gameName){
-  return rows.filter(d => d['gameName'] == gameName)[0]['modifiedValue']
+// a stat's modified value, or 0 if the unit doesn't have it
+export function getStat(rows, gameName){
+  let row = rows.find(d => d['gameName'] == gameName)
+  return row ? row['modifiedValue'] : 0
 }

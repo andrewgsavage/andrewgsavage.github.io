@@ -1,13 +1,13 @@
-"use strict"
+import { gameData, unitTargetTags } from "./data.js"
 
 // Techs with an effect that targets the unit, in techtree order
-function gatherUnitTechs(unit){
+export function gatherUnitTechs(unit){
   let tags = unitTargetTags(unit)
   return gameData.techs.filter(tech => tech.effects.some(effect => effect.targets.some(target => tags.includes(target))))
 }
 
 // Splits a unit's techs into the card groups shown above its stats: research, home city, team and native techs
-function groupUnitTechs(relevantTechs, civTechs){
+export function groupUnitTechs(relevantTechs, civTechs){
   let hasFlag = (tech, flag) => tech.flags.includes(flag)
   let researchTechs = relevantTechs.filter(d => civTechs.includes(d.name) &&
       (hasFlag(d, "UpgradeTech")
@@ -24,6 +24,6 @@ function groupUnitTechs(relevantTechs, civTechs){
 }
 
 // civ starting techs (Age0French etc.) are always researched, so their cards start active
-function isAge0Tech(tech){
+export function isAge0Tech(tech){
   return /age0/i.test(tech.name)
 }

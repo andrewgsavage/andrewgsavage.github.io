@@ -1,25 +1,24 @@
-"use strict"
+import { gameData, getUnit } from "./data.js"
 
 // localStorage can be unavailable (private windows, blocked storage), so failures are ignored
-function savePref(key, value){
+export function savePref(key, value){
   try { localStorage.setItem("aoe3calc." + key, value) } catch (e) {}
 }
-function loadPref(key){
+export function loadPref(key){
   try { return localStorage.getItem("aoe3calc." + key) } catch (e) { return null }
 }
 
-function renderCivOptions(civs){
-  d3.selectAll(".selectCivButton")
-    .selectAll('option')
-    .data(civs)
-    .enter()
-    .append('option')
-    .text(d => d['name'])
-    .attr("value", d => d['name'])
+export function renderCivOptions(civs){
+  document.querySelectorAll(".selectCivButton").forEach(function(select){
+    select.replaceChildren(new Option("Select civ", "", true, true))
+    select.options[0].disabled = true
+    civs.forEach(civ => select.append(new Option(civ.name, civ.name)))
+  })
 }
 
-// Fills a unit search input with the civ's units followed by the mercenary, native and consulate units
-function updateUnitOptions(civ, unitButtonID) {
+// Fills a unit search input with the civ's units followed by the mercenary, native and consulate units;
+// returns whether the unit selected before is still selected
+export function updateUnitOptions(civ, input) {
   let groups = [
     {label: "", names: civ.units},
     {label: "Mercenary", names: gameData.unitGroups["Mercenary"]},
@@ -46,68 +45,67 @@ function updateUnitOptions(civ, unitButtonID) {
     unitsByValue[d.value] = d.name
   })
 
-  let input = d3.select(unitButtonID)
-  let previousUnit = input.node().dataset.unit
-  input.property("value", "")
-    .attr("placeholder", "Search units...")
-  input.node().dataset.unit = ""
-  input.node().unitsByValue = unitsByValue
+  let previousUnit = input.dataset.unit
+  input.value = ""
+  input.placeholder = "Search units..."
+  input.dataset.unit = ""
+  input.unitsByValue = unitsByValue
 
-  let datalist = d3.select("#" + input.attr("list"))
-  datalist.selectAll('option').remove()
-  datalist.selectAll('option')
-    .data(options)
-    .enter()
-    .append('option')
-    .attr("value", d => d.value)
-    .attr("label", d => d.group)
+  input.list.replaceChildren(...options.map(function(d){
+    let option = document.createElement("option")
+    option.value = d.value
+    option.label = d.group
+    return option
+  }))
 
   // keep the unit selected when the new civ has it too
-  if (previousUnit) { selectUnitByName(unitButtonID, previousUnit) }
+  return Boolean(previousUnit) && selectUnitByName(input, previousUnit)
 }
 
 // Selects a unit by internal name if it is in the input's options; returns whether it was found
-function selectUnitByName(unitButtonID, unitName){
-  let node = d3.select(unitButtonID).node()
-  let value = Object.keys(node.unitsByValue || {}).find(k => node.unitsByValue[k] == unitName)
+export function selectUnitByName(input, unitName){
+  let value = Object.keys(input.unitsByValue || {}).find(k => input.unitsByValue[k] == unitName)
   if (value == undefined) { return false }
-  node.value = value
-  node.dataset.unit = unitName
-  node.dataset.previous = value
-  savePref(node.id, unitName)
-  node.onUnitSelect(unitName)
+  input.value = value
+  input.dataset.unit = unitName
+  input.dataset.previous = value
+  input.onUnitSelect(unitName)
   return true
 }
 
 // Wires a unit search input; onSelect is called with the internal unit name
-function setupUnitInput(unitButtonID, onSelect){
-  let input = d3.select(unitButtonID)
-  input.node().onUnitSelect = onSelect
-  input.on("focus", function(){
+export function setupUnitInput(input, onSelect){
+  input.onUnitSelect = onSelect
+  input.addEventListener("focus", function(){
     // clear so the datalist shows every unit instead of filtering on the current one
     this.dataset.previous = this.value
     this.value = ""
   })
-  input.on("blur", function(){
+  input.addEventListener("blur", function(){
     if (this.value == "") { this.value = this.dataset.previous || "" }
   })
-  input.on("change", function(){
+  input.addEventListener("change", function(){
     let selectedUnit = (this.unitsByValue || {})[this.value]
     if (selectedUnit == undefined) { return }
     this.blur()
-    selectUnitByName(unitButtonID, selectedUnit)
+    selectUnitByName(input, selectedUnit)
   })
 }
 
-// aura sliders as fractions
-function readAuras(side){
-  let Side = capitalizeFirstLetter(side)
-  return {
-    hitpoints: parseFloat(d3.select("#auraHitpointsInput" + Side).property("value"))/100,
-    attack: parseFloat(d3.select("#auraAttackInput" + Side).property("value"))/100,
-  }
+// Wires an aura slider and its % label; onChange is called with the value as a fraction while dragging
+export function setupAuraInput(input, label, onChange){
+  input.addEventListener("input", function(){
+    label.textContent = input.value
+    onChange(parseFloat(input.value) / 100)
+  })
 }
 
-function capitalizeFirstLetter(string) {
+// Moves an aura slider to a fraction without firing its events
+export function setAuraInput(input, label, fraction){
+  input.value = Math.round(fraction * 100)
+  label.textContent = input.value
+}
+
+export function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }

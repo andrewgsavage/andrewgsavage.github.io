@@ -1,10 +1,8 @@
-"use strict"
-
 // attacks left out of the damage tables
-const hiddenAttackNames = ['BuildingAttack', 'CoverBuildingAttack', 'RangedDefendBuildingAttack', 'DefendBuildingAttack', 'ChopAttack', 'HandAttackCrate', 'RangedBuildingAttack', 'LanceHandAttack', 'GuardianAttack', 'MortarBuildingAttack', 'TrampleHandAttack']
+export const hiddenAttackNames = ['BuildingAttack', 'CoverBuildingAttack', 'RangedDefendBuildingAttack', 'DefendBuildingAttack', 'ChopAttack', 'HandAttackCrate', 'RangedBuildingAttack', 'LanceHandAttack', 'GuardianAttack', 'MortarBuildingAttack', 'TrampleHandAttack']
 
 // stats shown at the top of the stats table; gameName is the protoy tag, subtype the tech effect subtype that modifies it
-const textStats = [
+export const textStats = [
   {gameName:'populationcount', niceName: 'Population'},
   {gameName:'maxvelocity', niceName: 'Speed', subtype: 'MaximumVelocity'},
   {gameName:'maxrunvelocity', niceName: 'Max Speed'},
@@ -15,13 +13,13 @@ const textStats = [
   {gameName:'bounty', niceName: 'XP Bounty'},
 ]
 
-const armorTypes = ["Hand", "Ranged", "Siege"]
-const costTypes = ["Food", "Wood", "Gold"]
+export const armorTypes = ["Hand", "Ranged", "Siege"]
+export const costTypes = ["Food", "Wood", "Gold"]
 // villager gather rates, used to convert costs into villager seconds
-const gatherRates = {Food: 0.84, Wood: 0.5, Gold: 0.6}
+export const gatherRates = {Food: 0.84, Wood: 0.5, Gold: 0.6}
 
 // unittypes left out of the tags table, which is also what damage bonuses are matched against
-const hiddenTags = ["UnitClass", "Military", "Unit", "ConvertsHerds", "HasBountyValue", "CountsTowardMilitaryScore"]
+export const hiddenTags = ["UnitClass", "Military", "Unit", "ConvertsHerds", "HasBountyValue", "CountsTowardMilitaryScore"]
 
 // card icons copied by tools/extract_data.py
-const iconRoot = "data/icons/"
+export const iconRoot = "data/icons/"
