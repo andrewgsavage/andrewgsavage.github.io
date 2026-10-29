@@ -73,7 +73,7 @@ function renderCards(side, techGroups, onToggle){
       .selectAll('.card')
       .data(techs).enter()
       .append('div')
-      .attr('class', 'card '+side)
+      .attr('class', d => 'card '+side + (isAge0Tech(d) ? ' active' : ''))
       .on("click", function() {
         this.classList.toggle("active")
         onToggle()
