@@ -76,11 +76,13 @@ let civs = [
       return unittypes.includes("AbstractConsulateUnit")
     })
     consUnitNames = Array.from(consUnits).map(d=>d.attributes["name"].value).sort()
+    dataLoaded()
   })
   let stringdata = {};
       d3.xml("./UI/Data/strings/English/stringtabley.xml", function(data) {
 	data=Array.from(data.children[0].children[0].children)
-	stringdata= Object.fromEntries( data.map( x => [x.attributes._locid.value, x.getInnerHTML()]) );
+	stringdata= Object.fromEntries( data.map( x => [x.attributes._locid.value, x.textContent]) );
+	dataLoaded()
 
   })
   function getEditorName(selectedUnitName){
@@ -102,6 +104,7 @@ stringid = stringids_[0].textContent
         cards = Array.from(data.getElementsByTagName("card"))
         cards = cards.map(d => d.getElementsByTagName("name")[0].textContent)
         civ['cards'] = cards
+        dataLoaded()
     })
     return civ
   })
@@ -109,6 +112,7 @@ stringid = stringids_[0].textContent
   d3.xml("./xml/techtreey.xml", function(data) {
     data = data.children[0]
     techtree = data;
+    dataLoaded()
   
   
   
@@ -120,8 +124,9 @@ stringid = stringids_[0].textContent
   
       selectedOption = civs.filter(d => d['name'] == selectedOption)[0]
       // run the updateChart function with this selected option
-      updateUnitButton(selectedOption, "#selectUnitButtonLeft")
+      savePref("selectCivButtonLeft", selectedOption['name'])
       civTechsLeft = updateCivTechs(selectedOption)
+      updateUnitButton(selectedOption, "#selectUnitButtonLeft")
     })
   
     // When the button is changed, run the updateChart function
@@ -131,21 +136,37 @@ stringid = stringids_[0].textContent
   
       selectedOption = civs.filter(d => d['name'] == selectedOption)[0]
       // run the updateChart function with this selected option
-      updateUnitButton(selectedOption, "#selectUnitButtonRight")
+      savePref("selectCivButtonRight", selectedOption['name'])
       civTechsRight = updateCivTechs(selectedOption)
+      updateUnitButton(selectedOption, "#selectUnitButtonRight")
     })
   
-  d3.select("#selectUnitButtonLeft").on("change", function(d) {
-    let selectedUnit = d3.select(this).property("value")
+  // xml files still loading: protoy, string table, techtree and one homecity per civ
+  let pendingLoads = 3 + civs.length
+  function dataLoaded(){
+    pendingLoads -= 1
+    if (pendingLoads > 0) { return }
+    // restore each side's last civ and unit
+    ["Left", "Right"].forEach(function(side){
+      let civName = loadPref("selectCivButton" + side)
+      if (!civName || !civs.some(d => d['name'] == civName)) { return }
+      let civButton = document.getElementById("selectCivButton" + side)
+      civButton.value = civName
+      civButton.dispatchEvent(new Event("change"))
+      let unitName = loadPref("selectUnitButton" + side)
+      if (unitName) { selectUnitByName("#selectUnitButton" + side, unitName) }
+    })
+  }
+
+  setupUnitInput("#selectUnitButtonLeft", function(selectedUnit) {
     unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
     updateUnitStats(unit, [], "left")
     updateUnitTechs(unit, civTechsLeft, "left")
     updateTags(unit, "left")
 	updateCenter()
 	})
-  
-  d3.select("#selectUnitButtonRight").on("change", function(d) {
-    let selectedUnit = d3.select(this).property("value")
+
+  setupUnitInput("#selectUnitButtonRight", function(selectedUnit) {
     unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
     updateUnitStats(unit, [], "right")
     updateUnitTechs(unit, civTechsRight, "right")
@@ -154,13 +175,15 @@ stringid = stringids_[0].textContent
   })
 
 function updateCenter(){
+    // nothing to compare until both sides have a unit
+    if (!unit_tags['left'] || !unit_tags['right']) { return }
     breakpoints_data_lhs = updateBreakpoints('left', 'right')
     breakpoints_data_rhs = updateBreakpoints('right', 'left')
 	lancaster()
 }
 
 function getUnit(side){
-    let selectedUnit = d3.select("#selectUnitButton"+capitalizeFirstLetter(side)).property("value")
+    let selectedUnit = d3.select("#selectUnitButton"+capitalizeFirstLetter(side)).node().dataset.unit
     return militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]	
 }
 	

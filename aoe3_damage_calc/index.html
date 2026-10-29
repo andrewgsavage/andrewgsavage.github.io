@@ -11,7 +11,8 @@
   <div class="row">
     <div class="column">
       <select id="selectCivButtonLeft" class="selectCivButton"></select>
-      <select id="selectUnitButtonLeft" class="selectUnitButton"></select>
+      <input id="selectUnitButtonLeft" class="selectUnitButton" list="unitListLeft" placeholder="Select civ first" autocomplete="off">
+      <datalist id="unitListLeft"></datalist>
 	  
     <div>
 	Hp
@@ -46,7 +47,8 @@ Do the same for the unit you're attacking on the right. In the centre a table wi
   </div>    
   <div class="column">
     <select id="selectCivButtonRight" class="selectCivButton"></select>
-    <select id="selectUnitButtonRight" class="selectUnitButton"></select>
+    <input id="selectUnitButtonRight" class="selectUnitButton" list="unitListRight" placeholder="Select civ first" autocomplete="off">
+    <datalist id="unitListRight"></datalist>
     <div>
 	Hp
 	<input id="auraHitpointsInputRight" class = "auraInput" type="range" min="0" max="50" value="0" oninput="auraHitpointsValueRight.innerText = this.value" >
