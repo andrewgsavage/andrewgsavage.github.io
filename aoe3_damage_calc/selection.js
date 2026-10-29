@@ -90,21 +90,39 @@
       container.enter().append('div')
         .data(techs, function(d) {return d.id; })
         .enter().append('div')
-        .attr('class', 'card '+side)
+        .attr('class', d => 'card '+side + (isAge0Tech(d) ? ' active' : ''))
         .on("click", function(d) {
             this.classList.toggle("active")
 			recalculate(civTechs,side)
         })
         .append('img')
         .attr("title", function(d){return d.attributes['name'].value})
-        .attr('src', function(d) { 
-          icon_list = d.getElementsByTagName("icon")
-          if (icon_list.length == 0){
-            return ""
-          }
-          link = "/aoe3_damage_calc/UI/Data/wpfg/" + icon_list[0].textContent.toLowerCase()
-      return link; });
+        .attr('src', techIconLink);
     })
+  }
+
+  // civ starting techs (Age0French etc.) are always researched, so their cards start active
+  function isAge0Tech(tech){
+    return /age0/i.test(tech.attributes['name'].value)
+  }
+
+  // the age-up techs point at post_game icons that aren't in UI/Data, so use the ingame age icons
+  const ageIcons = {
+    "time_line_age_2.png": "icon_age_ii.png",
+    "time_line_age_3.png": "icon_age_iii.png",
+    "time_line_age_4.png": "icon_age_iv.png",
+    "time_line_age_5.png": "icon_age_v.png",
+  }
+  function techIconLink(tech){
+    const ingame = "/aoe3_damage_calc/UI/Data/wpfg/resources/images/icons/ingame/"
+    let icon_list = tech.getElementsByTagName("icon")
+    if (icon_list.length == 0){
+      return isAge0Tech(tech) ? ingame + "icon_age_i.png" : ""
+    }
+    let icon = icon_list[0].textContent.toLowerCase()
+    let ageIcon = ageIcons[icon.split("\\").pop()]
+    if (ageIcon) { return ingame + ageIcon }
+    return "/aoe3_damage_calc/UI/Data/wpfg/" + icon
   }
   
   function updateTags(unit, side){

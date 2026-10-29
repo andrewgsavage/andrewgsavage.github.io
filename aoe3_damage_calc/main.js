@@ -160,18 +160,18 @@ stringid = stringids_[0].textContent
 
   setupUnitInput("#selectUnitButtonLeft", function(selectedUnit) {
     unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
-    updateUnitStats(unit, [], "left")
     updateUnitTechs(unit, civTechsLeft, "left")
     updateTags(unit, "left")
-	updateCenter()
+    // applies the cards that start active and updates the centre
+    recalculate(civTechsLeft, "left")
 	})
 
   setupUnitInput("#selectUnitButtonRight", function(selectedUnit) {
     unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
-    updateUnitStats(unit, [], "right")
     updateUnitTechs(unit, civTechsRight, "right")
     updateTags(unit, "right")
-	updateCenter()
+    // applies the cards that start active and updates the centre
+    recalculate(civTechsRight, "right")
   })
 
 function updateCenter(){
