@@ -22,3 +22,8 @@ export function groupUnitTechs(relevantTechs, civTechs){
   let nativeTechs = relevantTechs.filter(d => hasFlag(d, "YPNativeImprovement") )
   return [researchTechs, hcTechs, teamTechs, nativeTechs]
 }
+
+// civ starting techs (Age0French etc.) are always researched, so their cards start active
+export function isAge0Tech(tech){
+  return /age0/i.test(tech.name)
+}

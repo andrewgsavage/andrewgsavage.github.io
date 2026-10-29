@@ -1,5 +1,5 @@
 import { gameData, loadGameData, getUnit, getCiv, unitDisplayTags } from "./data.js"
-import { gatherUnitTechs, groupUnitTechs } from "./techs.js"
+import { gatherUnitTechs, groupUnitTechs, isAge0Tech } from "./techs.js"
 import { calcUnitStats, getStat } from "./stats.js"
 import { calcBreakpoints, reduceBreakpoints, calcLancaster } from "./combat.js"
 import { renderStats, renderTags, renderCards, renderBreakpoints, renderLancaster } from "./render.js"
@@ -44,14 +44,18 @@ function selectCiv(side, civ){
   updateLink()
 }
 
-// activeCards: names of the cards to start switched on; by default the ones already on, when the unit is unchanged
+// activeCards: names of the cards to start switched on; by default the ones already on when the unit is
+// unchanged, otherwise the civ's starting techs
 function selectUnit(side, unit, activeCards){
   let s = state[side]
-  if (activeCards == undefined) { activeCards = unit == s.unit ? Array.from(s.activeCards) : [] }
+  let sameUnit = unit == s.unit
   s.unit = unit
   s.tags = unitDisplayTags(unit)
   s.techs = gatherUnitTechs(unit)
   let techGroups = groupUnitTechs(s.techs, s.civ.techs)
+  if (activeCards == undefined){
+    activeCards = sameUnit ? Array.from(s.activeCards) : techGroups.flat().filter(isAge0Tech).map(d => d.name)
+  }
   // only cards the civ shows can be on
   let shown = new Set(techGroups.flat().map(d => d.name))
   s.activeCards = new Set(activeCards.filter(name => shown.has(name)))
@@ -117,10 +121,10 @@ function restoreSide(side, params){
     setAuraInput(...auraElements(side, aura), fraction)
   })
   let unitName = params.get(side + "Unit")
-  // selecting the unit switches every card off, so switch the saved ones back on after
+  // selecting the unit resets its cards, so set the saved ones after; a link without cards has them all off
   if (unitName && selectUnitByName(element("selectUnitButton", side), unitName)){
     let cards = (params.get(side + "Cards") || "").split(",").filter(d => d)
-    if (cards.length) { selectUnit(side, getUnit(unitName), cards) }
+    selectUnit(side, getUnit(unitName), cards)
   }
 }
 

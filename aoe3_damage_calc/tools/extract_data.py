@@ -28,6 +28,16 @@ OUT_DIR = ROOT / "data"
 ICON_DIR = OUT_DIR / "icons"
 # cards are shown at 80px, so this stays sharp on 2x screens
 ICON_SIZE = 160
+# the game has no age I icon, so this one is made from icon_age_ii.png; it lives here because UI/ isn't tracked
+AGE_I_ICON = Path(__file__).resolve().parent / "icon_age_i.png"
+INGAME_ICONS = "resources/images/icons/ingame/"
+# the age-up techs point at post_game icons that aren't in UI/, so use the ingame age icons
+AGE_ICONS = {
+    "resources/images/icons/post_game/time_line_age_2.png": INGAME_ICONS + "icon_age_ii.png",
+    "resources/images/icons/post_game/time_line_age_3.png": INGAME_ICONS + "icon_age_iii.png",
+    "resources/images/icons/post_game/time_line_age_4.png": INGAME_ICONS + "icon_age_iv.png",
+    "resources/images/icons/post_game/time_line_age_5.png": INGAME_ICONS + "icon_age_v.png",
+}
 
 # name shown in the civ select, homecity file, and the techs a civ starts with
 CIVS = [
@@ -182,10 +192,14 @@ def copy_icons(techs):
     missing = 0
     for tech in techs:
         if tech["icon"] is None:
-            continue
+            # civ starting techs (Age0French etc.) have no icon
+            if not re.search("age0", tech["name"], re.I):
+                continue
+            tech["icon"] = INGAME_ICONS + "icon_age_i.png"
         # icon paths in the XML use backslashes and mixed case
         icon = tech["icon"].replace("\\", "/").lower()
-        source = ICON_SOURCE_DIR / icon
+        icon = AGE_ICONS.get(icon, icon)
+        source = AGE_I_ICON if icon.endswith("icon_age_i.png") else ICON_SOURCE_DIR / icon
         if not tech["effects"] or not source.exists():
             # techs without effects never show as cards
             missing += bool(tech["effects"])
