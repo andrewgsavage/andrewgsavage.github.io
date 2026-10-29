@@ -21,9 +21,15 @@ rm -r UI
 mv .temp/Data UI
 rm -r .temp
 
-    
+
+# Rebuild the JSON the page loads (data/units.json, techs.json, civs.json)
+# Civs and their starting techs are listed at the top of the script
+
+python tools/extract_data.py
+
 # Commands to update data
-    
+
+git add aoe3_damage_calc/data/
 git add -f aoe3_damage_calc/xml/homecity*.xml
 git add -f aoe3_damage_calc/xml/protoy.xml
 git add -f aoe3_damage_calc/xml/techtreey.xml
