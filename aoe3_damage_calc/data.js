@@ -1,16 +1,16 @@
-"use strict"
+import { hiddenTags } from "./config.js"
 
 // Game data written by tools/extract_data.py
-const gameData = {
+export const gameData = {
   units: [],        // selectable units: {name, displayName, tags, stats, armor, costs, attacks}
   unitGroups: {},   // unit names offered to every civ, by group label
-  techs: [],        // techs that affect a unit: {name, flags, icon, effects, statusTechs}
+  techs: [],        // techs that affect a unit: {name, displayName, description, flags, icon, effects, statusTechs}
   civs: [],         // {name, techs, units}
 }
 const unitsByName = {}
 const techsByName = {}
 
-function loadGameData(){
+export function loadGameData(){
   let files = ["units", "techs", "civs"].map(name => fetch("data/" + name + ".json").then(r => r.json()))
   return Promise.all(files).then(function([units, techs, civs]){
     gameData.units = units.units
@@ -22,25 +22,25 @@ function loadGameData(){
   })
 }
 
-function getUnit(name){
+export function getUnit(name){
   return unitsByName[name]
 }
 
-function getTech(name){
+export function getTech(name){
   return techsByName[name]
 }
 
-function getCiv(name){
+export function getCiv(name){
   return gameData.civs.find(d => d.name == name)
 }
 
 // unittypes plus the unit's own name, which is what tech effects target
-function unitTargetTags(unit){
+export function unitTargetTags(unit){
   return unit.tags.concat([unit.name])
 }
 
 // tags shown in the tags table and matched by damage bonuses
-function unitDisplayTags(unit){
+export function unitDisplayTags(unit){
   let tags = unit.tags.filter(tag => !tag.includes("LogicalType") && !hiddenTags.includes(tag))
   return tags.concat([unit.name])
 }

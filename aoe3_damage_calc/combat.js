@@ -1,9 +1,10 @@
-"use strict"
+import { hiddenAttackNames } from "./config.js"
+import { getStat } from "./stats.js"
 
 // A side in a fight: {stats: rows from calcUnitStats, tags: unitDisplayTags}
 
 // How long each of the attacker's attacks takes to kill the defender
-function calcBreakpoints(attacker, defender){
+export function calcBreakpoints(attacker, defender){
   let defenderHp = getStat(defender.stats, 'maxhitpoints')
   let attackNames = new Set(attacker.stats.filter(d => d['attackName'] ).map(d => d['attackName']))
   hiddenAttackNames.forEach(d => attackNames.delete(d) )
@@ -11,8 +12,8 @@ function calcBreakpoints(attacker, defender){
   let breakpoints = []
   attackNames.forEach(function(attackName){
     let attackRows = attacker.stats.filter(d => d['attackName'] == attackName)
-    let damageRow = attackRows.filter(d => d['tag'] == 'damage')[0]
-    let rofRow = attackRows.filter(d => d['tag'] == 'rof')[0]
+    let damageRow = attackRows.find(d => d['tag'] == 'damage')
+    let rofRow = attackRows.find(d => d['tag'] == 'rof')
     // some attacks (e.g. on Bosniaks and monks) only carry a damage bonus, so there's nothing to time
     if (!damageRow || !rofRow) { return }
     let attackDamage = damageRow['modifiedValue']
@@ -22,13 +23,14 @@ function calcBreakpoints(attacker, defender){
       .map(d => d['modifiedValue'])
       .reduce( (a, b) => a * b, 1)
 
-    let damagetype = damageRow['damagetype']
-    let defendArmor = defender.stats.filter(d => d['armortype'] == damagetype)[0]
-    let defendResists = defendArmor['armortype'] == damagetype ? defendArmor['modifiedValue'] : 0.0
+    // attacks without a damage type (a few campaign units) ignore armor
+    let defendArmor = defender.stats.find(d => d['armortype'] == damageRow['damagetype'])
+    let defendResists = defendArmor ? defendArmor['modifiedValue'] : 0.0
 
     let effectiveDamage = attackDamage * damageBonus * (1-defendResists)
     let record = {
       'attackName': attackName,
+      'garrison': damageRow['garrison'] || 0,
       'damage': attackDamage,
       'damagebonus': damageBonus,
       'rof': attackRof,
@@ -42,8 +44,9 @@ function calcBreakpoints(attacker, defender){
 
     let attackerCost = getStat(attacker.stats, 'TotalCost')
     let defenderCost = getStat(defender.stats, 'TotalCost')
-    if (attackName.includes("vils")){
-      attackerCost = attackerCost * parseInt(attackName.slice(0,2))
+    // a garrisoned town center also costs its villagers
+    if (record['garrison']){
+      attackerCost = attackerCost * record['garrison']
     }
     // vs damage per vs cost
     record['vs damage/sec / vs cost'] = defenderCost / record['seconds_required'] / attackerCost
@@ -53,42 +56,35 @@ function calcBreakpoints(attacker, defender){
 }
 
 // Merges attacks whose breakpoints are identical into one row named after all of them
-function reduceBreakpoints(breakpoints){
-  let reduced = JSON.parse(JSON.stringify(breakpoints))
-  reduced.forEach(d => d['attackName'] = "")
-  // remove dupes
-  reduced = reduced.filter((v,i,a) => a.findIndex(t => JSON.stringify(t) === JSON.stringify(v)) === i)
-
-  reduced.forEach(function(reducedRow){
-    breakpoints.forEach(function(originalRow){
-      let count = 0
-      for (const [key, value] of Object.entries(originalRow)) {
-        if (value == reducedRow[key]){
-          count = count + 1
-        }
-      }
-      if (count == Object.keys(originalRow).length - 1){
-        reducedRow['attackName'] = originalRow['attackName'] + " " + reducedRow['attackName']
-      }
-    })
+export function reduceBreakpoints(breakpoints){
+  let rowsByValues = new Map()
+  breakpoints.forEach(function(row){
+    let {attackName, ...values} = row
+    let key = JSON.stringify(values)
+    if (rowsByValues.has(key)){
+      rowsByValues.get(key)['attackName'] += ", " + attackName
+    } else {
+      rowsByValues.set(key, Object.assign({attackName: attackName}, values))
+    }
   })
-  // units with no attacks (e.g. cutscene units) have no rows
-  if (reduced.length && !reduced[0]["attackName"].includes("vils")){
+  let reduced = Array.from(rowsByValues.values())
+  // a garrisoned town center's rows stay in villager order
+  if (!reduced.some(d => d['garrison'])){
     reduced.sort((a, b) => a['seconds_required'] - b['seconds_required'])
   }
   return reduced
 }
 
 // Lanchester-style cost efficiency of every left attack against every right attack:
-// above 1 the left unit wins the trade for its cost, below 1 the right one does
-function calcLancaster(leftBreakpoints, rightBreakpoints, leftCost, rightCost){
+// above 1 the left unit wins the trade for its cost, below 1 the right one does.
+// Returns one row per left attack: {attackName, ratios} with ratios in rightBreakpoints order
+export function calcLancaster(leftBreakpoints, rightBreakpoints, leftCost, rightCost){
   return leftBreakpoints.map(function(leftRow){
-    let row = {lhs_attackName: leftRow['attackName']}
-    rightBreakpoints.forEach(function(rightRow){
+    let ratios = rightBreakpoints.map(function(rightRow){
       let leftDeathRate = rightRow['seconds_required']
       let rightDeathRate = leftRow['seconds_required']
-      row[rightRow['attackName']] = (leftDeathRate * rightCost) / (rightDeathRate * leftCost)
+      return (leftDeathRate * rightCost) / (rightDeathRate * leftCost)
     })
-    return row
+    return {attackName: leftRow['attackName'], ratios: ratios}
   })
 }

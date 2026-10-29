@@ -1,14 +1,11 @@
-<!-- Code from d3-graph-gallery.com -->
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <!-- External sheet for styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Load d3.js -->
-  <script src="https://d3js.org/d3.v4.js"></script>
-
   <!-- One civ/unit panel, filled in for each side: {side} is left/right, {Side} is Left/Right -->
   <template id="sidePanel">
     <select id="selectCivButton{Side}" class="selectCivButton"></select>
@@ -17,13 +14,13 @@
 
     <div>
       Hp
-      <input id="auraHitpointsInput{Side}" class="auraInput" type="range" min="0" max="50" value="0" oninput="auraHitpointsValue{Side}.innerText = this.value">
+      <input id="auraHitpointsInput{Side}" class="auraInput" type="range" min="0" max="50" value="0">
       <p id="auraHitpointsValue{Side}" class="auraValue">0</p> %
     </div>
 
     <div>
       Att
-      <input id="auraAttackInput{Side}" class="auraInput" type="range" min="0" max="50" value="0" oninput="auraAttackValue{Side}.innerText = this.value">
+      <input id="auraAttackInput{Side}" class="auraInput" type="range" min="0" max="50" value="0">
       <p id="auraAttackValue{Side}" class="auraValue">0</p> %
     </div>
 
@@ -41,7 +38,10 @@ This is a unit stats and damage calculator for aoe3.
 Select a civ and unit on the left. Technologies, cards, team cards and native techs will appear below. Click each technology or card to activate them in the stats calculation below.
 
 Do the same for the unit you're attacking on the right. In the centre a table will appear showing the damage calculation.
+
+The page's address keeps the civs, units, cards and auras you've chosen, so you can share a matchup by sharing the link.
       </details>
+      <button id="copyLink" type="button">Copy link</button>
 
       <table class="breakpoints left"></table>
       <table class="breakpoints right"></table>
@@ -49,16 +49,6 @@ Do the same for the unit you're attacking on the right. In the centre a table wi
     </div>
     <div class="column side" data-side="right"></div>
   </div>
-  <!-- Color Scale -->
-  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-  <!-- Driver script -->
-  <script src="config.js"></script>
-  <script src="data.js"></script>
-  <script src="techs.js"></script>
-  <script src="stats.js"></script>
-  <script src="combat.js"></script>
-  <script src="render.js"></script>
-  <script src="controls.js"></script>
-  <script src="main.js"></script>
-
+  <script type="module" src="main.js"></script>
 </body>
+</html>
