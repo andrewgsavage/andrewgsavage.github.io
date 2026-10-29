@@ -21,13 +21,14 @@ rm -r UI
 mv .temp/Data UI
 rm -r .temp
 
-    
+
+# xml/ and UI/ are not committed; the page only loads what the script below builds from them.
+# Rebuild the JSON and card icons the page loads (data/units.json, techs.json, civs.json, data/icons/)
+# Civs and their starting techs are listed at the top of the script
+
+pip install pillow
+python tools/extract_data.py
+
 # Commands to update data
-    
-git add -f aoe3_damage_calc/xml/homecity*.xml
-git add -f aoe3_damage_calc/xml/protoy.xml
-git add -f aoe3_damage_calc/xml/techtreey.xml
-git add -f aoe3_damage_calc/UI/Data/wpfg/resources/images/icons/techs/
-git add -f aoe3_damage_calc/UI/Data/wpfg/resources/images/icons/techs/native/
-git add -f aoe3_damage_calc/UI/Data/wpfg/resources/images/icons/ingame/
-git add -f aoe3_damage_calc/UI/Data/wpfg/resources/images/icons/home_city/
+
+git add aoe3_damage_calc/data/

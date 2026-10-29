@@ -1,7 +1,5 @@
+# game files extracted locally; tools/extract_data.py turns them into aoe3_damage_calc/data/
 aoe3_damage_calc/UI/
 aoe3_damage_calc/xml/
 aoe3_damage_calc/.workspace.code-workspace
 aoe3_damage_calc/.vscode/
-!aoe3_damage_calc/xml/homecity*.xml
-!aoe3_damage_calc/xml/techtreey.xml
-!aoe3_damage_calc/xml/protoy.xml
