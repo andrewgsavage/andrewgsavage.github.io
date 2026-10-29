@@ -92,7 +92,7 @@ let civs = [
   stringids_ = unit.getElementsByTagName("editornameid")
     if (stringids_.length==0){  return selectedUnitName}
 stringid = stringids_[0].textContent
-  return stringdata[stringid]
+  return stringdata[stringid] || selectedUnitName
 
 
   }
