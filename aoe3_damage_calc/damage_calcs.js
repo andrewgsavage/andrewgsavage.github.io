@@ -1,31 +1,11 @@
 
-function getAttackNames(side){
-  attacker_stat_table_data = unit_stats[side]
-  attackNames = new Set(attacker_stat_table_data.filter(d => d['attackName'] ).map(d => d['attackName']))
-
-  attacNamesToDelete.forEach(d => attackNames.delete(d) )
-
-  attackNames = Array.from(attackNames)
-  attackNames = attackNames.sort((a, b) => {
-    if (a.includes('Building') ){
-    return 1
-    } else if (a.includes('BowAttack') || a.includes('Ranged')){
-    return -1
-    }
-    })
-  return attackNames
-  }
   function calcBreakpoints(attacker_side, defender_side){
-  
+
   attacker_stat_table_data = unit_stats[attacker_side]
   defender_stat_table_data = unit_stats[defender_side]
   defender_tags = unit_tags[defender_side].map( d => d['tag'])
-  
-  defender_hp = defender_stat_table_data.filter(d => d['gameName'] == 'maxhitpoints')[0]['modifiedValue']
-  attackNames = getAttackNames(attacker_side)
 
-  
-	
+  defender_hp = defender_stat_table_data.filter(d => d['gameName'] == 'maxhitpoints')[0]['modifiedValue']
   attackNames = new Set(attacker_stat_table_data.filter(d => d['attackName'] ).map(d => d['attackName']))
   attacNamesToDelete.forEach(d => attackNames.delete(d) )
   breakpoints_data = Array.from(attackNames).map(function(attackName){
@@ -122,50 +102,13 @@ count = 0;
       { head: 'Seconds required', cl: 'right-align', html: d => d3.format(".2f")(d['seconds_required']), unit: 's' },
       { head: 'Normalised dps', cl: 'right-align', html: d => d3.format(".2f")(d['vs damage/sec / vs cost']), unit: 'vs/vs/s' },
     ]
-    let table = d3.select('.breakpoints.'+attacker_side).html("")
-  header = getUnitName(attacker_side) + " (" + attacker_side + 
-    ") attacking " + getUnitName(defender_side) + " (" + defender_side +")"
-  // create table header
-  thead = table.append('thead')
-  
-  thead.append('tr')
-        .selectAll('th')
-        .data(["sdf"]).enter()
-        .append('th')
-        .text(header)
-        .attr('colspan',100 );
-  
-  thead.append('tr')
-    .selectAll('th')
-    .data(columns).enter()
-    .append('th')
-    .text(d => d['head']);
-  thead.append('tr')
-    .selectAll('th')
-    .data(columns).enter()
-    .append('th')
-    .text(d => d['unit']);
-  
-  // create table body
-  table.append('tbody')
-    .selectAll('tr')
-    .data(breakpoints_data).enter()
-    .append('tr')
-    .selectAll('td')
-    .data(function(row, i) {
-        return columns.map(function(c) {
-            // compute cell values for this specific row
-            let cell = {};
-            d3.keys(c).forEach(function(k) {
-                cell[k] = typeof c[k] == 'function' ? c[k](row,i) : c[k];
-            });
-            return cell;
-        });
-    }).enter()
-    .append('td')
-    .text(d => d['head'])
-    .html(d => d['html'])
-    .attr('class', d => d['cl'])
+    let header = getUnitName(attacker_side) + " (" + attacker_side +
+      ") attacking " + getUnitName(defender_side) + " (" + defender_side +")"
+    renderTable('.breakpoints.'+attacker_side, columns, breakpoints_data, {headerRows: [
+      [{text: header, colspan: 100}],
+      columns.map(c => c['head']),
+      columns.map(c => c['unit']),
+    ]})
     return breakpoints_data
   }
         
@@ -199,42 +142,6 @@ columns.push(
 		})
 	lancater_data.push(dat)
 	})
-
-
-
-
-    // create table
-    let table = d3.select('.lancaster').html("")
-  
-    // create table header
-    table.append('thead').append('tr')
-        .selectAll('th')
-        .data(columns).enter()
-        .append('th')
-        .attr('class', 'title')
-        .text(d => d['head']);
-  
-    // create table body
-    table.append('tbody')
-        .selectAll('tr')
-        .data(lancater_data).enter()
-        .append('tr')
-        .selectAll('td')
-        .data(function(row, i) {
-            return columns.map(function(c) {
-                // compute cell values for this specific row
-                let cell = {};
-                d3.keys(c).forEach(function(k) {
-                    cell[k] = typeof c[k] == 'function' ? c[k](row,i) : c[k];
-                });
-                return cell;
-            });
-        }).enter()
-        .append('td')
-        .text(d => d['head'])
-        .html(d => d['html'])
-        .attr('class', d => d['cl'])
-    .style('background-color', d => d['color'])
-
+    renderTable('.lancaster', columns, lancater_data, {headerClass: 'title'})
   }
   

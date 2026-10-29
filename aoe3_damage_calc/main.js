@@ -27,6 +27,19 @@ let civs = [
   {name: 'Maltese', homecity: 'homecitymaltese', techs: ['DEAge0Maltese', 'HCAdvancedArsenal']},
   ]
   common_civ_techs = ["VeteranCuirassierShadow", "Colonialize", "Fortressize", "Industrialize", "Imperialize"]
+
+  let sides = ["left", "right"]
+  // civ techs available to each side's selected civ
+  let civTechsBySide = {}
+
+  // fill each side's column from the panel template; element ids end in Left/Right
+  sides.forEach(function(side){
+    let panel = document.getElementById("sidePanel").innerHTML
+    document.querySelector('.side[data-side="' + side + '"]').innerHTML = panel
+      .replaceAll("{Side}", capitalizeFirstLetter(side))
+      .replaceAll("{side}", side)
+  })
+
   // add the options to the button
   d3.selectAll(".selectCivButton")
     .selectAll('myOptions')
@@ -44,7 +57,6 @@ let civs = [
   
     //Read the data
    d3.xml("./xml/protoy.xml", function(data) {
-  //d3.xml("https://raw.githubusercontent.com/andrewgsavage/andrewgsavage.github.io/master/aoe3_damage_calc/xml/protoy.xml", function(data) {
     data = data.children[0]
     protoy = data;
     units = Array.from(data.children)      
@@ -117,62 +129,51 @@ stringid = stringids_[0].textContent
   
   
   })
-    // When the button is changed, run the updateChart function
-    d3.select("#selectCivButtonLeft").on("change", function(d) {
-      // recover the option that has been chosen
-      let selectedOption = d3.select(this).property("value")
-  
-      selectedOption = civs.filter(d => d['name'] == selectedOption)[0]
-      // run the updateChart function with this selected option
-      savePref("selectCivButtonLeft", selectedOption['name'])
-      civTechsLeft = updateCivTechs(selectedOption)
-      updateUnitButton(selectedOption, "#selectUnitButtonLeft")
+  // Wires one side's civ select, unit search and aura sliders
+  function setupSide(side){
+    let Side = capitalizeFirstLetter(side)
+
+    d3.select("#selectCivButton" + Side).on("change", function() {
+      let selectedCiv = civs.filter(d => d['name'] == this.value)[0]
+      savePref("selectCivButton" + Side, selectedCiv['name'])
+      civTechsBySide[side] = updateCivTechs(selectedCiv)
+      updateUnitButton(selectedCiv, "#selectUnitButton" + Side)
     })
-  
-    // When the button is changed, run the updateChart function
-    d3.select("#selectCivButtonRight").on("change", function(d) {
-      // recover the option that has been chosen
-      let selectedOption = d3.select(this).property("value")
-  
-      selectedOption = civs.filter(d => d['name'] == selectedOption)[0]
-      // run the updateChart function with this selected option
-      savePref("selectCivButtonRight", selectedOption['name'])
-      civTechsRight = updateCivTechs(selectedOption)
-      updateUnitButton(selectedOption, "#selectUnitButtonRight")
+
+    setupUnitInput("#selectUnitButton" + Side, function(selectedUnit) {
+      unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
+      updateUnitStats(unit, [], side)
+      updateUnitTechs(unit, civTechsBySide[side], side)
+      updateTags(unit, side)
+      updateCenter()
     })
-  
+
+    let auraInputIds = ["#auraHitpointsInput" + Side, "#auraAttackInput" + Side]
+    auraInputIds.forEach(function(id_){
+      d3.select(id_).on("change", function() {
+        recalculate(civTechsBySide[side], side)
+      })
+    })
+  }
+  sides.forEach(setupSide)
+
   // xml files still loading: protoy, string table, techtree and one homecity per civ
   let pendingLoads = 3 + civs.length
   function dataLoaded(){
     pendingLoads -= 1
     if (pendingLoads > 0) { return }
     // restore each side's last civ and unit
-    ["Left", "Right"].forEach(function(side){
-      let civName = loadPref("selectCivButton" + side)
+    sides.forEach(function(side){
+      let Side = capitalizeFirstLetter(side)
+      let civName = loadPref("selectCivButton" + Side)
       if (!civName || !civs.some(d => d['name'] == civName)) { return }
-      let civButton = document.getElementById("selectCivButton" + side)
+      let civButton = document.getElementById("selectCivButton" + Side)
       civButton.value = civName
       civButton.dispatchEvent(new Event("change"))
-      let unitName = loadPref("selectUnitButton" + side)
-      if (unitName) { selectUnitByName("#selectUnitButton" + side, unitName) }
+      let unitName = loadPref("selectUnitButton" + Side)
+      if (unitName) { selectUnitByName("#selectUnitButton" + Side, unitName) }
     })
   }
-
-  setupUnitInput("#selectUnitButtonLeft", function(selectedUnit) {
-    unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
-    updateUnitStats(unit, [], "left")
-    updateUnitTechs(unit, civTechsLeft, "left")
-    updateTags(unit, "left")
-	updateCenter()
-	})
-
-  setupUnitInput("#selectUnitButtonRight", function(selectedUnit) {
-    unit = militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
-    updateUnitStats(unit, [], "right")
-    updateUnitTechs(unit, civTechsRight, "right")
-    updateTags(unit, "right")
-	updateCenter()
-  })
 
 function updateCenter(){
     // nothing to compare until both sides have a unit
@@ -184,30 +185,5 @@ function updateCenter(){
 
 function getUnit(side){
     let selectedUnit = d3.select("#selectUnitButton"+capitalizeFirstLetter(side)).node().dataset.unit
-    return militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]	
+    return militaryUnits.filter(d => d.attributes['name'].value == selectedUnit)[0]
 }
-	
-
-recalculateIdsLeft = [ 
-"#auraHitpointsInputLeft", "#auraAttackInputLeft", 
-]
-
-recalculateIdsLeft.forEach(function(id_){
-	
-  d3.select(id_).on("change", function(d) {
-    recalculate(civTechsLeft, "left")
-	})
-})
-
-
-recalculateIdsRight = [ 
-"#auraHitpointsInputRight", "#auraAttackInputRight", 
-]
-
-
-recalculateIdsRight.forEach(function(id_){
-	
-  d3.select(id_).on("change", function(d) {
-    recalculate(civTechsRight, "right")
-	})
-})

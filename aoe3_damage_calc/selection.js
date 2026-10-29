@@ -7,7 +7,6 @@
     })
 	effects = [].concat(...effects)
 	effects = effects.filter(d => d != undefined)
-	console.log(effects)
     return effects
   }
   
@@ -30,7 +29,6 @@
       }
       effects = Array.from(tech.getElementsByTagName("effects")[0].children).filter(function(effect){
 		  if(effect.attributes['subtype'] =="Enable"){
-			  console.log(effect.attributes['subtype'])
 			  return false
 		  }
         targets = Array.from(effect.getElementsByTagName("target")).filter(function(target){
@@ -40,7 +38,6 @@
       })
       return effects.length>0
     })
-	 console.log(relevant_techs.map(d=>d.attributes['name'].textContent))
     return relevant_techs
   }
   function groupUnitTechs(relevant_techs, civTechs){
@@ -66,10 +63,8 @@
 	  unit = getUnit(side)
 	  
 	relevant_techs = gatherUnitTechs(unit, civTechs)
-	console.log(relevant_techs.map(d=>d.attributes['name'].textContent))
 	active_techs = Array.from(d3.selectAll('.card.active.'+side)._groups[0]).map(d =>  d.children[0].attributes['title'].value)
 	active_techs = relevant_techs.filter(d => active_techs.includes(d.attributes['name'].value))
-	console.log(relevant_techs, active_techs)
 	updateUnitStats(unit, active_techs, side)
 	updateCenter()
 
@@ -77,7 +72,6 @@
   
   function updateUnitTechs(unit, civTechs, side){
     relevant_techs = gatherUnitTechs(unit, civTechs)
-    console.log(relevant_techs.map(d=>d.attributes['name'].textContent))
     tech_groups = groupUnitTechs(relevant_techs, civTechs)
     let gallery = d3.select('.cards.'+side).html("")
   
@@ -126,40 +120,12 @@
     let columns = [
         { head: 'tag', cl: 'title', html: d => d['tag'] },
   ]
-    let table = d3.select('.tags.'+side).html("")
-  
-    // create table header
-    table.append('thead').append('tr')
-        .selectAll('th')
-        .data(["tag"]).enter()
-        .append('th')
-        .text(d => d);
-  
-    // create table body
-    table.append('tbody')
-        .selectAll('tr')
-        .data(tags).enter()
-        .append('tr')
-        .selectAll('td')
-        .data(function(row, i) {
-            return columns.map(function(c) {
-                // compute cell values for this specific row
-                let cell = {};
-                d3.keys(c).forEach(function(k) {
-                    cell[k] = typeof c[k] == 'function' ? c[k](row,i) : c[k];
-                });
-                return cell;
-            });
-        }).enter()
-        .append('td')
-        .text(d => d['head'])
-        .html(d => d['html'])
-        .attr('class', d => d['cl'])
+    renderTable('.tags.'+side, columns, tags)
   }
 
-                function getUnitName(side){
-        return unit_tags[side].map( d => d['tag']).slice(-1)[0]
-        }
+  function getUnitName(side){
+    return unit_tags[side].map( d => d['tag']).slice(-1)[0]
+  }
   
     function updateUnitButton(selectedCiv, unitButtonID) {
       effects = getAllEffects(selectedCiv['techs'])

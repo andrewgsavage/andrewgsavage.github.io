@@ -8,71 +8,54 @@
 <body>
   <!-- Load d3.js -->
   <script src="https://d3js.org/d3.v4.js"></script>
-  <div class="row">
-    <div class="column">
-      <select id="selectCivButtonLeft" class="selectCivButton"></select>
-      <input id="selectUnitButtonLeft" class="selectUnitButton" list="unitListLeft" placeholder="Select civ first" autocomplete="off">
-      <datalist id="unitListLeft"></datalist>
-	  
+
+  <!-- One civ/unit panel, filled in for each side: {side} is left/right, {Side} is Left/Right -->
+  <template id="sidePanel">
+    <select id="selectCivButton{Side}" class="selectCivButton"></select>
+    <input id="selectUnitButton{Side}" class="selectUnitButton" list="unitList{Side}" placeholder="Select civ first" autocomplete="off">
+    <datalist id="unitList{Side}"></datalist>
+
     <div>
-	Hp
-	<input id="auraHitpointsInputLeft" class = "auraInput" type="range" min="0" max="50" value="0" oninput="auraHitpointsValueLeft.innerText = this.value" >
-<p id="auraHitpointsValueLeft" class="auraValue" >0</p> %
+      Hp
+      <input id="auraHitpointsInput{Side}" class="auraInput" type="range" min="0" max="50" value="0" oninput="auraHitpointsValue{Side}.innerText = this.value">
+      <p id="auraHitpointsValue{Side}" class="auraValue">0</p> %
     </div>
 
     <div>
+      Att
+      <input id="auraAttackInput{Side}" class="auraInput" type="range" min="0" max="50" value="0" oninput="auraAttackValue{Side}.innerText = this.value">
+      <p id="auraAttackValue{Side}" class="auraValue">0</p> %
+    </div>
 
-	Att
-	<input id="auraAttackInputLeft" class = "auraInput" type="range" min="0" max="50" value="0" oninput="auraAttackValueLeft.innerText = this.value" >
-<p id="auraAttackValueLeft" class="auraValue" >0</p> %
-</div>
+    <div class="cards {side}"></div>
+    <table class="stats {side}"></table>
+    <table class="tags {side}"></table>
+  </template>
 
-      <div class="cards left"></div>
-      <table class="stats left"></table>
-      <table class="tags left"></table>
-    </div>    
-   <div class="column">
-   <details>
-    <summary>Help</summary>
+  <div class="row">
+    <div class="column side" data-side="left"></div>
+    <div class="column">
+      <details>
+        <summary>Help</summary>
 This is a unit stats and damage calculator for aoe3.
 Select a civ and unit on the left. Technologies, cards, team cards and native techs will appear below. Click each technology or card to activate them in the stats calculation below.
 
 Do the same for the unit you're attacking on the right. In the centre a table will appear showing the damage calculation.
-    </details>
+      </details>
 
-    <table class="breakpoints left"></table>
-    <table class="breakpoints right"></table>
-    <table class="lancaster"></table>
-
-  </div>    
-  <div class="column">
-    <select id="selectCivButtonRight" class="selectCivButton"></select>
-    <input id="selectUnitButtonRight" class="selectUnitButton" list="unitListRight" placeholder="Select civ first" autocomplete="off">
-    <datalist id="unitListRight"></datalist>
-    <div>
-	Hp
-	<input id="auraHitpointsInputRight" class = "auraInput" type="range" min="0" max="50" value="0" oninput="auraHitpointsValueRight.innerText = this.value" >
-<p id="auraHitpointsValueRight" class="auraValue" >0</p> %
+      <table class="breakpoints left"></table>
+      <table class="breakpoints right"></table>
+      <table class="lancaster"></table>
     </div>
-
-    <div>
-
-	Att
-	<input id="auraAttackInputRight" class = "auraInput" type="range" min="0" max="50" value="0" oninput="auraAttackValueRight.innerText = this.value" >
-<p id="auraAttackValueRight" class="auraValue" >0</p> %
-</div>
-    <div class="cards right"></div>
-    <table class="stats right"></table>
-    <table class="tags right"></table>
-
-   </div>
+    <div class="column side" data-side="right"></div>
   </div>
   <!-- Color Scale -->
   <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   <!-- Driver script -->
+  <script src="table.js" ></script>
   <script src="selection.js" ></script>
   <script src="damage_calcs.js" ></script>
   <script src="stat_calcs.js" ></script>
   <script src="main.js" ></script>
-  
+
 </body>

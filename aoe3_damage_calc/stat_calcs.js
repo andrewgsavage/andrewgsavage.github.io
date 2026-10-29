@@ -177,11 +177,7 @@
 			
         return item
         })
-    // cost = Array.from(unit.getElementsByTagName("Cost")).map(d => d.textContent + " " + d.attributes['resourcetype'].value )
-    // stat_table_data.push({
-    //   gameName:'Cost', niceName: 'Cost', baseValue: cost.join(", ")
-    // })
-  
+
     protoaction_tags = ['damage', 'maxrange', 'rof', 'damagecap', 'damagearea', 'damagebonus']
     protoactions = unit.getElementsByTagName("protoaction")
     Array.from(protoactions).filter(d => d.children[0].textContent.includes("Attack")).forEach(function(protoAction){
@@ -331,41 +327,5 @@ function capitalizeFirstLetter(string) {
          }
          },        { head: 'Modified', cl: 'right-align', html: d => d3.format(".2f")(d['modifiedValue']) },
     ];
-  
-    // create table
-    let table = d3.select('.stats.'+side).html("")
-  
-    // create table header
-    table.append('thead').append('tr')
-        .selectAll('th')
-        .data(columns).enter()
-        .append('th')
-        .attr('class', 'title')
-        .text(d => d['head']);
-  
-    // create table body
-    table.append('tbody')
-        .selectAll('tr')
-        .data(stat_table_data).enter()
-        .append('tr')
-        .selectAll('td')
-        .data(function(row, i) {
-            return columns.map(function(c) {
-                // compute cell values for this specific row
-                let cell = {};
-                d3.keys(c).forEach(function(k) {
-                    cell[k] = typeof c[k] == 'function' ? c[k](row,i) : c[k];
-                });
-                return cell;
-            });
-        }).enter()
-        .append('td')
-        .text(d => d['head'])
-        .html(d => d['html'])
-        .attr('class', d => d['cl'])
-  
-    function length() {
-        let fmt = d3.format('02d');
-        return function(l) { return Math.floor(l / 60) + ':' + fmt(l % 60) + ''; };
-    }
+    renderTable('.stats.'+side, columns, stat_table_data, {headerClass: 'title'})
   }
