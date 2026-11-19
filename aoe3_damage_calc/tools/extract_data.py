@@ -23,7 +23,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parent.parent
 # game files extracted into xml/ and UI/; set_game_dir points these elsewhere
 XML_DIR = ROOT / "xml"
-STRINGS_XML = ROOT / "UI" / "Data" / "strings" / "English" / "stringtabley.xml"
+STRINGS_XML = ROOT / "xml" / "strings" / "English" / "stringtabley.xml"
 ICON_SOURCE_DIR = ROOT / "UI" / "Data" / "wpfg"
 DATA_DIR = ROOT / "data"
 PATCHES_JSON = DATA_DIR / "patches.json"
@@ -83,7 +83,7 @@ GUARD_UPGRADE = re.compile(r"(DE)?RG[A-Z]")
 def set_game_dir(game_dir):
     global XML_DIR, STRINGS_XML, ICON_SOURCE_DIR
     XML_DIR = game_dir / "xml"
-    STRINGS_XML = game_dir / "UI" / "Data" / "strings" / "English" / "stringtabley.xml"
+    STRINGS_XML = game_dir / "xml" / "strings" / "English" / "stringtabley.xml"
     ICON_SOURCE_DIR = game_dir / "UI" / "Data" / "wpfg"
 
 
