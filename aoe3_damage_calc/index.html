@@ -14,16 +14,16 @@
       <ul id="unitList{Side}" class="unitList" hidden></ul>
     </span>
 
-    <div>
-      Hp
+    <div class="aura">
+      <label for="auraHitpointsInput{Side}">HP aura</label>
       <input id="auraHitpointsInput{Side}" class="auraInput" type="range" min="0" max="50" value="0">
-      <p id="auraHitpointsValue{Side}" class="auraValue">0</p> %
+      <output id="auraHitpointsValue{Side}" class="auraValue" for="auraHitpointsInput{Side}">0%</output>
     </div>
 
-    <div>
-      Att
+    <div class="aura">
+      <label for="auraAttackInput{Side}">Attack aura</label>
       <input id="auraAttackInput{Side}" class="auraInput" type="range" min="0" max="50" value="0">
-      <p id="auraAttackValue{Side}" class="auraValue">0</p> %
+      <output id="auraAttackValue{Side}" class="auraValue" for="auraAttackInput{Side}">0%</output>
     </div>
 
     <div class="cards {side}"></div>

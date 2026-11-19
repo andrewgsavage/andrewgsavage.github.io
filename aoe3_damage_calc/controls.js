@@ -154,7 +154,7 @@ export function setupUnitInput(input, onSelect){
 // Wires an aura slider and its % label; onChange is called with the value as a fraction while dragging
 export function setupAuraInput(input, label, onChange){
   input.addEventListener("input", function(){
-    label.textContent = input.value
+    label.textContent = input.value + "%"
     onChange(parseFloat(input.value) / 100)
   })
 }
@@ -162,7 +162,7 @@ export function setupAuraInput(input, label, onChange){
 // Moves an aura slider to a fraction without firing its events
 export function setAuraInput(input, label, fraction){
   input.value = Math.round(fraction * 100)
-  label.textContent = input.value
+  label.textContent = input.value + "%"
 }
 
 export function capitalizeFirstLetter(string) {
