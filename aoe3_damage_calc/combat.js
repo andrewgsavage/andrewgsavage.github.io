@@ -1,5 +1,6 @@
 import { hiddenAttackNames } from "./config.js"
 import { getStat } from "./stats.js"
+import { labelAttacks } from "./attacknames.js"
 
 // A side in a fight: {stats: rows from calcUnitStats, tags: unitDisplayTags}
 
@@ -55,16 +56,17 @@ export function calcBreakpoints(attacker, defender){
   return breakpoints
 }
 
-// Merges attacks whose breakpoints are identical into one row named after all of them
+// Merges attacks whose breakpoints are identical into one row, with attackNames listing them all,
+// and labels the rows as the game names them (see attacknames.js)
 export function reduceBreakpoints(breakpoints){
   let rowsByValues = new Map()
   breakpoints.forEach(function(row){
     let {attackName, ...values} = row
     let key = JSON.stringify(values)
     if (rowsByValues.has(key)){
-      rowsByValues.get(key)['attackName'] += ", " + attackName
+      rowsByValues.get(key)['attackNames'].push(attackName)
     } else {
-      rowsByValues.set(key, Object.assign({attackName: attackName}, values))
+      rowsByValues.set(key, Object.assign({attackNames: [attackName]}, values))
     }
   })
   let reduced = Array.from(rowsByValues.values())
@@ -72,12 +74,12 @@ export function reduceBreakpoints(breakpoints){
   if (!reduced.some(d => d['garrison'])){
     reduced.sort((a, b) => a['seconds_required'] - b['seconds_required'])
   }
-  return reduced
+  return labelAttacks(reduced)
 }
 
 // Lanchester-style cost efficiency of every left attack against every right attack:
 // above 1 the left unit wins the trade for its cost, below 1 the right one does.
-// Returns one row per left attack: {attackName, ratios} with ratios in rightBreakpoints order
+// Returns one row per left attack: {attack: the left breakpoint row, ratios} with ratios in rightBreakpoints order
 export function calcLancaster(leftBreakpoints, rightBreakpoints, leftCost, rightCost){
   return leftBreakpoints.map(function(leftRow){
     let ratios = rightBreakpoints.map(function(rightRow){
@@ -85,6 +87,6 @@ export function calcLancaster(leftBreakpoints, rightBreakpoints, leftCost, right
       let rightDeathRate = leftRow['seconds_required']
       return (leftDeathRate * rightCost) / (rightDeathRate * leftCost)
     })
-    return {attackName: leftRow['attackName'], ratios: ratios}
+    return {attack: leftRow, ratios: ratios}
   })
 }
