@@ -1,7 +1,14 @@
 
+import { attackLabelText, attackLabelNodes } from "./attacknames.js"
+
+// Fills a cell with a string, or with an array of nodes
+function setContent(cell, content){
+  if (Array.isArray(content)) { cell.append(...content) } else { cell.textContent = content ?? '' }
+}
+
 // Replaces the contents of the table at selector.
 // columns: [{head, cl, text, color, detail}] where cl, text and color are values or functions of (row, i);
-// detail columns are hidden in the simplified view
+// head and text may be arrays of nodes; detail columns are hidden in the simplified view
 // options.headerRows: rows of header cells, each a string or {text, colspan, detail}; defaults to the column heads
 // options.headerClass: class for every header cell
 function renderTable(selector, columns, rows, options = {}){
@@ -18,7 +25,7 @@ function renderTable(selector, columns, rows, options = {}){
       if (typeof header == 'string'){
         th.textContent = header
       } else {
-        th.textContent = header['text']
+        setContent(th, header['text'])
         if (header['colspan']) { th.colSpan = header['colspan'] }
         if (header['detail']) { th.classList.add('detail') }
       }
@@ -32,7 +39,7 @@ function renderTable(selector, columns, rows, options = {}){
     columns.forEach(function(c){
       let cell = k => typeof c[k] == 'function' ? c[k](row, i) : c[k]
       let td = tr.insertCell()
-      td.textContent = cell('text') ?? ''
+      setContent(td, cell('text'))
       if (c['cl']) { td.className = cell('cl') }
       if (c['color']) { td.style.backgroundColor = cell('color') }
       if (c['detail']) { td.classList.add('detail') }
@@ -97,7 +104,7 @@ export function renderCards(side, techGroups, isActive, onToggle){
 
 export function renderBreakpoints(side, title, breakpoints){
   let columns = [
-    { head: 'Attack Name', cl: 'title', text: d => d['attackName'], unit: ''},
+    { head: 'Attack Name', cl: 'title', text: d => attackLabelText(d, breakpoints), unit: ''},
     { head: 'Damage', detail: true, cl: 'right-align', text: d => formatNumber(d['damage']), unit: 'hp/atk'},
     { head: 'Multiplier', detail: true, cl: 'right-align', text: d => d['damagebonus'], unit: ''},
     { head: 'ROF', detail: true, cl: 'right-align', text: d => d['rof'], unit: 's/atk'},
@@ -128,14 +135,14 @@ function interpolateRdBu(t){
   return "rgb(" + channel(16) + "," + channel(8) + "," + channel(0) + ")"
 }
 
-// rows from calcLancaster; blue where the left unit wins the trade, red where the right one does,
-// on a log scale from 0.5 to 2
-export function renderLancaster(rows, rightAttackNames){
+// rows from calcLancaster, against the right side's breakpoint rows; blue where the left unit wins the trade,
+// red where the right one does, on a log scale from 0.5 to 2. Attacks show their stances as icons
+export function renderLancaster(rows, rightBreakpoints){
   let colorScale = d => interpolateRdBu(Math.log(d / 0.5) / Math.log(4))
   let columns = [
-    { head: 'Attack', cl: 'left-align', text: d => d['attackName'] },
-  ].concat(rightAttackNames.map((name, i) => (
-    { head: name, cl: 'left-align', text: d => formatNumber(d['ratios'][i]), color: d => colorScale(d['ratios'][i]) }
+    { head: 'Attack', cl: 'left-align attack', text: d => attackLabelNodes(d['attack']) },
+  ].concat(rightBreakpoints.map((attack, i) => (
+    { head: attackLabelNodes(attack), cl: 'left-align', text: d => formatNumber(d['ratios'][i]), color: d => colorScale(d['ratios'][i]) }
   )))
   renderTable('.lancaster', columns, rows, {headerClass: 'title'})
 }

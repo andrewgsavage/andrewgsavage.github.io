@@ -48,6 +48,20 @@ td {
   padding: 5px 10px 5px 5px;
   color: rgb(0, 0, 0);
 }
+/* attack names in the cross table, with their stance icons on a line below */
+.attack-label {
+  white-space: nowrap;
+}
+.stances {
+  display: block;
+  white-space: nowrap;
+}
+img.stance {
+  width: 24px;
+  height: 24px;
+  margin: 2px 2px 0 0;
+  vertical-align: middle;
+}
 .right-align {
   text-align: right
 }

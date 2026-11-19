@@ -13,6 +13,9 @@ export const textStats = [
   {gameName:'bounty', niceName: 'XP Bounty'},
 ]
 
+// stance buttons copied by tools/extract_data.py, shown next to attack names in the cross table
+export const stanceIconRoot = "images/stances/"
+
 export const armorTypes = ["Hand", "Ranged", "Siege"]
 export const costTypes = ["Food", "Wood", "Gold"]
 // villager gather rates, used to convert costs into villager seconds

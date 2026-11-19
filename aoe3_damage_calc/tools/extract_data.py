@@ -3,7 +3,7 @@
 Reads xml/protoy.xml, xml/techtreey.xml, xml/homecity*.xml and the English string table,
 and writes data/PATCH/units.json, data/PATCH/techs.json and data/PATCH/civs.json.
 Also copies the card icons the techs use from UI/ into data/PATCH/icons, shrunk to card size,
-and adds the patch to data/patches.json, the list of patches the calculator offers, newest first.
+the stance buttons into images/stances, and adds the patch to data/patches.json, the list of patches the calculator offers, newest first.
 
     pip install pillow
     python tools/extract_data.py --patch PATCH [--label LABEL] [--game-dir FOLDER_WITH_xml_AND_UI] [--ui-dir UI_FOLDER]
@@ -42,6 +42,12 @@ AGE_ICONS = {
     "resources/images/icons/post_game/time_line_age_4.png": INGAME_ICONS + "icon_age_iv.png",
     "resources/images/icons/post_game/time_line_age_5.png": INGAME_ICONS + "icon_age_v.png",
 }
+# stance buttons from the command panel, copied to images/stances/STANCE.webp
+STANCE_ICONS = ["defend", "volley", "stagger", "melee", "cover", "trample"]
+STANCE_ICON_SOURCE = "resources/images/icons/command/tactics_{}_avl.png"
+STANCE_ICON_DIR = ROOT / "images" / "stances"
+# shown at 24px, so this stays sharp on 2x screens
+STANCE_ICON_SIZE = 48
 
 # name shown in the civ select, homecity file, and the techs a civ starts with
 CIVS = [
@@ -240,6 +246,22 @@ def copy_icons(techs):
     print("wrote %s (%d KB), %d icons not found in UI/" % (ICON_DIR.relative_to(ROOT), size // 1024, missing))
 
 
+def copy_stance_icons():
+    """Copies the command panel's stance buttons into images/stances, shared by every patch.
+
+    The cross table shows them next to attacks named after a stance; config.js lists the stances."""
+    STANCE_ICON_DIR.mkdir(parents=True, exist_ok=True)
+    for stance in STANCE_ICONS:
+        source = ICON_SOURCE_DIR / STANCE_ICON_SOURCE.format(stance)
+        if not source.exists():
+            print("stance icon not found in UI/: %s" % source)
+            continue
+        image = Image.open(source)
+        image.thumbnail((STANCE_ICON_SIZE, STANCE_ICON_SIZE))
+        image.save(STANCE_ICON_DIR / (stance + ".webp"), quality=85)
+    print("wrote %s" % STANCE_ICON_DIR.relative_to(ROOT))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--game-dir", type=Path, default=ROOT, help="folder holding the extracted xml/ and UI/ folders")
@@ -281,6 +303,7 @@ def main():
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     copy_icons(techs)
+    copy_stance_icons()
     for name, data in [("units", {"units": units, "groups": groups}), ("techs", techs), ("civs", civs)]:
         path = OUT_DIR / (name + ".json")
         path.write_text(json.dumps(data, separators=(",", ":")), encoding="utf-8")

@@ -106,7 +106,7 @@ function updateCenter(){
   renderBreakpoints('left', left.unit.name + " (left) attacking " + right.unit.name + " (right)", leftBreakpoints)
   renderBreakpoints('right', right.unit.name + " (right) attacking " + left.unit.name + " (left)", rightBreakpoints)
   let lancaster = calcLancaster(leftBreakpoints, rightBreakpoints, getStat(left.stats, 'TotalCost'), getStat(right.stats, 'TotalCost'))
-  renderLancaster(lancaster, rightBreakpoints.map(d => d['attackName']))
+  renderLancaster(lancaster, rightBreakpoints)
 }
 
 // The page's setup lives in the URL hash so it can be shared, e.g.
