@@ -139,10 +139,11 @@ function interpolateRdBu(t){
 // red where the right one does, on a log scale from 0.5 to 2. Attacks show their stances as icons
 export function renderLancaster(rows, rightBreakpoints){
   let colorScale = d => interpolateRdBu(Math.log(d / 0.5) / Math.log(4))
+  let leftBreakpoints = rows.map(d => d['attack'])
   let columns = [
-    { head: 'Attack', cl: 'left-align attack', text: d => attackLabelNodes(d['attack']) },
+    { head: 'Attack', cl: 'left-align attack', text: d => attackLabelNodes(d['attack'], leftBreakpoints) },
   ].concat(rightBreakpoints.map((attack, i) => (
-    { head: attackLabelNodes(attack), cl: 'left-align', text: d => formatNumber(d['ratios'][i]), color: d => colorScale(d['ratios'][i]) }
+    { head: attackLabelNodes(attack, rightBreakpoints), cl: 'left-align', text: d => formatNumber(d['ratios'][i]), color: d => colorScale(d['ratios'][i]) }
   )))
   renderTable('.lancaster', columns, rows, {headerClass: 'title'})
 }

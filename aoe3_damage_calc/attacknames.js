@@ -48,11 +48,11 @@ export function attackLabelText(row, rows){
   return row['stances'].map(capitalize).join(", ")
 }
 
-// The row's label, then an icon for each stance it's used in
-export function attackLabelNodes(row){
+// The row's label text (see attackLabelText), then an icon for each stance it's used in
+export function attackLabelNodes(row, rows){
   let label = document.createElement('span')
   label.className = 'attack-label'
-  label.textContent = row['label']
+  label.textContent = attackLabelText(row, rows)
   let stances = document.createElement('span')
   stances.className = 'stances'
   stances.append(...row['stances'].map(function(stance){
