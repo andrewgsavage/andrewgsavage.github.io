@@ -127,3 +127,10 @@ td {
   color: rgb(80, 80, 80);
   background-color: rgb(230, 230, 230);
 }
+
+/*
+  Simplified view: only the cards, the key damage results and the cross table
+*/
+.simple .stats, .simple .tags, .simple .detail {
+  display: none;
+}
