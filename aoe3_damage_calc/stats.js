@@ -22,9 +22,32 @@ function calcModifier(record, effect, relativity){
   return record
 }
 
+// A damage bonus against a unit type the attack has no bonus for starts from the game's default of 1.0
+// (e.g. Military Reforms gives Halberdiers -0.25 against AbstractInfantry), so add that row to modify
+function addMissingDamageBonusRows(effect, rows){
+  if (effect.subtype != 'DamageBonus' || effect.unittype == undefined){ return rows }
+  let damageRows = rows.filter(d => d['tag'] == 'damage' && d['attackName'] != undefined &&
+    (effect.allactions == '1' || d['action'] == effect.action))
+  damageRows.forEach(function(damageRow){
+    let hasBonus = rows.some(d => d['attackName'] == damageRow['attackName'] && d['tag'] == 'damagebonus' && d['type'] == effect.unittype)
+    if (hasBonus){ return }
+    let newRow = Object.assign({}, damageRow, {
+      niceName: damageRow['niceName'].replace(/damage$/, 'damagebonus ' + effect.unittype),
+      baseValue: 1.0,
+      BasePercent: 0.0,
+      Absolute: 0.0,
+      tag: 'damagebonus',
+      type: effect.unittype,
+    })
+    rows.splice(rows.indexOf(damageRow) + 1, 0, newRow)
+  })
+  return rows
+}
+
 function applyEffect(effect, rows){
   // effects without a subtype don't change stats
   if (effect.subtype == undefined){ return rows }
+  rows = addMissingDamageBonusRows(effect, rows)
   return rows.map(function(record){
     let isArmor = record['gameName'] != undefined && record['gameName'].includes("armor")
     if(effect.subtype==record['subtype']){
