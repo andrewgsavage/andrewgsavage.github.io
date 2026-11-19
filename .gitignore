@@ -4,3 +4,4 @@ aoe3_damage_calc/xml/
 aoe3_damage_calc/.temp/
 aoe3_damage_calc/.workspace.code-workspace
 aoe3_damage_calc/.vscode/
+__pycache__/
