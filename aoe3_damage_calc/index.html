@@ -5,7 +5,7 @@
   <!-- External sheet for styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="simple">
   <!-- One civ/unit panel, filled in for each side: {side} is left/right, {Side} is Left/Right -->
   <template id="sidePanel">
     <select id="selectCivButton{Side}" class="selectCivButton"></select>
@@ -44,6 +44,7 @@ Do the same for the unit you're attacking on the right. In the centre a table wi
 The page's address keeps the civs, units, cards and auras you've chosen, so you can share a matchup by sharing the link.
       </details>
       <button id="copyLink" type="button">Copy link</button>
+      <label><input id="simpleView" type="checkbox" checked> Simplified view</label>
 
       <table class="breakpoints left"></table>
       <table class="breakpoints right"></table>
