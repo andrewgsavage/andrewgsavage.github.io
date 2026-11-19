@@ -5,7 +5,7 @@
   <!-- External sheet for styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="simple">
   <!-- One civ/unit panel, filled in for each side: {side} is left/right, {Side} is Left/Right -->
   <template id="sidePanel">
     <select id="selectPatchButton{Side}" class="selectPatchButton" title="Game patch"></select>
@@ -15,16 +15,16 @@
       <ul id="unitList{Side}" class="unitList" hidden></ul>
     </span>
 
-    <div>
-      Hp
+    <div class="aura">
+      <label for="auraHitpointsInput{Side}">HP aura</label>
       <input id="auraHitpointsInput{Side}" class="auraInput" type="range" min="0" max="50" value="0">
-      <p id="auraHitpointsValue{Side}" class="auraValue">0</p> %
+      <output id="auraHitpointsValue{Side}" class="auraValue" for="auraHitpointsInput{Side}">0%</output>
     </div>
 
-    <div>
-      Att
+    <div class="aura">
+      <label for="auraAttackInput{Side}">Attack aura</label>
       <input id="auraAttackInput{Side}" class="auraInput" type="range" min="0" max="50" value="0">
-      <p id="auraAttackValue{Side}" class="auraValue">0</p> %
+      <output id="auraAttackValue{Side}" class="auraValue" for="auraAttackInput{Side}">0%</output>
     </div>
 
     <div class="cards {side}"></div>
@@ -47,6 +47,7 @@ Each side has its own game patch, newest first, so you can compare a unit agains
 The page's address keeps the patches, civs, units, cards and auras you've chosen, so you can share a matchup by sharing the link.
       </details>
       <button id="copyLink" type="button">Copy link</button>
+      <label><input id="simpleView" type="checkbox" checked> Simplified view</label>
 
       <table class="breakpoints left"></table>
       <table class="breakpoints right"></table>

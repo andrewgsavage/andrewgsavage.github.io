@@ -198,6 +198,18 @@ document.getElementById("copyLink").addEventListener("click", function(){
   })
 })
 
+// the simplified view is the default; choosing the full one is remembered for the next visit
+const simpleView = document.getElementById("simpleView")
+function setSimpleView(simple){
+  simpleView.checked = simple
+  document.body.classList.toggle("simple", simple)
+}
+setSimpleView(loadPref("simpleView") != "0")
+simpleView.addEventListener("change", function(){
+  setSimpleView(this.checked)
+  savePref("simpleView", this.checked ? "1" : "0")
+})
+
 // a link pasted into the address bar of an open page
 window.addEventListener("hashchange", () => location.reload())
 

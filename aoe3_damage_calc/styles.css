@@ -70,12 +70,21 @@ td {
 }
 
 
-.auraValue {
-	display: inline
+.aura {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-
-.auraInput{
-	width: 85%
+.aura label {
+  width: 6em;
+}
+.auraInput {
+  flex: 1;
+}
+.auraValue {
+  width: 3em;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 .selectUnitButton {
   width: 220px;
@@ -117,4 +126,11 @@ td {
   font-weight: 600;
   color: rgb(80, 80, 80);
   background-color: rgb(230, 230, 230);
+}
+
+/*
+  Simplified view: only the cards, the key damage results and the cross table
+*/
+.simple .stats, .simple .tags, .simple .detail {
+  display: none;
 }

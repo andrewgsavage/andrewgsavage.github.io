@@ -1,10 +1,11 @@
 
 // Replaces the contents of the table at selector.
-// columns: [{head, cl, text, color}] where cl, text and color are values or functions of (row, i)
-// options.headerRows: rows of header cells, each a string or {text, colspan}; defaults to the column heads
+// columns: [{head, cl, text, color, detail}] where cl, text and color are values or functions of (row, i);
+// detail columns are hidden in the simplified view
+// options.headerRows: rows of header cells, each a string or {text, colspan, detail}; defaults to the column heads
 // options.headerClass: class for every header cell
 function renderTable(selector, columns, rows, options = {}){
-  let headerRows = options.headerRows || [columns.map(c => c['head'])]
+  let headerRows = options.headerRows || [columns.map(c => ({text: c['head'], detail: c['detail']}))]
   let table = document.querySelector(selector)
   table.replaceChildren()
 
@@ -18,7 +19,8 @@ function renderTable(selector, columns, rows, options = {}){
         th.textContent = header
       } else {
         th.textContent = header['text']
-        th.colSpan = header['colspan']
+        if (header['colspan']) { th.colSpan = header['colspan'] }
+        if (header['detail']) { th.classList.add('detail') }
       }
       tr.append(th)
     })
@@ -33,6 +35,7 @@ function renderTable(selector, columns, rows, options = {}){
       td.textContent = cell('text') ?? ''
       if (c['cl']) { td.className = cell('cl') }
       if (c['color']) { td.style.backgroundColor = cell('color') }
+      if (c['detail']) { td.classList.add('detail') }
     })
   })
   return table
@@ -95,21 +98,21 @@ export function renderCards(side, techGroups, isActive, onToggle){
 export function renderBreakpoints(side, title, breakpoints){
   let columns = [
     { head: 'Attack Name', cl: 'title', text: d => d['attackName'], unit: ''},
-    { head: 'Damage', cl: 'right-align', text: d => formatNumber(d['damage']), unit: 'hp/atk'},
-    { head: 'Multiplier', cl: 'right-align', text: d => d['damagebonus'], unit: ''},
-    { head: 'ROF', cl: 'right-align', text: d => d['rof'], unit: 's/atk'},
-    { head: 'Resists', cl: 'right-align', text: d => formatNumber(d['resists']) , unit: ''},
-    { head: 'Effective damage', cl: 'right-align', text: d => formatNumber(d['effective_damage']), unit: 'hp'},
-    { head: 'Hitpoints', cl: 'right-align', text: d => formatNumber(d['hitpoints']),  unit: 'hp'},
-    { head: 'Shots required', cl: 'right-align', text: d => formatNumber(d['shots_required']),   unit: ''},
+    { head: 'Damage', detail: true, cl: 'right-align', text: d => formatNumber(d['damage']), unit: 'hp/atk'},
+    { head: 'Multiplier', detail: true, cl: 'right-align', text: d => d['damagebonus'], unit: ''},
+    { head: 'ROF', detail: true, cl: 'right-align', text: d => d['rof'], unit: 's/atk'},
+    { head: 'Resists', detail: true, cl: 'right-align', text: d => formatNumber(d['resists']) , unit: ''},
+    { head: 'Effective damage', detail: true, cl: 'right-align', text: d => formatNumber(d['effective_damage']), unit: 'hp'},
+    { head: 'Hitpoints', detail: true, cl: 'right-align', text: d => formatNumber(d['hitpoints']),  unit: 'hp'},
+    { head: 'Shots required', detail: true, cl: 'right-align', text: d => formatNumber(d['shots_required']),   unit: ''},
     { head: 'Full shots required', cl: 'right-align', text: d => formatNumber(d['full_shots_required']), unit: ''},
     { head: 'Seconds required', cl: 'right-align', text: d => formatNumber(d['seconds_required']), unit: 's' },
     { head: 'Normalised dps', cl: 'right-align', text: d => formatNumber(d['vs damage/sec / vs cost']), unit: 'vs/vs/s' },
   ]
   renderTable('.breakpoints.'+side, columns, breakpoints, {headerRows: [
     [{text: title, colspan: 100}],
-    columns.map(c => c['head']),
-    columns.map(c => c['unit']),
+    columns.map(c => ({text: c['head'], detail: c['detail']})),
+    columns.map(c => ({text: c['unit'], detail: c['detail']})),
   ]})
 }
 
