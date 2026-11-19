@@ -2,7 +2,7 @@
 
 Reads xml/protoy.xml, xml/techtreey.xml, xml/homecity*.xml and the English string table,
 and writes data/PATCH/units.json, data/PATCH/techs.json and data/PATCH/civs.json.
-Also copies the card icons the techs use from UI/ into data/PATCH/icons, shrunk to card size,
+Also copies the card icons the techs use from UI/ into data/icons (shared by every patch), shrunk to card size,
 the stance buttons into images/stances, and adds the patch to data/patches.json, the list of patches the calculator offers, newest first.
 
     pip install pillow
@@ -14,7 +14,6 @@ getElementsByTagName finds the first matching descendant and textContent joins a
 import argparse
 import json
 import re
-import shutil
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -27,9 +26,10 @@ STRINGS_XML = ROOT / "xml" / "strings" / "English" / "stringtabley.xml"
 ICON_SOURCE_DIR = ROOT / "UI" / "Data" / "wpfg"
 DATA_DIR = ROOT / "data"
 PATCHES_JSON = DATA_DIR / "patches.json"
-# the patch's folder under data/; set_patch points these at it
+# the patch's folder under data/; set_patch points it there
 OUT_DIR = None
-ICON_DIR = None
+# card icons, shared by every patch; an icon already copied for an earlier patch is kept
+ICON_DIR = DATA_DIR / "icons"
 # cards are shown at 80px, so this stays sharp on 2x screens
 ICON_SIZE = 160
 # the game has no age I icon, so this one is made from icon_age_ii.png; it lives here because UI/ isn't tracked
@@ -94,9 +94,8 @@ def set_game_dir(game_dir, ui_dir=None):
 
 
 def set_patch(name):
-    global OUT_DIR, ICON_DIR
+    global OUT_DIR
     OUT_DIR = DATA_DIR / name
-    ICON_DIR = OUT_DIR / "icons"
 
 
 def add_patch(name, label):
@@ -216,7 +215,6 @@ def civ_data(civ, techs_by_name, military_names):
 
 def copy_icons(techs):
     """Copies each card's icon into data/icons and points tech["icon"] at the copy, or None if the game has no such file."""
-    shutil.rmtree(ICON_DIR, ignore_errors=True)
     missing = 0
     for tech in techs:
         if tech["icon"] is None:

@@ -28,8 +28,8 @@ export function loadPatch(name){
         unitsByName: {}, techsByName: {}}
       patch.units.forEach(u => { if (!(u.name in patch.unitsByName)) { patch.unitsByName[u.name] = u } })
       patch.techs.forEach(function(t){
-        // card icons are copied into the patch's icons folder
-        if (t.icon != null) { t.icon = dir + "icons/" + t.icon }
+        // card icons are shared by every patch
+        if (t.icon != null) { t.icon = "data/icons/" + t.icon }
         if (!(t.name in patch.techsByName)) { patch.techsByName[t.name] = t }
       })
       return patch

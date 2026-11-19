@@ -1,9 +1,10 @@
 Adding a new game patch to the calculator
 =========================================
 
-The page loads one folder per game patch, data/PATCH/ (units.json, techs.json, civs.json, icons/),
+The page loads one folder per game patch, data/PATCH/ (units.json, techs.json, civs.json),
 listed newest first in data/patches.json. Each export adds a new patch; the older ones stay selectable.
 xml/ and UI/ (the extracted game files) are not committed.
+Card icons are in data/icons/, shared by every patch.
 
 Commands are for PowerShell, run from C:\Users\A\repos\andrewgsavage.github.io\aoe3_damage_calc
 
