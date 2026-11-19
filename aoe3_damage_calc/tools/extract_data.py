@@ -6,7 +6,7 @@ Also copies the card icons the techs use from UI/ into data/PATCH/icons, shrunk 
 and adds the patch to data/patches.json, the list of patches the calculator offers, newest first.
 
     pip install pillow
-    python tools/extract_data.py --patch PATCH [--label LABEL] [--game-dir FOLDER_WITH_xml_AND_UI]
+    python tools/extract_data.py --patch PATCH [--label LABEL] [--game-dir FOLDER_WITH_xml_AND_UI] [--ui-dir UI_FOLDER]
 
 Element lookups mirror the browser DOM calls the calculator used to make on the XML:
 getElementsByTagName finds the first matching descendant and textContent joins all descendant text.
@@ -80,11 +80,11 @@ UNIT_GROUPS = {"Mercenary": "Mercenary", "Native": "AbstractNativeWarrior", "Con
 GUARD_UPGRADE = re.compile(r"(DE)?RG[A-Z]")
 
 
-def set_game_dir(game_dir):
+def set_game_dir(game_dir, ui_dir=None):
     global XML_DIR, STRINGS_XML, ICON_SOURCE_DIR
     XML_DIR = game_dir / "xml"
     STRINGS_XML = game_dir / "xml" / "strings" / "English" / "stringtabley.xml"
-    ICON_SOURCE_DIR = game_dir / "UI" / "Data" / "wpfg"
+    ICON_SOURCE_DIR = (ui_dir or game_dir / "UI") / "Data" / "wpfg"
 
 
 def set_patch(name):
@@ -243,12 +243,13 @@ def copy_icons(techs):
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--game-dir", type=Path, default=ROOT, help="folder holding the extracted xml/ and UI/ folders")
+    parser.add_argument("--ui-dir", type=Path, help="extracted UI folder, if not GAME_DIR/UI, e.g. .temp/UI")
     parser.add_argument("--patch", required=True, help="folder name under data/ and the patch's id in shared links, e.g. 2026-10")
     parser.add_argument("--label", help="name shown in the patch select; defaults to the existing label, else --patch")
     args = parser.parse_args()
     if not re.fullmatch(r"[\w.-]+", args.patch):
         parser.error("--patch may only use letters, digits, '_', '-' and '.'")
-    set_game_dir(args.game_dir)
+    set_game_dir(args.game_dir, args.ui_dir)
     set_patch(args.patch)
 
     strings_root = ET.parse(STRINGS_XML).getroot()

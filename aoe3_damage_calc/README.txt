@@ -40,6 +40,7 @@ Commands are for PowerShell, run from C:\Users\A\repos\andrewgsavage.github.io\a
    This writes data\2026-11\ and puts the patch first in data\patches.json, so it becomes the default.
    Civs and their starting techs are listed at the top of tools\extract_data.py.
    If xml/ and UI/ were extracted somewhere else, add --game-dir FOLDER_HOLDING_xml_AND_UI.
+   To read the icons straight from the extract without swapping UI/, add --ui-dir .temp\UI.
 
 
 3. Check and commit
