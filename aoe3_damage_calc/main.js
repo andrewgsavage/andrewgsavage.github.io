@@ -1,19 +1,19 @@
-import { gameData, loadGameData, getUnit, getCiv, unitDisplayTags } from "./data.js"
+import { patches, loadPatchList, loadPatch, getPatchInfo, getUnit, getCiv, unitDisplayTags } from "./data.js"
 import { gatherUnitTechs, groupUnitTechs, isAge0Tech } from "./techs.js"
 import { calcUnitStats, getStat } from "./stats.js"
 import { calcBreakpoints, reduceBreakpoints, calcLancaster } from "./combat.js"
 import { renderStats, renderTags, renderCards, renderBreakpoints, renderLancaster } from "./render.js"
-import { savePref, loadPref, renderCivOptions, updateUnitOptions, selectUnitByName, setupUnitInput,
+import { savePref, loadPref, renderPatchOptions, renderCivOptions, updateUnitOptions, selectUnitByName, setupUnitInput,
   setupAuraInput, setAuraInput, capitalizeFirstLetter } from "./controls.js"
 
 const sides = ["left", "right"]
 const auraNames = ["hitpoints", "attack"]
 
-// per side: civ, unit, techs (techs that affect the unit), activeCards (names of the techs switched on),
-// auras ({hitpoints, attack} as fractions), stats and tags
+// per side: patch (the game data the side uses), civ, unit, techs (techs that affect the unit),
+// activeCards (names of the techs switched on), auras ({hitpoints, attack} as fractions), stats and tags
 const state = {}
 sides.forEach(function(side){
-  state[side] = {civ: null, unit: null, techs: [], activeCards: new Set(), auras: {hitpoints: 0, attack: 0}, stats: null, tags: []}
+  state[side] = {patch: null, civ: null, unit: null, techs: [], activeCards: new Set(), auras: {hitpoints: 0, attack: 0}, stats: null, tags: []}
 })
 
 // fill each side's column from the panel template; element ids end in Left/Right
@@ -33,13 +33,32 @@ function auraElements(side, aura){
   return [element(name + "Input", side), element(name + "Value", side)]
 }
 
+function clearUnit(side){
+  Object.assign(state[side], {unit: null, techs: [], activeCards: new Set(), stats: null, tags: []})
+  document.querySelectorAll('.' + side + ':is(.cards, .stats, .tags), .breakpoints, .lancaster').forEach(d => d.replaceChildren())
+}
+
+// Switches a side to another patch's data, then restores its civ, unit, cards and auras from params
+// where the patch still has them
+function selectPatch(side, patch, params){
+  let s = state[side]
+  s.patch = patch
+  s.civ = null
+  clearUnit(side)
+  let unitInput = element("selectUnitButton", side)
+  Object.assign(unitInput, {value: "", placeholder: "Select civ first", unitsByValue: {}, unitOptions: []})
+  unitInput.dataset.unit = ""
+  renderCivOptions(element("selectCivButton", side), patch.civs)
+  restoreCivAndUnit(side, params)
+  updateLink()
+}
+
 function selectCiv(side, civ){
   let s = state[side]
   s.civ = civ
   // the unit is reselected if the new civ has it too, otherwise the side is emptied
-  if (!updateUnitOptions(civ, element("selectUnitButton", side)) && s.unit){
-    Object.assign(s, {unit: null, techs: [], activeCards: new Set(), stats: null, tags: []})
-    document.querySelectorAll('.' + side + ':is(.cards, .stats, .tags), .breakpoints, .lancaster').forEach(d => d.replaceChildren())
+  if (!updateUnitOptions(s.patch, civ, element("selectUnitButton", side)) && s.unit){
+    clearUnit(side)
   }
   updateLink()
 }
@@ -51,7 +70,7 @@ function selectUnit(side, unit, activeCards){
   let sameUnit = unit == s.unit
   s.unit = unit
   s.tags = unitDisplayTags(unit)
-  s.techs = gatherUnitTechs(unit)
+  s.techs = gatherUnitTechs(s.patch, unit)
   let techGroups = groupUnitTechs(s.techs, s.civ.techs)
   if (activeCards == undefined){
     activeCards = sameUnit ? Array.from(s.activeCards) : techGroups.flat().filter(isAge0Tech).map(d => d.name)
@@ -71,7 +90,7 @@ function selectUnit(side, unit, activeCards){
 function recalculate(side){
   let s = state[side]
   if (s.unit){
-    s.stats = calcUnitStats(s.unit, s.techs.filter(d => s.activeCards.has(d.name)), s.auras)
+    s.stats = calcUnitStats(s.patch, s.unit, s.techs.filter(d => s.activeCards.has(d.name)), s.auras)
     renderStats(side, s.stats)
     updateCenter()
   }
@@ -91,12 +110,13 @@ function updateCenter(){
 }
 
 // The page's setup lives in the URL hash so it can be shared, e.g.
-// #leftCiv=British&leftUnit=Musketeer&leftCards=RGRedcoats&leftAuras=10,0&rightCiv=...
+// #leftPatch=2026-10&leftCiv=British&leftUnit=Musketeer&leftCards=RGRedcoats&leftAuras=10,0&rightPatch=...
 // and is also saved so the next visit starts where this one left off
-function updateLink(){
+function linkParams(){
   let params = new URLSearchParams()
   sides.forEach(function(side){
     let s = state[side]
+    if (s.patch) { params.set(side + "Patch", s.patch.name) }
     if (s.civ) { params.set(side + "Civ", s.civ.name) }
     if (s.unit) { params.set(side + "Unit", s.unit.name) }
     if (s.activeCards.size) { params.set(side + "Cards", Array.from(s.activeCards).join(",")) }
@@ -104,37 +124,63 @@ function updateLink(){
       params.set(side + "Auras", auraNames.map(aura => Math.round(s.auras[aura] * 100)).join(","))
     }
   })
-  let hash = params.toString()
+  return params
+}
+
+function updateLink(){
+  let hash = linkParams().toString()
   history.replaceState(null, "", hash ? "#" + hash : location.pathname + location.search)
   savePref("link", hash)
 }
 
+// Loads the side's patch from params, or the newest one if params has none or one that no longer exists,
+// then restores the rest of the side
 function restoreSide(side, params){
-  let civ = getCiv(params.get(side + "Civ"))
+  let info = getPatchInfo(params.get(side + "Patch")) || patches[0]
+  element("selectPatchButton", side).value = info.name
+  state[side].pendingPatch = info.name
+  return loadPatch(info.name).then(function(patch){
+    // a patch picked while this one was loading wins
+    if (state[side].pendingPatch == patch.name) { selectPatch(side, patch, params) }
+  })
+}
+
+function restoreCivAndUnit(side, params){
+  let s = state[side]
+  let civ = getCiv(s.patch, params.get(side + "Civ"))
   if (!civ) { return }
   element("selectCivButton", side).value = civ.name
   selectCiv(side, civ)
   let auras = (params.get(side + "Auras") || "").split(",")
   auraNames.forEach(function(aura, i){
     let fraction = (parseFloat(auras[i]) || 0) / 100
-    state[side].auras[aura] = fraction
+    s.auras[aura] = fraction
     setAuraInput(...auraElements(side, aura), fraction)
   })
   let unitName = params.get(side + "Unit")
   // selecting the unit resets its cards, so set the saved ones after; a link without cards has them all off
   if (unitName && selectUnitByName(element("selectUnitButton", side), unitName)){
     let cards = (params.get(side + "Cards") || "").split(",").filter(d => d)
-    selectUnit(side, getUnit(unitName), cards)
+    selectUnit(side, getUnit(s.patch, unitName), cards)
   }
 }
 
-// Wires one side's civ select, unit search and aura sliders
+// Wires one side's patch and civ selects, unit search and aura sliders
 function setupSide(side){
-  element("selectCivButton", side).addEventListener("change", function() {
-    selectCiv(side, getCiv(this.value))
+  let patchSelect = element("selectPatchButton", side)
+  renderPatchOptions(patchSelect, patches)
+  // the side keeps its civ, unit, cards and auras where the new patch still has them
+  patchSelect.addEventListener("change", function() {
+    let params = linkParams()
+    params.set(side + "Patch", this.value)
+    restoreSide(side, params)
   })
 
-  setupUnitInput(element("selectUnitButton", side), name => selectUnit(side, getUnit(name)))
+  element("selectCivButton", side).addEventListener("change", function() {
+    selectCiv(side, getCiv(state[side].patch, this.value))
+  })
+
+  setupUnitInput(element("selectUnitButton", side), name => selectUnit(side, getUnit(state[side].patch, name)))
 
   auraNames.forEach(function(aura){
     setupAuraInput(...auraElements(side, aura), function(fraction){
@@ -155,9 +201,13 @@ document.getElementById("copyLink").addEventListener("click", function(){
 // a link pasted into the address bar of an open page
 window.addEventListener("hashchange", () => location.reload())
 
-loadGameData().then(function(){
-  renderCivOptions(gameData.civs)
+loadPatchList().then(function(){
   sides.forEach(setupSide)
-  let params = new URLSearchParams(location.hash.slice(1) || loadPref("link") || "")
+  let params = new URLSearchParams(location.hash.slice(1))
+  if (!location.hash){
+    // a return visit picks up where it left off, but on the newest patch
+    params = new URLSearchParams(loadPref("link") || "")
+    sides.forEach(side => params.delete(side + "Patch"))
+  }
   sides.forEach(side => restoreSide(side, params))
 })

@@ -1,11 +1,12 @@
 """Extract the game data the calculator needs from the AoE3 XML into compact JSON.
 
 Reads xml/protoy.xml, xml/techtreey.xml, xml/homecity*.xml and the English string table,
-and writes data/units.json, data/techs.json and data/civs.json.
-Also copies the card icons the techs use from UI/ into data/icons, shrunk to card size.
+and writes data/PATCH/units.json, data/PATCH/techs.json and data/PATCH/civs.json.
+Also copies the card icons the techs use from UI/ into data/PATCH/icons, shrunk to card size,
+and adds the patch to data/patches.json, the list of patches the calculator offers, newest first.
 
     pip install pillow
-    python tools/extract_data.py [--game-dir FOLDER_WITH_xml_AND_UI]
+    python tools/extract_data.py --patch PATCH [--label LABEL] [--game-dir FOLDER_WITH_xml_AND_UI]
 
 Element lookups mirror the browser DOM calls the calculator used to make on the XML:
 getElementsByTagName finds the first matching descendant and textContent joins all descendant text.
@@ -24,8 +25,11 @@ ROOT = Path(__file__).resolve().parent.parent
 XML_DIR = ROOT / "xml"
 STRINGS_XML = ROOT / "UI" / "Data" / "strings" / "English" / "stringtabley.xml"
 ICON_SOURCE_DIR = ROOT / "UI" / "Data" / "wpfg"
-OUT_DIR = ROOT / "data"
-ICON_DIR = OUT_DIR / "icons"
+DATA_DIR = ROOT / "data"
+PATCHES_JSON = DATA_DIR / "patches.json"
+# the patch's folder under data/; set_patch points these at it
+OUT_DIR = None
+ICON_DIR = None
 # cards are shown at 80px, so this stays sharp on 2x screens
 ICON_SIZE = 160
 # the game has no age I icon, so this one is made from icon_age_ii.png; it lives here because UI/ isn't tracked
@@ -81,6 +85,24 @@ def set_game_dir(game_dir):
     XML_DIR = game_dir / "xml"
     STRINGS_XML = game_dir / "UI" / "Data" / "strings" / "English" / "stringtabley.xml"
     ICON_SOURCE_DIR = game_dir / "UI" / "Data" / "wpfg"
+
+
+def set_patch(name):
+    global OUT_DIR, ICON_DIR
+    OUT_DIR = DATA_DIR / name
+    ICON_DIR = OUT_DIR / "icons"
+
+
+def add_patch(name, label):
+    """Lists the patch in data/patches.json: a new patch goes first, an existing one keeps its place."""
+    patches = json.loads(PATCHES_JSON.read_text(encoding="utf-8")) if PATCHES_JSON.exists() else []
+    existing = next((p for p in patches if p["name"] == name), None)
+    if existing:
+        existing["label"] = label or existing["label"]
+    else:
+        patches.insert(0, {"name": name, "label": label or name})
+    PATCHES_JSON.write_text(json.dumps(patches, indent=1) + "\n", encoding="utf-8")
+    print("wrote %s (%d patches)" % (PATCHES_JSON.relative_to(ROOT), len(patches)))
 
 
 def text(el):
@@ -221,7 +243,13 @@ def copy_icons(techs):
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--game-dir", type=Path, default=ROOT, help="folder holding the extracted xml/ and UI/ folders")
-    set_game_dir(parser.parse_args().game_dir)
+    parser.add_argument("--patch", required=True, help="folder name under data/ and the patch's id in shared links, e.g. 2026-10")
+    parser.add_argument("--label", help="name shown in the patch select; defaults to the existing label, else --patch")
+    args = parser.parse_args()
+    if not re.fullmatch(r"[\w.-]+", args.patch):
+        parser.error("--patch may only use letters, digits, '_', '-' and '.'")
+    set_game_dir(args.game_dir)
+    set_patch(args.patch)
 
     strings_root = ET.parse(STRINGS_XML).getroot()
     strings = {s.get("_locid"): text(s) for s in strings_root[0]}
@@ -250,12 +278,13 @@ def main():
     status_targets = {name for t in techs for name in t["statusTechs"]}
     techs = [t for t in techs if t["effects"] or t["name"] in status_targets]
 
-    OUT_DIR.mkdir(exist_ok=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
     copy_icons(techs)
     for name, data in [("units", {"units": units, "groups": groups}), ("techs", techs), ("civs", civs)]:
         path = OUT_DIR / (name + ".json")
         path.write_text(json.dumps(data, separators=(",", ":")), encoding="utf-8")
         print("wrote %s (%d KB)" % (path.relative_to(ROOT), path.stat().st_size // 1024))
+    add_patch(args.patch, args.label)
 
 
 if __name__ == "__main__":

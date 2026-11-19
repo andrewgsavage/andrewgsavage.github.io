@@ -1,4 +1,4 @@
-import { gameData, getUnit } from "./data.js"
+import { getUnit } from "./data.js"
 
 // localStorage can be unavailable (private windows, blocked storage), so failures are ignored
 export function savePref(key, value){
@@ -8,12 +8,14 @@ export function loadPref(key){
   try { return localStorage.getItem("aoe3calc." + key) } catch (e) { return null }
 }
 
-export function renderCivOptions(civs){
-  document.querySelectorAll(".selectCivButton").forEach(function(select){
-    select.replaceChildren(new Option("Select civ", "", true, true))
-    select.options[0].disabled = true
-    civs.forEach(civ => select.append(new Option(civ.name, civ.name)))
-  })
+export function renderPatchOptions(select, patches){
+  select.replaceChildren(...patches.map(d => new Option(d.label, d.name)))
+}
+
+export function renderCivOptions(select, civs){
+  select.replaceChildren(new Option("Select civ", "", true, true))
+  select.options[0].disabled = true
+  civs.forEach(civ => select.append(new Option(civ.name, civ.name)))
 }
 
 // infantry, then cavalry, then artillery, then everything else
@@ -23,20 +25,20 @@ function unitTypeRank(unit){
   return rank == -1 ? unitTypeOrder.length : rank
 }
 
-// Fills a unit search input with the civ's units followed by the mercenary, native and consulate units;
+// Fills a unit search input with the civ's units followed by the patch's mercenary, native and consulate units;
 // returns whether the unit selected before is still selected
-export function updateUnitOptions(civ, input) {
+export function updateUnitOptions(patch, civ, input) {
   let groups = [
     {label: "", names: civ.units},
-    {label: "Mercenary", names: gameData.unitGroups["Mercenary"]},
-    {label: "Native", names: gameData.unitGroups["Native"]},
-    {label: "Consulate", names: gameData.unitGroups["Consulate"]},
+    {label: "Mercenary", names: patch.unitGroups["Mercenary"]},
+    {label: "Native", names: patch.unitGroups["Native"]},
+    {label: "Consulate", names: patch.unitGroups["Consulate"]},
   ]
   // each group is sorted by unit type, then display name
   let options = []
   groups.forEach(function(group){
     let groupOptions = group.names.map(function(d){
-      let unit = getUnit(d)
+      let unit = getUnit(patch, d)
       return {name: d, text: unit.displayName, group: group.label, rank: unitTypeRank(unit)}
     })
     groupOptions.sort((a, b) => a.rank - b.rank || a.text.localeCompare(b.text))

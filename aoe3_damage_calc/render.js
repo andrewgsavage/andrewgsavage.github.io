@@ -1,4 +1,3 @@
-import { iconRoot } from "./config.js"
 
 // Replaces the contents of the table at selector.
 // columns: [{head, cl, text, color}] where cl, text and color are values or functions of (row, i)
@@ -85,7 +84,7 @@ export function renderCards(side, techGroups, isActive, onToggle){
       let img = document.createElement('img')
       img.alt = tech.displayName
       img.title = tech.description ? tech.displayName + "\n\n" + tech.description : tech.displayName
-      img.src = tech.icon == null ? "" : iconRoot + tech.icon
+      img.src = tech.icon == null ? "" : tech.icon
       card.append(img)
       group.append(card)
     })

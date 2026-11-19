@@ -167,7 +167,7 @@ function calcUnmodifiedUnitStats(unit){
   return rows
 }
 
-function applyTech(tech, rows, tags){
+function applyTech(patch, tech, rows, tags){
   // each effect applies once for every target that matches the unit
   tech.effects.forEach(function(effect){
     effect.targets.forEach(function(target){
@@ -178,8 +178,8 @@ function applyTech(tech, rows, tags){
   })
   // techs this one turns on, which tools/extract_data.py only lists for guard upgrades
   tech.statusTechs.forEach(function(name){
-    let statusTech = getTech(name)
-    if (statusTech) { rows = applyTech(statusTech, rows, tags) }
+    let statusTech = getTech(patch, name)
+    if (statusTech) { rows = applyTech(patch, statusTech, rows, tags) }
   })
   return rows
 }
@@ -208,15 +208,15 @@ function addGarrisonedVillagerAttacks(rows){
   return newRows
 }
 
-// auras: {hitpoints, attack} as fractions
-export function calcUnitStats(unit, techs, auras){
+// techs: the patch's techs switched on; auras: {hitpoints, attack} as fractions
+export function calcUnitStats(patch, unit, techs, auras){
   let rows = calcUnmodifiedUnitStats(unit)
   if (unit.name == "TownCenter"){
     rows = addGarrisonedVillagerAttacks(rows)
   }
   let tags = unitTargetTags(unit)
   techs.forEach(function(tech){
-    rows = applyTech(tech, rows, tags)
+    rows = applyTech(patch, tech, rows, tags)
   })
   rows.forEach(function(d){
     d['aura'] = 0.0

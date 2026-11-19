@@ -1,9 +1,9 @@
-import { gameData, unitTargetTags } from "./data.js"
+import { unitTargetTags } from "./data.js"
 
-// Techs with an effect that targets the unit, in techtree order
-export function gatherUnitTechs(unit){
+// The patch's techs with an effect that targets the unit, in techtree order
+export function gatherUnitTechs(patch, unit){
   let tags = unitTargetTags(unit)
-  return gameData.techs.filter(tech => tech.effects.some(effect => effect.targets.some(target => tags.includes(target))))
+  return patch.techs.filter(tech => tech.effects.some(effect => effect.targets.some(target => tags.includes(target))))
 }
 
 // Splits a unit's techs into the card groups shown above its stats: research, home city, team and native techs
