@@ -147,3 +147,32 @@ export function renderLancaster(rows, rightBreakpoints){
   )))
   renderTable('.lancaster', columns, rows, {headerClass: 'title'})
 }
+
+// The two units under the cross table, framed in the colour of the side that wins there
+export function renderMatchup(leftUnit, rightUnit){
+  let unitFigure = function(unit, side){
+    let figure = document.createElement('figure')
+    figure.className = 'matchup-unit ' + side
+    // a few campaign units have no portrait
+    if (unit.icon){
+      let img = document.createElement('img')
+      img.src = unit.icon
+      img.alt = unit.displayName
+      figure.append(img)
+    }
+    let caption = document.createElement('figcaption')
+    caption.textContent = unit.displayName
+    figure.append(caption)
+    return figure
+  }
+  let vs = document.createElement('span')
+  vs.className = 'vs'
+  vs.textContent = 'vs'
+  let units = document.createElement('div')
+  units.className = 'matchup-units'
+  units.append(unitFigure(leftUnit, 'left'), vs, unitFigure(rightUnit, 'right'))
+  let note = document.createElement('p')
+  note.className = 'matchup-note'
+  note.innerHTML = '<span class="left">Blue</span> = left wins, <span class="right">red</span> = right wins'
+  document.querySelector('.matchup').replaceChildren(units, note)
+}

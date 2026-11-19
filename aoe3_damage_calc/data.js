@@ -26,9 +26,12 @@ export function loadPatch(name){
     loadedPatches[name] = Promise.all(files).then(function([units, techs, civs]){
       let patch = {...getPatchInfo(name), units: units.units, unitGroups: units.groups, techs: techs, civs: civs,
         unitsByName: {}, techsByName: {}}
-      patch.units.forEach(u => { if (!(u.name in patch.unitsByName)) { patch.unitsByName[u.name] = u } })
+      // card icons and unit portraits are shared by every patch
+      patch.units.forEach(function(u){
+        if (u.icon != null) { u.icon = "data/icons/" + u.icon }
+        if (!(u.name in patch.unitsByName)) { patch.unitsByName[u.name] = u }
+      })
       patch.techs.forEach(function(t){
-        // card icons are shared by every patch
         if (t.icon != null) { t.icon = "data/icons/" + t.icon }
         if (!(t.name in patch.techsByName)) { patch.techsByName[t.name] = t }
       })

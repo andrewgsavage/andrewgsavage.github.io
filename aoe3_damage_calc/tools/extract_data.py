@@ -2,7 +2,7 @@
 
 Reads xml/protoy.xml, xml/techtreey.xml, xml/homecity*.xml and the English string table,
 and writes data/PATCH/units.json, data/PATCH/techs.json and data/PATCH/civs.json.
-Also copies the card icons the techs use from UI/ into data/icons (shared by every patch), shrunk to card size,
+Also copies the card icons the techs use and the unit portraits from UI/ into data/icons (shared by every patch), shrunk to card size,
 the stance buttons into images/stances, and adds the patch to data/patches.json, the list of patches the calculator offers, newest first.
 
     pip install pillow
@@ -165,6 +165,8 @@ def extract_unit(unit, strings):
         "armor": [[a.get("type"), parse_float(a.get("value"))] for a in unit.iter("armor")],
         "costs": [[c.get("resourcetype"), parse_float(text(c))] for c in unit.iter("cost")],
         "attacks": attacks,
+        # the large portrait, or the small icon for units without one; copy_unit_icons swaps in the copy
+        "icon": next((text(el) for el in [first(unit, "portraiticon"), first(unit, "icon")] if el is not None), None),
     }
 
 
@@ -231,17 +233,38 @@ def copy_icons(techs):
             missing += bool(tech["effects"])
             tech["icon"] = None
             continue
-        # webp is a fraction of the size of the game's png art
-        icon = str(Path(icon).with_suffix(".webp").as_posix())
-        target = ICON_DIR / icon
-        if not target.exists():
-            target.parent.mkdir(parents=True, exist_ok=True)
-            image = Image.open(source)
-            image.thumbnail((ICON_SIZE, ICON_SIZE))
-            image.save(target, quality=85)
-        tech["icon"] = icon
+        tech["icon"] = save_icon(source, icon)
+    print("%d card icons not found in UI/" % missing)
+
+
+def copy_unit_icons(units):
+    """Copies each unit's portrait into data/icons and points unit["icon"] at the copy, or None if the game has no such file."""
+    missing = 0
+    for unit in units:
+        if unit["icon"] is None:
+            continue
+        icon = unit["icon"].replace("\\", "/").lower()
+        source = ICON_SOURCE_DIR / icon
+        if not source.exists():
+            missing += 1
+            unit["icon"] = None
+            continue
+        unit["icon"] = save_icon(source, icon)
     size = sum(f.stat().st_size for f in ICON_DIR.rglob("*") if f.is_file())
-    print("wrote %s (%d KB), %d icons not found in UI/" % (ICON_DIR.relative_to(ROOT), size // 1024, missing))
+    print("wrote %s (%d KB), %d unit icons not found in UI/" % (ICON_DIR.relative_to(ROOT), size // 1024, missing))
+
+
+def save_icon(source, icon):
+    """Saves the game image source as data/icons/ICON shrunk to card size, unless an earlier patch already did; returns its path there."""
+    # webp is a fraction of the size of the game's png art
+    icon = str(Path(icon).with_suffix(".webp").as_posix())
+    target = ICON_DIR / icon
+    if not target.exists():
+        target.parent.mkdir(parents=True, exist_ok=True)
+        image = Image.open(source)
+        image.thumbnail((ICON_SIZE, ICON_SIZE))
+        image.save(target, quality=85)
+    return icon
 
 
 def copy_stance_icons():
@@ -301,6 +324,7 @@ def main():
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     copy_icons(techs)
+    copy_unit_icons(units)
     copy_stance_icons()
     for name, data in [("units", {"units": units, "groups": groups}), ("techs", techs), ("civs", civs)]:
         path = OUT_DIR / (name + ".json")

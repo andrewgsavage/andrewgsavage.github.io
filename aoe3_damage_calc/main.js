@@ -2,7 +2,7 @@ import { patches, loadPatchList, loadPatch, getPatchInfo, getUnit, getCiv, unitD
 import { gatherUnitTechs, groupUnitTechs, isAge0Tech } from "./techs.js"
 import { calcUnitStats, getStat } from "./stats.js"
 import { calcBreakpoints, reduceBreakpoints, calcLancaster } from "./combat.js"
-import { renderStats, renderTags, renderCards, renderBreakpoints, renderLancaster } from "./render.js"
+import { renderStats, renderTags, renderCards, renderBreakpoints, renderLancaster, renderMatchup } from "./render.js"
 import { savePref, loadPref, renderPatchOptions, renderCivOptions, updateUnitOptions, selectUnitByName, setupUnitInput,
   setupAuraInput, setAuraInput, capitalizeFirstLetter } from "./controls.js"
 
@@ -35,7 +35,7 @@ function auraElements(side, aura){
 
 function clearUnit(side){
   Object.assign(state[side], {unit: null, techs: [], activeCards: new Set(), stats: null, tags: []})
-  document.querySelectorAll('.' + side + ':is(.cards, .stats, .tags), .breakpoints, .lancaster').forEach(d => d.replaceChildren())
+  document.querySelectorAll('.' + side + ':is(.cards, .stats, .tags), .breakpoints, .lancaster, .matchup').forEach(d => d.replaceChildren())
 }
 
 // Switches a side to another patch's data, then restores its civ, unit, cards and auras from params
@@ -107,6 +107,7 @@ function updateCenter(){
   renderBreakpoints('right', right.unit.name + " (right) attacking " + left.unit.name + " (left)", rightBreakpoints)
   let lancaster = calcLancaster(leftBreakpoints, rightBreakpoints, getStat(left.stats, 'TotalCost'), getStat(right.stats, 'TotalCost'))
   renderLancaster(lancaster, rightBreakpoints)
+  renderMatchup(left.unit, right.unit)
 }
 
 // The page's setup lives in the URL hash so it can be shared, e.g.
